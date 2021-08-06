@@ -4,6 +4,8 @@
     border-radius: 5px;
     border: 1.2px solid #fff;
     transition: .2s;
+    cursor: pointer;
+    transform: scale(1.2);
 }
 
 .block_img {

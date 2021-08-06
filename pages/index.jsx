@@ -23,9 +23,9 @@ export default function Home() {
         </div>        
         <div className={s.criteries}>
           <div className={s.section_param1}>
-            <p>Beeds</p>
+            <p>Breeds</p>
             <ul>
-              <li><input type="radio" name="breeds" id="inp_rad_beeds1" checked /><label htmlFor="inp_rad_beeds1">Lorem.</label></li>
+              <li><input type="radio" name="breeds" id="inp_rad_beeds1" defaultChecked /><label htmlFor="inp_rad_beeds1">Lorem.</label></li>
               <li><input type="radio" name="breeds" id="inp_rad_beeds2" /><label htmlFor="inp_rad_beeds2">Eum?</label></li>
               <li><input type="radio" name="breeds" id="inp_rad_beeds3" /><label htmlFor="inp_rad_beeds3">Placeat?</label></li>
               <li><input type="radio" name="breeds" id="inp_rad_beeds4" /><label htmlFor="inp_rad_beeds4">Tempora!</label></li>
@@ -42,7 +42,7 @@ export default function Home() {
           <div className={s.section_param2}>
             <p>Agegroup</p>
             <ul>
-              <li><input type="radio" name="agegroup" id="inp_rad_agegroup1" checked /><label htmlFor="inp_rad_agegroup1">All Ages</label></li>
+              <li><input type="radio" name="agegroup" id="inp_rad_agegroup1" defaultChecked /><label htmlFor="inp_rad_agegroup1">All Ages</label></li>
               <li><input type="radio" name="agegroup" id="inp_rad_agegroup2" /><label htmlFor="inp_rad_agegroup2">4+ weeks</label></li>
               <li><input type="radio" name="agegroup" id="inp_rad_agegroup3" /><label htmlFor="inp_rad_agegroup3">1-2 months</label></li>
               <li><input type="radio" name="agegroup" id="inp_rad_agegroup4" /><label htmlFor="inp_rad_agegroup4">2-6 months</label></li>
@@ -55,7 +55,7 @@ export default function Home() {
             <div className={s.pick_availability}>
               <p>Availability</p>
               <ul>
-                <li><input type="radio" name="availability" id="inp_rad_availability1" checked /><label htmlFor="inp_rad_availability1">All Available</label></li>
+                <li><input type="radio" name="availability" id="inp_rad_availability1" defaultChecked /><label htmlFor="inp_rad_availability1">All Available</label></li>
                 <li><input type="radio" name="availability" id="inp_rad_availability2" /><label htmlFor="inp_rad_availability2">Kitties for Sale</label></li>
                 <li><input type="radio" name="availability" id="inp_rad_availability3" /><label htmlFor="inp_rad_availability3">Kitties for Adoption</label></li>
                 <li><input type="radio" name="availability" id="inp_rad_availability4" /><label htmlFor="inp_rad_availability4">Retired Breeding Cats</label></li>
@@ -66,7 +66,7 @@ export default function Home() {
             <div className={s.pick_price}>
               <p>Sort by Price</p>
               <ul>
-                <li><input type="radio" name="price" id="inp_rad_price1" checked /><label htmlFor="inp_rad_price1">Low First</label></li>
+                <li><input type="radio" name="price" id="inp_rad_price1" defaultChecked /><label htmlFor="inp_rad_price1">Low First</label></li>
                 <li><input type="radio" name="price" id="inp_rad_price2" /><label htmlFor="inp_rad_price2">High First</label></li>
               </ul>
             </div>
@@ -75,15 +75,15 @@ export default function Home() {
             <div className={s.pick_gender}>
               <p>Gender</p>
               <ul>
-                <li><input type="radio" name="gender" id="inp_rad_gender1" checked /><label htmlFor="inp_rad_gender1">All</label></li>
+                <li><input type="radio" name="gender" id="inp_rad_gender1" defaultChecked /><label htmlFor="inp_rad_gender1">All</label></li>
                 <li><input type="radio" name="gender" id="inp_rad_gender2" /><label htmlFor="inp_rad_gender2">Male</label></li>
-                <li><input type="radio" name="gender" id="inp_rad_gender3" /><label htmlFor="inp_rad_gender2">Female</label></li>
+                <li><input type="radio" name="gender" id="inp_rad_gender3" /><label htmlFor="inp_rad_gender3">Female</label></li>
               </ul>
             </div>
             <div className={s.pick_location}>
               <p>Location</p>
               <ul>
-                <li><input type="radio" name="location" id="inp_rad_location1" checked /><label htmlFor="inp_rad_location1">All States</label></li>
+                <li><input type="radio" name="location" id="inp_rad_location1" defaultChecked /><label htmlFor="inp_rad_location1">All States</label></li>
                 <li><input type="radio" name="location" id="inp_rad_location2" /><label htmlFor="inp_rad_location2">Worldwide</label></li>
                 <li><input type="radio" name="location" id="inp_rad_location3" /><label htmlFor="inp_rad_location3">Specific (Map)</label></li>
               </ul>

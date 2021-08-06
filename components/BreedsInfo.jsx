@@ -61,9 +61,9 @@ const BreedsInfo = (props) => {
                                 {props.other_traits}
                             </p>
                         </div>
-                        <div className={s.breed_info_right__info}>
+                        {/* <div className={s.breed_info_right__info}>
                             {props.description}
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

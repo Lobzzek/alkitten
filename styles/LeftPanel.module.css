@@ -1,10 +1,13 @@
 .left_panel {
     width: 14.0625vw;
-    height: 58.75vw;
+    height: 41.967vw;
     margin-top: 0.91vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: fixed;
+    transform: translateX(-36vw) translateY(-50%);
+    top: calc(50% + (2.4vw + 3.073vw) / 3);
 }
 
 .group_cats {
@@ -214,7 +217,9 @@
 @media screen and (min-width: 1920px) {
     .left_panel {
         max-width: 270px;
-        max-height: 1127.5px;
+        max-height: 800px;
+        transform: translateX(-690px) translateY(-50%);
+        top: calc(50% + (2.4vw + 56.25px) / 3);
     }
     .group_cats {
         height: 537.5px;

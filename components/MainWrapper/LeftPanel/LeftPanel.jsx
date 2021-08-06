@@ -38,13 +38,13 @@ const LeftPanel = () => {
                     <a href="#">View More</a>
                 </div>
             </div>
-            <div className={s.gallery}>
+            {/* <div className={s.gallery}>
                 <div className={s.text}>
                     <h4>Cat Gallery</h4>
                     <img src="/img/fon_gallery.jpg" alt="" />
                     <a href="#">View Gallery</a>
                 </div>
-            </div>
+            </div> */}
         </section>
     )
 }

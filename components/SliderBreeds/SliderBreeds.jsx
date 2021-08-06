@@ -22,17 +22,16 @@ const SliderBreeds = () => {
     const [numberPages, setNumberPages] = React.useState()
 
 
-    const [marginBetwenCards, setMarginBetwenCards] = React.useState(78);
+    const [marginBetwenCards, setMarginBetwenCards] = React.useState(140);
 
     React.useEffect(() => {
-        if (document.documentElement.clientWidth < 1920) {
-            setMarginBetwenCards(document.documentElement.clientWidth * 0.04);
-        } else {
-            setMarginBetwenCards(78);
+        if(document.documentElement.clientWidth < 1920){
+            setMarginBetwenCards(70)
+            //cahnge later
         }
 
-        block_imgs.current.style.width = `${block_imgs.current.childNodes.length * (block_imgs.current.childNodes[0].clientWidth + marginBetwenCards)}px`;
-        setNumberPages(Math.ceil(block_imgs.current.childNodes.length / 4));
+        block_imgs.current.style.width = `${block_imgs.current.childNodes.length * (block_imgs.current.childNodes[0].clientWidth + 140)}px`;
+        setNumberPages(Math.ceil(block_imgs.current.childNodes.length / 3));
     }, [])
 
     //logic slider
@@ -47,27 +46,32 @@ const SliderBreeds = () => {
         if (activePage === 1) {
             block_imgs.current.style.left = "0px";
         } else if (activePage === 2) {
-            block_imgs.current.style.left = "-913px";
+            block_imgs.current.style.left = "-902px";
         } else if (activePage === 3) {
-            block_imgs.current.style.left = "-1826px";
+            block_imgs.current.style.left = "-1785px";
         } else if (activePage === 4) {
-            block_imgs.current.style.left = "-2739px";
+            block_imgs.current.style.left = "-2649px";
         } else if (activePage === 5) {
-            block_imgs.current.style.left = "-3652px";
+            block_imgs.current.style.left = "-3532px";
         } else if (activePage === 6) {
-            block_imgs.current.style.left = "-4565px";
+            block_imgs.current.style.left = "-4396px";
         }
         else if (activePage === 7) {
-            block_imgs.current.style.left = "-5478px";
+            block_imgs.current.style.left = "-5280px";
         }
         else if (activePage === 8) {
-            block_imgs.current.style.left = "-6391px";
+            block_imgs.current.style.left = "-6144px";
         }
         else if (activePage === 9) {
-            block_imgs.current.style.left = "-7304px";
+            block_imgs.current.style.left = "-7008px";
         }
         else if (activePage === 10) {
-            block_imgs.current.style.left = "-8217px";
+            block_imgs.current.style.left = "-7891px";
+        } else if (activePage === 11) {
+            block_imgs.current.style.left = "-8774px";
+        }
+        else if (activePage === 12) {
+            block_imgs.current.style.left = "-9696px";
         }
         
 
@@ -106,8 +110,8 @@ const SliderBreeds = () => {
 
         setActiveCardCat(0);
         setTimeout(() => {
-            block_imgs.current.style.width = `${block_imgs.current.childNodes.length * (block_imgs.current.childNodes[0].clientWidth + marginBetwenCards)}px`;
-            setNumberPages(Math.ceil(block_imgs.current.childNodes.length / 4));
+            block_imgs.current.style.width = `${block_imgs.current.childNodes.length * (block_imgs.current.childNodes[0].clientWidth + 140)}px`;
+            setNumberPages(Math.ceil(block_imgs.current.childNodes.length / 3));
         }, 200);
 
     }, [activeSort])

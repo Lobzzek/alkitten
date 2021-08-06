@@ -16,8 +16,9 @@
 .wrap {
     display: flex;
     align-items: center;
-    width: 91.771vw;
+    width: 89.479vw;
     margin: 0 auto;
+    transform: translateX(-1.719vw);
 }
 
 .logo {
@@ -88,11 +89,11 @@
     .header .wrap {
         height: 100%;
         position: relative;
-        max-width: 1762px;
+        max-width: 1718px;
         margin: 0 auto;
         display: flex;
         align-items: center;
-        /* transform: translateX(132px); */
+        transform: translateX(-33px);
     }
     .logo {
         position: relative;

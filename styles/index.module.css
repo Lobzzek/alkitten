@@ -61,7 +61,7 @@
 
 .criteries {
     background: #f1efe8;
-    width: 31.354vw;
+    width: 36.510vw;
     height: 11.198vw;
     border: 1px solid #000;
     border-radius: 4px;
@@ -76,7 +76,12 @@
     position: relative;
 }
 
-.criteries .section_param1, .criteries .section_param2 {
+.criteries .section_param1 {
+    width: 10.521vw;
+    background: white;
+}
+
+.criteries .section_param2 {
     width: 5.260vw;
     background: white;
 }
@@ -656,11 +661,14 @@
         font-size: 15.36px;
     }
     .criteries {
-        width: 600px;
+        width: 701px;
         height: 213px;
         margin-bottom: 127px;
     }
-    .criteries .section_param1, .criteries .section_param2 {
+    .criteries .section_param1 {
+        width: 202px;
+    }
+    .criteries .section_param2 {
         width: 101px;
     }
     .criteries .section_param3 {
@@ -691,13 +699,13 @@
         margin-left: 4px;
     }
     .criteries div label::before {
-        width: 7.6px !important;
-        height: 7.6px !important;
+        min-width: 7.6px !important;
+        min-height: 7.6px !important;
         left: -12.48px !important;
     }
     .criteries div label::after {
-        width: 7.6px !important;
-        height: 7.6px !important;
+        min-width: 7.6px !important;
+        min-height: 7.6px !important;
         left: -13.44px !important;
     }
     .criteries .pick_availability {
