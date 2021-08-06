@@ -1,0 +1,188 @@
+.breed_info {
+    font-family: "modelica-r";
+    font-size: 14px;
+}
+
+.breed_info__title {
+    font-size: 28px;
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+    position: relative;
+    z-index: 1;
+    color: #202D34;
+    font-family: "modelica-m";
+}
+
+.breed_info_container {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.breed_info_content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.breed_info_left {
+    width: 400px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.breed_info_left__img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 254px;
+    height: 326px;
+    margin: 0px 0px 10px 0px;
+    background: #f1efe8;
+    border: 2px solid #938556;
+    border-radius: 10px;
+}
+
+.breed_info_left__img img {
+    height: 120%;
+    position: relative;
+    top: -5px;
+}
+
+.breed_info_left__button {
+    width: 254px;
+    position: relative;
+    z-index: 1;
+    height: 26px;
+    display: block;
+    line-height: 26px;
+    text-align: center;
+    background: #938556;
+    color: #fff;
+    border-radius: 5px;
+    font-family: "modelica-r";
+}
+
+.breed_info_right {
+    width: 500px;
+}
+
+.breed_info_right__info {
+    margin: 10px 0 0;
+    padding: 5px;
+    line-height: 18px;
+    border: 1px dashed #000;
+}
+
+.breed_info_right__info p {
+    padding: 0 0 10px 0;
+}
+
+.breed_info_right__info p:last-child {
+    padding: 0;
+}
+
+.breed-info-right__row {
+    padding: 5px;
+    line-height: 20px;
+    padding: 10px 0;
+}
+
+.breed_info_right__row {
+    padding: 5px 10px 5px 10px;
+}
+
+.breed_info_right__row:nth-child(odd) {
+    background: #f1efe8;
+    padding: 7px 10px 7px 10px;
+}
+
+.breed_info_right__row span {
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.breed_info_right__row_5, .breed_info_right__row_6, .breed_info_right__row_7 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.breed_info_right__row_5 span, .breed_info_right__row_6 span, .breed_info_right__row_7 span {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    padding: 0 10px 0 0;
+}
+
+@media screen and (max-width: 1920px) {
+    .breed_info {
+        font-size: 0.729vw;
+    }
+    .breed_info__title {
+        font-size: 1.458vw;
+        margin: 0px 0px 1.042vw 0px;
+        
+    }
+    .breed_info_container {
+        width: 46.875vw;
+    }
+    .breed_info_left {
+        width: 20.833vw;
+    }
+    .breed_info_left__img {
+        width: 13.229vw;
+        height: 16.979vw;
+        margin: 0px 0px 0.521vw 0px;
+        border: 2px solid #938556;
+        border-radius: 0.521vw;
+    }
+    .breed_info_left__img img {
+        top: -0.260vw;
+    }
+    .breed_info_left__button {
+        width: 13.229vw;
+        height: 1.354vw;
+        line-height: 1.354vw;
+        border-radius: 0.260vw;
+    }
+    .breed_info_right {
+        width: 26.042vw;
+    }
+    .breed_info_right__info {
+        margin: 0.521vw 0 0;
+        padding: 0.260vw;
+        line-height: 0.938vw;
+        border: 0.052vw dashed #000;
+    }
+    .breed_info_right__info p {
+        padding: 0 0 0.5vw 0;
+    }
+    .breed-info-right__row {
+        padding: 0.25vw;
+        line-height: 1vw;
+        padding: 0.5vw 0;
+    }
+    .breed_info_right__row {
+        padding: .25vw .5vw .25vw .5vw;
+    }
+    .breed_info_right__row:nth-child(odd) {
+        padding: 0.365vw .5vw 0.365vw .5vw;
+    }
+    .breed_info_right__row_5 span, .breed_info_right__row_6 span, .breed_info_right__row_7 span {
+        padding: 0 .5vw 0 0;
+    }
+}

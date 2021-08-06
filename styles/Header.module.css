@@ -1,0 +1,116 @@
+.header {
+    background: #F4F3EE;
+    padding-top: 2.4vw;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+}
+
+.green_sect {
+    display: flex;
+    align-items: center;
+    background: #142B33;
+}
+
+.wrap {
+    display: flex;
+    align-items: center;
+    width: 91.771vw;
+    margin: 0 auto;
+}
+
+.logo {
+    background-color: #F4F3EE;
+    height: 3.06vw;
+    position: relative;
+    width: fit-content;
+    display: flex;
+    align-items: flex-start;
+}
+
+.header .logo img {
+    height: 95% !important;
+    width: auto !important;
+    margin: 0 2.4vw !important;
+}
+
+.header nav {
+    margin-left: auto;
+    margin-right: 2.4vw;
+}
+
+.header nav a {
+    color: white;
+    text-decoration: none;
+    font-family: "modelica-r";
+    margin-left: 0.938vw;
+    font-size: 1vw;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    height: 3.06vw;
+    background: #F4F3EE;
+    width: 283.75px;
+    /* margin-left: auto; */
+    justify-content: space-evenly;
+}
+
+.user a {
+    text-decoration: none;
+    font-family: "modelica-r";
+    font-size: 1vw;
+}
+
+.user a.message img {
+    width: 1.4vw;
+}
+
+.user a.sign {
+    color: #000;
+    font-weight: 600;
+}
+
+.user a.log {
+    color: #938556;
+    font-weight: 600;
+}
+
+@media screen and (min-width: 1920px) {
+    .header .green_sect {
+        max-height: 56.25px;
+        height: 56.25px;
+        position: relative;
+        padding: 0;
+    }
+    .header .wrap {
+        height: 100%;
+        position: relative;
+        max-width: 1762px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        /* transform: translateX(132px); */
+    }
+    .logo {
+        position: relative;
+        height: 103%;
+        margin-left: 0;
+    }
+    .user {
+        height: 103%;
+    }
+    .user a {
+        font-size: 19.2px;
+    }
+    .user a.message img {
+        width: 28.75px;
+        margin-top: 5px;
+    }
+    .header nav a {
+        margin-left: 22.5px;
+        font-size: 19.2px;
+    }
+}

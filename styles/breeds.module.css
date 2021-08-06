@@ -1,0 +1,26 @@
+.top_text {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.458vw;
+}
+
+.top_text h2 {
+    margin: 0;
+    padding: 0;
+    font-family: "modelica-m";
+    color: #202D34;
+    font-size: 1.5vw;
+}
+
+.top_text p {
+    margin: 0;
+    padding: 0;
+    color: #919191;
+    font-size: 1.0625vw;
+}
+
+/*fffffffffffffffffffffffffffffff*/
+

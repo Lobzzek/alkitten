@@ -1,0 +1,115 @@
+.card_cat {
+    width: 157.5px;
+    height: 275px;
+    border-radius: 5px;
+    border: 1.2px solid #fff;
+    transition: .2s;
+}
+
+.block_img {
+    width: 137.5px;
+    height: 162.5px;
+    background: #f1efe8;
+    border: 1.2px solid #938556;
+    border-radius: 5px;
+    margin: 8.75px auto 0 auto;
+    position: relative;
+    transition: .2s;
+}
+
+.card_cat:hover, .card_cat.active {
+    background: #f1efe8;
+    border: 1.2px solid #938556;
+}
+
+.card_cat:hover .block_img, .card_cat.active .block_img {
+    background: #938556;
+}
+
+.card_cat:hover .text div a, .card_cat:hover .text div button, .card_cat.active .text div a, .card_cat.active .text div button {
+    opacity: 1;
+}
+
+/* .card_cat.active {
+    background: #f1efe8;
+    border: 1.2px solid #938556;
+}
+
+.card_cat.active .block_img {
+    background: #938556;
+} */
+
+.block_img img {
+    height: 140%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 85px;
+    margin-top: 5px;
+}
+
+.text p {
+    font-size: 15.6px;
+    font-family: "modelica-r";
+    margin-top: 10px;
+    text-align: center;
+    height: 36px;
+    display: flex;
+    align-items: center;
+}
+
+.text div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 130px;
+}
+
+.text div a, .text div button {
+    color: #fff;
+    background: #938556;
+    border-radius: 5px;
+    font-family: "modelica-r";
+    font-size: 12px;
+    border: none;
+    padding: 4px 4.4px;
+    opacity: 0;
+    transition: .2s;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1920px) {
+    .card_cat {
+        width: 8.203vw;
+        height: 14.323vw;
+    }
+    .block_img {
+        width: 7.161vw;
+        height: 8.464vw;
+        margin: 0.456vw auto 0 auto;
+    }
+    .text {
+        height: 4.427vw;
+    }
+    .text p {
+        font-size: 0.813vw;
+        margin-top: 0.521vw;
+        height: 1.875vw;
+    }
+    .text div {
+        width: 6.771vw;
+    }
+    .text div a, .text div button {
+        font-size: 0.625vw;
+        
+        padding: 0.308vw 0.25vw;
+    }
+}

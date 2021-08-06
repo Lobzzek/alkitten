@@ -1,0 +1,39 @@
+.footer {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.footer::before {
+    content: "";
+    height: 1px;
+    width: 90%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000;
+    z-index: 1;
+}
+
+.footer .bottom_phrase {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background: #F1EFE8;
+}
+
+.footer .bottom_phrase h3 {
+    font-family: "modelica-r";
+    color: #202D34;
+    font-weight: 100;
+    font-size: 1vw;
+}
+
+@media screen and (min-width: 1920px) {
+    .footer .bottom_phrase h3 {
+        font-size: 19.2px;
+    }
+}

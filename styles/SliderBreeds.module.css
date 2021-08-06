@@ -1,0 +1,151 @@
+.slider_breeds {
+    margin-bottom: 60px;
+}
+
+@media screen and (max-width: 1920px) {
+    .slider_breeds {
+        margin-bottom: 3.12vw;
+    }
+}
+
+.sort {
+    background: white;
+    display: flex;
+    border-radius: 5px;
+    border: 1.2px solid #938556;
+    width: 26.875vw;
+    height: 1.82vw;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+
+.sort div {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.sort div:nth-child(1), .sort div:nth-child(2) {
+    border-right: 1.25px solid #938556;
+}
+
+.sort div:nth-child(1) {
+    margin-left: -1px;
+}
+
+.sort div p {
+    color: #000;
+    font-size: 17.5px;
+    font-family: "modelica-r";
+}
+
+.sort div.active {
+    background: #938556;
+}
+
+.sort div.active p {
+    color: white;
+}
+
+.slider_cnt {
+    display: flex;
+}
+
+.slider_cnt>button {
+    background: #f1efe8;
+    border-radius: 50%;
+    position: relative;
+    border: none;
+    height: 32.5px;
+    width: 32.5px;
+    z-index: 1;
+    cursor: pointer;
+    margin-top: 120px;
+}
+
+.slider_cnt>button:hover {
+    opacity: .2;
+}
+
+.slider_cnt>button:first-child {
+    transform: translateX(-20px) rotate(45deg);
+}
+
+.slider_cnt>button:last-child {
+    transform: translateX(20px) rotate(225deg);
+}
+
+.slider_cnt .wrap_cont {
+    width: 937.5px;
+    /* background: pink; */
+    height: 362.5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider_cnt .block_imgs {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    justify-content: space-evenly;
+    left: 0px;
+    transition: .6s;
+    /* background: #000; */
+}
+
+.dots {
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.dots span {
+    width: 10px;
+    height: 10px;
+    background: #919191;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dots span.active {
+    background: #000;
+}
+
+@media screen and (min-width: 1920px) {
+    .sort {
+        width: 516px;
+        height: 32.5px;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    .sort {
+        border-radius: 0.25vw;
+        margin-bottom: 1.302vw;
+    }
+    .sort div p {
+        font-size: 0.911vw;
+    }
+    .slider_cnt>button {
+        height: 1.693vw;
+        width: 1.693vw;
+        margin-top: 5.729vw;
+    }
+    .slider_cnt .wrap_cont {
+        width: 48.828vw;
+        height: 18.880vw;
+    }
+    .dots span {
+        width: 0.521vw;
+        height: 0.521vw;
+    }
+}

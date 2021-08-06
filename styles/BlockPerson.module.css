@@ -1,0 +1,142 @@
+.block_person {
+    width: 11.1975vw;
+    background: white;
+    border-radius: 0.4vw;
+    position: relative;
+}
+
+.avatar_data {
+    display: flex;
+    position: relative;
+}
+
+.avatar_data .avatar {
+    position: relative;
+    width: 3.1vw;
+    height: 3.1vw;
+    min-height: 3.1vw;
+    min-width: 3.1vw;
+    background: #f1efe8;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: 0.45vw;
+    margin-top: -.5vw;
+}
+
+.avatar_data .avatar img {
+    width: calc(100% - .5vw);
+    height: calc(100% - .5vw);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.avatar_data .data img {
+    height: 0.65vw;
+    width: 0.65vw;
+    margin: 0 .12vw;
+}
+
+.avatar_data .data {
+    display: flex;
+    flex-direction: column;
+    margin-top: .25vw;
+    margin-left: .25vw;
+}
+
+.avatar_data .data .rating {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.avatar_data .data p {
+    margin-left: auto;
+    font-family: "modelica-r";
+    margin-top: 0;
+    margin-bottom: .12vw;
+}
+
+.avatar_data .data .login {
+    font-family: "modelica-r";
+    font-size: .65vw;
+    margin: 0;
+}
+
+.block_person>p {
+    margin: 0 0 0 0.75vw;
+    font-family: "modelica-r";
+    font-size: 0.72vw;
+    width: 10vw;
+    color: #365864;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    width: 10vw;
+    margin-left: 0.75vw;
+    padding-bottom: 0.25vw;
+}
+
+.location img {
+    width: 0.58vw;
+}
+
+.location p {
+    color: #365864;
+    font-family: "modelica-r";
+    font-size: .75vw;
+}
+
+.location a {
+    text-decoration: none;
+    margin-left: auto;
+    background: #142B33;
+    color: white;
+    border-radius: 0.25vw;
+    padding: .25vw 0.75vw;
+    font-size: 0.87vw;
+}
+
+@media screen and (min-width: 1920px) {
+    .block_person {
+        width: 90%;
+    }
+    .avatar_data .avatar img {
+        width: 48.75px;
+        height: 48.75px;
+    }
+    .avatar_data data img {
+        width: 12.5px;
+        height: 12.5px;
+    }
+    .avatar_data .data .login {
+        font-size: 12px;
+    }
+    .block_person>p {
+        font-size: 13.875px;
+        margin-left: 13.875px;
+        width: 197.5px;
+    }
+    .location img {
+        width: 11.25px;
+    }
+    .location {
+        width: 191.25px;
+    }
+    .location p {
+        font-size: 14.4px;
+    }
+    .location a {
+        font-size: 16.75px;
+    }
+    .avatar_data .avatar {
+        width: 58.75px;
+        height: 58.75px;
+        min-width: 58.75px;
+        min-height: 58.75px;
+    }
+}
