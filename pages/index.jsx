@@ -1,8 +1,8 @@
-import MainWrapper from '../components/MainWrapper/MainWrapper.jsx';
-import CardCat from '../components/CardCat.jsx'
-import Head from 'next/head'
+import MainWrapper from "../components/MainWrapper/MainWrapper.jsx";
+import CardCat from "../components/CardCat.jsx"
+import Head from "next/head"
 
-import s from '../styles/index.module.css'
+import s from "../styles/index.module.css"
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
     <MainWrapper>
       <div className={s.top_text}>
-        <h2>You're on the Right Track</h2>
+          <h2>You&apos;re on the Right Track</h2>
         <p>The Best Way to Find a New Family Member</p>
       </div>
       <form className={s.search_form}>
