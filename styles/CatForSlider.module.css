@@ -1,6 +1,6 @@
 .card_cat {
     width: 157.5px;
-    height: 275px;
+    height: 255px;
     border-radius: 5px;
     border: 1.2px solid #fff;
     transition: .2s;
@@ -28,8 +28,20 @@
     background: #938556;
 }
 
-.card_cat:hover .text div a, .card_cat:hover .text div button, .card_cat.active .text div a, .card_cat.active .text div button {
+.card_cat:hover .text div a, .card_cat:hover .text div button, .card_cat.active .text div a, .card_cat.active .text div button, .card_cat.active .fav_ava, .card_cat:hover .fav_ava {
     opacity: 1;
+}
+
+.card_cat:hover .text div, .card_cat:hover .text div button {
+    transition: 0;
+}
+
+.card_cat:hover .text div a:hover {
+    opacity: .6;
+}
+
+.card_cat:hover .text div button:hover {
+    opacity: .6;
 }
 
 /* .card_cat.active {
@@ -52,20 +64,20 @@
 .text {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     flex-direction: column;
-    height: 85px;
-    margin-top: 5px;
+    height: 65px;
+    margin-top: 3px;
 }
 
 .text p {
     font-size: 15.6px;
     font-family: "modelica-r";
-    margin-top: 10px;
     text-align: center;
     height: 36px;
     display: flex;
     align-items: center;
+    margin-top: 0;
+    margin-bottom: 5px;
 }
 
 .text div {
@@ -88,10 +100,62 @@
     cursor: pointer;
 }
 
+.fav_ava {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    right: 0;
+    transform: translateX(50%);
+    top: 40%;
+    opacity: 0;
+    transition: .6s;
+}
+
+.fav_ava>div {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    border: 1.2px solid #938556;
+    background: #f1efe8;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.fav_ava .favorite {
+    margin-bottom: 5px;
+}
+
+.fav_ava .favorite img {
+    width: 40%;
+}
+
+.fav_ava .favorite p {
+    font-size: 7.5px;
+    margin: 0;
+}
+
+.fav_ava .available * {
+    padding: 0;
+    margin: 0;
+}
+
+.fav_ava .available p {
+    font-size: 7.5px;
+}
+
+.fav_ava .available h4 {
+    font-size: 15px;
+    height: 15px;
+}
+
 @media screen and (max-width: 1920px) {
     .card_cat {
         width: 8.203vw;
-        height: 14.323vw;
+        height: 13.323vw;
     }
     .block_img {
         width: 7.161vw;
@@ -99,11 +163,11 @@
         margin: 0.456vw auto 0 auto;
     }
     .text {
-        height: 4.427vw;
+        height: 4vw;
+        margin-top: 0.156vw;
     }
     .text p {
         font-size: 0.813vw;
-        margin-top: 0.521vw;
         height: 1.875vw;
     }
     .text div {
@@ -111,7 +175,24 @@
     }
     .text div a, .text div button {
         font-size: 0.625vw;
-        
         padding: 0.308vw 0.25vw;
+    }
+    .fav_ava>div {
+        width: 1.823vw;
+        height: 1.823vw;
+        border-radius: 0.208vw;
+    }
+    .fav_ava .favorite {
+        margin-bottom: 0.260vw;
+    }
+    .fav_ava .favorite p {
+        font-size: 0.391vw;
+    }
+    .fav_ava .available p {
+        font-size: 0.391vw;
+    }
+    .fav_ava .available h4 {
+        font-size: 0.781vw;
+        height: 0.781vw;
     }
 }

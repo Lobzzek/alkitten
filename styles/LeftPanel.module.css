@@ -7,7 +7,7 @@
     justify-content: space-between;
     position: fixed;
     transform: translateX(-36vw) translateY(-50%);
-    top: calc(50% + (2.4vw + 3.073vw) / 3);
+    top: calc(50% + (0.5vw + 3.073vw) / 3);
 }
 
 .group_cats {
@@ -18,15 +18,30 @@
     background: #F1EFE8;
     border: 1.2px solid #000;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
 }
 
-.group_cats .top_phrase {
+/* .group_cats::before {
+    content: '';
     position: absolute;
-    width: 100%;
-    height: 5.2vw;
-    background: linear-gradient(#F1EFE8, #F1EFE8, transparent);
+    background: pink;
+    left: 0;
     top: 0;
+    width: 100%;
     z-index: 1;
+    height: 16%;
+    
+} */
+
+.group_cats .top_phrase {
+    position: relative;
+    width: 100%;
+    /* background: linear-gradient(#F1EFE8, #F1EFE8, transparent); */
+    top: 0;
+    z-index: 2;
+    padding: 1vw 0;
+    box-shadow: 0 10px 16px #f1efe8;
 }
 
 .group_cats .top_phrase h3 {
@@ -35,17 +50,14 @@
     color: #000;
     font-family: "modelica-m";
     font-size: 1.125vw;
-    margin-top: 0.84vw;
+    margin-top: 0;
 }
 
 .group_cats .blocks {
-    position: absolute;
-    top: .5vw;
-    height: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
     overflow-y: scroll;
     width: 98%;
+    height: 100%;
 }
 
 .group_cats .blocks>div {
@@ -71,20 +83,16 @@
 }
 
 .group_cats .blocks>div:first-child {
-    margin-top: 3.5vw;
-}
-
-.group_cats .blocks>div:last-child {
-    margin-bottom: 3.75vw;
+    margin-top: 1vw;
 }
 
 .group_cats .link {
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
     display: flex;
     justify-content: center;
-    background: linear-gradient(transparent, #f1efe8, #f1efe8);
+    box-shadow: 0 -10px 16px #f1efe8;
     height: 3.64vw;
     align-items: center;
 }
@@ -113,11 +121,13 @@
 
 .faq .text {
     position: absolute;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .faq .text h4 {
@@ -128,7 +138,7 @@
     text-align: center;
 }
 
-.faq .text>a {
+.faq .text a.view {
     color: white;
     font-family: "modelica-r";
     font-weight: 100;
@@ -140,29 +150,35 @@
     border-radius: 0.25vw;
 }
 
+.faq a:not(.view) {
+    position: relative;
+    width: 90%;
+}
+
 .faq .text .punkt {
     background: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 90%;
+    width: 100%;
+    position: relative;
     margin-bottom: .5vw;
     height: 2.8vw;
     padding: .25vw .375vw;
 }
 
-.faq .text .punkt:nth-child(3) {
-    margin-bottom: 1.25vw;
+.faq .text a:nth-child(3) {
+    margin-bottom: .35vw;
 }
 
-.faq .text .punkt p {
+.faq .text .punkt p:nth-child(1) {
     padding: 0;
     margin: 0;
     font-family: "modelica-r";
     font-size: 1vw;
 }
 
-.faq .text .punkt a {
+.faq .text .punkt p:nth-child(2) {
     color: #000;
     text-decoration: none;
     font-size: 1.25vw;
@@ -219,14 +235,12 @@
         max-width: 270px;
         max-height: 800px;
         transform: translateX(-690px) translateY(-50%);
-        top: calc(50% + (2.4vw + 56.25px) / 3);
+        top: calc(50% + (0.5vw + 56.25px) / 3);
     }
     .group_cats {
         height: 537.5px;
     }
-    .group_cats .top_phrase {
-        height: 100px;
-    }
+    .group_cats .top_phrase {}
     .group_cats .top_phrase h3 {
         font-size: 21.6px;
     }
@@ -247,13 +261,13 @@
         height: 55px;
         margin-bottom: 10px;
     }
-    .faq .text .punkt p {
+    .faq .text .punkt p:nth-child(1) {
         font-size: 19.075px;
     }
-    .faq .text .punkt a {
+    .faq .text .punkt p:nth-child(2) {
         font-size: 24px;
     }
-    .faq .text a {
+    .faq .text a.view {
         font-size: 19.075px;
     }
     .gallery {
@@ -267,10 +281,7 @@
         width: 192.5px;
         margin-bottom: 7.5px;
     }
-    .gallery .text a {
+    .gallery .text a.view {
         font-size: 19.075px;
-    }
-    .group_cats .blocks>div:first-child {
-        margin-top: 68.75px;
     }
 }

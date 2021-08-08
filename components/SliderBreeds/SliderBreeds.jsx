@@ -21,17 +21,15 @@ const SliderBreeds = () => {
 
     const [numberPages, setNumberPages] = React.useState()
 
-
-    const [marginBetwenCards, setMarginBetwenCards] = React.useState(140);
-
     React.useEffect(() => {
         if(document.documentElement.clientWidth < 1920){
-            setMarginBetwenCards(70)
-            //cahnge later
+            let marginBetwenCards = document.documentElement.clientWidth * 0.073;
+            block_imgs.current.style.width = `${block_imgs.current.childNodes.length * (block_imgs.current.childNodes[0].clientWidth + marginBetwenCards)}px`;
+        }else{
+            block_imgs.current.style.width = `${block_imgs.current.childNodes.length * (block_imgs.current.childNodes[0].clientWidth + 140)}px`;
         }
-
-        block_imgs.current.style.width = `${block_imgs.current.childNodes.length * (block_imgs.current.childNodes[0].clientWidth + 140)}px`;
         setNumberPages(Math.ceil(block_imgs.current.childNodes.length / 3));
+        
     }, [])
 
     //logic slider
@@ -42,37 +40,70 @@ const SliderBreeds = () => {
         } else if (activePage < 1) {
             setActivePage(1);
         }
-
-        if (activePage === 1) {
-            block_imgs.current.style.left = "0px";
-        } else if (activePage === 2) {
-            block_imgs.current.style.left = "-902px";
-        } else if (activePage === 3) {
-            block_imgs.current.style.left = "-1785px";
-        } else if (activePage === 4) {
-            block_imgs.current.style.left = "-2649px";
-        } else if (activePage === 5) {
-            block_imgs.current.style.left = "-3532px";
-        } else if (activePage === 6) {
-            block_imgs.current.style.left = "-4396px";
+        if(document.documentElement.clientWidth >= 1920){
+            if (activePage === 1) {
+                block_imgs.current.style.left = "0px";
+            } else if (activePage === 2) {
+                block_imgs.current.style.left = "-902px";
+            } else if (activePage === 3) {
+                block_imgs.current.style.left = "-1785px";
+            } else if (activePage === 4) {
+                block_imgs.current.style.left = "-2649px";
+            } else if (activePage === 5) {
+                block_imgs.current.style.left = "-3532px";
+            } else if (activePage === 6) {
+                block_imgs.current.style.left = "-4396px";
+            }
+            else if (activePage === 7) {
+                block_imgs.current.style.left = "-5280px";
+            }
+            else if (activePage === 8) {
+                block_imgs.current.style.left = "-6144px";
+            }
+            else if (activePage === 9) {
+                block_imgs.current.style.left = "-7008px";
+            }
+            else if (activePage === 10) {
+                block_imgs.current.style.left = "-7891px";
+            } else if (activePage === 11) {
+                block_imgs.current.style.left = "-8774px";
+            }
+            else if (activePage === 12) {
+                block_imgs.current.style.left = "-9696px";
+            }
+        }else{
+            if (activePage === 1) {
+                block_imgs.current.style.left = "0vw";
+            } else if (activePage === 2) {
+                block_imgs.current.style.left = "-47vw";
+            } else if (activePage === 3) {
+                block_imgs.current.style.left = "-93vw";
+            } else if (activePage === 4) {
+                block_imgs.current.style.left = "-138vw";
+            } else if (activePage === 5) {
+                block_imgs.current.style.left = "-184vw";
+            } else if (activePage === 6) {
+                block_imgs.current.style.left = "-229vw";
+            }
+            else if (activePage === 7) {
+                block_imgs.current.style.left = "-275vw";
+            }
+            else if (activePage === 8) {
+                block_imgs.current.style.left = "-320vw";
+            }
+            else if (activePage === 9) {
+                block_imgs.current.style.left = "-365vw";
+            }
+            else if (activePage === 10) {
+                block_imgs.current.style.left = "-411vw";
+            } else if (activePage === 11) {
+                block_imgs.current.style.left = "-457vw";
+            }
+            else if (activePage === 12) {
+                block_imgs.current.style.left = "-505vw";
+            }
         }
-        else if (activePage === 7) {
-            block_imgs.current.style.left = "-5280px";
-        }
-        else if (activePage === 8) {
-            block_imgs.current.style.left = "-6144px";
-        }
-        else if (activePage === 9) {
-            block_imgs.current.style.left = "-7008px";
-        }
-        else if (activePage === 10) {
-            block_imgs.current.style.left = "-7891px";
-        } else if (activePage === 11) {
-            block_imgs.current.style.left = "-8774px";
-        }
-        else if (activePage === 12) {
-            block_imgs.current.style.left = "-9696px";
-        }
+        
         
 
     }, [activePage])
@@ -92,9 +123,16 @@ const SliderBreeds = () => {
         setActivePage(activePage + 1);
     }
 
+    const next3Pages = () => {
+        setActivePage(activePage + 3);
+    }
+    const prev3Pages = () => {
+        setActivePage(activePage - 3);
+    }
+
     //logic sort 
     const [activeSortObject, setActiveSortObject] = React.useState(jsonCats.long_hair);
-
+    const objsLatters = React.useRef([])
     React.useEffect(() => {
         setActivePage(1);
         if (activeSort === 0){
@@ -110,11 +148,41 @@ const SliderBreeds = () => {
 
         setActiveCardCat(0);
         setTimeout(() => {
-            block_imgs.current.style.width = `${block_imgs.current.childNodes.length * (block_imgs.current.childNodes[0].clientWidth + 140)}px`;
+            if (document.documentElement.clientWidth < 1920) {
+                let marginBetwenCards = document.documentElement.clientWidth * 0.073;
+                block_imgs.current.style.width = `${block_imgs.current.childNodes.length * (block_imgs.current.childNodes[0].clientWidth + marginBetwenCards)}px`;
+            } else {
+                block_imgs.current.style.width = `${block_imgs.current.childNodes.length * (block_imgs.current.childNodes[0].clientWidth + 140)}px`;
+            }
             setNumberPages(Math.ceil(block_imgs.current.childNodes.length / 3));
         }, 200);
 
+
+        for (let i = 0; i < activeSortObject.length; i++) {
+            const element = activeSortObject[i];
+            let objForArr = {
+                latter: element.name.match(/^\w/)[0],
+                index: i,
+            }
+            // if(){
+            //     objsLatters.current.push(objForArr)
+            // }else{
+
+            // }
+            objsLatters.current.push(objForArr)
+
+        }
+
+        // setTimeout(() => {
+        //    for (let i = 0; i < objsLatters.length; i++) {
+        //     } 
+        // }, 200);
+        
     }, [activeSort])
+
+
+   
+
     const changeActiveSort = (num) => setActiveSort(num);
     return (
         <>
@@ -138,7 +206,9 @@ const SliderBreeds = () => {
             </div>
 
             <div className={s.slider_cnt}>
-                <button className={s.prev} onClick={() => prevPage()}>∟</button>
+                <button className={s.prev} onClick={() => prevPage()}>
+                    <img src="/img/icon_arow.svg" alt="" />
+                </button>
                 <div className={s.wrap_cont}>
                     <div ref={block_imgs} className={s.block_imgs}>
                     
@@ -154,16 +224,29 @@ const SliderBreeds = () => {
 
                     </div>
                 </div>
-                <button className={s.next} onClick={() => nextPage()}>∟</button>
+                <button className={s.next} onClick={() => nextPage()}>
+                    <img src="/img/icon_arow.svg" alt="" />
+                </button>
             </div>
 
             <div className={s.dots}>
-                {
-                    dots.map((el, index) => <span key={`${index}_dots`}
-                        className={activePage === index + 1 ? `${s.active}` : ``}
-                        onClick={() => setActivePage(index + 1)}
-                    ></span>)
-                }
+
+                <button className={s.next3Pages} onClick={() => prev3Pages()}>
+                    <img src="/img/icon_arow.svg" alt="" />
+                </button>
+                <div className={s.container_dots}>
+                        {
+                            dots.map((el, index) => <span key={`${index}_dots`}
+                                className={activePage === index + 1 ? `${s.active}` : ``}
+                                onClick={() => setActivePage(index + 1)}
+                            ></span>)
+                        }
+                </div>
+
+                <button className={s.prev3Pages} onClick={() => next3Pages()}>
+                    <img src="/img/icon_arow.svg" alt="" />
+                </button>
+            
             </div>
         </div>
         

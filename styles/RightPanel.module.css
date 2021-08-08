@@ -7,7 +7,7 @@
     justify-content: space-between;
     position: fixed;
     transform: translateX(36vw) translateY(-50%);
-    top: calc(50% + (2.4vw + 3.073vw) / 3);
+    top: calc(50% + (0.5vw + 3.073vw) / 3);
 }
 
 .browse {
@@ -199,7 +199,7 @@
         max-width: 270px;
         max-height: 729.6px;
         transform: translateX(690px) translateY(-50%);
-        top: calc(50% + (2.4vw + 56.25px) / 3);
+        top: calc(50% + (0.5vw + 56.25px) / 3);
     }
     .browse {
         height: 112.5px;

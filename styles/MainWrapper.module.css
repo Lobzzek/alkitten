@@ -16,6 +16,14 @@
     justify-content: center;
 }
 
+.center_content.triggered section:first-child {
+    position: absolute;
+}
+
+.center_content.triggered section:last-child {
+    position: absolute;
+}
+
 .main_content {
     width: 43.875vw;
     position: relative;

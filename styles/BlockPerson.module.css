@@ -63,13 +63,14 @@
     font-family: "modelica-r";
     font-size: .65vw;
     margin: 0;
+    width: 50px;
 }
 
 .block_person>p {
     margin: 0 0 0 0.75vw;
     font-family: "modelica-r";
     font-size: 0.72vw;
-    width: 10vw;
+    width: fit-content;
     color: #365864;
 }
 
@@ -119,7 +120,6 @@
     .block_person>p {
         font-size: 13.875px;
         margin-left: 13.875px;
-        width: 197.5px;
     }
     .location img {
         width: 11.25px;

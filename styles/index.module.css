@@ -44,6 +44,7 @@
     font-size: 0.75vw;
     font-family: "modelica-r";
     padding-left: 55px;
+    outline: none;
 }
 
 .search_form .search_inp button {
@@ -61,24 +62,28 @@
 
 .criteries {
     background: #f1efe8;
-    width: 36.510vw;
-    height: 11.198vw;
+    width: auto;
+    height: auto;
     border: 1px solid #000;
     border-radius: 4px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 6vw;
+    padding: 5px;
 }
 
 .criteries>div {
     height: 10.156vw;
     position: relative;
+    margin: 5px;
 }
 
 .criteries .section_param1 {
     width: 10.521vw;
     background: white;
+    display: flex;
+    flex-direction: column;
 }
 
 .criteries .section_param2 {
@@ -87,7 +92,7 @@
 }
 
 .criteries .section_param3 {
-    width: 8.4vw;
+    width: 9vw;
 }
 
 .criteries .section_param4 {
@@ -99,17 +104,18 @@
 }
 
 .criteries .section_param1>p {
+    position: relative;
     font-size: .75vw;
     font-family: "modelica-m";
     color: #253E47;
-    padding: 0;
-    margin: 0.417vw 0 .2vw 0;
+    padding: 5px 0;
+    margin: 0;
 }
 
 .criteries .section_param1 ul {
     padding: 0;
     overflow-y: scroll;
-    height: 8.5vw;
+    height: 100%;
     margin: 0;
 }
 
@@ -147,6 +153,13 @@
     display: none;
 }
 
+.criteries .section_param1 ul li {
+    height: .75vw;
+    margin-bottom: .25vw;
+    display: flex;
+    align-items: center;
+}
+
 .criteries .section_param1 ul li label {
     color: #919191;
     font-size: .75vw;
@@ -163,35 +176,37 @@
 
 .criteries .section_param2 {
     padding-left: 0.525vw;
+    display: flex;
+    flex-direction: column;
 }
 
 .criteries .section_param2>p {
     font-size: .75vw;
     font-family: "modelica-m";
     color: #253E47;
-    padding: 0;
-    margin: 0.417vw 0 .2vw 0;
+    padding: 3px 0;
+    margin: 0;
 }
 
 .criteries .section_param2 ul {
     padding: 0;
     margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .criteries .section_param2 ul li {
     list-style-type: none;
-    margin-top: .1vw;
     -webkit-touch-callout: none;
-    /* iOS Safari */
     -webkit-user-select: none;
-    /* Chrome/Safari/Opera */
     -khtml-user-select: none;
-    /* Konqueror */
     -moz-user-select: none;
-    /* Firefox */
     -ms-user-select: none;
-    /* Internet Explorer/Edge */
     user-select: none;
+    height: calc(100% / 7);
+    display: flex;
 }
 
 .criteries .section_param2 ul li input {
@@ -224,9 +239,8 @@
     height: 7.135vw;
     width: 100%;
     background: white;
-}
-
-.section_param3 .pick_availability {
+    display: flex;
+    flex-direction: column;
     padding-left: 0.525vw;
 }
 
@@ -234,13 +248,17 @@
     font-size: .75vw;
     font-family: "modelica-m";
     color: #253E47;
-    padding: 0;
-    margin: 0.417vw 0 .1vw 0;
+    padding: 3px 0;
+    margin: 0;
 }
 
 .section_param3 .pick_availability ul {
     padding: 0;
     margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .section_param3 .pick_availability ul li {
@@ -257,6 +275,8 @@
     -ms-user-select: none;
     /* Internet Explorer/Edge */
     user-select: none;
+    height: calc(100% / 5);
+    display: flex;
 }
 
 .section_param3 .pick_availability ul li input {
@@ -283,9 +303,8 @@
     height: 2.552vw;
     width: 100%;
     background: white;
-}
-
-.section_param3 .pick_price {
+    display: flex;
+    flex-direction: column;
     padding-left: 0.525vw;
 }
 
@@ -293,14 +312,16 @@
     font-size: .75vw;
     font-family: "modelica-m";
     color: #253E47;
-    padding: 0;
-    margin: 0.417vw 0 .1vw 0;
+    padding: 3px;
+    margin: 0;
 }
 
 .section_param3 .pick_price ul {
     padding: 0;
     margin: 0;
     display: flex;
+    height: 100%;
+    align-items: flex-start;
 }
 
 .section_param3 .pick_price ul li {
@@ -322,7 +343,7 @@
 }
 
 .section_param3 .pick_price ul li:nth-child(2) {
-    margin-left: .3vw;
+    margin-left: .1vw;
 }
 
 .section_param3 .pick_price ul li input {
@@ -342,8 +363,10 @@
 .section_param3 .pick_price ul li label::before {
     content: '';
     position: absolute;
-    width: 0.4vw;
-    height: 0.4vw;
+    max-width: 0.4vw;
+    max-height: 0.4vw;
+    min-width: 0.4vw;
+    min-height: 0.4vw;
     left: -.65vw;
     background: #938556;
     border-radius: 50%;
@@ -359,8 +382,10 @@
 .section_param3 .pick_price ul li label::after {
     content: '';
     position: absolute;
-    width: 0.4vw;
-    height: 0.4vw;
+    min-width: 0.4vw;
+    min-height: 0.4vw;
+    max-width: 0.4vw;
+    max-height: 0.4vw;
     left: -.7vw;
     border: 1px solid #000;
     border-radius: 50%;
@@ -383,9 +408,8 @@
     height: 2.552vw;
     width: 100%;
     background: white;
-}
-
-.section_param4 .pick_gender {
+    display: flex;
+    flex-direction: column;
     padding-left: 0.525vw;
 }
 
@@ -393,14 +417,16 @@
     font-size: .75vw;
     font-family: "modelica-m";
     color: #253E47;
-    padding: 0;
-    margin: 0.417vw 0 .1vw 0;
+    padding: 3px 0;
+    margin: 0;
 }
 
 .section_param4 .pick_gender ul {
     padding: 0;
     margin: 0;
     display: flex;
+    height: 100%;
+    align-items: flex-start;
 }
 
 .section_param4 .pick_gender ul li {
@@ -419,7 +445,7 @@
     user-select: none;
     display: flex;
     align-items: center;
-    margin-right: .3vw;
+    margin-right: .1vw;
 }
 
 .section_param4 .pick_gender ul li input {
@@ -439,8 +465,10 @@
 .section_param4 .pick_gender ul li label::before {
     content: '';
     position: absolute;
-    width: 0.4vw;
-    height: 0.4vw;
+    min-width: 0.4vw;
+    min-height: 0.4vw;
+    max-width: 0.4vw;
+    max-height: 0.4vw;
     left: -.65vw;
     background: #938556;
     border-radius: 50%;
@@ -456,8 +484,10 @@
 .section_param4 .pick_gender ul li label::after {
     content: '';
     position: absolute;
-    width: 0.4vw;
-    height: 0.4vw;
+    min-width: 0.4vw;
+    min-height: 0.4vw;
+    max-width: 0.4vw;
+    max-height: 0.4vw;
     left: -.7vw;
     border: 1px solid #000;
     border-radius: 50%;
@@ -472,9 +502,8 @@
     height: 4.063vw;
     width: 100%;
     background: white;
-}
-
-.section_param4 .pick_location {
+    display: flex;
+    flex-direction: column;
     padding-left: 0.525vw;
 }
 
@@ -482,8 +511,8 @@
     font-size: .75vw;
     font-family: "modelica-m";
     color: #253E47;
-    padding: 0;
-    margin: 0.417vw 0 .1vw 0;
+    padding: 3px 0;
+    margin: 0;
 }
 
 .section_param4 .pick_location ul {
@@ -491,6 +520,8 @@
     margin: 0;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
 }
 
 .section_param4 .pick_location ul li {
@@ -509,7 +540,7 @@
     user-select: none;
     display: flex;
     align-items: center;
-    margin-right: .3vw;
+    margin-right: 0vw;
 }
 
 .section_param4 .pick_location ul li input {
@@ -529,8 +560,10 @@
 .section_param4 .pick_location ul li label::before {
     content: '';
     position: absolute;
-    width: 0.4vw;
-    height: 0.4vw;
+    min-width: 0.4vw;
+    min-height: 0.4vw;
+    max-width: 0.4vw;
+    max-height: 0.4vw;
     left: -.65vw;
     background: #938556;
     border-radius: 50%;
@@ -546,17 +579,15 @@
 .section_param4 .pick_location ul li label::after {
     content: '';
     position: absolute;
-    width: 0.4vw;
-    height: 0.4vw;
+    min-width: 0.4vw;
+    min-height: 0.4vw;
+    max-width: 0.4vw;
+    max-height: 0.4vw;
     left: -.7vw;
     border: 1px solid #000;
     border-radius: 50%;
     top: 50%;
     transform: translateY(-50%);
-}
-
-.section_param4 .pick_location ul li:nth-child(3) {
-    margin-top: .3vw;
 }
 
 .section_param4 .with_photo label {
@@ -572,15 +603,19 @@
 }
 
 .section_param4 .with_photo label::before {
-    content: '';
+    content: '✔';
     position: absolute;
-    width: 0.4vw;
-    height: 0.45vw;
-    left: -.65vw;
-    background: #938556;
+    width: 0.5vw;
+    height: 0.5vw;
+    left: -.63vw;
     top: 50%;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    font-size: .5vw;
     transform: translateY(-53%);
     opacity: 0;
+    font-weight: 600;
 }
 
 .section_param4 .with_photo input:checked+label::before {
@@ -590,8 +625,8 @@
 .section_param4 .with_photo label::after {
     content: '';
     position: absolute;
-    width: 0.4vw;
-    height: 0.45vw;
+    width: 0.5vw;
+    height: 0.5vw;
     left: -.7vw;
     border: 1px solid #000;
     border-radius: 2px;
@@ -644,95 +679,201 @@
 
 @media screen and (min-width: 1920px) {
     .top_text {
-        margin-bottom: 33.75px;
+        margin-bottom: 35px;
     }
     .top_text h2 {
-        font-size: 28.75px;
+        font-size: 28.8px;
     }
     .top_text p {
-        font-size: 20.4px;
+        font-size: 20.352px;
     }
     .search_form .search_inp {
-        margin-bottom: 19px;
+        margin-bottom: 19.2px;
     }
     .search_form .search_inp input {
-        width: 445px;
+        border-radius: 4px;
+        width: 441.6px;
         height: 44px;
-        font-size: 15.36px;
+        font-size: 14.4px;
+        padding-left: 55px;
+    }
+    .search_form .search_inp button {
+        left: 5.76px;
+    }
+    .search_form .search_inp button img {
+        width: 19.2px;
     }
     .criteries {
-        width: 701px;
-        height: 213px;
-        margin-bottom: 127px;
-    }
-    .criteries .section_param1 {
-        width: 202px;
-    }
-    .criteries .section_param2 {
-        width: 101px;
-    }
-    .criteries .section_param3 {
-        width: 158px;
-    }
-    .criteries .section_param4 {
-        width: 178.5px;
+        margin-bottom: 115.1920px;
+        padding: 5px;
     }
     .criteries>div {
-        height: 194.9px;
-        overflow: hidden;
+        height: 194px;
     }
-    .criteries div p {
-        font-size: 14.4px !important;
-        margin: 8px 0 2px 0;
+    .criteries .section_param1 {
+        width: 194px;
+        padding-left: 10px;
     }
-    .criteries div label, .section_param4 .with_photo label {
-        font-size: 14.4px !important;
+    .criteries .section_param2 {
+        width: 100px;
     }
-    .criteries .pick_availability label {
-        font-size: 13.4px !important;
+    .criteries .section_param3 {
+        width: 161px;
     }
-    .criteries .pick_price label, .criteries .pick_gender label, .criteries .pick_location label {
-        font-size: 11.5px !important;
-        margin-top: 2px !important;
+    .criteries .section_param4 {
+        width: 178px;
     }
-    .section_param3 .pick_price ul li:nth-child(2) {
-        margin-left: 4px;
+    .criteries .section_param1>p {
+        font-size: 14.4px;
+        margin: 0;
+        padding: 10px;
     }
-    .criteries div label::before {
-        min-width: 7.6px !important;
-        min-height: 7.6px !important;
-        left: -12.48px !important;
+    .criteries .section_param1 ul li {
+        height: 14.4px;
+        margin-bottom: 4.8px;
     }
-    .criteries div label::after {
-        min-width: 7.6px !important;
-        min-height: 7.6px !important;
-        left: -13.44px !important;
+    .criteries .section_param1 ul li label {
+        font-size: 14.4px;
     }
-    .criteries .pick_availability {
-        height: 137px;
+    .criteries .section_param2 {
+        padding-left: 10px;
     }
-    .criteries .pick_price {
-        height: 49px;
+    .criteries .section_param2>p {
+        font-size: 14.4px;
+        padding: 3px;
     }
-    .criteries .pick_gender {
-        height: 130.7px;
-        margin-bottom: 7px;
+    .criteries .section_param2 ul li label {
+        font-size: 14.4px;
     }
-    .criteries .pick_location {
-        height: 140px;
-        padding-bottom: 7px;
-        margin-bottom: 4px;
+    .section_param3 .pick_availability {
+        height: 136px;
+        padding-left: 10px;
+    }
+    .section_param3 .pick_availability>p {
+        font-size: 14.4px;
+        padding: 3px 0;
+    }
+    .section_param3 .pick_availability ul li label {
+        font-size: 13.44px;
+    }
+    .section_param3 .pick_price {
+        height: 48.9px;
+        padding-left: 10px;
+    }
+    .section_param3 .pick_price>p {
+        font-size: 14.4px;
+        padding: 3px;
+    }
+    .section_param3 .pick_price ul li label {
+        font-size: 12px;
+        margin-top: 3.84px;
+    }
+    .section_param3 .pick_price ul li label::before {
+        max-width: 7.68px;
+        max-height: 7.68px;
+        min-width: 7.68px;
+        min-height: 7.68px;
+        left: -12.48px;
+    }
+    .section_param3 .pick_price ul li label::after {
+        min-width: 7.68px;
+        min-height: 7.68px;
+        max-width: 7.68px;
+        max-height: 7.68px;
+        left: -13.44px;
+    }
+    .section_param4 .pick_gender {
+        height: 48.9px;
+        padding-left: 10px;
+    }
+    .section_param4 .pick_gender>p {
+        font-size: 14.4px;
+        padding: 3px 0;
+    }
+    .section_param4 .pick_gender ul li {
+        list-style-type: none;
+        margin-right: 5.7px;
+    }
+    .section_param4 .pick_gender ul li label {
+        font-size: 12px;
+        margin-top: .2vw;
+    }
+    .section_param4 .pick_gender ul li label::before {
+        min-width: 7.68px;
+        min-height: 7.68px;
+        max-width: 7.68px;
+        max-height: 7.68px;
+        left: -12.48px;
+        border-radius: 50%;
+        top: 50%;
+    }
+    .section_param4 .pick_gender ul li label::after {
+        min-width: 7.68px;
+        min-height: 7.68px;
+        max-width: 7.68px;
+        max-height: 7.68px;
+        left: -13.44px;
+    }
+    .section_param4 .pick_location {
+        height: 78px;
+        padding-left: 10px;
+    }
+    .section_param4 .pick_location>p {
+        font-size: 14.4px;
+        padding: 3px 0;
+        margin: 0;
+    }
+    .section_param4 .pick_location ul li {
+        margin-top: 0vw;
+        margin-right: 5.7px;
+    }
+    .section_param4 .pick_location ul li label {
+        font-size: 12px;
+        margin-top: 3.84px;
+    }
+    .section_param4 .pick_location ul li label::before {
+        min-width: 7.68px;
+        min-height: 7.68px;
+        max-width: 7.68px;
+        max-height: 7.68px;
+        left: -12.48px;
+    }
+    .section_param4 .pick_location ul li label::after {
+        min-width: 7.68px;
+        min-height: 7.68px;
+        max-width: 7.68px;
+        max-height: 7.68px;
+        left: -13.44px;
+    }
+    .section_param4 .with_photo label {
+        font-size: 14.4px;
+    }
+    .section_param4 .with_photo label::before {
+        width: 9.6px;
+        height: 9.6px;
+        left: -12px;
+        top: 50%;
+        font-size: 9.6px;
+    }
+    .section_param4 .with_photo label::after {
+        width: 9.6px;
+        height: 9.6px;
+        left: -13.44px;
+        border-radius: 2px;
     }
     .section_param4>input[type="submit"] {
         font-size: 15.36px;
+        padding: 4.8px 7.68px;
+        border-radius: 0.208vw;
+    }
+    .last_kittens .block_cats {
+        width: 923.52px;
+        margin-bottom: 23px;
     }
     .last_kittens>a {
         font-size: 19.2px;
-    }
-    .with_photo {
-        margin-bottom: 5px;
-    }
-    .last_kittens .block_cats {
-        width: 923.75px;
+        color: white;
+        padding: 5.7px 9.6px;
+        border-radius: 0.26vw;
     }
 }

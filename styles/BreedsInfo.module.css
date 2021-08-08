@@ -66,14 +66,14 @@
     width: 254px;
     position: relative;
     z-index: 1;
-    height: 26px;
     display: block;
-    line-height: 26px;
     text-align: center;
     background: #938556;
     color: #fff;
     border-radius: 5px;
     font-family: "modelica-r";
+    font-size: 19px;
+    padding: 5px 0;
 }
 
 .breed_info_right {
@@ -155,9 +155,8 @@
     }
     .breed_info_left__button {
         width: 13.229vw;
-        height: 1.354vw;
-        line-height: 1.354vw;
         border-radius: 0.260vw;
+        font-size: 1vw;
     }
     .breed_info_right {
         width: 26.042vw;

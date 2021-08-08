@@ -1,7 +1,7 @@
 import MainWrapper from "../components/MainWrapper/MainWrapper.jsx";
 import CardCat from "../components/CardCat.jsx"
 import Head from "next/head"
-
+import Link from 'next/link'
 import s from "../styles/index.module.css"
 
 export default function Home() {
@@ -105,9 +105,21 @@ export default function Home() {
           <p>Browse breeds that fit your lifestyle</p>
         </div>
           <div className={s.block_cats}>
-            <CardCat image="/img/cat_for_card.jpg" name="meya" breed="F, American Longhair" verified h="1m (Adult, Nose to tail)" w="5.9 - 8.2kg" location="Temecula, CA"/>
-            <CardCat image="/img/cat_for_card.jpg" name="samey" breed="M, Bengal Cat" h="1m (Adult, Nose to tail)" w="5.9 - 8.2kg" location="San Francisco, CA"/>
-            <CardCat image="/img/cat_for_card.jpg" name="queen" breed="F, American Longhair" verified h="1m (Adult, Nose to tail)" w="5.9 - 8.2kg" location="Los Angeles, CA"/>
+            <Link href="/">
+              <a>
+                <CardCat image="/img/cat_for_card.jpg" name="meya" breed="F, American Longhair" verified h="1m (Adult, Nose to tail)" w="5.9 - 8.2kg" location="Temecula, CA" />
+              </a>
+            </Link>
+            <Link href="/">
+              <a>
+                <CardCat image="/img/cat_for_card.jpg" name="samey" breed="M, Bengal Cat" h="1m (Adult, Nose to tail)" w="5.9 - 8.2kg" location="San Francisco, CA" />
+              </a>
+            </Link>
+            <Link href="/">
+              <a>
+                <CardCat image="/img/cat_for_card.jpg" name="queen" breed="F, American Longhair" verified h="1m (Adult, Nose to tail)" w="5.9 - 8.2kg" location="Los Angeles, CA" />
+              </a>
+            </Link>
           </div> 
           <a href="dsa">Viev More</a>
       </div>

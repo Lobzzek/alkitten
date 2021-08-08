@@ -1,16 +1,39 @@
 import s from '../../../styles/LeftPanel.module.css';
 import BlockPerson from './BlockPerson.jsx';
+import React from 'react'
 
-const LeftPanel = () => {
+const LeftPanel = (props) => {    
+    // console.log(props.triggered.current)
+    // console.log(props.bottomContent.current)
+
+    // const left_p = React.useRef();
+    // React.useEffect(() => {
+    //     window.addEventListener("scroll", () => {
+    //         if (props.triggered.current <= window.scrollY){
+    //             left_p.current.style.top = `${props.bottomContent}px`;
+    //             left_p.current.style.position = `absolute`;
+
+    //         }else{
+    //             if(document.documentElement.clientWidth < 1920){
+    //                 left_p.current.style.top = `50% + (0.5vw + 3.073vw) / 3)`;
+    //                 left_p.current.style.position = `fixed`;
+    //             }else{
+    //                 left_p.current.style.top = `calc(50% + (0.5vw + 56.25px) / 3)`;
+    //                 left_p.current.style.position = `fixed`;
+    //             }
+    //         }
+    //     })
+    // }, [])
     return (
+        // <section className={s.left_panel} ref={left_p}>
         <section className={s.left_panel}>
             <div className={s.group_cats}>
                 <div className={s.top_phrase}>
                     <h3>Catteries/Breeders</h3>
                 </div>
                 <div className={s.blocks}>
-                    <BlockPerson verified rating="4" login="LAILALOVES CATTERY" description="We are a breeder located in McKinney, TX and specialize in Exotic Folds / Foldex kittens. The queen (mother) is an Exotic Long Hair and the king (father)" location="Temecula, CA"/>
-                    <BlockPerson verified rating="4" login="LAILALOVES CATTERY" description="We are a breeder located in McKinney, TX and specialize in Exotic Folds / Foldex kittens. The queen (mother) is an Exotic Long Hair and the king (father)" location="Temecula, CA"/>
+                    <BlockPerson verified rating="4" login="LAILALOVES CATTERYLOREM" description="We are a breeder located in McKinney, TX and specialize in Exotic Folds / Foldex kittens. The queen (mother) is an Exotic Long Hair and the king (father)" location="Temecula, CA"/>
+                    <BlockPerson verified rating="4" login="LAILALOVESLOREMIM CATTERY" description="We are a breeder located in McKinney, TX and specialize in Exotic Folds / Foldex kittens. The queen (mother) is an Exotic Long Hair and the king (father)" location="Temecula, CA"/>
                     <BlockPerson verified rating="4" login="LAILALOVES CATTERY" description="We are a breeder located in McKinney, TX and specialize in Exotic Folds / Foldex kittens. The queen (mother) is an Exotic Long Hair and the king (father)" location="Temecula, CA"/>
                     <BlockPerson verified rating="4" login="LAILALOVES CATTERY" description="We are a breeder located in McKinney, TX and specialize in Exotic Folds / Foldex kittens. The queen (mother) is an Exotic Long Hair and the king (father)" location="Temecula, CA"/>
                     <BlockPerson verified rating="4" login="LAILALOVES CATTERY" description="We are a breeder located in McKinney, TX and specialize in Exotic Folds / Foldex kittens. The queen (mother) is an Exotic Long Hair and the king (father)" location="Temecula, CA"/>
@@ -26,16 +49,20 @@ const LeftPanel = () => {
             <div className={s.faq}>
                 <div className={s.text}>
                     <h4>FAQs</h4>
-                    <div className={s.punkt}>
-                        <p>What is allkittens?</p>
-                        <a href="#">+</a>
-                    </div>
-                    <div className={s.punkt}>
-                        <p>How does the delivery <br />
-                        work?</p>
-                        <a href="#">+</a>
-                    </div>
-                    <a href="#">View More</a>
+                    <a href="#">
+                        <div className={s.punkt}>
+                            <p>What is allkittens?</p>
+                            <p>+</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div className={s.punkt}>
+                            <p>How does the delivery <br />
+                            work?</p>
+                            <p>+</p>
+                        </div>
+                    </a>
+                    <a href="#" className={s.view}>View More</a>
                 </div>
             </div>
             {/* <div className={s.gallery}>

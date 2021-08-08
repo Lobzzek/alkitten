@@ -22,6 +22,18 @@ const CatForSlider = (props) => {
                     }}>Info</button>
                 </div>
             </div>
+            <div className={s.fav_ava}>
+                
+                <div className={s.favorite}>
+                    <img src="/img/icon_heart.svg" alt="" />
+                    <p>Favorite</p>
+                </div>
+
+                <div className={s.available}>
+                    <h4>21</h4>
+                    <p>Available</p>
+                </div>
+            </div>
         </div>
     )
 }
