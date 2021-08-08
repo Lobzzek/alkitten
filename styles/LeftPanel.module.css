@@ -127,7 +127,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 
 .faq .text h4 {
@@ -240,7 +239,6 @@
     .group_cats {
         height: 537.5px;
     }
-    .group_cats .top_phrase {}
     .group_cats .top_phrase h3 {
         font-size: 21.6px;
     }
@@ -285,3 +283,41 @@
         font-size: 19.075px;
     }
 }
+
+@media (min-aspect-ratio: 180/83) {
+    .left_panel {
+        max-height: 700px;
+    }
+    .group_cats {
+        height: 437.5px;
+    }
+}
+
+@media (min-aspect-ratio: 1826/783) {
+    .left_panel {
+        max-width: 270px;
+        max-height: 600px;
+    }
+    .group_cats {
+        height: 337.5px;
+    }
+}
+/* 
+@media (min-aspect-ratio: 180/83) {
+    .left_panel {
+        max-height: 700px;
+    }
+    .group_cats {
+        height: 437.5px;
+    }
+}
+
+@media (min-aspect-ratio: 1826/783) {
+    .left_panel {
+        max-width: 270px;
+        max-height: 600px;
+    }
+    .group_cats {
+        height: 337.5px;
+    }
+} */

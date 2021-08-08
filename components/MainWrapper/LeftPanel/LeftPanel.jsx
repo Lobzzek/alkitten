@@ -4,9 +4,8 @@ import React from 'react'
 
 const LeftPanel = (props) => {    
     // console.log(props.triggered.current)
-    // console.log(props.bottomContent.current)
 
-    // const left_p = React.useRef();
+    const left_p = React.useRef();
     // React.useEffect(() => {
     //     window.addEventListener("scroll", () => {
     //         if (props.triggered.current <= window.scrollY){
@@ -24,9 +23,35 @@ const LeftPanel = (props) => {
     //         }
     //     })
     // }, [])
+
+    // React.useEffect(() => {
+    //     window.addEventListener("scroll", () => {
+    //         if (window.scrollY >= props.triggered.current){
+    //             if (document.documentElement.clientWidth > 1920){
+    //                 left_p.current.style.position = `absolute`;
+    //                 left_p.current.style.top = `${props.bottomContent.current - left_p.current.clientHeight * 2 + document.documentElement.clientHeight +
+    //                     (document.documentElement.clientHeight * 0.05 + 56.25) / 2}px`;
+    //             }else{
+    //                 left_p.current.style.position = `absolute`;
+    //                 left_p.current.style.top = `${props.bottomContent.current - left_p.current.clientHeight * 2 + document.documentElement.clientHeight +
+    //                 (document.documentElement.clientWidth * 0.0359) / 2}px`;
+    //             }
+                
+            
+    //         }else{
+    //             if(document.documentElement.clientWidth < 1920){
+    //                 left_p.current.style.position = `fixed`;
+    //                 left_p.current.style.top = `calc(50% + (0.5vw + 3.073vw) / 3)`;
+    //             }else{
+    //                 left_p.current.style.position = `fixed`;
+    //                 left_p.current.style.top = `calc(50% + (0.5vw + 56.25px) / 3)`;
+    //             }
+    //         }
+    //     })
+    // }, [])
     return (
-        // <section className={s.left_panel} ref={left_p}>
-        <section className={s.left_panel}>
+        <section className={s.left_panel} ref={left_p}>
+         {/* <section className={s.left_panel}> */}
             <div className={s.group_cats}>
                 <div className={s.top_phrase}>
                     <h3>Catteries/Breeders</h3>

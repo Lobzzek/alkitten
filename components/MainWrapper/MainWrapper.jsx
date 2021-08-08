@@ -31,15 +31,15 @@ function MainWrapper(props) {
         }
         triggerScroll.current = offset(main_content).bottom - document.documentElement.clientHeight;
         bottomContent.current = offset(main_content).bottom;
-        window.addEventListener("scroll", () => {
-            if (triggerScroll.current <= window.scrollY){
-                triggered.current = true;
-                setTriggeredState(triggered.current);
-            }else{
-                triggered.current = false;
-                setTriggeredState(triggered.current);
-            }
-        })
+        // window.addEventListener("scroll", () => {
+        //     if (triggerScroll.current <= window.scrollY){
+        //         triggered.current = true;
+        //         setTriggeredState(triggered.current);
+        //     }else{
+        //         triggered.current = false;
+        //         setTriggeredState(triggered.current);
+        //     }
+        // })
     }, [])
     return (
         <div className={s.main_wrapper}>

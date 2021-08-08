@@ -115,6 +115,7 @@
     margin: 0 auto;
     width: fit-content;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .dots .container_dots {
@@ -176,6 +177,22 @@
     transform: rotate(180deg);
 }
 
+.container_latters {
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+}
+
+.container_latters button {
+    background: none;
+    border: none;
+    font-size: 21.6px;
+    font-family: 'modelica-r';
+    cursor: pointer;
+}
+/* .container_latters button.active{
+    text-decoration: underline;
+} */
 @media screen and (min-width: 1920px) {
     .sort {
         width: 516px;
@@ -184,6 +201,9 @@
 }
 
 @media screen and (max-width: 1920px) {
+    .dots {
+        margin-bottom: 2.5vw;
+    }
     .sort {
         border-radius: 0.25vw;
         margin-bottom: 1.302vw;

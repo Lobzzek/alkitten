@@ -21,6 +21,8 @@ const SliderBreeds = () => {
 
     const [numberPages, setNumberPages] = React.useState()
 
+    const [activeLatter, setActiveLatter] = React.useState(0);
+
     React.useEffect(() => {
         if(document.documentElement.clientWidth < 1920){
             let marginBetwenCards = document.documentElement.clientWidth * 0.073;
@@ -132,21 +134,82 @@ const SliderBreeds = () => {
 
     //logic sort 
     const [activeSortObject, setActiveSortObject] = React.useState(jsonCats.long_hair);
-    const objsLatters = React.useRef([])
+    // const objsLatters = React.useRef();
+
+
+    let navigationLatter1 = [
+        { latter: "A", indexPage: 1 },
+        { latter: "B", indexPage: 2 },
+        { latter: "C", indexPage: 3 },
+        { latter: "H", indexPage: 3 },
+        { latter: "J", indexPage: 4 },
+        { latter: "K", indexPage: 4 },
+        { latter: "L", indexPage: 5 },
+        { latter: "M", indexPage: 5 },
+        { latter: "N", indexPage: 7 },
+        { latter: "P", indexPage: 8 },
+        { latter: "S", indexPage: 9 },
+        { latter: "T", indexPage: 10 },
+    ]
+
+    const objsLattersRef = React.useRef(navigationLatter1);
+
+    const [objsLatters, setObjsLatters] = React.useState(objsLattersRef.current);
+
+    let navigationLatter2 = [
+        { latter: "A", indexPage: 1 },
+        { latter: "B", indexPage: 3 },
+        { latter: "C", indexPage: 4 },
+        { latter: "D", indexPage: 6 },
+        { latter: "E", indexPage: 6 },
+        { latter: "H", indexPage: 7 },
+        { latter: "J", indexPage: 7 },
+        { latter: "K", indexPage: 7 },
+        { latter: "L", indexPage: 8 },
+        { latter: "M", indexPage: 8 },
+        { latter: "O", indexPage: 9 },
+        { latter: "P", indexPage: 10 },
+        { latter: "R", indexPage: 10 },
+        { latter: "S", indexPage: 10 },
+        { latter: "T", indexPage: 12 },
+    ]
+    let navigationLatter3 = [
+        { latter: "B", indexPage: 1 },
+        { latter: "C", indexPage: 1 },
+        { latter: "D", indexPage: 2 },
+        { latter: "H", indexPage: 2 },
+        { latter: "K", indexPage: 2 },
+        { latter: "L", indexPage: 3 },
+        { latter: "M", indexPage: 3 },
+        { latter: "O", indexPage: 3 },
+        { latter: "P", indexPage: 4 },
+        { latter: "S", indexPage: 4 },
+        { latter: "T", indexPage: 4 },
+    ]
     React.useEffect(() => {
         setActivePage(1);
         if (activeSort === 0){
             setActiveSortObject(jsonCats.long_hair);
-            dispatch(setActiveBreed(jsonCats.long_hair[0]))
+            dispatch(setActiveBreed(jsonCats.long_hair[0]));
+
+            objsLattersRef.current = navigationLatter1;
+            setObjsLatters(objsLattersRef.current);
+
         } else if (activeSort === 1){
             setActiveSortObject(jsonCats.short_hair)
             dispatch(setActiveBreed(jsonCats.short_hair[0]))
+
+            objsLattersRef.current = navigationLatter2;
+            setObjsLatters(objsLattersRef.current);
         } else if (activeSort === 2) {
             setActiveSortObject(jsonCats.siamese_and_oriental)      
             dispatch(setActiveBreed(jsonCats.siamese_and_oriental[0]))
-        }
 
+            objsLattersRef.current = navigationLatter3;
+            setObjsLatters(objsLattersRef.current);
+        }
         setActiveCardCat(0);
+        setActiveLatter(0);
         setTimeout(() => {
             if (document.documentElement.clientWidth < 1920) {
                 let marginBetwenCards = document.documentElement.clientWidth * 0.073;
@@ -156,34 +219,12 @@ const SliderBreeds = () => {
             }
             setNumberPages(Math.ceil(block_imgs.current.childNodes.length / 3));
         }, 200);
-
-
-        for (let i = 0; i < activeSortObject.length; i++) {
-            const element = activeSortObject[i];
-            let objForArr = {
-                latter: element.name.match(/^\w/)[0],
-                index: i,
-            }
-            // if(){
-            //     objsLatters.current.push(objForArr)
-            // }else{
-
-            // }
-            objsLatters.current.push(objForArr)
-
-        }
-
-        // setTimeout(() => {
-        //    for (let i = 0; i < objsLatters.length; i++) {
-        //     } 
-        // }, 200);
         
     }, [activeSort])
 
-
-   
-
     const changeActiveSort = (num) => setActiveSort(num);
+
+    
     return (
         <>
         <div className={s.slider_breeds}>
@@ -242,12 +283,24 @@ const SliderBreeds = () => {
                             ></span>)
                         }
                 </div>
-
                 <button className={s.prev3Pages} onClick={() => next3Pages()}>
                     <img src="/img/icon_arow.svg" alt="" />
                 </button>
-            
             </div>
+                <div className={s.container_latters}>
+                    {
+                        objsLatters.map((el, index) => <button 
+                        className={activeLatter === index ? `${s.active}` : ``}
+                         key={`${index}_latter_nav`} 
+                         onClick={() => {
+                             setActivePage(el.indexPage)
+                             setActiveLatter(index);
+                            }
+                         }>
+                             {el.latter}
+                        </button>)
+                    }
+                </div>
         </div>
         
         <BreedsInfo {...state} />

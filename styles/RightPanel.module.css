@@ -253,3 +253,45 @@
         font-size: 19px;
     }
 }
+/* 
+@media (min-aspect-ratio: 180/83) {
+    .right_panel {
+        max-height: 33.677vw;
+    }
+    .started {
+        height: 9.896vw;
+    }
+    .started .text h4 {
+        margin: 0.234vw 0 0.365vw 0;
+    }
+    .started .text p {
+        margin-bottom: 0.208vw;
+    }
+    .become {
+        height: 5.469vw;
+    }
+    .become .text h4 {
+        margin: 0.247vw 0 0.221vw 0;
+    }
+} */
+
+@media (min-aspect-ratio: 180/83) {
+    .right_panel {
+        max-height: 685.6px;
+    }
+    .started {
+        height: 190px;
+    }
+    .started .text h4 {
+        margin: 4.5px 0 7px 0;
+    }
+    .started .text p {
+        margin-bottom: 4px;
+    }
+    .become {
+        height: 105px;
+    }
+    .become .text h4 {
+        margin: 4.75px 0 4.25px 0;
+    }
+}
