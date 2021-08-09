@@ -16,9 +16,8 @@
 .wrap {
     display: flex;
     align-items: center;
-    width: 89.479vw;
+    width: 85.8vw;
     margin: 0 auto;
-    transform: translateX(-1.719vw);
 }
 
 .logo {
@@ -27,13 +26,13 @@
     position: relative;
     width: fit-content;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    width: 14vw;
 }
 
 .header .logo img {
-    height: 95% !important;
-    width: auto !important;
-    margin: 0 2.4vw !important;
+    width: 85% !important;
 }
 
 .header nav {
@@ -89,16 +88,17 @@
     .header .wrap {
         height: 100%;
         position: relative;
-        max-width: 1718px;
+        width: 1647px;
         margin: 0 auto;
         display: flex;
         align-items: center;
-        transform: translateX(-33px);
+        /* transform: translateX(-33px); */
     }
     .logo {
         position: relative;
         height: 103%;
         margin-left: 0;
+        width: 270px;
     }
     .user {
         height: 103%;

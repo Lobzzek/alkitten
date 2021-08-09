@@ -2,7 +2,7 @@
     position: sticky;
     position: -webkit-sticky;
     /* top: calc((100vh / 2) - (41.967vw / 2) + (2.917vh / 2)); */
-    top: calc(8.3vw - (0.05vw + 2.930vw));
+    top: 8.3vw;
     width: 14.0625vw;
     height: 41.967vw;
     margin-top: 0;
@@ -240,7 +240,7 @@
     .left_panel {
         max-width: 270px;
         max-height: 800px;
-        top: calc(161.25px - (0.05vw + 56.25px));
+        top: 161.25px;
     }
     .group_cats {
         height: 537.5px;
@@ -290,7 +290,7 @@
     }
 }
 
-@media (min-aspect-ratio: 1919/928) {
+@media (min-aspect-ratio: 1900/966) {
     .left_panel {
         max-height: 705px;
     }
@@ -299,7 +299,7 @@
     }
 }
 
-@media (min-aspect-ratio: 1826/783) {
+@media (min-aspect-ratio: 1900/877) {
     .left_panel {
         max-width: 270px;
         max-height: 600px;
