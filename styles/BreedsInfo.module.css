@@ -6,7 +6,7 @@
 .breed_info__title {
     font-size: 28px;
     text-align: center;
-    margin: 0px 0px 20px 0px;
+    margin: 0px 0px 115px 0px;
     position: relative;
     z-index: 1;
     color: #202D34;
@@ -14,7 +14,7 @@
 }
 
 .breed_info_container {
-    width: 900px;
+    width: 1000px;
     margin: 0 auto;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .breed_info_left {
-    width: 400px;
+    width: 500px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -39,15 +39,7 @@
 }
 
 .breed_info_left__img {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    position: relative;
     width: 254px;
     height: 326px;
     margin: 0px 0px 10px 0px;
@@ -57,9 +49,11 @@
 }
 
 .breed_info_left__img img {
-    height: 120%;
-    position: relative;
-    top: -5px;
+    height: calc(120% * 1.23);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -58%);
 }
 
 .breed_info_left__button {
@@ -95,24 +89,23 @@
     padding: 0;
 }
 
-.breed-info-right__row {
-    padding: 5px;
-    line-height: 20px;
-    padding: 10px 0;
-}
 
 .breed_info_right__row {
     padding: 5px 10px 5px 10px;
 }
-
 .breed_info_right__row:nth-child(odd) {
     background: #f1efe8;
     padding: 7px 10px 7px 10px;
 }
-
+.breed_info_right__row p{
+    margin: 0;
+    font-size: 15px;
+    font-family: "modelica-r";
+}
 .breed_info_right__row span {
     text-transform: capitalize;
     font-weight: 700;
+    font-size: 15px;
 }
 
 .breed_info_right__row_5, .breed_info_right__row_6, .breed_info_right__row_7 {
@@ -134,14 +127,13 @@
     }
     .breed_info__title {
         font-size: 1.458vw;
-        margin: 0px 0px 1.042vw 0px;
-        
+        margin: 0px 0px 6vw 0px;
     }
     .breed_info_container {
-        width: 46.875vw;
+        width: 52vw;
     }
     .breed_info_left {
-        width: 20.833vw;
+        width: 25vw;
     }
     .breed_info_left__img {
         width: 13.229vw;
@@ -149,9 +141,6 @@
         margin: 0px 0px 0.521vw 0px;
         border: 2px solid #938556;
         border-radius: 0.521vw;
-    }
-    .breed_info_left__img img {
-        top: -0.260vw;
     }
     .breed_info_left__button {
         width: 13.229vw;

@@ -13,16 +13,16 @@
     width: 85.8vw;
     margin: 8.3vw auto 4.6vw auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-.center_content.triggered section:first-child {
+/* .center_content.triggered section:first-child {
     position: absolute;
 }
 
 .center_content.triggered section:last-child {
     position: absolute;
-}
+} */
 
 .main_content {
     width: 43.875vw;

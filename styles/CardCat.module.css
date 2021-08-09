@@ -6,6 +6,12 @@
     box-shadow: 0 0 8px 6px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     overflow: hidden;
+    transition: .6s;
+}
+
+.card:hover {
+    -webkit-box-shadow: 5px 5px 32px -11px #000000;
+    box-shadow: 5px 5px 32px -11px #000000;
 }
 
 .block_img {
@@ -110,8 +116,12 @@
     margin: 0;
     padding: .31vw .625vw;
     border-radius: 0.26vw;
+    transition: .4s;
 }
-
+.location a:hover{
+    opacity: 1;
+    background: #938556;
+}
 @media screen and (min-width: 1920px) {
     .card {
         width: 281.25px;

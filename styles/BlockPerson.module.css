@@ -3,6 +3,7 @@
     background: white;
     border-radius: 0.4vw;
     position: relative;
+    padding-right: 13px;
 }
 
 .avatar_data {
@@ -77,7 +78,7 @@
 .location {
     display: flex;
     align-items: center;
-    width: 10vw;
+    width: calc(100% - 0.781vw);
     margin-left: 0.75vw;
     padding-bottom: 0.25vw;
 }
@@ -105,6 +106,7 @@
 @media screen and (min-width: 1920px) {
     .block_person {
         width: 90%;
+        padding-right: 0.677vw;
     }
     .avatar_data .avatar img {
         width: 48.75px;
@@ -125,7 +127,7 @@
         width: 11.25px;
     }
     .location {
-        width: 191.25px;
+        width: calc(100% - 15px);
     }
     .location p {
         font-size: 14.4px;

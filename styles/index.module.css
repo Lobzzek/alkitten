@@ -360,25 +360,6 @@
     position: relative;
 }
 
-.section_param3 .pick_price ul li label::before {
-    content: '';
-    position: absolute;
-    max-width: 0.4vw;
-    max-height: 0.4vw;
-    min-width: 0.4vw;
-    min-height: 0.4vw;
-    left: -.65vw;
-    background: #938556;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 0;
-}
-
-.section_param3 .pick_price ul li input:checked+label::before {
-    opacity: 1;
-}
-
 .section_param3 .pick_price ul li label::after {
     content: '';
     position: absolute;
@@ -386,11 +367,15 @@
     min-height: 0.4vw;
     max-width: 0.4vw;
     max-height: 0.4vw;
-    left: -.7vw;
+    left: calc(-.7vw + .5px);
     border: 1px solid #000;
-    border-radius: 50%;
+    border-radius: 100%;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.section_param3 .pick_price ul li input:checked+label::after {
+    background: #938556;
 }
 
 /* param4 */
@@ -462,25 +447,6 @@
     position: relative;
 }
 
-.section_param4 .pick_gender ul li label::before {
-    content: '';
-    position: absolute;
-    min-width: 0.4vw;
-    min-height: 0.4vw;
-    max-width: 0.4vw;
-    max-height: 0.4vw;
-    left: -.65vw;
-    background: #938556;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 0;
-}
-
-.section_param4 .pick_gender ul li input:checked+label::before {
-    opacity: 1;
-}
-
 .section_param4 .pick_gender ul li label::after {
     content: '';
     position: absolute;
@@ -488,11 +454,15 @@
     min-height: 0.4vw;
     max-width: 0.4vw;
     max-height: 0.4vw;
-    left: -.7vw;
+    left: calc(-.7vw + .5px);
     border: 1px solid #000;
-    border-radius: 50%;
+    border-radius: 100%;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.section_param4 .pick_gender ul li input:checked+label::after {
+    background: #938556;
 }
 
 /*pick location*/
@@ -557,25 +527,6 @@
     position: relative;
 }
 
-.section_param4 .pick_location ul li label::before {
-    content: '';
-    position: absolute;
-    min-width: 0.4vw;
-    min-height: 0.4vw;
-    max-width: 0.4vw;
-    max-height: 0.4vw;
-    left: -.65vw;
-    background: #938556;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 0;
-}
-
-.section_param4 .pick_location ul li input:checked+label::before {
-    opacity: 1;
-}
-
 .section_param4 .pick_location ul li label::after {
     content: '';
     position: absolute;
@@ -583,11 +534,15 @@
     min-height: 0.4vw;
     max-width: 0.4vw;
     max-height: 0.4vw;
-    left: -.7vw;
+    left: calc(-.7vw + .5px);
     border: 1px solid #000;
-    border-radius: 50%;
+    border-radius: 100%;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.section_param4 .pick_location ul li input:checked+label::after {
+    background: #938556;
 }
 
 .section_param4 .with_photo label {
@@ -613,7 +568,7 @@
     justify-self: center;
     align-items: center;
     font-size: .5vw;
-    transform: translateY(-53%);
+    transform: translateY(-58%);
     opacity: 0;
     font-weight: 600;
 }
@@ -627,7 +582,7 @@
     position: absolute;
     width: 0.5vw;
     height: 0.5vw;
-    left: -.7vw;
+    left: calc(-.7vw + .5px);
     border: 1px solid #000;
     border-radius: 2px;
     top: 50%;
@@ -648,8 +603,12 @@
     border: none;
     width: fit-content;
     align-self: flex-end;
+    transition: .4s;
+    cursor: pointer;
 }
-
+.section_param4>input[type="submit"]:hover{
+    opacity: .6;
+}
 /*-----last kitten------*/
 
 .last_kittens {
@@ -768,19 +727,12 @@
         font-size: 12px;
         margin-top: 3.84px;
     }
-    .section_param3 .pick_price ul li label::before {
-        max-width: 7.68px;
-        max-height: 7.68px;
-        min-width: 7.68px;
-        min-height: 7.68px;
-        left: -12.48px;
-    }
     .section_param3 .pick_price ul li label::after {
         min-width: 7.68px;
         min-height: 7.68px;
         max-width: 7.68px;
         max-height: 7.68px;
-        left: -13.44px;
+        left: -12.48px;
     }
     .section_param4 .pick_gender {
         height: 48.9px;
@@ -798,21 +750,12 @@
         font-size: 12px;
         margin-top: .2vw;
     }
-    .section_param4 .pick_gender ul li label::before {
-        min-width: 7.68px;
-        min-height: 7.68px;
-        max-width: 7.68px;
-        max-height: 7.68px;
-        left: -12.48px;
-        border-radius: 50%;
-        top: 50%;
-    }
     .section_param4 .pick_gender ul li label::after {
         min-width: 7.68px;
         min-height: 7.68px;
         max-width: 7.68px;
         max-height: 7.68px;
-        left: -13.44px;
+        left: -12.48px;
     }
     .section_param4 .pick_location {
         height: 78px;
@@ -831,19 +774,12 @@
         font-size: 12px;
         margin-top: 3.84px;
     }
-    .section_param4 .pick_location ul li label::before {
-        min-width: 7.68px;
-        min-height: 7.68px;
-        max-width: 7.68px;
-        max-height: 7.68px;
-        left: -12.48px;
-    }
     .section_param4 .pick_location ul li label::after {
         min-width: 7.68px;
         min-height: 7.68px;
         max-width: 7.68px;
         max-height: 7.68px;
-        left: -13.44px;
+        left: -12.48px;
     }
     .section_param4 .with_photo label {
         font-size: 14.4px;
@@ -851,7 +787,7 @@
     .section_param4 .with_photo label::before {
         width: 9.6px;
         height: 9.6px;
-        left: -12px;
+        left: -11.6px;
         top: 50%;
         font-size: 9.6px;
     }

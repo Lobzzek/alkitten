@@ -1,10 +1,10 @@
 .header {
-    background: #F4F3EE;
+    background: #fff;
     padding-top: .5vw;
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 2;
+    z-index: 4;
 }
 
 .green_sect {
@@ -22,7 +22,7 @@
 }
 
 .logo {
-    background-color: #F4F3EE;
+    background-color: #fff;
     height: 3.06vw;
     position: relative;
     width: fit-content;
@@ -53,7 +53,7 @@
     display: flex;
     align-items: center;
     height: 3.06vw;
-    background: #F4F3EE;
+    background: #fff;
     width: 283.75px;
     /* margin-left: auto; */
     justify-content: space-evenly;

@@ -16,34 +16,64 @@ const BreedsInfo = (props) => {
                     </div>
                     <div className={s.breed_info_right}>
                         <div className={`${s.breed_info_right__row} ${s.breed_info_right__row_1}`}>
-                            <span>height: </span>
-                            {props.height}
+                            <p>
+                                <span>height: </span>
+                                {props.height}
+                            </p>
+                            
+                            <br />
+                            <p>
                             <span> Weight: </span>
                             {props.weight}
+                            </p>
+                            <br />
+                            <p>
                             <span> Life Span: </span>
                             {props.life_span}
+                            </p>
                         </div>
                         <div className={`${s.breed_info_right__row} ${s.breed_info_right__row_2}`}>
+                            <p>
                             <span>Good With: </span>
                             {props.good_with}
+                            </p>
+                            <br />
+                            <p>
                             <span> Intelligence: </span>
                             {props.intelligence}
+                            </p>
                         </div>
                         <div className={`${s.breed_info_right__row} ${s.breed_info_right__row_3}`}>
+                            <p>
                             <span>Temperament: </span>
                             {props.temperament}
+                            </p>
+                            <br />
+                            <p>
                             <span> Playfulness: </span>
                             {props.playfulness}
+                            </p>
+                            <br />
+                            <p>
                             <span> Activity: </span>
                             {props.activity}
+                            </p>
                         </div>
                         <div className={`${s.breed_info_right__row} ${s.breed_info_right__row_4}`}>
+                            <p>
                             <span> Shedding: </span>
                             {props.shedding}
+                            </p>
+                            <br />
+                            <p>
                             <span> Vocalness: </span>
                             {props.vocalness}
+                            </p>
+                            <br />
+                            <p>
                             <span> Coat Length: </span>
                             {props.coat_length}
+                            </p>
                         </div>
                         <div className={`${s.breed_info_right__row} ${s.breed_info_right__row_5}`}>
                             <span>Patterns: </span>
