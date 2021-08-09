@@ -5,9 +5,11 @@
     border: 1.2px solid #fff;
     transition: .2s;
     cursor: pointer;
-    transform: scale(1.35);
+    transform: scale(1.45);
 }
-
+.card_cat.hiddenCart {
+    opacity: 0;
+}
 .block_img {
     width: 137.5px;
     height: 162.5px;

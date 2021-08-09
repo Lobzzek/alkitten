@@ -64,13 +64,15 @@
     background: #f1efe8;
     width: auto;
     height: auto;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     border-radius: 4px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 6vw;
     padding: 5px;
+    -webkit-box-shadow: 5px 5px 32px -11px #000000;
+    box-shadow: 5px 5px 32px -11px #000000;
 }
 
 .criteries>div {
@@ -606,9 +608,11 @@
     transition: .4s;
     cursor: pointer;
 }
-.section_param4>input[type="submit"]:hover{
+
+.section_param4>input[type="submit"]:hover {
     opacity: .6;
 }
+
 /*-----last kitten------*/
 
 .last_kittens {

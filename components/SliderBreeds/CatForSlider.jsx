@@ -2,13 +2,18 @@ import React from 'react'
 import s from '../../styles/CatForSlider.module.css'
 import {useDispatch} from 'react-redux';
 import {setActiveBreed} from '../../Redux/actions/activeBreedsInfoAction.js'
+import classNames from 'classnames'
+
 
 const CatForSlider = (props) => {
-
-    // console.log(props.active ? props.data : false)
     const dispatch = useDispatch();
     return (
-        <div className={props.active ? `${s.card_cat} ${s.active}` : `${s.card_cat}`}>
+        // <div className={props.active ? `${s.card_cat} ${s.active}` : `${s.card_cat}`}>
+
+            <div className={classNames(s.card_cat, 
+                {[s.active]: props.active},
+                { [s.hiddenCart]: props.indexCart === props.currentCard + 2 || props.indexCart === props.currentCard - 2},
+            )}>
             <div className={s.block_img}>
                 <img src={props.image} alt="" />
             </div>

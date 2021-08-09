@@ -1,6 +1,7 @@
 .right_panel {
     position: sticky;
-    top: calc((100vh / 2) - (41.967vw / 2) + (2.917vh / 2));
+    /* top: calc((100vh / 2) - (41.967vw / 2) + (2.917vh / 2)); */
+    top: calc(8.3vw - (0.05vw + 2.930vw));
     width: 14.0625vw;
     height: 38.5vw;
     /* margin-top: 0.9vw; */
@@ -53,8 +54,8 @@
     position: relative;
     background: #f1efe8;
     height: 5.85vw;
-    border-radius: 5px;
-    border: 1.2px solid #000;
+    /* border-radius: 5px; */
+    /* border: 1.2px solid #000; */
     -webkit-box-shadow: 5px 5px 32px -11px #000000;
     box-shadow: 5px 5px 32px -11px #000000;
 }
@@ -138,8 +139,8 @@
     align-items: center;
     margin-bottom: 0.18vw;
     background: #f1efe8;
-    border-radius: 5px;
-    border: 1.2px solid #000;
+    /* border-radius: 5px; */
+    /* border: 1.2px solid #000; */
     -webkit-box-shadow: 5px 5px 32px -11px #000000;
     box-shadow: 5px 5px 32px -11px #000000;
     z-index: 1;
@@ -157,8 +158,8 @@
     margin: 0;
     height: 11.9vw;
     background: #f1efe8;
-    border-radius: 5px;
-    border: 1.2px solid #000;
+    /* border-radius: 5px; */
+    /* border: 1.2px solid #000; */
     -webkit-box-shadow: 5px 5px 32px -11px #000000;
     box-shadow: 5px 5px 32px -11px #000000;
     z-index: 1;
@@ -209,7 +210,8 @@
         max-height: 729.6px;
         /* transform: translateX(690px) translateY(-50%); */
         /* top: calc(50% + (0.5vw + 56.25px) / 3); */
-        top: calc((100vh / 2) - (800px / 2) + ((56.25px + 0.05vw) / 2));
+        /* top: calc((100vh / 2) - (800px / 2) + ((56.25px + 0.05vw) / 2)); */
+        top: calc(161.25px - (0.05vw + 56.25px));
     }
     .browse {
         height: 112.5px;
