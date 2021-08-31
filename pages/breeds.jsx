@@ -7,7 +7,7 @@ import dynamic from 'next/dynamic'
 
 const BreedsInfo = dynamic(() => import('../components/BreedsInfo.jsx'));
 
-export default function Home() {
+export default function Breeds() {
     const state = useSelector(state => state.active_breeds.items);
 
     return (

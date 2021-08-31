@@ -11,7 +11,7 @@ import classNames from 'classnames'
 // }
 
 
-const gallery = () => {
+const Gallery = () => {
 
     const [openZoomImg, setOpenZoomImg] = React.useState(false);
 
@@ -228,4 +228,4 @@ const gallery = () => {
     )
 }
 
-export default gallery
+export default Gallery

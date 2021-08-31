@@ -2,7 +2,7 @@ import React from 'react'
 import s from '../styles/faq.module.css'
 import MainWrapper from '../components/MainWrapper/MainWrapper.jsx'
 
-const faq = () => {
+const Faq = () => {
 
     const listLi = React.useRef();
     const punkts = React.useRef()
@@ -77,7 +77,7 @@ const faq = () => {
         <MainWrapper>
             <div className={s.top_text}>
                 <h2>Got a question or two?</h2>
-                <p>Here's a list of Frequently Asked Questions answered for you!</p>
+                <p>Here &apos;s a list of Frequently Asked Questions answered for you!</p>
             </div>
             <div className={s.faq_cnt}>
                 <div className={s.punkts} ref={punkts}>
@@ -354,4 +354,4 @@ const faq = () => {
     )
 }
 
-export default faq
+export default Faq

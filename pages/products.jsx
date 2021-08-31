@@ -4,12 +4,12 @@ import s from '../styles/products/products.module.css';
 import CardGoods from '../components/Products/CardGoods.jsx';
 import CardGoodsSlider from '../components/Products/CardGoodsSlider.jsx';
 
-const products = () => {
+const Products = () => {
     let dataCategory1 = [
         { name_link: "Applaws", href_a: "#"},
         { name_link: "★ Concept for Life", href_a: "#"},
-        { name_link: "Hill's Prescription D", href_a: "#"},
-        { name_link: "Hill's Science Plan", href_a: "#"},
+        { name_link: "Hill &apos;s Prescription D", href_a: "#"},
+        { name_link: "Hill &apos;s Science Plan", href_a: "#"},
         { name_link: "IAMS", href_a: "#" },
         { name_link: "James Wellbeloved", href_a: "#" },
         { name_link: "Purina ONE", href_a: "#" },
@@ -247,4 +247,4 @@ const products = () => {
     )
 }
 
-export default products
+export default Products
