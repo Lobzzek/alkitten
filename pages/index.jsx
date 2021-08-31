@@ -29,17 +29,17 @@ export default function Home() {
             <ul>
                 {
                   jsonCats.long_hair.map( (el, i ) => 
-                    <li><input type="radio" name="breeds" id={`inp_rad_beeds${i + 1}`} defaultChecked={i===0 ? true : false}/><label htmlFor={`inp_rad_beeds${i + 1}`}>{el.name}</label></li>
+                    <li key={`li_beeds1${i + 1}`}><input type="radio" name="breeds" id={`inp_rad_beeds${i + 1}`} defaultChecked={i===0 ? true : false}/><label htmlFor={`inp_rad_beeds${i + 1}`}>{el.name}</label></li>
                   )
                 }
                 {
                   jsonCats.short_hair.map((el, i) =>
-                    <li><input type="radio" name="breeds" id={`inp_rad_beeds${i + 1}`}/><label htmlFor={`inp_rad_beeds${i + 1}`}>{el.name}</label></li>
+                    <li key={`li_beeds2${i + 1}`}><input type="radio" name="breeds" id={`inp_rad_beeds${i + 1}`}/><label htmlFor={`inp_rad_beeds${i + 1}`}>{el.name}</label></li>
                   )
                 }
                 {
                   jsonCats.siamese_and_oriental.map((el, i) =>
-                    <li><input type="radio" name="breeds" id={`inp_rad_beeds${i + 1}`} /><label htmlFor={`inp_rad_beeds${i + 1}`}>{el.name}</label></li>
+                    <li key={`li_beeds3${i + 1}`}><input type="radio" name="breeds"  id={`inp_rad_beeds${i + 1}`} /><label htmlFor={`inp_rad_beeds${i + 1}`}>{el.name}</label></li>
                   )
                 }
             </ul>
