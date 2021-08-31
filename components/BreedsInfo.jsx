@@ -1,5 +1,5 @@
 import React from 'react'
-import s from '../styles/BreedsInfo.module.css'
+import s from '../styles/breeds/BreedsInfo.module.css'
 const BreedsInfo = (props) => {
     return (
         <div className={s.breed_info}>

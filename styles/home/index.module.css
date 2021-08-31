@@ -43,7 +43,7 @@
     height: 2.292vw;
     font-size: 0.75vw;
     font-family: "modelica-r";
-    padding-left: 55px;
+    padding-left: 2.865vw;
     outline: none;
 }
 
@@ -54,10 +54,12 @@
     background: none;
     border: none;
     left: 0.3vw;
+    height: 1.6vw;
 }
 
 .search_form .search_inp button img {
     width: 1.1vw;
+    height: fit-content;
 }
 
 .criteries {
@@ -82,7 +84,7 @@
 }
 
 .criteries .section_param1 {
-    width: 10.521vw;
+    width: 11.458vw;
     background: white;
     display: flex;
     flex-direction: column;
@@ -110,7 +112,7 @@
     font-size: .75vw;
     font-family: "modelica-m";
     color: #253E47;
-    padding: 5px 0;
+    padding: 0.2vw 0;
     margin: 0;
 }
 
@@ -123,6 +125,12 @@
 
 .criteries .section_param1 ul::-webkit-scrollbar {
     width: 5px;
+}
+
+@media screen and (max-width: 1920px) {
+    .criteries .section_param1 ul::-webkit-scrollbar {
+        width: 0.375vw;
+    }
 }
 
 .criteries .section_param1 ul::-webkit-scrollbar-thumb {
@@ -665,6 +673,7 @@
     }
     .search_form .search_inp button img {
         width: 19.2px;
+        height: fit-content;
     }
     .criteries {
         margin-bottom: 115.1920px;
@@ -674,7 +683,7 @@
         height: 194px;
     }
     .criteries .section_param1 {
-        width: 194px;
+        width: 220px;
         padding-left: 10px;
     }
     .criteries .section_param2 {
@@ -689,7 +698,7 @@
     .criteries .section_param1>p {
         font-size: 14.4px;
         margin: 0;
-        padding: 10px;
+        padding: 5px 0;
     }
     .criteries .section_param1 ul li {
         height: 14.4px;

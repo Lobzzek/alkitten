@@ -73,6 +73,12 @@
     width: 7.2px;
 }
 
+@media screen and (max-width: 1920px) {
+    .group_cats .blocks::-webkit-scrollbar {
+        width: 0.375vw;
+    }
+}
+
 .group_cats .blocks::-webkit-scrollbar-thumb {
     background: #000;
     border-radius: 10px;

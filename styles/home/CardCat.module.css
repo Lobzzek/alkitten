@@ -65,6 +65,7 @@
 
 .name_breed img {
     height: 1.5vw;
+    width: fit-content;
 }
 
 .sizes {
@@ -99,6 +100,7 @@
 .location img {
     width: 0.86vw;
     margin-right: .225vw;
+    height: fit-content;
 }
 
 .location p {

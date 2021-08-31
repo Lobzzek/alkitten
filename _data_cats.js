@@ -514,8 +514,8 @@ let jsonCats = {
             "description": "American bobtails are known for their short bobbed tails, rugged appearance, and playful personalities. They have been referred to as the “golden retriever” of cat breeds, thanks to their affectionate and friendly personalities. These cats love to be around humans and have a sweet, gentle nature that makes them wonderful companions. American bobtails are a relatively uncommon breed. Because they’re considered rare, these cats can cost around $600–$1,200 from a reputable breeder."
         },
         {
-            "name": "Siberian cat_Neva Masquerade",
-            "img": "/img/cats/Longhair/Siberian cat_Neva Masquerade.png",
+            "name": "Siberian Neva Masquerade",
+            "img": "/img/cats/Longhair/Siberian Neva Masquerade.png",
             "height": "9 to 10 inches",
             "weight": "7 to 16 pounds",
             "life_span": "13 to 15 years",

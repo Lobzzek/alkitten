@@ -3,7 +3,7 @@ import LeftPanel from './LeftPanel/LeftPanel.jsx';
 import RightPanel from './RightPanel.jsx';
 import Footer from './Footer.jsx';
 import React from 'react'
-import s from '../../styles/MainWrapper.module.css'
+import s from '../../styles/MainWrapper/MainWrapper.module.css'
 
 // import { setTriggeredScroll } from '../../Redux/actions/triggeredScroll.js';
 // import { useDispatch } from 'react-redux'

@@ -1,9 +1,9 @@
-import s from '../styles/CardCat.module.css'
+import s from '../styles/home/CardCat.module.css'
 const CardCat = (props) => {
     return (
         <div className={s.card}>
             <div className={s.block_img}>
-                <img src={`${props.image}`} alt="" />
+                <img src={`${props.image}`} alt={`cat_card_${props.index}_img`} />
             </div>
             <div className={s.data_cat}>
                 
@@ -13,7 +13,7 @@ const CardCat = (props) => {
                         <p>{props.breed}</p>
                     </div>
                     {
-                        props.verified && <img src="/img/icon_verified.svg" alt="" />
+                        props.verified && <img src="/img/icon_verified.svg" alt="verified_icon" />
                     }
                 </div>
         

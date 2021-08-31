@@ -1,12 +1,4 @@
-@font-face {
-    font-family: "modelica-r";
-    src: url("../assets/fonts/bwmodelica-regular.otf");
-}
 
-@font-face {
-    font-family: "modelica-m";
-    src: url("../assets/fonts/bwmodelica-medium.otf");
-}
 
 .center_content {
     position: relative;
@@ -15,14 +7,6 @@
     display: flex;
     justify-content: space-between;
 }
-
-/* .center_content.triggered section:first-child {
-    position: absolute;
-}
-
-.center_content.triggered section:last-child {
-    position: absolute;
-} */
 
 .main_content {
     width: 43.875vw;
@@ -39,5 +23,14 @@
     }
     .main_content {
         width: 1052px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .center_content {
+        width: 95vw;
+    }
+    .main_content {
+        width: 63.875vw;
     }
 }

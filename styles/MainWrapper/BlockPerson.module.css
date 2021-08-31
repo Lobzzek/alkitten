@@ -58,6 +58,13 @@
     font-family: "modelica-r";
     margin-top: 0;
     margin-bottom: .12vw;
+    font-size: 1vw;
+}
+
+@media screen and (min-width: 1920px) {
+    .avatar_data .data p {
+        font-size: 19px;
+    }
 }
 
 .avatar_data .data .login {
@@ -85,6 +92,7 @@
 
 .location img {
     width: 0.58vw;
+    height: fit-content;
 }
 
 .location p {
@@ -125,6 +133,7 @@
     }
     .location img {
         width: 11.25px;
+        height: fit-content;
     }
     .location {
         width: calc(100% - 15px);

@@ -1,0 +1,311 @@
+.top_text {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2.8225vw;
+}
+
+.top_text h2 {
+    margin: 0;
+    padding: 0;
+    font-family: "modelica-m";
+    color: #202D34;
+    font-size: 1.5vw;
+}
+
+.top_text p {
+    margin: 0;
+    padding: 0;
+    color: #919191;
+    font-size: 1.06vw;
+}
+.active_sort{
+    font-family: 'modelica-m';
+    font-size: 20px;
+    padding: 0;
+    margin: 0 0 20px 0;
+    font-weight: 100;
+}
+.sort {
+    position: relative;
+    background: white;
+    border-radius: 5px;
+    border: 1.2px solid #938556;
+    width: 35.542vw;
+    height: 1.901vw;
+    z-index: 2;
+    margin: 0 auto;
+    margin-bottom: 95px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sort .sort_hair {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sort .sort_hair div {
+    width: 35%;
+    height: 105%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.sort .sort_hair div:nth-child(1), .sort .sort_hair div:nth-child(2) {
+    border-right: 1.25px solid #938556;
+}
+
+.sort .sort_hair div:nth-child(1) {
+    margin-left: -1px;
+}
+
+.sort .sort_hair div p {
+    color: #000;
+    font-size: 17.5px;
+    font-family: "modelica-r";
+}
+
+.sort .sort_hair div.active {
+    background: #938556;
+    box-shadow: 0px 2px 16px #00000046;
+}
+
+.sort .sort_hair div.active p {
+    color: white;
+}
+
+.sort_longhair, .sort_shorthair, .sort_siamese {
+    position: absolute;
+    width: 33.6%;
+    background: #F1EFE8;
+    bottom: -200px;
+    z-index: -1;
+    -webkit-box-shadow: 5px 5px 32px -11px #000000;
+    box-shadow: 5px 5px 32px -11px #000000;
+    transition: .4s;
+    height: 200px;
+    transform-origin: 50% 0;
+    transform: scaleY(0);
+}
+
+.sort_longhair {
+    left: -2px;
+}
+
+.sort_shorthair {
+    left: calc(33.6% - 4px);
+}
+
+.sort_siamese {
+    left: auto;
+    right: -2px;
+}
+
+.sort_longhair.active, .sort_shorthair.active, .sort_siamese.active {
+    transform: scaleY(1);
+}
+
+.sort_longhair ul, .sort_shorthair ul, .sort_siamese ul {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0 0 0 7px;
+}
+
+.sort_longhair ul::-webkit-scrollbar, .sort_shorthair ul::-webkit-scrollbar, .sort_siamese ul::-webkit-scrollbar {
+    width: 5px;
+}
+
+.sort_longhair ul::-webkit-scrollbar-thumb, .sort_shorthair ul::-webkit-scrollbar-thumb, .sort_siamese ul::-webkit-scrollbar-thumb {
+    background: #919191;
+    border-radius: 10px;
+}
+
+.sort_longhair ul::-webkit-scrollbar-track, .sort_shorthair ul::-webkit-scrollbar-track, .sort_siamese ul::-webkit-scrollbar-track {
+    background: none;
+}
+
+.sort_longhair ul li, .sort_shorthair ul li, .sort_siamese ul li {
+    list-style: none;
+    padding-left: 0;
+    cursor: pointer;
+    font-family: 'modelica-r';
+    font-size: 15.5px;
+    margin-bottom: 3px;
+}
+
+.sort_longhair ul li.active, .sort_shorthair ul li.active, .sort_siamese ul li.active {
+    color: #938556;
+}
+
+.sort_longhair ul li:hover, .sort_shorthair ul li:hover, .sort_siamese ul li:hover {
+    opacity: .4;
+}
+
+.wrap_block_img {
+    width: 950px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.block_img {
+    width: 310px;
+    height: 310px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.block_img:hover {
+    -webkit-box-shadow: 5px 5px 32px -11px #000000;
+    box-shadow: 5px 5px 32px -11px #000000;
+    transform: scale(1.01);
+}
+
+/* .block_img img {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+.zoomImg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    /* background: rgba(0, 0, 0, 0.866); */
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.zoomImg .fon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.866);
+    width: 100%;
+    height: 100%;
+    transition: .6s;
+    opacity: 0;
+}
+
+.zoomImg img {
+    position: relative;
+    z-index: 1;
+    height: 80%;
+    transition: .6s;
+    opacity: 0;
+}
+
+.zoomImg .close {
+    position: absolute;
+    color: #800;
+    font-size: 80px;
+    right: 50px;
+    top: 0;
+    z-index: 2;
+    padding: 0;
+    margin: 0;
+    transition: .6s;
+    opacity: 0;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1920px) {
+    .sort {
+        border-radius: 0.25vw;
+        margin-bottom: 4.427vw;
+    }
+    .sort .sort_hair div p {
+        font-size: 0.911vw;
+    }
+    .sort_longhair ul::-webkit-scrollbar, .sort_shorthair ul::-webkit-scrollbar, .sort_siamese ul::-webkit-scrollbar {
+        width: 0.375vw;
+    }
+    .wrapp_card {
+        width: 49.921vw;
+    }
+    .sort .sort_hair div:nth-child(1) {
+        margin-left: -1px;
+    }
+    .sort .sort_hair div p {
+        font-size: 0.920vw;
+    }
+    .sort_longhair, .sort_shorthair, .sort_siamese {
+        bottom: -10.510vw;
+        z-index: -1;
+        /* left: -2px; */
+        height: 10.510vw;
+    }
+    .sort_longhair {
+        left: -0.105vw;
+    }
+    .sort_shorthair {
+        left: calc(33.6% - 4px);
+    }
+    .sort_siamese {
+        right: -0.105vw;
+    }
+    .sort_longhair ul, .sort_shorthair ul, .sort_siamese ul {
+        padding: 0 0 0 0.368vw;
+    }
+    .sort_longhair ul li, .sort_shorthair ul li, .sort_siamese ul li {
+        padding-left: 0;
+        cursor: pointer;
+        margin-bottom: 0.158vw;
+    }
+    .wrap_block_img {
+        width: 49.921vw;
+    }
+    .block_img {
+        width: 16.290vw;
+        height: 16.290vw;
+        margin-bottom: 0.525vw;
+    }
+    .zoomImg .close {
+        font-size: 4.204vw;
+        right: 2.627vw;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .top_text {
+        margin-bottom: 53px;
+    }
+    .top_text h2 {
+        font-size: 28.8px;
+    }
+    .top_text p {
+        font-size: 20.352px;
+    }
+    .sort {
+        width: 681px;
+        height: 36.5px;
+    }
+}

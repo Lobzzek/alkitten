@@ -1,8 +1,11 @@
 import MainWrapper from "../components/MainWrapper/MainWrapper.jsx";
-import CardCat from "../components/CardCat.jsx"
 import Head from "next/head"
-import Link from 'next/link'
-import s from "../styles/index.module.css"
+import s from "../styles/home/index.module.css";
+import jsonCats from '../_data_cats.js';
+import React from 'react'
+
+import dynamic from 'next/dynamic';
+const CardCat = dynamic(() => import('../components/CardCat.jsx'));
 
 export default function Home() {
   return (
@@ -17,26 +20,28 @@ export default function Home() {
       </div>
       <form className={s.search_form}>
         <div className={s.search_inp}>
-          <button><img src="/img/icon_loupe.svg" alt="" /></button>
+          <button title="search button" ><img src="/img/icon_loupe.svg" alt="" /></button>
           <input type="text" placeholder="Enter Breed or Location" />
-
         </div>        
         <div className={s.criteries}>
           <div className={s.section_param1}>
             <p>Breeds</p>
             <ul>
-              <li><input type="radio" name="breeds" id="inp_rad_beeds1" defaultChecked /><label htmlFor="inp_rad_beeds1">Lorem.</label></li>
-              <li><input type="radio" name="breeds" id="inp_rad_beeds2" /><label htmlFor="inp_rad_beeds2">Eum?</label></li>
-              <li><input type="radio" name="breeds" id="inp_rad_beeds3" /><label htmlFor="inp_rad_beeds3">Placeat?</label></li>
-              <li><input type="radio" name="breeds" id="inp_rad_beeds4" /><label htmlFor="inp_rad_beeds4">Tempora!</label></li>
-              <li><input type="radio" name="breeds" id="inp_rad_beeds5" /><label htmlFor="inp_rad_beeds5">Ipsa!</label></li>
-              <li><input type="radio" name="breeds" id="inp_rad_beeds6" /><label htmlFor="inp_rad_beeds6">Ducimus.</label></li>
-              <li><input type="radio" name="breeds" id="inp_rad_beeds7" /><label htmlFor="inp_rad_beeds7">Quod.</label></li>
-              <li><input type="radio" name="breeds" id="inp_rad_beeds8" /><label htmlFor="inp_rad_beeds8">Ex!</label></li>
-              <li><input type="radio" name="breeds" id="inp_rad_beeds9" /><label htmlFor="inp_rad_beeds9">Quod.</label></li>
-              <li><input type="radio" name="breeds" id="inp_rad_beeds10" /><label htmlFor="inp_rad_beeds10">Ipsa.</label></li>
-              <li><input type="radio" name="breeds" id="inp_rad_beeds11" /><label htmlFor="inp_rad_beeds11">Quos?</label></li>
-              <li><input type="radio" name="breeds" id="inp_rad_beeds12" /><label htmlFor="inp_rad_beeds12">Ut?</label></li>
+                {
+                  jsonCats.long_hair.map( (el, i ) => 
+                    <li><input type="radio" name="breeds" id={`inp_rad_beeds${i + 1}`} defaultChecked={i===0 ? true : false}/><label htmlFor={`inp_rad_beeds${i + 1}`}>{el.name}</label></li>
+                  )
+                }
+                {
+                  jsonCats.short_hair.map((el, i) =>
+                    <li><input type="radio" name="breeds" id={`inp_rad_beeds${i + 1}`}/><label htmlFor={`inp_rad_beeds${i + 1}`}>{el.name}</label></li>
+                  )
+                }
+                {
+                  jsonCats.siamese_and_oriental.map((el, i) =>
+                    <li><input type="radio" name="breeds" id={`inp_rad_beeds${i + 1}`} /><label htmlFor={`inp_rad_beeds${i + 1}`}>{el.name}</label></li>
+                  )
+                }
             </ul>
           </div>
           <div className={s.section_param2}>
@@ -105,9 +110,9 @@ export default function Home() {
           <p>Browse breeds that fit your lifestyle</p>
         </div>
           <div className={s.block_cats}>
-                <CardCat image="/img/cat_for_card.jpg" name="meya" breed="F, American Longhair" verified h="1m (Adult, Nose to tail)" w="5.9 - 8.2kg" location="Temecula, CA" />
-                <CardCat image="/img/cat_for_card.jpg" name="samey" breed="M, Bengal Cat" h="1m (Adult, Nose to tail)" w="5.9 - 8.2kg" location="San Francisco, CA" />
-                <CardCat image="/img/cat_for_card.jpg" name="queen" breed="F, American Longhair" verified h="1m (Adult, Nose to tail)" w="5.9 - 8.2kg" location="Los Angeles, CA" />
+                <CardCat image="/img/cat_for_card.jpg" index="0" name="meya" breed="F, American Longhair" verified h="1m (Adult, Nose to tail)" w="5.9 - 8.2kg" location="Temecula, CA" />
+                <CardCat image="/img/cat_for_card.jpg" index="1" name="samey" breed="M, Bengal Cat" h="1m (Adult, Nose to tail)" w="5.9 - 8.2kg" location="San Francisco, CA" />
+                <CardCat image="/img/cat_for_card.jpg" index="2" name="queen" breed="F, American Longhair" verified h="1m (Adult, Nose to tail)" w="5.9 - 8.2kg" location="Los Angeles, CA" />
           </div> 
           <a href="dsa">Viev More</a>
       </div>

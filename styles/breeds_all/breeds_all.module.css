@@ -1,0 +1,72 @@
+.sort {
+    background: white;
+    display: flex;
+    border-radius: 5px;
+    border: 1.2px solid #938556;
+    width: 28.542vw;
+    height: 1.901vw;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+    margin: 0 auto;
+    margin-bottom: 95px;
+}
+
+.sort div {
+    width: 35%;
+    height: 105%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.sort div:nth-child(1), .sort div:nth-child(2) {
+    border-right: 1.25px solid #938556;
+}
+
+.sort div:nth-child(1) {
+    margin-left: -1px;
+}
+
+.sort div p {
+    color: #000;
+    font-size: 17.5px;
+    font-family: "modelica-r";
+}
+
+.sort div.active {
+    background: #938556;
+}
+
+.sort div.active p {
+    color: white;
+}
+
+.wrapp_card {
+    width: 950px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    transition: .6s;
+}
+
+@media screen and (min-width: 1920px) {
+    .sort {
+        width: 548x;
+        height: 36.5px;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    .sort {
+        border-radius: 0.25vw;
+        margin-bottom: 4.427vw;
+    }
+    .sort div p {
+        font-size: 0.911vw;
+    }
+    .wrapp_card {
+        width: 49.921vw;
+    }
+}

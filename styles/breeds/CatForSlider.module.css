@@ -60,6 +60,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    width: fit-content;
     transform: translate(-50%, -59%);
 }
 
@@ -134,6 +135,7 @@
 
 .fav_ava .favorite img {
     width: 40%;
+    height: fit-content;
 }
 
 .fav_ava .favorite p {

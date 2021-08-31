@@ -1,0 +1,110 @@
+.card_slider * {
+    margin: 0;
+}
+
+.card_slider img.silver {
+    filter: brightness(0) invert(90%);
+}
+
+.card_slider {
+    width: 200px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: .6s;
+    padding: 10px;
+    margin: 0 20px;
+}
+
+.card_slider:hover {
+    -webkit-box-shadow: 5px 5px 32px -11px #000000;
+    box-shadow: 5px 5px 32px -11px #000000;
+}
+
+.card_slider .wrap_img {
+    position: relative;
+    margin: 0 auto;
+    width: 130px;
+    height: 130px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.card_slider hr {
+    border: none;
+    background: rgba(0, 0, 0, 0.281);
+    height: 2px;
+    margin-bottom: 15px;
+}
+
+.card_slider .rating {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.card_slider .rating img {
+    width: 25px;
+}
+
+.card_slider h3 {
+    font-size: 15.6px;
+    font-family: "modelica-r";
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.card_slider h4 {
+    font-size: 15.6px;
+    font-family: "modelica-r";
+    margin-bottom: 5px;
+}
+
+.card_slider p {
+    font-size: 15.6px;
+    font-family: "modelica-r";
+    margin-bottom: 5px;
+    font-weight: 100;
+    color: #919191;
+}
+
+@media screen and (max-width: 1920px) {
+    .card_slider {
+        width: 10.510vw;
+        padding: 0.525vw;
+        margin: 0 1.051vw;
+    }
+    .card_slider .wrap_img {
+        width: 6.831vw;
+        height: 6.831vw;
+        margin-bottom: 0.788vw;
+    }
+    .card_slider hr {
+        height: 0.105vw;
+        margin-bottom: 0.788vw;
+    }
+    .card_slider .rating {
+        margin-bottom: 0.525vw;
+    }
+    .card_slider .rating img {
+        width: 1.314vw;
+    }
+    .card_slider h3 {
+        font-size: 0.820vw;
+        margin-bottom: .5vw;
+    }
+    .card_slider h4 {
+        font-size: 0.820vw;
+        margin-bottom: 0.263vw;
+    }
+    .card_slider p {
+        font-size: 0.820vw;
+        margin-bottom: 0.263vw;
+    }
+}

@@ -1,0 +1,62 @@
+.card_breed {
+    width: 180px;
+    margin: 0 10px 60px 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.block_img {
+    width: 180px;
+    height: 180px;
+    position: relative;
+    background: #CDD7D9;
+    border-radius: 40px;
+    transition: .4s;
+}
+
+.card_breed:hover .block_img {
+    -webkit-box-shadow: 5px 5px 32px -11px #000000;
+    box-shadow: 5px 5px 32px -11px #000000;
+}
+
+.card_breed:hover .block_img img {
+    transform: translate(-50%, -62%);
+}
+
+.block_img img {
+    height: 140%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%);
+    transition: .4s;
+}
+
+.card_breed p {
+    font-size: 22.62px;
+    font-family: "modelica-r";
+    text-align: center;
+    margin: 0;
+    margin-top: 5px;
+    height: 58px;
+}
+
+@media screen and (max-width: 1920px) {
+    .card_breed {
+        width: 9.459vw;
+        margin: 0 0.525vw 3.153vw 0.525vw;
+    }
+    .block_img {
+        width: 9.459vw;
+        height: 9.459vw;
+        border-radius: 2.102vw;
+    }
+    .card_breed p {
+        font-size: 1.189vw;
+        margin-top: 0.263vw;
+        height: 3.048vw;
+    }
+}

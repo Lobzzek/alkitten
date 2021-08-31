@@ -1,0 +1,255 @@
+.top_text {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2.8225vw;
+}
+
+.top_text h2 {
+    margin: 0;
+    padding: 0;
+    font-family: "modelica-m";
+    color: #202D34;
+    font-size: 1.5vw;
+}
+
+.top_text p {
+    margin: 0;
+    padding: 0;
+    color: #919191;
+    font-size: 1.06vw;
+}
+
+.categories {
+    position: relative;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.categories .left_panel {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+    background: #F5F5F5;
+    padding: 5px 15px 5px 15px;
+    -webkit-box-shadow: 5px 5px 32px -11px #000000a1;
+    box-shadow: 5px 5px 32px -11px #00000071;
+    width: 250px;
+}
+
+.categories .left_panel h3 {
+    font-family: 'modelica-m';
+    font-size: 20px;
+    padding: 0;
+    margin: 20px 0 0px 0;
+    font-weight: 100;
+}
+
+.categories .left_panel ul {
+    padding: 0 10px 0 0;
+    margin-top: 5px;
+}
+
+.categories .left_panel li {
+    list-style-type: none;
+    margin-bottom: 4px;
+}
+
+.categories .left_panel li a {
+    font-size: 18px;
+    position: relative;
+    font-family: 'modelica-r';
+}
+
+.categories .left_panel a.red {
+    color: #800;
+}
+
+.categories .right_panel {
+    width: 720px;
+}
+
+.categories .top_slider {
+    width: 100%;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.categories .cnt {
+    width: 100%;
+    height: 114px;
+    background: url("https://uxt-cf-images.mediazs.com/m7nty8w6vr94/3lv7zmbADxek7n1bQPcUz4/e2561e4cb14b4edc97a11fc9d107ee0d/2020_03_RosiesFarm_C_1000x160_UK.jpg?fm=jpg&fl=progressive&w=928&q=85");
+    margin-bottom: 10px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    transition: .55s;
+}
+
+.categories .top_slider .dots {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.categories .top_slider .dots span {
+    position: relative;
+    background: #919191;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: .6s;
+}
+
+.categories .top_slider span.active {
+    background: #000;
+}
+
+.categories .block_cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.categories h2 {
+    margin: 0;
+    padding: 0;
+    font-family: "modelica-m";
+    color: #202D34;
+    margin-bottom: 20px;
+}
+
+.categories .bottom_slider {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.categories .bottom_slider>button {
+    background: #f1efe8;
+    border-radius: 50%;
+    position: relative;
+    border: none;
+    height: 32.5px;
+    width: 32.5px;
+    z-index: 1;
+    cursor: pointer;
+    outline: none;
+}
+
+.categories .bottom_slider>button img {
+    width: 30%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.categories .bottom_slider>button:hover {
+    opacity: .2;
+}
+
+.categories .bottom_slider>button:first-child {
+    transform: rotate(0deg);
+}
+
+.categories .bottom_slider>button:last-child {
+    transform: rotate(180deg);
+}
+
+.categories .wrap_items {
+    position: relative;
+    height: auto;
+    width: 630px;
+    overflow: hidden;
+}
+
+.categories .wrap_items::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 50px;
+    background: linear-gradient(90deg, transparent, white);
+    right: 0;
+    z-index: 1;
+}
+
+.categories .block_cards_slider {
+    display: flex;
+    align-items: flex-start;
+    margin: 30px 0;
+    transition: .6s;
+}
+
+@media screen and (min-width: 1920px) {
+    .top_text {
+        margin-bottom: 53px;
+    }
+    .top_text h2 {
+        font-size: 28.8px;
+    }
+    .top_text p {
+        font-size: 20.352px;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    .categories {
+        width: 52.549vw;
+    }
+    .categories .left_panel {
+        top: 6.255vw;
+        padding: 0.263vw 0.788vw 0.263vw 0.788vw;
+        width: 13.137vw;
+    }
+    .categories .left_panel h3 {
+        font-size: 1.051vw;
+        margin: 1.051vw 0 0px 0;
+    }
+    .categories .left_panel ul {
+        padding: 0 0.525vw 0 0;
+        margin-top: 0.263vw;
+    }
+    .categories .left_panel li {
+        margin-bottom: 0.210vw;
+    }
+    .categories .left_panel li a {
+        font-size: 0.946vw;
+    }
+    .categories .top_slider {
+        margin-bottom: 2.102vw;
+    }
+    .categories .cnt {
+        height: 5.991vw;
+        margin-bottom: 0.525vw;
+    }
+    .categories .top_slider .dots span {
+        width: 0.788vw;
+        height: 0.788vw;
+        margin: 0 0.263vw;
+    }
+    .categories h2 {
+        margin-bottom: 1.051vw;
+    }
+    .categories .bottom_slider>button {
+        height: 1.682vw;
+        width: 1.682vw;
+    }
+    .categories .wrap_items {
+        width: 33.106vw;
+    }
+    .categories .wrap_items::before {
+        width: 2.627vw;
+    }
+    .categories .block_cards_slider {
+        margin: 1.576vw 0;
+    }
+}
