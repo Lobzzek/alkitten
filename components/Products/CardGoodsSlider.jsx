@@ -15,7 +15,7 @@ const CardGoodsSlider = (props) => {
                 <img src="/img/icon_star.svg" alt="" />
                 <img src="/img/icon_star.svg" alt="" /> */}
                 {
-                    arrStars.map(el => <img src="/img/icon_star.svg" className={el < props.rating ? `` : `${s.silver}`} alt="" />)
+                    arrStars.map((el, i) => <img src="/img/icon_star.svg" key={`${i}_star`} className={el < props.rating ? `` : `${s.silver}`} alt="" />)
                 }
             </div>
             <h3>{props.title}</h3>

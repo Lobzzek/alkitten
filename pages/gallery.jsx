@@ -211,7 +211,7 @@ const Gallery = () => {
 
                 <div className={s.wrap_block_img}>
                     {
-                        arrImg.map(() => <div className={s.block_img} 
+                        arrImg.map((el, i) => <div className={s.block_img} key={`${i}_img_cat`}
                             style={{ background: `url(/img/cat_for_card.jpg)`, backgroundPosition: "center", backgroundSize: "cover", backgroundRepeat: "no-repeat" }}
                             onClick={() => setOpenZoomImg(true)}
                         ></div>)

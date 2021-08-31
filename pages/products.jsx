@@ -203,7 +203,6 @@ const Products = () => {
                         <CardGoods type="wide" name_category="Cat Food" linkOnCatagory="#" img="https://shop-cdn-m.mediazs.com/bilder/1/140/ExclusiveCat_Prod_1000x1000_UK_1.jpg" dataLinks={dataCategory1}></CardGoods>
                         <CardGoods type="wide" name_category="Cat Food" linkOnCatagory="#" img="https://shop-cdn-m.mediazs.com/bilder/1/140/Cat_Toilet_1000x1000_1.jpg" dataLinks={dataCategory1}></CardGoods>
                         <CardGoods type="wide" name_category="Cat Food" linkOnCatagory="#" img="https://shop-cdn-m.mediazs.com/bilder/1/140/Cat_Scratchtree_1000x1000_1.jpg" dataLinks={dataCategory1}></CardGoods>
-
                         <CardGoods type="narrow" name_category="Cat Baskets &amp; Beds" linkOnCatagory="#" img="/img/img_for_goods.jpg" dataLinks={dataCategory1}></CardGoods>
                         <CardGoods type="narrow" name_category="Cat Roys" linkOnCatagory="#" img="https://shop-cdn-m.mediazs.com/bilder/1/140/Cat_Wetfood_1000x1000_1.jpg" dataLinks={dataCategory1}></CardGoods>
                         <CardGoods type="narrow" name_category="Cat Bowls" linkOnCatagory="#" img="https://shop-cdn-m.mediazs.com/bilder/4/140/Cat_Litter_1000x1000_4.jpg" dataLinks={dataCategory1}></CardGoods>
@@ -222,7 +221,8 @@ const Products = () => {
                         <div className={s.wrap_items}>
                             <div className={s.block_cards_slider} ref={block_cards_slider}>
                                 {
-                                    dataBottomSlider.map(el => <CardGoodsSlider 
+                                    dataBottomSlider.map((el, index) => <CardGoodsSlider 
+                                        key={`${index}_card_goods_slider`}
                                         img={el.img} 
                                         rating={el.rating} 
                                         title={el.title}

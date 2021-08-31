@@ -14,7 +14,7 @@ const cardGoods = (props) => {
                 <img src={props.img} alt="" />
                 <div className={s.links}>
                     {
-                        props.dataLinks.map(el => <a href={el.href_a}>{el.name_link}</a>)
+                        props.dataLinks.map((el, i)=> <a key={`${i}_link_card`} href={el.href_a}>{el.name_link}</a>)
                     }
                     <a href={props.linkOnCatagory} className={s.all_prod}>All products...&#10230;</a>
                 </div>
