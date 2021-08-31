@@ -4,7 +4,7 @@ import s from '../styles/breeds_all/breeds_all.module.css'
 import CardBreed from '../components/CardBreed.jsx'
 import jsonCats from '../_data_cats.js';
 
-const breeds_all = () => {
+const Breeds_all = () => {
     const [activeSort, setActiveSort] = React.useState(0);
     const changeActiveSort = (num) => setActiveSort(num);
 
@@ -55,4 +55,4 @@ const breeds_all = () => {
     )
 }
 
-export default breeds_all;
+export default Breeds_all;
