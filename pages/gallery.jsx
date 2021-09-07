@@ -222,7 +222,17 @@ const Gallery = () => {
             <div className={s.zoomImg} ref={zoomImg}>
                 <p className={s.close} onClick={() => setOpenZoomImg(false)}>✕</p>
                 <div className={s.fon} onClick={() => setOpenZoomImg(false)}></div>
+                {/* <button title="prev slide" className={s.prev_slide} onClick={() => prevSlide()}> */}
+                <button title="prev slide" className={s.prev_slide}>
+                    <img src="/img/icon_arow.svg" alt="" />
+                </button>
+
                 <img src="/img/cat_for_card.jpg" alt="" />
+
+                {/* <button title="next slide" className={s.next_slide} onClick={() => nextSlide()}> */}
+                <button title="next slide" className={s.next_slide}>
+                    <img src="/img/icon_arow.svg" alt="" />
+                </button>
             </div>
         </>
     )

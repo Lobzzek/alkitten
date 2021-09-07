@@ -7,6 +7,15 @@ const Faq = () => {
     const listLi = React.useRef();
     const punkts = React.useRef()
     const [activePunkt, setActivePunkt] = React.useState(0);
+
+    function offsetPosition(element) {
+        let hElem = element.clientHeight;
+        let offsetTop = 0;
+        do {
+            offsetTop += element.offsetTop;
+        } while (element = element.offsetParent);
+        return [offsetTop, offsetTop + hElem];
+    }
     React.useEffect(() => {
 
         let allDivWithLi = listLi.current.childNodes;
@@ -35,22 +44,14 @@ const Faq = () => {
         }
         //change active link
 
-        function offsetPosition(element) {
-            let hElem = element.clientHeight;
-            let offsetTop = 0;
-            do {
-                offsetTop += element.offsetTop;
-            } while (element = element.offsetParent);
-            return [offsetTop, offsetTop + hElem];
-        }
+        
 
-
-        window.onscroll = () => {
+        let setActivePunktOnScroll = () => {
             // console.log(listLi.current.childNodes[0].getBoundingClientRect())
-            if (window.scrollY < offsetPosition(listLi.current.childNodes[0])[1]){
+            if (window.scrollY < offsetPosition(listLi.current.childNodes[0])[1]) {
                 setActivePunkt(0)
-            } else if (window.scrollY > offsetPosition(listLi.current.childNodes[1])[0] && 
-                       window.scrollY < offsetPosition(listLi.current.childNodes[1])[1]){
+            } else if (window.scrollY > offsetPosition(listLi.current.childNodes[1])[0] &&
+                window.scrollY < offsetPosition(listLi.current.childNodes[1])[1]) {
                 setActivePunkt(1)
             } else if (window.scrollY > offsetPosition(listLi.current.childNodes[2])[0] &&
                 window.scrollY < offsetPosition(listLi.current.childNodes[2])[1]) {
@@ -64,6 +65,8 @@ const Faq = () => {
             }
         }
 
+            window.addEventListener("scroll", setActivePunktOnScroll)
+
         //remove change url
         function locationHashChanged() {
             if (location.hash) {
@@ -72,7 +75,11 @@ const Faq = () => {
         }
         window.onhashchange = locationHashChanged;
 
+        return window.removeEventListener("scroll", setActivePunktOnScroll)
+
     }, [])
+
+    
     return (
         <MainWrapper>
             <div className={s.top_text}>
@@ -81,21 +88,21 @@ const Faq = () => {
             </div>
             <div className={s.faq_cnt}>
                 <div className={s.punkts} ref={punkts}>
-                    <div><a href="#tit_1" onClick={(e) => e.stopPropagation()} 
+                    <div><a href="#tit_1" onClick={() => setTimeout(() => {setActivePunkt(0)}, 1000)}
                         className={activePunkt === 0 ? `${s.active}` : `` }
-                    >Lorem1</a></div>
-                    <div><a href="#tit_2" onClick={(e) => e.stopPropagation()} 
+                    >Lorem Ipsum1</a></div>
+                    <div><a href="#tit_2" onClick={() => setTimeout(() => {setActivePunkt(1)}, 1000)}
                         className={activePunkt === 1 ? `${s.active}` : `` }
-                    >Lorem2</a></div>
-                    <div><a href="#tit_3" onClick={(e) => e.stopPropagation()} 
+                    >Lorem Ipsum2</a></div>
+                    <div><a href="#tit_3" onClick={() => setTimeout(() => {setActivePunkt(2)}, 1000)}
                         className={activePunkt === 2 ? `${s.active}` : `` }
-                    >Lorem3</a></div>
-                    <div><a href="#tit_4" onClick={(e) => e.stopPropagation()} 
+                    >Lorem Ipsum3</a></div>
+                    <div><a href="#tit_4" onClick={() => setTimeout(() => {setActivePunkt(3)}, 1000)}
                         className={activePunkt === 3 ? `${s.active}` : `` }
-                    >Lorem4</a></div>
-                    <div><a href="#tit_5" onClick={(e) => e.stopPropagation()} 
+                    >Lorem Ipsum4</a></div>
+                    <div><a href="#tit_5" onClick={() => setTimeout(() => {setActivePunkt(4)}, 1000)}
                         className={activePunkt ===4 ? `${s.active}` : `` }
-                    >Lorem5</a></div>
+                    >Lorem Ipsum5</a></div>
                 </div>
 
                 <ul ref={listLi}>
@@ -127,6 +134,60 @@ const Faq = () => {
                                 </button>
                             </div>
                             <p>Modi culpa distinctio, sit ipsam ipsa molestiae temporibus animi quod quae iste nobis amet nulla similique doloremque aliquam provident accusamus est magni praesentium corrupti doloribus quibusdam itaque. Illo non vitae blanditiis eos quaerat quidem, dolor obcaecati dignissimos dicta adipisci veniam repudiandae nisi expedita saepe accusantium. Ipsam culpa cupiditate et sunt.</p>
+                        </li>
+                        <li>
+                            <div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                                <button>
+                                    +
+                                </button>
+                            </div>
+                            <p>Porro eius ratione ullam ea perspiciatis quidem perferendis aperiam earum laboriosam eligendi dolorem vitae omnis non velit error, expedita explicabo commodi! Qui similique excepturi temporibus veritatis minus, neque facilis, repellat sapiente harum alias impedit provident cum accusamus atque sit, eum rerum dolor commodi? Animi reiciendis quidem doloribus fuga, recusandae magni!</p>
+                        </li>
+                        <li>
+                            <div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                                <button>
+                                    +
+                                </button>
+                            </div>
+                            <p>Porro eius ratione ullam ea perspiciatis quidem perferendis aperiam earum laboriosam eligendi dolorem vitae omnis non velit error, expedita explicabo commodi! Qui similique excepturi temporibus veritatis minus, neque facilis, repellat sapiente harum alias impedit provident cum accusamus atque sit, eum rerum dolor commodi? Animi reiciendis quidem doloribus fuga, recusandae magni!</p>
+                        </li>
+                        <li>
+                            <div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                                <button>
+                                    +
+                                </button>
+                            </div>
+                            <p>Porro eius ratione ullam ea perspiciatis quidem perferendis aperiam earum laboriosam eligendi dolorem vitae omnis non velit error, expedita explicabo commodi! Qui similique excepturi temporibus veritatis minus, neque facilis, repellat sapiente harum alias impedit provident cum accusamus atque sit, eum rerum dolor commodi? Animi reiciendis quidem doloribus fuga, recusandae magni!</p>
+                        </li>
+                        <li>
+                            <div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                                <button>
+                                    +
+                                </button>
+                            </div>
+                            <p>Porro eius ratione ullam ea perspiciatis quidem perferendis aperiam earum laboriosam eligendi dolorem vitae omnis non velit error, expedita explicabo commodi! Qui similique excepturi temporibus veritatis minus, neque facilis, repellat sapiente harum alias impedit provident cum accusamus atque sit, eum rerum dolor commodi? Animi reiciendis quidem doloribus fuga, recusandae magni!</p>
+                        </li>
+                        <li>
+                            <div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                                <button>
+                                    +
+                                </button>
+                            </div>
+                            <p>Porro eius ratione ullam ea perspiciatis quidem perferendis aperiam earum laboriosam eligendi dolorem vitae omnis non velit error, expedita explicabo commodi! Qui similique excepturi temporibus veritatis minus, neque facilis, repellat sapiente harum alias impedit provident cum accusamus atque sit, eum rerum dolor commodi? Animi reiciendis quidem doloribus fuga, recusandae magni!</p>
+                        </li>
+                        <li>
+                            <div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                                <button>
+                                    +
+                                </button>
+                            </div>
+                            <p>Porro eius ratione ullam ea perspiciatis quidem perferendis aperiam earum laboriosam eligendi dolorem vitae omnis non velit error, expedita explicabo commodi! Qui similique excepturi temporibus veritatis minus, neque facilis, repellat sapiente harum alias impedit provident cum accusamus atque sit, eum rerum dolor commodi? Animi reiciendis quidem doloribus fuga, recusandae magni!</p>
                         </li>
                         <li>
                             <div>
@@ -175,6 +236,60 @@ const Faq = () => {
                                 </button>
                             </div>
                             <p>Illo, facere cumque. Laudantium nesciunt explicabo officiis dolorum placeat corporis enim distinctio. Harum cum, reprehenderit consectetur, aliquam ut fuga sapiente incidunt, ullam minima vel autem exercitationem. Consequatur, ex laboriosam tempore inventore natus voluptates. Harum atque quasi adipisci, quo blanditiis cum unde rem aperiam deleniti asperiores nihil nam in, facere eligendi.</p>
+                        </li>
+                        <li>
+                            <div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                                <button>
+                                    +
+                                </button>
+                            </div>
+                            <p>Porro eius ratione ullam ea perspiciatis quidem perferendis aperiam earum laboriosam eligendi dolorem vitae omnis non velit error, expedita explicabo commodi! Qui similique excepturi temporibus veritatis minus, neque facilis, repellat sapiente harum alias impedit provident cum accusamus atque sit, eum rerum dolor commodi? Animi reiciendis quidem doloribus fuga, recusandae magni!</p>
+                        </li>
+                        <li>
+                            <div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                                <button>
+                                    +
+                                </button>
+                            </div>
+                            <p>Porro eius ratione ullam ea perspiciatis quidem perferendis aperiam earum laboriosam eligendi dolorem vitae omnis non velit error, expedita explicabo commodi! Qui similique excepturi temporibus veritatis minus, neque facilis, repellat sapiente harum alias impedit provident cum accusamus atque sit, eum rerum dolor commodi? Animi reiciendis quidem doloribus fuga, recusandae magni!</p>
+                        </li>
+                        <li>
+                            <div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                                <button>
+                                    +
+                                </button>
+                            </div>
+                            <p>Porro eius ratione ullam ea perspiciatis quidem perferendis aperiam earum laboriosam eligendi dolorem vitae omnis non velit error, expedita explicabo commodi! Qui similique excepturi temporibus veritatis minus, neque facilis, repellat sapiente harum alias impedit provident cum accusamus atque sit, eum rerum dolor commodi? Animi reiciendis quidem doloribus fuga, recusandae magni!</p>
+                        </li>
+                        <li>
+                            <div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                                <button>
+                                    +
+                                </button>
+                            </div>
+                            <p>Porro eius ratione ullam ea perspiciatis quidem perferendis aperiam earum laboriosam eligendi dolorem vitae omnis non velit error, expedita explicabo commodi! Qui similique excepturi temporibus veritatis minus, neque facilis, repellat sapiente harum alias impedit provident cum accusamus atque sit, eum rerum dolor commodi? Animi reiciendis quidem doloribus fuga, recusandae magni!</p>
+                        </li>
+                        <li>
+                            <div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                                <button>
+                                    +
+                                </button>
+                            </div>
+                            <p>Porro eius ratione ullam ea perspiciatis quidem perferendis aperiam earum laboriosam eligendi dolorem vitae omnis non velit error, expedita explicabo commodi! Qui similique excepturi temporibus veritatis minus, neque facilis, repellat sapiente harum alias impedit provident cum accusamus atque sit, eum rerum dolor commodi? Animi reiciendis quidem doloribus fuga, recusandae magni!</p>
+                        </li>
+                        <li>
+                            <div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                                <button>
+                                    +
+                                </button>
+                            </div>
+                            <p>Porro eius ratione ullam ea perspiciatis quidem perferendis aperiam earum laboriosam eligendi dolorem vitae omnis non velit error, expedita explicabo commodi! Qui similique excepturi temporibus veritatis minus, neque facilis, repellat sapiente harum alias impedit provident cum accusamus atque sit, eum rerum dolor commodi? Animi reiciendis quidem doloribus fuga, recusandae magni!</p>
                         </li>
                     </div>
                     <div className={s.section_li_3}>
@@ -241,6 +356,33 @@ const Faq = () => {
                                 </button>
                             </div>
                             <p>Fugit quos ad aperiam cupiditate debitis voluptates ex quas magni quaerat corrupti accusamus autem, earum fugiat enim atque iusto pariatur est eum at repellendus facere a omnis animi? Tenetur asperiores, aspernatur consequuntur, non minus architecto autem vel cumque quis unde cum officia. Quam voluptate expedita mollitia saepe sapiente incidunt! Est.</p>
+                        </li>
+                        <li>
+                            <div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                                <button>
+                                    +
+                                </button>
+                            </div>
+                            <p>Porro eius ratione ullam ea perspiciatis quidem perferendis aperiam earum laboriosam eligendi dolorem vitae omnis non velit error, expedita explicabo commodi! Qui similique excepturi temporibus veritatis minus, neque facilis, repellat sapiente harum alias impedit provident cum accusamus atque sit, eum rerum dolor commodi? Animi reiciendis quidem doloribus fuga, recusandae magni!</p>
+                        </li>
+                        <li>
+                            <div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                                <button>
+                                    +
+                                </button>
+                            </div>
+                            <p>Porro eius ratione ullam ea perspiciatis quidem perferendis aperiam earum laboriosam eligendi dolorem vitae omnis non velit error, expedita explicabo commodi! Qui similique excepturi temporibus veritatis minus, neque facilis, repellat sapiente harum alias impedit provident cum accusamus atque sit, eum rerum dolor commodi? Animi reiciendis quidem doloribus fuga, recusandae magni!</p>
+                        </li>
+                        <li>
+                            <div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                                <button>
+                                    +
+                                </button>
+                            </div>
+                            <p>Porro eius ratione ullam ea perspiciatis quidem perferendis aperiam earum laboriosam eligendi dolorem vitae omnis non velit error, expedita explicabo commodi! Qui similique excepturi temporibus veritatis minus, neque facilis, repellat sapiente harum alias impedit provident cum accusamus atque sit, eum rerum dolor commodi? Animi reiciendis quidem doloribus fuga, recusandae magni!</p>
                         </li>
                     </div>
                     <div className={s.section_li_4}>
@@ -326,6 +468,15 @@ const Faq = () => {
                             </div>
                             <p>Numquam facilis inventore suscipit eaque. Molestias est hic odit deserunt! Sed deserunt facilis consectetur tempora! Et, eum fugit. Doloremque, ex adipisci perferendis nihil, culpa iure sunt veniam quis voluptatibus aspernatur ea odit veritatis, nostrum esse quas dolores sapiente. Facilis eligendi quibusdam aliquam delectus quo dolorum a porro fugiat hic quisquam!</p>
                         </li>
+                        <li>
+                            <div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                                <button>
+                                    +
+                                </button>
+                            </div>
+                            <p>Porro eius ratione ullam ea perspiciatis quidem perferendis aperiam earum laboriosam eligendi dolorem vitae omnis non velit error, expedita explicabo commodi! Qui similique excepturi temporibus veritatis minus, neque facilis, repellat sapiente harum alias impedit provident cum accusamus atque sit, eum rerum dolor commodi? Animi reiciendis quidem doloribus fuga, recusandae magni!</p>
+                        </li>
                     </div>
                     <div className={s.section_li_5}>
                         <h3 id="tit_5">Lorem5</h3>
@@ -346,6 +497,78 @@ const Faq = () => {
                                 </button>
                             </div>
                             <p>Voluptates ex voluptas, earum dolorum odit quaerat magni harum reprehenderit eum odio, cum, quis quae. Animi quis delectus, explicabo eveniet numquam omnis excepturi saepe labore? Quia impedit deserunt velit rerum, fugiat in accusantium doloremque fuga iure magni labore! Magni eos reprehenderit sint dignissimos provident? Quae beatae delectus explicabo odio ullam.</p>
+                        </li>
+                        <li>
+                            <div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                                <button>
+                                    +
+                                </button>
+                            </div>
+                            <p>Porro eius ratione ullam ea perspiciatis quidem perferendis aperiam earum laboriosam eligendi dolorem vitae omnis non velit error, expedita explicabo commodi! Qui similique excepturi temporibus veritatis minus, neque facilis, repellat sapiente harum alias impedit provident cum accusamus atque sit, eum rerum dolor commodi? Animi reiciendis quidem doloribus fuga, recusandae magni!</p>
+                        </li>
+                        <li>
+                            <div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                                <button>
+                                    +
+                                </button>
+                            </div>
+                            <p>Porro eius ratione ullam ea perspiciatis quidem perferendis aperiam earum laboriosam eligendi dolorem vitae omnis non velit error, expedita explicabo commodi! Qui similique excepturi temporibus veritatis minus, neque facilis, repellat sapiente harum alias impedit provident cum accusamus atque sit, eum rerum dolor commodi? Animi reiciendis quidem doloribus fuga, recusandae magni!</p>
+                        </li>
+                        <li>
+                            <div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                                <button>
+                                    +
+                                </button>
+                            </div>
+                            <p>Porro eius ratione ullam ea perspiciatis quidem perferendis aperiam earum laboriosam eligendi dolorem vitae omnis non velit error, expedita explicabo commodi! Qui similique excepturi temporibus veritatis minus, neque facilis, repellat sapiente harum alias impedit provident cum accusamus atque sit, eum rerum dolor commodi? Animi reiciendis quidem doloribus fuga, recusandae magni!</p>
+                        </li>
+                        <li>
+                            <div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                                <button>
+                                    +
+                                </button>
+                            </div>
+                            <p>Porro eius ratione ullam ea perspiciatis quidem perferendis aperiam earum laboriosam eligendi dolorem vitae omnis non velit error, expedita explicabo commodi! Qui similique excepturi temporibus veritatis minus, neque facilis, repellat sapiente harum alias impedit provident cum accusamus atque sit, eum rerum dolor commodi? Animi reiciendis quidem doloribus fuga, recusandae magni!</p>
+                        </li>
+                        <li>
+                            <div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                                <button>
+                                    +
+                                </button>
+                            </div>
+                            <p>Porro eius ratione ullam ea perspiciatis quidem perferendis aperiam earum laboriosam eligendi dolorem vitae omnis non velit error, expedita explicabo commodi! Qui similique excepturi temporibus veritatis minus, neque facilis, repellat sapiente harum alias impedit provident cum accusamus atque sit, eum rerum dolor commodi? Animi reiciendis quidem doloribus fuga, recusandae magni!</p>
+                        </li>
+                        <li>
+                            <div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                                <button>
+                                    +
+                                </button>
+                            </div>
+                            <p>Porro eius ratione ullam ea perspiciatis quidem perferendis aperiam earum laboriosam eligendi dolorem vitae omnis non velit error, expedita explicabo commodi! Qui similique excepturi temporibus veritatis minus, neque facilis, repellat sapiente harum alias impedit provident cum accusamus atque sit, eum rerum dolor commodi? Animi reiciendis quidem doloribus fuga, recusandae magni!</p>
+                        </li>
+                        <li>
+                            <div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                                <button>
+                                    +
+                                </button>
+                            </div>
+                            <p>Porro eius ratione ullam ea perspiciatis quidem perferendis aperiam earum laboriosam eligendi dolorem vitae omnis non velit error, expedita explicabo commodi! Qui similique excepturi temporibus veritatis minus, neque facilis, repellat sapiente harum alias impedit provident cum accusamus atque sit, eum rerum dolor commodi? Animi reiciendis quidem doloribus fuga, recusandae magni!</p>
+                        </li>
+                        <li>
+                            <div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                                <button>
+                                    +
+                                </button>
+                            </div>
+                            <p>Porro eius ratione ullam ea perspiciatis quidem perferendis aperiam earum laboriosam eligendi dolorem vitae omnis non velit error, expedita explicabo commodi! Qui similique excepturi temporibus veritatis minus, neque facilis, repellat sapiente harum alias impedit provident cum accusamus atque sit, eum rerum dolor commodi? Animi reiciendis quidem doloribus fuga, recusandae magni!</p>
                         </li>
                     </div>
                 </ul>

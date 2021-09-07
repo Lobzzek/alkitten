@@ -21,13 +21,15 @@
     color: #919191;
     font-size: 1.06vw;
 }
-.active_sort{
+
+.active_sort {
     font-family: 'modelica-m';
     font-size: 20px;
     padding: 0;
     margin: 0 0 20px 0;
     font-weight: 100;
 }
+
 .sort {
     position: relative;
     background: white;
@@ -220,7 +222,6 @@
     z-index: 1;
     height: 80%;
     transition: .6s;
-    opacity: 0;
 }
 
 .zoomImg .close {
@@ -235,6 +236,41 @@
     transition: .6s;
     opacity: 0;
     cursor: pointer;
+}
+
+.zoomImg>button {
+    background: #f1efe8;
+    border-radius: 50%;
+    position: relative;
+    border: none;
+    height: 32.5px;
+    width: 32.5px;
+    z-index: 1;
+    cursor: pointer;
+    outline: none;
+    margin: 80px;
+    transition: .6s;
+    opacity: 0;
+}
+
+.zoomImg>button img {
+    width: 30%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.zoomImg>button:hover {
+    opacity: .2;
+}
+
+.zoomImg>button.prev_slide {
+    transform: rotate(0deg);
+}
+
+.zoomImg .next_slide {
+    transform: rotate(180deg);
 }
 
 @media screen and (max-width: 1920px) {
@@ -291,6 +327,11 @@
     .zoomImg .close {
         font-size: 4.204vw;
         right: 2.627vw;
+    }
+    .zoomImg>button {
+        height: 1.693vw;
+        width: 1.693vw;
+        margin: 4.627vw;
     }
 }
 

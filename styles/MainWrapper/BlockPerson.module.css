@@ -114,7 +114,7 @@
 @media screen and (min-width: 1920px) {
     .block_person {
         width: 90%;
-        padding-right: 0.677vw;
+        padding-right: 12px;
     }
     .avatar_data .avatar img {
         width: 48.75px;
@@ -137,17 +137,26 @@
     }
     .location {
         width: calc(100% - 15px);
+        margin-left: 14.2px;
+        padding-bottom: 4.7px;
     }
     .location p {
         font-size: 14.4px;
     }
     .location a {
         font-size: 16.75px;
+        padding: 4.7px 14.2px;
+        border-radius: 4.7px;
     }
     .avatar_data .avatar {
         width: 58.75px;
         height: 58.75px;
         min-width: 58.75px;
         min-height: 58.75px;
+    }
+    .avatar_data .data img {
+        width: 12.3px;
+        height: 12.3px;
+        margin: 0 2.2px;
     }
 }

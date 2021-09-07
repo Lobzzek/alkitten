@@ -63,6 +63,7 @@
     overflow-y: scroll;
     width: 98%;
     height: 100%;
+    overflow-x: hidden;
 }
 
 .group_cats .blocks>div {
@@ -294,9 +295,15 @@
     .gallery .text a.view {
         font-size: 19.075px;
     }
+    .group_cats .blocks>div {
+        margin-bottom: 19px;
+    }
+    .group_cats .blocks>div:first-child {
+        margin-top: 19px;
+    }
 }
 
-@media (min-aspect-ratio: 1900/966) {
+@media (min-width: 1920px) and (min-aspect-ratio: 2637/976) {
     .left_panel {
         max-height: 705px;
     }
@@ -305,7 +312,16 @@
     }
 }
 
-@media (min-aspect-ratio: 1900/877) {
+@media (max-width: 1920px) and (min-aspect-ratio: 1633/845) {
+    .left_panel {
+        max-height: 37.047vw;
+    }
+    .group_cats {
+        height: 22.964vw;
+    }
+}
+
+@media (min-width: 1920px) and (min-aspect-ratio: 2637/878) {
     .left_panel {
         max-width: 270px;
         max-height: 600px;
@@ -315,22 +331,12 @@
     }
 }
 
-/* 
-@media (min-aspect-ratio: 180/83) {
+@media (max-width: 1920px) and (min-aspect-ratio: 1633/755) {
     .left_panel {
-        max-height: 700px;
+        max-width: 14.188vw;
+        max-height: 31.529vw;
     }
     .group_cats {
-        height: 437.5px;
+        height: 17.709vw;
     }
 }
-
-@media (min-aspect-ratio: 1826/783) {
-    .left_panel {
-        max-width: 270px;
-        max-height: 600px;
-    }
-    .group_cats {
-        height: 337.5px;
-    }
-} */

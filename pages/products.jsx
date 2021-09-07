@@ -125,8 +125,8 @@ const Products = () => {
     const block_cards_slider = React.useRef();
 
     React.useEffect(() => {
-        if (activePageBSlider >= dataBottomSlider.length - 3){
-            setActivePageBSlider(dataBottomSlider.length - 3)
+        if (activePageBSlider >= dataBottomSlider.length - 4){
+            setActivePageBSlider(dataBottomSlider.length - 4)
         } else if (activePageBSlider < 0){
             setActivePageBSlider(0);
         }else if ( activePageBSlider === 0){

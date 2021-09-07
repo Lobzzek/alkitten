@@ -23,7 +23,7 @@ const SliderBreeds = () => {
 
     React.useEffect(() => {
         if (document.documentElement.clientWidth < 1920) {
-            let marginBetwenCards = document.documentElement.clientWidth * 0.08;
+            let marginBetwenCards = document.documentElement.clientWidth * 0.065;
             let widthCard = 8.203 * 1920 / 100;
             block_imgs.current.style.width = `${block_imgs.current.childNodes.length * (widthCard + marginBetwenCards)}px`;
         } else {
@@ -161,7 +161,7 @@ const SliderBreeds = () => {
 
         setTimeout(() => {
             if (document.documentElement.clientWidth < 1920) {
-                let marginBetwenCards = document.documentElement.clientWidth * 0.08;
+                let marginBetwenCards = document.documentElement.clientWidth * 0.065;
                 let widthCard = 8.203 * 1920 / 100;
                 block_imgs.current.style.width = `${block_imgs.current.childNodes.length * (widthCard + marginBetwenCards)}px`;
             } else {

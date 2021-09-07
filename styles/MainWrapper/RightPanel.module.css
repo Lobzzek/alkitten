@@ -309,11 +309,20 @@
     }
 }
 
-@media (min-aspect-ratio: 1900/867) {
+@media (min-width: 1920px) and (min-aspect-ratio: 2891/828) {
     .ads {
         height: 330px;
     }
     .right_panel {
         max-height: 640.6px;
+    }
+}
+
+@media (max-width: 1920px) and (min-aspect-ratio: 1917/869) {
+    .ads {
+        height: 17.341vw;
+    }
+    .right_panel {
+        max-height: 33.631vw;
     }
 }

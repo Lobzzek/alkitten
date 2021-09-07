@@ -36,7 +36,7 @@
 }
 
 .card_breed p {
-    font-size: 22.62px;
+    font-size: 21.12px;
     font-family: "modelica-r";
     text-align: center;
     margin: 0;
@@ -47,7 +47,7 @@
 @media screen and (max-width: 1920px) {
     .card_breed {
         width: 9.459vw;
-        margin: 0 0.525vw 3.153vw 0.525vw;
+        margin: 0 .5vw 3.153vw .5vw;
     }
     .block_img {
         width: 9.459vw;
@@ -55,7 +55,7 @@
         border-radius: 2.102vw;
     }
     .card_breed p {
-        font-size: 1.189vw;
+        font-size: 1.1vw;
         margin-top: 0.263vw;
         height: 3.048vw;
     }

@@ -38,6 +38,7 @@
     -webkit-box-shadow: 5px 5px 32px -11px #000000a1;
     box-shadow: 5px 5px 32px -11px #00000071;
     width: 250px;
+    display: none;
 }
 
 .categories .left_panel h3 {
@@ -69,7 +70,8 @@
 }
 
 .categories .right_panel {
-    width: 720px;
+    /* width: 720px; */
+    width: 100%;
 }
 
 .categories .top_slider {
@@ -80,7 +82,7 @@
 
 .categories .cnt {
     width: 100%;
-    height: 114px;
+    height: 159px;
     background: url("https://uxt-cf-images.mediazs.com/m7nty8w6vr94/3lv7zmbADxek7n1bQPcUz4/e2561e4cb14b4edc97a11fc9d107ee0d/2020_03_RosiesFarm_C_1000x160_UK.jpg?fm=jpg&fl=progressive&w=928&q=85");
     margin-bottom: 10px;
     overflow: hidden;
@@ -168,7 +170,8 @@
 .categories .wrap_items {
     position: relative;
     height: auto;
-    width: 630px;
+    /* width: 630px; */
+    width: 856px;
     overflow: hidden;
 }
 
@@ -228,7 +231,7 @@
         margin-bottom: 2.102vw;
     }
     .categories .cnt {
-        height: 5.991vw;
+        height: 8.4vw;
         margin-bottom: 0.525vw;
     }
     .categories .top_slider .dots span {
@@ -244,7 +247,8 @@
         width: 1.682vw;
     }
     .categories .wrap_items {
-        width: 33.106vw;
+        /* width: 33.106vw; */
+        width: 45.106vw;
     }
     .categories .wrap_items::before {
         width: 2.627vw;

@@ -1,5 +1,5 @@
 .card_goods {
-    width: 340px;
+    width: 475px;
     height: fit-content;
     -webkit-box-shadow: 5px 5px 32px -11px #000000;
     box-shadow: 5px 5px 32px -11px #000000;
@@ -89,8 +89,8 @@
 }
 
 .card_goods.narrow {
-    width: 220px;
-    height: 520px;
+    width: 294px;
+    height: 608px;
 }
 
 .card_goods.narrow .cnt_goods {
@@ -112,7 +112,7 @@
 
 @media screen and (max-width: 1920px) {
     .card_goods {
-        width: 17.867vw;
+        width: 25vw;
         height: 16.500vw;
         margin-bottom: 2.102vw;
     }
@@ -138,8 +138,10 @@
         margin-top: 0.525vw;
     }
     .card_goods.narrow {
-        width: 11.561vw;
-        height: 27.325vw;
+        /* width: 11.561vw;
+        height: 27.325vw; */
+        width: 15.561vw;
+        height: 32vw
     }
     .card_goods.narrow .cnt_goods>img {
         margin-bottom: 0.525vw;
