@@ -114,9 +114,9 @@ export default function Home() {
                 <CardCat image="/img/cat_for_card.jpg" index="1" name="samey" breed="M, Bengal Cat" h="1m (Adult, Nose to tail)" w="5.9 - 8.2kg" location="San Francisco, CA" />
                 <CardCat image="/img/cat_for_card.jpg" index="2" name="queen" breed="F, American Longhair" verified h="1m (Adult, Nose to tail)" w="5.9 - 8.2kg" location="Los Angeles, CA" /> */}
          
-                <CardCat />
-                <CardCat />
-                <CardCat />
+              <CardCat img_cat="/img/cat_bottom_home.png" />
+              <CardCat img_cat="/img/cat_bottom_home.png" />
+              <CardCat img_cat="/img/cat_bottom_home.png" />
           </div> 
           <a href="dsa">Viev More</a>
       </div>

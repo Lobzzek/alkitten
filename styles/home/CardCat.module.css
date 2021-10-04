@@ -310,7 +310,7 @@
     width: 100%;
     height: 230px;
     margin: 15px 0px 15px 0px;
-    background: url("/img/cat_bottom_home.png") 0/cover no-repeat;
+    /* background: url("/img/cat_bottom_home.png") 0/cover no-repeat; */
 }
 
 .show_more_text {
@@ -329,6 +329,7 @@
 
 .show_more_text p {
     margin: 0;
+    font-size: 16px;
 }
 
 @media screen and (max-width: 1920px) {
@@ -369,7 +370,7 @@
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        font-size: 14.0.26vw;
+        font-size: 0.75vw;
         margin: 0.00vw 0.00vw 0.26vw 0.00vw;
     }
     .cat_card_info_row__title {
@@ -455,7 +456,7 @@
         background: #142b33;
         color: #fff;
         border-radius: 0.26vw;
-        font-size: 14.0.26vw;
+        font-size: 0.75vw;
     }
     .cat_card_info_img {
         border-radius: 0.52vw;
@@ -463,7 +464,7 @@
         width: 100%;
         height: 11.98vw;
         margin: 0.78vw 0.00vw 0.78vw 0.00vw;
-        background: url("/img/cat_bottom_home.png") 0/cover no-repeat;
+        /* background: url("/img/cat_bottom_home.png") 0/cover no-repeat; */
     }
     .show_more_text {
         position: absolute;
@@ -480,5 +481,6 @@
     }
     .show_more_text p {
         margin: 0;
+        font-size: .8vw;
     }
 }
