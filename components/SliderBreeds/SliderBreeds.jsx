@@ -40,14 +40,14 @@ const SliderBreeds = () => {
             setActivePage(1);
         }
 
-        let leftBlock = -2;
+        let leftBlock = 0;
         for (let i = 0; i < activePage - 1; i++) {
             if (activeSort === 0) {
-                leftBlock -= 15.88
+                leftBlock -= 14.433
             } else if (activeSort === 1) {
-                leftBlock -= 15.9
+                leftBlock -= 14.47
             } else {
-                leftBlock -= 15.5
+                leftBlock -= 14.2
             }
         }
 
@@ -55,7 +55,7 @@ const SliderBreeds = () => {
             block_imgs.current.style.left = `${leftBlock}vw`
 
         } else {
-            block_imgs.current.style.left = `${leftBlock * 1930 / 100}px`;
+            block_imgs.current.style.left = `${leftBlock * 2130 / 100}px`;
         }
 
 

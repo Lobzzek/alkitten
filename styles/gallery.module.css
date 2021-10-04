@@ -93,8 +93,8 @@
     background: #F1EFE8;
     bottom: -200px;
     z-index: -1;
-    -webkit-box-shadow: 5px 5px 32px -11px #000000;
-    box-shadow: 5px 5px 32px -11px #000000;
+    -webkit-box-shadow: 5px 5px 32px -11px rgba(0,0,0,0.6);
+    box-shadow: 5px 5px 32px -11px rgba(0,0,0,0.6);
     transition: .4s;
     height: 200px;
     transform-origin: 50% 0;
@@ -179,8 +179,8 @@
 }
 
 .block_img:hover {
-    -webkit-box-shadow: 5px 5px 32px -11px #000000;
-    box-shadow: 5px 5px 32px -11px #000000;
+    -webkit-box-shadow: 5px 5px 32px -11px rgba(0,0,0,0.6);
+    box-shadow: 5px 5px 32px -11px rgba(0,0,0,0.6);
     transform: scale(1.01);
 }
 

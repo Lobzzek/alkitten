@@ -18,8 +18,8 @@
 }
 
 .card_slider:hover {
-    -webkit-box-shadow: 5px 5px 32px -11px #000000;
-    box-shadow: 5px 5px 32px -11px #000000;
+    -webkit-box-shadow: 5px 5px 32px -11px rgba(0,0,0,0.6);
+    box-shadow: 5px 5px 32px -11px rgba(0,0,0,0.6);
 }
 
 .card_slider .wrap_img {

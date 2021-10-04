@@ -110,9 +110,13 @@ export default function Home() {
           <p>Browse breeds that fit your lifestyle</p>
         </div>
           <div className={s.block_cats}>
-                <CardCat image="/img/cat_for_card.jpg" index="0" name="meya" breed="F, American Longhair" verified h="1m (Adult, Nose to tail)" w="5.9 - 8.2kg" location="Temecula, CA" />
+                {/* <CardCat image="/img/cat_for_card.jpg" index="0" name="meya" breed="F, American Longhair" verified h="1m (Adult, Nose to tail)" w="5.9 - 8.2kg" location="Temecula, CA" />
                 <CardCat image="/img/cat_for_card.jpg" index="1" name="samey" breed="M, Bengal Cat" h="1m (Adult, Nose to tail)" w="5.9 - 8.2kg" location="San Francisco, CA" />
-                <CardCat image="/img/cat_for_card.jpg" index="2" name="queen" breed="F, American Longhair" verified h="1m (Adult, Nose to tail)" w="5.9 - 8.2kg" location="Los Angeles, CA" />
+                <CardCat image="/img/cat_for_card.jpg" index="2" name="queen" breed="F, American Longhair" verified h="1m (Adult, Nose to tail)" w="5.9 - 8.2kg" location="Los Angeles, CA" /> */}
+         
+                <CardCat />
+                <CardCat />
+                <CardCat />
           </div> 
           <a href="dsa">Viev More</a>
       </div>
