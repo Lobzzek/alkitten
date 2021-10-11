@@ -79,13 +79,13 @@ const Login = (props) => {
                                         <p className={`${s.woocommerce_form_row} ${s.woocommerce_form_row__wide} ${s.form_row} ${s.form_row_wide}`}>
                                             <label for="username">Email address&nbsp; <span lassName={s.required}>*</span></label>
                                             <input type="text" className={` ${s.woocommerce_Input} ${s.woocommerce_Input__text} ${s.input_text} `}
-                                                name="username" id="username" autocomplete="username" value="" />
+                                                name="username" id="username" autoComplete="username" value="" />
                                         </p>
                                         <p className={`${s.woocommerce_form_row} ${s.woocommerce_form_row__wide} ${s.form_row} ${s.form_row_wide}`}>
                                             <label for="password">Password&nbsp; <span className={s.required}>*</span></label>
                                             <span className={s.password_input}><input
                                                 className={`${s.woocommerce_Input} ${s.woocommerce_Input__text} ${s.input_text}`} type="password"
-                                                name="password" id="password" autocomplete="current_password" /><span
+                                                name="password" id="password" autoComplete="current_password" /><span
                                                     className={s.show_password_input}></span></span>
                                         </p>
 
@@ -128,7 +128,7 @@ const Login = (props) => {
                                         <p className={`${s.woocommerce_form_row} ${s.woocommerce_form_row__wide} ${s.form_row} ${s.form_row_wide}}`}>
                                             <label for="reg_email">Email address&nbsp; <span className={s.required}>*</span></label>
                                             <input type="email" className={`${s.woocommerce_Input} ${s.woocommerce_Input__text} ${s.input_text}`}
-                                                name="email" id="reg_email" autocomplete="email" value="" />
+                                                name="email" id="reg_email" autoComplete="email" value="" />
                                         </p>
 
 
@@ -136,7 +136,7 @@ const Login = (props) => {
                                             <label for="reg_password">Password&nbsp; <span className={s.required}>*</span></label>
                                             <span className={s.password_input}><input type="password"
                                                 className={`${s.woocommerce_Input} ${s.woocommerce_Input__text} ${s.input_text}`} name="password"
-                                                id="reg_password" autocomplete="new_password" /><span
+                                                id="reg_password" autoComplete="new_password" /><span
                                                 className={s.show_password_input}></span></span>
                                         </p>
 
