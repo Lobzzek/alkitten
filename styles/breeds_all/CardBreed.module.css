@@ -18,8 +18,8 @@
 }
 
 .card_breed:hover .block_img {
-    -webkit-box-shadow: 5px 5px 32px -11px rgba(0,0,0,0.6);
-    box-shadow: 5px 5px 32px -11px rgba(0,0,0,0.6);
+    -webkit-box-shadow: rgb(0 0 0 / 28%) 0px 8px 28px;
+    box-shadow: rgb(0 0 0 / 28%) 0px 8px 28px;
 }
 
 .card_breed:hover .block_img img {

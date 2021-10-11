@@ -65,7 +65,7 @@ const Faq = () => {
             }
         }
 
-            window.addEventListener("scroll", setActivePunktOnScroll)
+        window.addEventListener("scroll", setActivePunktOnScroll)
 
         //remove change url
         function locationHashChanged() {
@@ -75,7 +75,7 @@ const Faq = () => {
         }
         window.onhashchange = locationHashChanged;
 
-        return window.removeEventListener("scroll", setActivePunktOnScroll)
+        // return window.removeEventListener("scroll", setActivePunktOnScroll)
 
     }, [])
 

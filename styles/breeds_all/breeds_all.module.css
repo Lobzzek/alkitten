@@ -3,7 +3,7 @@
     display: flex;
     border-radius: 5px;
     border: 1.2px solid #938556;
-    width: 28.542vw;
+    width: 38.542vw;
     height: 1.901vw;
     align-items: center;
     justify-content: space-between;
@@ -21,7 +21,7 @@
     cursor: pointer;
 }
 
-.sort div:nth-child(1), .sort div:nth-child(2) {
+.sort div:nth-child(1), .sort div:nth-child(2), .sort div:nth-child(3) {
     border-right: 1.25px solid #938556;
 }
 
@@ -58,7 +58,7 @@
 
 @media screen and (min-width: 1920px) {
     .sort {
-        width: 548x;
+        width: 733px;
         height: 36.5px;
     }
 }

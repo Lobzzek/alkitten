@@ -41,12 +41,11 @@
     -webkit-box-shadow: 5px 5px 32px -11px #000000a1;
     box-shadow: 5px 5px 32px -11px #00000071;
     z-index: 2;
-    width: 970px;
     display: flex;
     justify-content: space-evenly;
-    left: 50%;
-    transform: translateX(-50%);
     top: 240px;
+    width: 990px;
+    transform: translateX(-20px);
 }
 
 .faq_cnt .punkts::before {
@@ -100,7 +99,7 @@
 
 .faq_cnt ul {
     width: 100%;
-    margin-top: 160px;
+    margin-top: 210px;
     padding: 0;
 }
 
@@ -198,8 +197,9 @@
     }
     .faq_cnt .punkts {
         /* padding: 0.263vw 1.576vw; */
-        width: 50.972vw;
+        width: 51.972vw;
         top: 13vw;
+        transform: translateX(-1vw);
     }
     .faq_cnt .punkts div {
         margin: 0.368vw 0;
@@ -216,7 +216,7 @@
         margin: 1.314vw 0 0.525vw 0;
     }
     .faq_cnt ul {
-        margin-top: 9.255vw;
+        margin-top: 12.255vw;
     }
     .faq_cnt ul li {
         padding: 1.051vw;

@@ -1,15 +1,17 @@
 .card_goods {
-    width: 475px;
+    width: 556.8px;
+    height: 374.4px;
     height: fit-content;
-    -webkit-box-shadow: 5px 5px 32px -11px rgba(0,0,0,0.6);
-    box-shadow: 5px 5px 32px -11px rgba(0,0,0,0.6);
-    height: 314px;
+    -webkit-box-shadow: rgb(0 0 0 / 28%) 0px 8px 28px;
+    box-shadow: rgb(0 0 0 / 28%) 0px 8px 28px;
     background: #F5F5F5;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     margin-bottom: 40px;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .card_goods>a {
@@ -27,14 +29,14 @@
     padding: 19px 0;
     font-family: 'modelica-r';
     font-weight: 100;
-    font-size: 19.2px;
+    font-size: 23.3px;
     text-align: center;
-    max-height: 61px;
+    max-height: 81px;
 }
 
 .card_goods .cnt_goods {
     display: flex;
-    padding: 15px 10px;
+    padding: 15px;
     width: 100%;
     align-items: flex-start;
 }
@@ -57,7 +59,7 @@
     font-family: 'modelica-r';
     margin-bottom: 4px;
     position: relative;
-    font-size: 16px;
+    font-size: 19.2px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -89,8 +91,10 @@
 }
 
 .card_goods.narrow {
-    width: 294px;
-    height: 608px;
+    width: 356.3px;
+    height: 700px;
+    /* width: 18.561vw;
+    height: 35vw; */
 }
 
 .card_goods.narrow .cnt_goods {
@@ -112,24 +116,25 @@
 
 @media screen and (max-width: 1920px) {
     .card_goods {
-        width: 25vw;
-        height: 16.500vw;
+        width: 29vw;
+        height: 19.5vw;
         margin-bottom: 2.102vw;
+        border-radius: .6vw;
     }
     .card_goods h3 {
         padding: 0.998vw 0;
-        font-size: 0.998vw;
-        max-height: 3.205vw;
+        font-size: 1.2vw;
+        max-height: 4.205vw;
     }
     .card_goods .cnt_goods {
-        padding: 0.788vw 0.525vw;
+        padding: 0.75vw;
     }
     .card_goods .cnt_goods>img {
         margin-right: 1.051vw;
     }
     .card_goods .links a {
         margin-bottom: 0.210vw;
-        font-size: 0.841vw;
+        font-size: 1vw;
     }
     .card_goods .links a:not(.all_prod)::before {
         height: 0.105vw;
@@ -140,8 +145,8 @@
     .card_goods.narrow {
         /* width: 11.561vw;
         height: 27.325vw; */
-        width: 15.561vw;
-        height: 32vw
+        width: 18.561vw;
+        height: 36.5vw;
     }
     .card_goods.narrow .cnt_goods>img {
         margin-bottom: 0.525vw;

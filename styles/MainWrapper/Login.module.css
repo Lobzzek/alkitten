@@ -1,0 +1,351 @@
+.login_wrap {
+    z-index: 80;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+
+.login_wrap .fon {
+    background: rgba(0, 0, 0, 0.76);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: .6s;
+    opacity: 0;
+}
+
+.post_47 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+    transform: translate(-50%, -20%);
+    transition: .6s;
+}
+
+.login_wrap form {
+    width: 100%;
+}
+
+.entry_header h2 {
+    margin-bottom: 0.3vw;
+}
+
+.centered_title, .entry_header h2 {
+    text-align: center;
+    font-size: 28.8px;
+    color: white;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+.entry_content {
+    padding-bottom: 60px;
+}
+
+.form_wrapper {
+    max-width: 480px;
+    width: 480px;
+    margin: auto;
+    margin-top: 20px;
+    z-index: 1;
+}
+
+.form_wrapper .buttons_wrapper {
+    display: flex;
+}
+
+.form_wrapper .buttons_wrapper>button {
+    width: 50%;
+    border-radius: 0;
+    border: none;
+    outline: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+    font-size: 19px;
+    color: white;
+    cursor: pointer;
+    padding: 20px 0;
+    margin-bottom: -2px;
+}
+
+.register_btn {
+    border-radius: 12px 0 0 0 !important;
+}
+
+.login_btn {
+    border-radius: 0 12px 0 0 !important;
+}
+
+.form_wrapper .buttons_wrapper>button.active {
+    background: #f3f8f5;
+    color: #000;
+}
+
+.form_wrapper .buttons_wrapper>button:hover {
+    opacity: 1;
+}
+
+.form_content {
+    padding: 30px 20px;
+    background: #f3f8f5;
+    border-radius: 0 0 12px 12px;
+}
+
+.form_content>div.active {
+    display: flex;
+}
+
+.form_content>div {
+    display: none;
+}
+
+.form_wrapper form label {
+    font-size: 19.2px;
+}
+
+.woocommerce_privacy_policy_text p {
+    font-size: 14px;
+}
+
+.woocommerce_privacy_policy_text a {
+    color: #938556;
+}
+
+.u_columns.col2_set>div p input:not(.woocommerce_form__input_checkbox), .form_wrapper form input:not(.woocommerce_form__input_checkbox) {
+    width: 100%;
+    max-width: 100%;
+    padding: 8px 5px 8px 13px;
+    font-size: 17px;
+    border-radius: 4px;
+    outline: none;
+    transition: all 300ms;
+    background: #efefef;
+    border: none;
+}
+
+.woocommerce form .form_row .required {
+    visibility: visible;
+}
+
+.password_input {
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.form_wrapper form .row_specs_form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form_wrapper form .row_specs_form label, .form_wrapper form .row_specs_form a {
+    font-size: 19.2px;
+    color: black;
+}
+
+form .row_specs_form a {
+    font-size: 19.2px;
+    color: black;
+}
+
+.woocommerce_form_login__submit, .woocommerce_form_register__submit {
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    background: #938556;
+    color: #fff;
+    font-size: 18px;
+    transition: 300ms;
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 6px 0;
+    border-radius: 5px;
+}
+
+.form_wrapper .text_under_button {
+    font-size: 19.2px;
+    margin-top: 9px;
+    text-align: center;
+}
+
+.clicable_form_btn {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    color: #938556;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    transition: 300ms;
+}
+/* 
+@media screen and (max-width: 1920px) {
+    .login_wrap {
+        z-index: 80;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: none;
+    }
+    .login_wrap .fon {
+        background: rgba(0, 0, 0, 0.76);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        transition: .6s;
+        opacity: 0;
+    }
+    .post_47 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        opacity: 0;
+        transform: translate(-50%, -20%);
+        transition: .6s;
+    }
+    .login_wrap form {
+        width: 100%;
+    }
+    .entry_header h2 {
+        margin-bottom: 0.3vw;
+    }
+    .centered_title, .entry_header h2 {
+        text-align: center;
+        font-size: 1.3vw;
+        color: white;
+        margin-bottom: 0;
+        font-weight: 400;
+    }
+    .entry_content {
+        padding-bottom: 3.13vw;
+    }
+    .form_wrapper {
+        max-width: 25.00vw;
+        width: 25.00vw;
+        margin: auto;
+        margin-top: 1.04vw;
+        z-index: 1;
+    }
+    .form_wrapper .buttons_wrapper {
+        display: flex;
+    }
+    .form_wrapper .buttons_wrapper>button {
+        width: 50%;
+        border-radius: 0;
+        border: none;
+        outline: none;
+        background: none;
+        margin: 0;
+        padding: 0;
+        font-size: 0.99vw;
+        color: white;
+        cursor: pointer;
+        padding: 1.04vw 0;
+        margin-bottom: -0.10vw;
+    }
+    .register_btn {
+        border-radius: 0.63vw 0 0 0 !important;
+    }
+    .login_btn {
+        border-radius: 0 0.63vw 0 0 !important;
+    }
+    .form_wrapper .buttons_wrapper>button.active {
+        background: #f3f8f5;
+        color: #000;
+    }
+    .form_wrapper .buttons_wrapper>button:hover {
+        opacity: 1;
+    }
+    .form_content {
+        padding: 1.56vw 1.04vw;
+        background: #f3f8f5;
+        border-radius: 0 0 0.63vw 0.63vw;
+    }
+    .form_content>div.active {
+        display: flex;
+    }
+    .form_content>div {
+        display: none;
+    }
+    .form_wrapper form label {
+        font-size: 1vw;
+    }
+    .woocommerce_privacy_policy_text p {
+        font-size: 0.73vw;
+    }
+    .woocommerce_privacy_policy_text a {
+        color: #938556;
+    }
+    .u_columns.col2_set>div p input:not(.woocommerce_form__input_checkbox), .form_wrapper form input:not(.woocommerce_form__input_checkbox) {
+        width: 100%;
+        max-width: 100%;
+        padding: 0.42vw 0.26vw 0.42vw 0.68vw;
+        font-size: 0.89vw;
+        border-radius: 0.21vw;
+        outline: none;
+        transition: all 300ms;
+        background: #efefef;
+        border: none;
+    }
+    .woocommerce form .form_row .required {
+        visibility: visible;
+    }
+    .password_input {
+        font-size: 0.83vw;
+        line-height: 1.2;
+    }
+    .form_wrapper form .row_specs_form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .form_wrapper form .row_specs_form label, .form_wrapper form .row_specs_form a {
+        font-size: 1vw;
+        color: black;
+    }
+    form .row_specs_form a {
+        font-size: 1vw;
+        color: black;
+    }
+    .woocommerce_form_login__submit, .woocommerce_form_register__submit {
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        outline: none;
+        background: #938556;
+        color: #fff;
+        font-size: 0.94vw;
+        transition: 300ms;
+        margin-top: 0.52vw;
+        cursor: pointer;
+        padding: 0.31vw 0;
+        border-radius: 0.26vw;
+    }
+    .form_wrapper .text_under_button {
+        font-size: 1vw;
+        margin-top: 0.47vw;
+        text-align: center;
+    }
+    .clicable_form_btn {
+        border: none;
+        border-radius: 0;
+        padding: 0;
+        color: #938556;
+        background: transparent;
+        outline: none;
+        cursor: pointer;
+        transition: 300ms;
+    }
+} */

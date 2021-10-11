@@ -3,7 +3,7 @@ import s from '../../../styles/MainWrapper/LeftPanel.module.css';
 import React from 'react'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
-const BlockPerson = dynamic(() => import('./BlockPerson.jsx'));
+const BlockPerson = dynamic(() => import('../RightPanel/BlockPerson.jsx'));
 
 const LeftPanel = () => {    
 
@@ -25,7 +25,7 @@ const LeftPanel = () => {
                     <BlockPerson verified rating="4" index="8" login="LAILALOVES CATTERY" description="We are a breeder located in McKinney, TX and specialize in Exotic Folds / Foldex kittens. The queen (mother) is an Exotic Long Hair and the king (father)" location="Temecula, CA"/>
                 </div>
                 <div className={s.link}>
-                    <a href="#">View All</a>
+                    <Link href="/catteries"><a className={s.view}>View All</a></Link>
                 </div>
             </div>
             <div className={s.faq}>

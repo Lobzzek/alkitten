@@ -71,7 +71,16 @@
     font-family: "modelica-r";
     font-size: .65vw;
     margin: 0;
-    width: 50px;
+    max-width: 5vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    line-clamp: 1;
+    box-orient: vertical;
 }
 
 .block_person>p {
@@ -80,6 +89,15 @@
     font-size: 0.72vw;
     width: fit-content;
     color: #365864;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-clamp: 3;
+    box-orient: vertical;
 }
 
 .location {
@@ -93,12 +111,23 @@
 .location img {
     width: 0.58vw;
     height: fit-content;
+    margin-right: .2vw;
 }
 
 .location p {
     color: #365864;
     font-family: "modelica-r";
     font-size: .75vw;
+    max-width: 5.5vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    line-clamp: 1;
+    box-orient: vertical;
 }
 
 .location a {
@@ -126,6 +155,7 @@
     }
     .avatar_data .data .login {
         font-size: 12px;
+        max-width: 100px;
     }
     .block_person>p {
         font-size: 13.875px;
@@ -134,6 +164,7 @@
     .location img {
         width: 11.25px;
         height: fit-content;
+        margin-right: 4px;
     }
     .location {
         width: calc(100% - 15px);
@@ -142,6 +173,7 @@
     }
     .location p {
         font-size: 14.4px;
+        max-width: 105.6px;
     }
     .location a {
         font-size: 16.75px;

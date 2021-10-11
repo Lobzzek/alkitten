@@ -24,7 +24,7 @@
 
 .categories {
     position: relative;
-    width: 1000px;
+    width: 1161px;
     display: flex;
     justify-content: space-between;
 }
@@ -89,6 +89,7 @@
     background-size: cover;
     background-position: center;
     transition: .55s;
+    border-radius: 12px;
 }
 
 .categories .top_slider .dots {
@@ -125,13 +126,15 @@
     font-family: "modelica-m";
     color: #202D34;
     margin-bottom: 20px;
+    text-align: center;
+    font-size: 28.8px;
 }
 
 .categories .bottom_slider {
     width: 100%;
     height: fit-content;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -206,7 +209,7 @@
 
 @media screen and (max-width: 1920px) {
     .categories {
-        width: 52.549vw;
+        width: 60.549vw;
     }
     .categories .left_panel {
         top: 6.255vw;
@@ -233,6 +236,7 @@
     .categories .cnt {
         height: 8.4vw;
         margin-bottom: 0.525vw;
+        border-radius: .6vw;
     }
     .categories .top_slider .dots span {
         width: 0.788vw;

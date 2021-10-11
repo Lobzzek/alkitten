@@ -1,7 +1,7 @@
 .right_panel {
     position: sticky;
     /* top: calc((100vh / 2) - (41.967vw / 2) + (2.917vh / 2)); */
-    top: 8.3vw;
+    top: 6.38vw;
     width: 14.0625vw;
     height: 38.5vw;
     /* margin-top: 0.9vw; */
@@ -56,8 +56,8 @@
     height: 5.85vw;
     /* border-radius: 5px; */
     /* border: 1.2px solid #000; */
-    -webkit-box-shadow: 5px 5px 32px -11px rgba(0,0,0,0.6);
-    box-shadow: 5px 5px 32px -11px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
 .become img {
@@ -141,8 +141,8 @@
     background: #f1efe8;
     /* border-radius: 5px; */
     /* border: 1.2px solid #000; */
-    -webkit-box-shadow: 5px 5px 32px -11px rgba(0,0,0,0.6);
-    box-shadow: 5px 5px 32px -11px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 5px 5px 32px -11px rgba(0, 0, 0, 0.4);
+    box-shadow: 5px 5px 32px -11px rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
 
@@ -160,8 +160,8 @@
     background: #f1efe8;
     /* border-radius: 5px; */
     /* border: 1.2px solid #000; */
-    -webkit-box-shadow: 5px 5px 32px -11px rgba(0,0,0,0.6);
-    box-shadow: 5px 5px 32px -11px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
     z-index: 1;
 }
 
@@ -204,6 +204,116 @@
     border-radius: 0.25vw;
 }
 
+.group_cats {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 17.7vw;
+    background: #F1EFE8;
+    /* border: 1.2px solid #000; */
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-shadow: 5px 5px 32px -11px rgba(0, 0, 0, 0.4);
+    box-shadow: 5px 5px 32px -11px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* .group_cats::before {
+    content: '';
+    position: absolute;
+    background: pink;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    height: 16%;
+    
+} */
+
+.group_cats .top_phrase {
+    position: relative;
+    width: 100%;
+    /* background: linear-gradient(#F1EFE8, #F1EFE8, transparent); */
+    top: 0;
+    z-index: 2;
+    padding: 1vw 0;
+    box-shadow: 0 10px 16px #f1efe8;
+}
+
+.group_cats .top_phrase h3 {
+    margin: 0 auto;
+    width: fit-content;
+    color: #000;
+    font-family: "modelica-m";
+    font-size: 1.125vw;
+    margin-top: 0;
+}
+
+.group_cats .blocks {
+    position: relative;
+    overflow-y: scroll;
+    width: 98%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.group_cats .blocks>div {
+    margin: 0 auto;
+}
+
+.group_cats .blocks::-webkit-scrollbar {
+    width: 7.2px;
+}
+
+@media screen and (max-width: 1920px) {
+    .group_cats .blocks::-webkit-scrollbar {
+        width: 0.375vw;
+    }
+}
+
+.group_cats .blocks::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 10px;
+}
+
+.group_cats .blocks::-webkit-scrollbar-track {
+    background: none;
+}
+
+.group_cats .blocks>div {
+    margin-bottom: 1vw;
+    border-radius: 7.2px;
+}
+
+.group_cats .blocks>div:first-child {
+    margin-top: 1vw;
+}
+
+.group_cats .link {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 -10px 16px #f1efe8;
+    height: 3.64vw;
+    align-items: center;
+}
+
+.group_cats .link a {
+    color: white;
+    font-family: "modelica-r";
+    font-weight: 100;
+    font-size: 1vw;
+    background: #938556;
+    text-decoration: none;
+    padding: .31vw .5vw;
+    border-radius: 0.26vw;
+    margin: 0 auto;
+    height: fit-content;
+}
+
 @media screen and (min-width: 1920px) {
     .right_panel {
         max-width: 270px;
@@ -211,7 +321,7 @@
         /* transform: translateX(690px) translateY(-50%); */
         /* top: calc(50% + (0.5vw + 56.25px) / 3); */
         /* top: calc((100vh / 2) - (800px / 2) + ((56.25px + 0.05vw) / 2)); */
-        top: 161.25px;
+        top: 153px;
     }
     .browse {
         height: 112.5px;
@@ -263,6 +373,24 @@
     }
     .started .text a {
         font-size: 19px;
+    }
+    .group_cats {
+        height: 340px;
+    }
+    .group_cats .top_phrase h3 {
+        font-size: 21.6px;
+    }
+    .group_cats .link {
+        height: 70px;
+    }
+    .group_cats .link a {
+        font-size: 19.2px;
+    }
+    .group_cats .blocks>div {
+        margin-bottom: 19px;
+    }
+    .group_cats .blocks>div:first-child {
+        margin-top: 19px;
     }
 }
 

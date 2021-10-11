@@ -1,184 +1,29 @@
-/* .card {
-    width: 14.6vw;
-    height: 20.3vw;
-    background: white;
-    position: relative;
-    box-shadow: 0 0 8px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    overflow: hidden;
-    transition: .6s;
-}
-
-.card:hover {
-    -webkit-box-shadow: 5px 5px 16px -11px rgba(0,0,0,0.6);
-    box-shadow: 5px 5px 16px -11px rgba(0,0,0,0.6);
-}
-
-.block_img {
-    width: 100%;
-    position: relative;
-    height: 50%;
-    overflow: hidden;
-}
-
-.block_img img {
-    width: 101%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.data_cat {
-    position: relative;
-    width: 100%;
-    height: 50%;
-}
-
-.name_breed {
+.cat_card_info {
     display: flex;
-    align-items: center;
-    margin-top: 0.625vw;
-    margin-left: 1.56vw;
-    margin-bottom: 1vw;
-}
-
-.name_breed div {
-    margin-right: 0.75vw;
-}
-
-.name_breed h3 {
-    margin: 0;
-    color: #202d34;
-    font-size: 1.25vw;
-    font-family: "modelica-m";
-    margin-bottom: .125vw;
-}
-
-.name_breed p {
-    margin: 0;
-    color: #365864;
-    font-size: 0.875vw;
-    font-family: "modelica-r";
-    font-weight: 100;
-}
-
-.name_breed img {
-    height: 1.5vw;
+    align-items: flex-start;
     width: fit-content;
 }
 
-.sizes {
-    margin-bottom: .5vw;
-}
-
-.sizes p {
-    font-size: 0.875vw;
-    font-family: "modelica-r";
-    font-weight: 100;
-    margin: 0;
-    margin-bottom: .5vw;
-    margin-left: 1.56vw;
-    color: #919191;
-    font-size: 0.75vw;
-}
-
-.location {
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    width: calc(100% - 2.5vw);
-    margin: 0 auto;
-    align-items: center;
-}
-
-.location div {
-    display: flex;
-    align-items: center;
-}
-
-.location img {
-    width: 0.86vw;
-    margin-right: .225vw;
-    height: fit-content;
-}
-
-.location p {
-    color: #365864;
-    font-size: .75vw;
-}
-
-.location a {
-    color: white;
-    font-family: "modelica-r";
-    font-weight: 100;
-    font-size: .75vw;
-    background: #142B33;
-    text-decoration: none;
-    margin: 0;
-    padding: .31vw .625vw;
-    border-radius: 0.26vw;
-    transition: .4s;
-}
-.location a:hover{
-    opacity: 1;
-    background: #938556;
-}
-@media screen and (min-width: 1920px) {
-    .card {
-        width: 281.25px;
-        height: 390px;
-    }
-    .name_breed {
-        margin: 12px 11.25px 19.125px 30px;
-    }
-    .name_breed h3 {
-        font-size: 24px;
-    }
-    .name_breed p {
-        font-size: 16.75px;
-    }
-    .name_breed img {
-        height: 28.75px;
-    }
-    .sizes {
-        margin-bottom: 8.75px;
-    }
-    .sizes p {
-        font-size: 15px;
-        margin: 0 0 9.5px 30px;
-    }
-    .location {
-        width: 221.25px;
-    }
-    .location img {
-        width: 16.75px;
-        margin-right: 5px;
-    }
-    .location p {
-        font-size: 14.3px;
-    }
-    .location a {
-        font-size: 14.3px;
-    }
-} */
-
-.cat_card_info {
-    width: 300px;
-    border-radius: 12px;
-    -webkit-box-shadow: 5px 5px 16px -11px rgba(0,0,0,0.6);
-    box-shadow: 5px 5px 16px -11px rgba(0,0,0,0.6);
-    padding: 15px;
+.cat_card_info .left_cnt {
+    width: 277px;
     color: #365864;
     font-family: "modelica-r";
-    margin: 0 24px;
+    margin-right: 19.02px;
+}
+
+.cat_card_info .right_cnt {
+    width: 307px;
+    margin-top: 100px;
+}
+
+.cat_card_info .right_cnt p {
+    font-size: 14px;
+    margin: 0;
 }
 
 .cat_card_info__icon {
     width: 45px;
     height: 45px;
-    border: 2px solid #938556;
-    border-radius: 10px;
 }
 
 .cat_card_info_row {
@@ -194,9 +39,9 @@
 }
 
 .cat_card_info_row_2 img {
-    width: 19.2px;
-    height: 19.2px;
-    margin: 0px 10px 1.92px 0px;
+    width: 15px;
+    height: 15px;
+    margin: 0px 5px 0px 0px;
 }
 
 .cat_card_info_row_2 p {
@@ -206,7 +51,14 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    font-size: 19.2px;
+    font-size: 14.5px;
+    margin: 0px 0px 5px 0px;
+}
+
+.cat_card_info_row_2 a.href_site {
+    font-size: 15.5px;
+    display: flex;
+    align-items: center;
     margin: 0px 0px 5px 0px;
 }
 
@@ -222,6 +74,11 @@
     margin: 0px 0px 5px 0px;
 }
 
+.cat_card_info_row__title span {
+    position: relative;
+    padding-bottom: 4px;
+}
+
 .cat_card_info_row__title img {
     width: 20px;
     height: 20px;
@@ -231,18 +88,11 @@
 .cat_card_info_row__sub_titles {
     font-size: 19.2px;
     width: 180px;
+    position: relative;
 }
 
 .cat_card_info_row__sub_titles p {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -moz-box;
-    -moz-box-orient: vertical;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    line-clamp: 1;
-    box-orient: vertical;
+    position: relative;
 }
 
 .cat_card_info_row__sub_titles p:first-child {
@@ -256,28 +106,57 @@
     padding: 0px;
 }
 
-.cat_card_info_row__sub_titles p:first-child::after {
+.cat_card_info_row__sub_titles:after {
     content: "";
     position: absolute;
     width: 70px;
     height: 2px;
     left: 0;
-    bottom: 0;
+    top: -4px;
     background: #365864;
 }
 
 .cat_card_info_row_2 p {
-    font-size: 16px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -moz-box;
-    -moz-box-orient: vertical;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    line-clamp: 1;
-    box-orient: vertical;
+    font-size: 19.2px;
     /* height: 16px; */
+}
+
+.cat_card_info_row_2 h5 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 100;
+    margin: 0px 0px 0px 0px;
+    position: relative;
+}
+
+.cat_card_info_row_2 h5::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(transparent, white);
+    width: 100%;
+    height: 30%;
+    left: 0;
+    bottom: 0;
+}
+
+.detail {
+    color: white;
+    font-family: "modelica-r";
+    font-weight: 100;
+    font-size: 1vw;
+    background: #938556;
+    text-decoration: none;
+    margin: 0;
+    padding: 0.4vw .5vw;
+    border-radius: 0.25vw;
+    border: none;
+    width: 100%;
+    cursor: pointer;
 }
 
 /* .cat_card_info_row_2 p:hover {
@@ -293,17 +172,17 @@
 
 .cat_card_info_row_2 .cat_card_info_row_text {
     /* background: pink; */
-    width: 160px;
+    /* width: 160px; */
     overflow-x: hidden;
     text-overflow: clip;
 }
 
 .cat_card_info_row__link {
-    padding: 5px 12px;
+    padding: 5px 15px;
     background: #142b33;
     color: #fff;
     border-radius: 5px;
-    font-size: 19.2px;
+    font-size: 14.5px;
 }
 
 .cat_card_info_img {
@@ -311,7 +190,7 @@
     border: 3px solid #938556;
     width: 100%;
     height: 230px;
-    margin: 15px 0px 15px 0px;
+    margin: 15px 0px 28.8px 0px;
     position: relative;
     /* background: url("/img/cat_bottom_home.png") 0/cover no-repeat; */
 }
@@ -366,27 +245,83 @@
 
 .show_more_text p {
     margin: 0;
-    font-size: 19.2px;
+    font-size: 16px;
 }
 
 .cat_card_info_row_2 {
     align-items: flex-end !important;
+    margin-bottom: 1vw;
+}
+
+.rating {
+    display: flex;
+    width: 100%;
+    position: relative;
+    align-items: center;
+}
+
+.rating .stars {
+    display: flex;
+    position: relative;
+}
+
+.rating .stars img {
+    width: 20px;
+    margin-right: 4px;
+}
+
+.rating .num {
+    color: white;
+    font-family: "modelica-r";
+    font-weight: 100;
+    font-size: 15px;
+    background: #938556;
+    text-decoration: none;
+    padding: 5px 5px;
+    border-radius: 4.5px;
+    margin: 5px 7px;
+}
+
+.rating .vote {
+    font-family: "modelica-r";
+    font-size: 15px;
+    margin: 0;
+    transition: .4s;
+    cursor: pointer;
+}
+.rating .vote:hover {
+    opacity: .6;
 }
 
 @media screen and (max-width: 1920px) {
-    .cat_card_info {
-        width: 15.58vw;
-        border-radius: .6vw;
-        padding: .75vw;
+    .rating .vote {
+        font-size: .8vw;
+    }
+    .rating .num {
+        font-size: .8vw;
+        padding: .3vw .3vw;
+        border-radius: 0.26vw;
+        margin: 0 .3vw 0 .4vw;
+    }
+    .rating .stars img {
+        width: 1vw;
+        margin-right: .2vw;
+    }
+    .cat_card_info .left_cnt {
+        width: 14vw;
         color: #365864;
         font-family: "modelica-r";
-        margin: 0 1.25vw;
+        margin-right: 1vw;
+    }
+    .cat_card_info .right_cnt {
+        width: 16vw;
+    }
+    .cat_card_info .right_cnt p {
+        font-size: .72vw;
     }
     .cat_card_info__icon {
         width: 2.34vw;
         height: 2.34vw;
-        border: 0.105vw solid #938556;
-        border-radius: .5vw;
     }
     .cat_card_info_row {
         display: -webkit-box;
@@ -400,9 +335,9 @@
         justify-content: space-between;
     }
     .cat_card_info_row_2 img {
-        width: 1vw;
-        height: 1vw;
-        margin: 0.00vw 0.5vw 0.1vw 0.00vw;
+        width: 0.78vw;
+        height: 0.78vw;
+        margin: 0.00vw 0.26vw 0.00vw 0.00vw;
     }
     .cat_card_info_row_2 p {
         display: -webkit-box;
@@ -411,19 +346,19 @@
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        font-size: 0.75vw;
+        font-size: 1vw;
         margin: 0.00vw 0.00vw 0.26vw 0.00vw;
+    }
+    .cat_card_info_row_2 a.href_site {
+        font-size: .8vw;
+        margin: 0px 0px 0.26vw 0px;
+    }
+    .cat_card_info_row_2 h5 {
+        font-size: .83vw;
+        margin: 0px 0px 0vw 0px;
     }
     .cat_card_info_row__title {
         font-size: 1.2vw;
-        font-size: 1.;
-        font-family: "modelica-m";
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
         margin: 0.00vw 0.00vw 0.26vw 0.00vw;
     }
     .cat_card_info_row__title img {
@@ -435,7 +370,7 @@
         font-size: 1vw;
         width: 9.38vw;
     }
-    .cat_card_info_row__sub_titles p {
+    /* .cat_card_info_row__sub_titles p {
         overflow: hidden;
         text-overflow: ellipsis;
         display: -moz-box;
@@ -445,7 +380,7 @@
         -webkit-box-orient: vertical;
         line-clamp: 1;
         box-orient: vertical;
-    }
+    } */
     .cat_card_info_row__sub_titles p:first-child {
         margin: 0.00vw 0.00vw 0.26vw 0.00vw;
         padding: 0.00vw 0.00vw 0.31vw 0.00vw;
@@ -455,28 +390,14 @@
         margin: 0.00vw;
         padding: 0.00vw;
     }
-    .cat_card_info_row__sub_titles p:first-child::after {
-        content: "";
-        position: absolute;
+    .cat_card_info_row__sub_titles:after {
         width: 3.65vw;
         height: 0.10vw;
-        left: 0;
-        bottom: 0;
-        background: #365864;
+        top: -.2vw;
     }
-    .cat_card_info_row_2 p {
-        font-size: 1vw;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -moz-box;
-        -moz-box-orient: vertical;
-        display: -webkit-box;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
-        line-clamp: 1;
-        box-orient: vertical;
+
         /* height: 0.83vw; */
-    }
+    
     /* .cat_card_info_row_2 p:hover {
     display: -moz-box;
     -moz-box-orient: vertical;
@@ -489,23 +410,23 @@
 } */
     .cat_card_info_row_2 .cat_card_info_row_text {
         /* background: pink; */
-        width: 8.33vw;
+        /* width: 8.33vw; */
         overflow-x: hidden;
         text-overflow: clip;
     }
     .cat_card_info_row__link {
-        padding: 0.3vw 0.6vw;
+        padding: 0.26vw 0.78vw;
         background: #142b33;
         color: #fff;
-        border-radius: 0.25vw;
-        font-size: 1vw;
+        border-radius: 0.26vw;
+        font-size: 0.75vw;
     }
     .cat_card_info_img {
         border-radius: 0.52vw;
         border: 0.12vw solid #938556;
         width: 100%;
         height: 11.98vw;
-        margin: 0.78vw 0.00vw 0.78vw 0.00vw;
+        margin: 0.78vw 0.00vw 1.5vw 0.00vw;
         /* background: url("/img/cat_bottom_home.png") 0/cover no-repeat; */
     }
     .show_more_text {
@@ -522,7 +443,7 @@
     }
     .show_more_text p {
         margin: 0;
-        font-size: 1vw;
+        font-size: .8vw;
     }
     .cat_card_info_img .favourite {
         right: .5vw;
@@ -530,5 +451,16 @@
         height: 2.5vw;
         border: 0.12vw solid #938556;
         border-radius: .5vw;
+    }
+     .right_cnt {
+        margin-top: 5.4vw !important;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .detail {
+        font-size: 19.075px;
+        padding: 6px 10px;
+        border-radius: 5px;
     }
 }

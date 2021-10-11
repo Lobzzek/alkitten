@@ -16,7 +16,7 @@
     display: flex;
     border-radius: 5px;
     border: 1.2px solid #938556;
-    width: 28.542vw;
+    width: 38.542vw;
     height: 1.901vw;
     align-items: center;
     justify-content: space-between;
@@ -34,7 +34,7 @@
     cursor: pointer;
 }
 
-.sort div:nth-child(1), .sort div:nth-child(2) {
+.sort div:nth-child(1), .sort div:nth-child(2), .sort div:nth-child(3) {
     border-right: 1.25px solid #938556;
 }
 
@@ -86,7 +86,7 @@
 }
 
 .slider_cnt>button:first-child {
-    transform: rotate(0deg);
+    transform: rotate(0deg) translateX(31.2px);
 }
 
 .slider_cnt>button:last-child {
@@ -94,11 +94,12 @@
 }
 
 .slider_cnt .wrap_cont {
-    width: 1000px;
+    width: 1115px;
     /* background: pink; */
     height: 480px;
     position: relative;
     overflow: hidden;
+    /* background: rgb(236, 165, 177); */
 }
 
 .slider_cnt .block_imgs {
@@ -117,7 +118,7 @@
     position: relative;
     margin: 0 auto;
     width: fit-content;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 30px;
 }
 
@@ -127,6 +128,9 @@
     margin: 0 auto;
     width: fit-content;
     align-items: center;
+    max-width: 768px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .dots .container_dots span {
@@ -134,9 +138,13 @@
     height: 10px;
     background: #919191;
     border-radius: 50%;
-    margin: 0 5px;
+    margin: 5px 5px;
     cursor: pointer;
     position: relative;
+}
+
+.dots .container_dots span:nth-child(76) {
+    margin-left: 20px;
 }
 
 .dots .container_dots span:hover {
@@ -189,9 +197,10 @@
 .container_latters button {
     background: none;
     border: none;
-    font-size: 21.6px;
+    font-size: 23.3px;
     font-family: 'modelica-r';
     cursor: pointer;
+    padding: 0 6px;
 }
 
 /* .container_latters button.active{
@@ -214,7 +223,7 @@
 
 @media screen and (min-width: 1920px) {
     .sort {
-        width: 548x;
+        width: 733px;
         height: 36.5px;
     }
     .slider_breeds>a {
@@ -223,6 +232,9 @@
 }
 
 @media screen and (max-width: 1920px) {
+    .slider_cnt>button:first-child {
+        transform: rotate(0deg) translateX(1vw);
+    }
     .dots {
         margin-bottom: 1.563vw;
     }
@@ -239,12 +251,19 @@
         margin-top: 8.729vw;
     }
     .slider_cnt .wrap_cont {
-        width: 49.083vw;
+        width: 58.083vw;
         height: 25vw;
     }
     .dots .container_dots span {
         width: 0.521vw;
         height: 0.521vw;
+        margin: .26vw;
+    }
+    .dots .container_dots span:nth-child(76) {
+        margin-left: 1vw;
+    }
+    .dots .container_dots {
+        max-width: 40vw;
     }
     .dots>button {
         width: 1.250vw;
@@ -253,4 +272,9 @@
     .container_latters {
         margin: 0 auto 2.083vw auto;
     }
+    .container_latters button {
+        font-size: 1.2vw;
+        padding: 0 .3vw;
+    }
+    
 }

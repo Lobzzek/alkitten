@@ -1,14 +1,15 @@
 import Header from './Header.jsx';
-import LeftPanel from './LeftPanel/LeftPanel.jsx';
-import RightPanel from './RightPanel.jsx';
+// import LeftPanel from './LeftPanel/LeftPanel.jsx';
+import RightPanel from './RightPanel/RightPanel.jsx';
 import Footer from './Footer.jsx';
 import React from 'react'
 import s from '../../styles/MainWrapper/MainWrapper.module.css'
+import Login from './Login.jsx'
 
 // import { setTriggeredScroll } from '../../Redux/actions/triggeredScroll.js';
 // import { useDispatch } from 'react-redux'
 
-import moduleName from '../../Redux/actions/triggeredScroll.js'
+// import moduleName from '../../Redux/actions/triggeredScroll.js'
 
 function MainWrapper(props) {
 
@@ -31,21 +32,12 @@ function MainWrapper(props) {
         }
         triggerScroll.current = offset(main_content).bottom - document.documentElement.clientHeight;
         bottomContent.current = offset(main_content).bottom;
-        // window.addEventListener("scroll", () => {
-        //     if (triggerScroll.current <= window.scrollY){
-        //         triggered.current = true;
-        //         setTriggeredState(triggered.current);
-        //     }else{
-        //         triggered.current = false;
-        //         setTriggeredState(triggered.current);
-        //     }
-        // })
     }, [])
     return (
         <div className={s.main_wrapper}>
             <Header />
             <section className={triggeredState ? `${s.center_content} ${s.triggered}` : `${s.center_content}`}>
-                <LeftPanel triggered={triggerScroll} bottomContent={bottomContent} />
+                {/* <LeftPanel triggered={triggerScroll} bottomContent={bottomContent} /> */}
                 <section className={s.main_content} ref={main_content}>
 
                 {
@@ -57,6 +49,8 @@ function MainWrapper(props) {
                 <RightPanel triggered={triggerScroll} bottomContent={bottomContent} />
             </section>
             <Footer />
+
+            <Login />
         </div>
     );
 }

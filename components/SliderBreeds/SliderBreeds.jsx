@@ -10,9 +10,9 @@ import { setActiveBreed } from '../../Redux/actions/activeBreedsInfoAction.js';
 const SliderBreeds = () => {
     const dispatch = useDispatch();
 
-    const [activeSort, setActiveSort] = React.useState(0);
+    const [activeSort, setActiveSort] = React.useState(1);
 
-    const [activeCardCat, setActiveCardCat] = React.useState(0);
+    const [activeCardCat, setActiveCardCat] = React.useState(1);
 
     const block_imgs = React.useRef();
     const [activePage, setActivePage] = React.useState(1);
@@ -23,11 +23,11 @@ const SliderBreeds = () => {
 
     React.useEffect(() => {
         if (document.documentElement.clientWidth < 1920) {
-            let marginBetwenCards = document.documentElement.clientWidth * 0.065;
-            let widthCard = 8.203 * 1920 / 100;
+            let marginBetwenCards = document.documentElement.clientWidth * 0.086;
+            let widthCard = 8.5 * document.documentElement.clientWidth / 100;
             block_imgs.current.style.width = `${block_imgs.current.childNodes.length * (widthCard + marginBetwenCards)}px`;
         } else {
-            block_imgs.current.style.width = `${block_imgs.current.childNodes.length * (157.5 + 155)}px`;
+            block_imgs.current.style.width = `${block_imgs.current.childNodes.length * (163.2 + 166)}px`;
         }
         setNumberPages(Math.ceil(block_imgs.current.childNodes.length));
     }, [])
@@ -43,19 +43,20 @@ const SliderBreeds = () => {
         let leftBlock = 0;
         for (let i = 0; i < activePage - 1; i++) {
             if (activeSort === 0) {
-                leftBlock -= 14.433
-            } else if (activeSort === 1) {
-                leftBlock -= 14.47
-            } else {
-                leftBlock -= 14.2
+                leftBlock -= 16.85
+            }else if (activeSort === 1) {
+                leftBlock -= 16.713
+            } else if (activeSort === 2) {
+                leftBlock -= 16.713
+            } else if (activeSort === 3) {
+                leftBlock -= 16.413
             }
         }
 
         if (document.documentElement.clientWidth < 1920) {
             block_imgs.current.style.left = `${leftBlock}vw`
-
         } else {
-            block_imgs.current.style.left = `${leftBlock * 2130 / 100}px`;
+            block_imgs.current.style.left = `${leftBlock * 1940 / 100}px`;
         }
 
 
@@ -82,8 +83,26 @@ const SliderBreeds = () => {
     //logic sort 
     const [activeSortObject, setActiveSortObject] = React.useState(jsonCats.long_hair);
 
-
     let navigationLatter1 = [
+        { latter: "A", indexPage: 1 },
+        { latter: "B", indexPage: 10 },
+        { latter: "C", indexPage: 21 },
+        { latter: "D", indexPage: 27 },
+        { latter: "E", indexPage: 29 },
+        { latter: "H", indexPage: 31 },
+        { latter: "J", indexPage: 35 },
+        { latter: "K", indexPage: 37 },
+        { latter: "L", indexPage: 42 },
+        { latter: "M", indexPage: 45 },
+        { latter: "N", indexPage: 53 },
+        { latter: "O", indexPage: 56 },
+        { latter: "P", indexPage: 58 },
+        { latter: "R", indexPage: 62 },
+        { latter: "S", indexPage: 64 },
+        { latter: "T", indexPage: 75 },
+    ]
+
+    let navigationLatter2 = [
         { latter: "A", indexPage: 1 },
         { latter: "B", indexPage: 4 },
         { latter: "C", indexPage: 8 },
@@ -99,11 +118,11 @@ const SliderBreeds = () => {
         { latter: "T", indexPage: 30 },
     ]
 
-    const objsLattersRef = React.useRef(navigationLatter1);
+    const objsLattersRef = React.useRef(navigationLatter2);
 
     const [objsLatters, setObjsLatters] = React.useState(objsLattersRef.current);
 
-    let navigationLatter2 = [
+    let navigationLatter3 = [
         { latter: "A", indexPage: 1 },
         { latter: "B", indexPage: 7 },
         { latter: "C", indexPage: 12 },
@@ -120,7 +139,7 @@ const SliderBreeds = () => {
         { latter: "S", indexPage: 30 },
         { latter: "T", indexPage: 35 },
     ]
-    let navigationLatter3 = [
+    let navigationLatter4 = [
         { latter: "B", indexPage: 1 },
         { latter: "C", indexPage: 3 },
         { latter: "D", indexPage: 4 },
@@ -137,23 +156,36 @@ const SliderBreeds = () => {
         setActivePage(1);
 
         if (activeSort === 0) {
-            setActiveSortObject(jsonCats.long_hair);
-            dispatch(setActiveBreed(jsonCats.long_hair[0]));
+            let obj = [...jsonCats.long_hair, ...jsonCats.short_hair, ...jsonCats.siamese_and_oriental];
+            obj.sort(function (a, b) {
+                if (a.name < b.name) { return -1; }
+                if (a.name > b.name) { return 1; }
+                return 0;
+            })
+            setActiveSortObject(obj);
+            dispatch(setActiveBreed(jsonCats.short_hair[0]));
 
             objsLattersRef.current = navigationLatter1;
             setObjsLatters(objsLattersRef.current);
 
-        } else if (activeSort === 1) {
-            setActiveSortObject(jsonCats.short_hair)
-            dispatch(setActiveBreed(jsonCats.short_hair[0]))
+        }else if (activeSort === 1) {
+            setActiveSortObject(jsonCats.long_hair);
+            dispatch(setActiveBreed(jsonCats.long_hair[0]));
 
             objsLattersRef.current = navigationLatter2;
             setObjsLatters(objsLattersRef.current);
+
         } else if (activeSort === 2) {
+            setActiveSortObject(jsonCats.short_hair)
+            dispatch(setActiveBreed(jsonCats.short_hair[0]))
+
+            objsLattersRef.current = navigationLatter3;
+            setObjsLatters(objsLattersRef.current);
+        } else if (activeSort === 3) {
             setActiveSortObject(jsonCats.siamese_and_oriental)
             dispatch(setActiveBreed(jsonCats.siamese_and_oriental[0]))
 
-            objsLattersRef.current = navigationLatter3;
+            objsLattersRef.current = navigationLatter4;
             setObjsLatters(objsLattersRef.current);
         }
         setActiveCardCat(0);
@@ -161,11 +193,11 @@ const SliderBreeds = () => {
 
         setTimeout(() => {
             if (document.documentElement.clientWidth < 1920) {
-                let marginBetwenCards = document.documentElement.clientWidth * 0.065;
-                let widthCard = 8.203 * 1920 / 100;
+                let marginBetwenCards = document.documentElement.clientWidth * 0.086;
+                let widthCard = 8.5 * document.documentElement.clientWidth / 100;
                 block_imgs.current.style.width = `${block_imgs.current.childNodes.length * (widthCard + marginBetwenCards)}px`;
             } else {
-                block_imgs.current.style.width = `${block_imgs.current.childNodes.length * (157.5 + 155)}px`;
+                block_imgs.current.style.width = `${block_imgs.current.childNodes.length * (163.2 + 166)}px`;
             }
             setNumberPages(Math.ceil(block_imgs.current.childNodes.length));
         }, 100);
@@ -181,15 +213,20 @@ const SliderBreeds = () => {
                 <div className={s.sort}>
                     <div className={activeSort === 0 ? `${s.active}` : ``} onClick={() => changeActiveSort(0)}>
                         <p>
-                            Longhair Breeds
+                            All Breeds
                         </p>
                     </div>
                     <div className={activeSort === 1 ? `${s.active}` : ``} onClick={() => changeActiveSort(1)}>
                         <p>
-                            Shorthair Breeds
+                            Longhair Breeds
                         </p>
                     </div>
                     <div className={activeSort === 2 ? `${s.active}` : ``} onClick={() => changeActiveSort(2)}>
+                        <p>
+                            Shorthair Breeds
+                        </p>
+                    </div>
+                    <div className={activeSort === 3 ? `${s.active}` : ``} onClick={() => changeActiveSort(3)}>
                         <p>
                             Siamese &amp; Oriental
                         </p>

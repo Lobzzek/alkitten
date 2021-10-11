@@ -81,11 +81,13 @@
 .user a.sign {
     color: #000;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .user a.log {
     color: #938556;
     font-weight: 600;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1920px) {

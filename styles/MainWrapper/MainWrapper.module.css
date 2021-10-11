@@ -1,28 +1,29 @@
-
-
 .center_content {
     position: relative;
     width: 85.8vw;
-    margin: 8.3vw auto 4.6vw auto;
+    margin: 5.38vw auto 2.6vw auto;
+    /* margin: 113px auto 50px auto; */
     display: flex;
     justify-content: space-between;
+
 }
 
 .main_content {
-    width: 43.875vw;
+    width: 69.4vw;
     position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
+    /* background: pink; */
 }
 
 @media screen and (min-width: 1920px) {
     .center_content {
         max-width: 1649px;
-        margin: 161.25px auto 50px auto;
+        margin: 113px auto 50px auto;
     }
     .main_content {
-        width: 1052px;
+        width: 1333px;
     }
 }
 

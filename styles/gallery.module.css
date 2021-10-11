@@ -35,7 +35,8 @@
     background: white;
     border-radius: 5px;
     border: 1.2px solid #938556;
-    width: 35.542vw;
+    width: 50.9vw;
+    /* width: 978px; */
     height: 1.901vw;
     z-index: 2;
     margin: 0 auto;
@@ -64,7 +65,7 @@
     z-index: 1;
 }
 
-.sort .sort_hair div:nth-child(1), .sort .sort_hair div:nth-child(2) {
+.sort .sort_hair div:nth-child(1), .sort .sort_hair div:nth-child(2), .sort .sort_hair div:nth-child(3) {
     border-right: 1.25px solid #938556;
 }
 
@@ -89,12 +90,12 @@
 
 .sort_longhair, .sort_shorthair, .sort_siamese {
     position: absolute;
-    width: 33.6%;
+    width: 25%;
     background: #F1EFE8;
     bottom: -200px;
     z-index: -1;
-    -webkit-box-shadow: 5px 5px 32px -11px rgba(0,0,0,0.6);
-    box-shadow: 5px 5px 32px -11px rgba(0,0,0,0.6);
+    -webkit-box-shadow: rgb(0 0 0 / 28%) 0px 8px 28px;
+    box-shadow: rgb(0 0 0 / 28%) 0px 8px 28px;
     transition: .4s;
     height: 200px;
     transform-origin: 50% 0;
@@ -102,16 +103,16 @@
 }
 
 .sort_longhair {
-    left: -2px;
+    left: 25%;
 }
 
 .sort_shorthair {
-    left: calc(33.6% - 4px);
+    left: 50.2%;
 }
 
 .sort_siamese {
     left: auto;
-    right: -2px;
+    left: 75.2%;
 }
 
 .sort_longhair.active, .sort_shorthair.active, .sort_siamese.active {
@@ -176,11 +177,14 @@
     background-size: cover;
     transition: .4s;
     cursor: pointer;
+    border-radius: 12px;
+    -webkit-box-shadow: rgb(0 0 0 / 18%) 0px 8px 28px;
+    box-shadow: rgb(0 0 0 / 18%) 0px 8px 28px;
 }
 
 .block_img:hover {
-    -webkit-box-shadow: 5px 5px 32px -11px rgba(0,0,0,0.6);
-    box-shadow: 5px 5px 32px -11px rgba(0,0,0,0.6);
+    -webkit-box-shadow: rgb(0 0 0 / 28%) 0px 8px 28px;
+    box-shadow: rgb(0 0 0 / 28%) 0px 8px 28px;
     transform: scale(1.01);
 }
 
@@ -222,6 +226,7 @@
     z-index: 1;
     height: 80%;
     transition: .6s;
+    border-radius: 12px
 }
 
 .zoomImg .close {
@@ -299,7 +304,7 @@
         /* left: -2px; */
         height: 10.510vw;
     }
-    .sort_longhair {
+    /* .sort_longhair {
         left: -0.105vw;
     }
     .sort_shorthair {
@@ -307,7 +312,7 @@
     }
     .sort_siamese {
         right: -0.105vw;
-    }
+    } */
     .sort_longhair ul, .sort_shorthair ul, .sort_siamese ul {
         padding: 0 0 0 0.368vw;
     }
@@ -318,11 +323,13 @@
     }
     .wrap_block_img {
         width: 49.921vw;
+        border-radius: .6vw;
     }
     .block_img {
         width: 16.290vw;
         height: 16.290vw;
         margin-bottom: 0.525vw;
+        border-radius: .6vw;
     }
     .zoomImg .close {
         font-size: 4.204vw;
@@ -333,20 +340,22 @@
         width: 1.693vw;
         margin: 4.627vw;
     }
-}
-
-@media screen and (min-width: 1920px) {
-    .top_text {
-        margin-bottom: 53px;
-    }
-    .top_text h2 {
-        font-size: 28.8px;
-    }
-    .top_text p {
-        font-size: 20.352px;
-    }
-    .sort {
-        width: 681px;
-        height: 36.5px;
+    .zoomImg img {
+        border-radius: .6vw;
     }
 }
+    @media screen and (min-width: 1920px) {
+        .top_text {
+            margin-bottom: 53px;
+        }
+        .top_text h2 {
+            font-size: 28.8px;
+        }
+        .top_text p {
+            font-size: 20.352px;
+        }
+        .sort {
+            width: 978px;
+            height: 36.5px;
+        }
+    }

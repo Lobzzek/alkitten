@@ -15,11 +15,12 @@
     transition: .6s;
     padding: 10px;
     margin: 0 20px;
+    border-radius: 12px;
 }
 
 .card_slider:hover {
-    -webkit-box-shadow: 5px 5px 32px -11px rgba(0,0,0,0.6);
-    box-shadow: 5px 5px 32px -11px rgba(0,0,0,0.6);
+    -webkit-box-shadow: rgb(0 0 0 / 28%) 0px 8px 28px;
+    box-shadow: rgb(0 0 0 / 28%) 0px 8px 28px;
 }
 
 .card_slider .wrap_img {
@@ -80,6 +81,7 @@
         width: 10.510vw;
         padding: 0.525vw;
         margin: 0 1.051vw;
+        border-radius: .6vw;
     }
     .card_slider .wrap_img {
         width: 6.831vw;

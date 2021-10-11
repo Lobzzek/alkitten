@@ -22,5 +22,15 @@
     font-size: 1.0625vw;
 }
 
-/*fffffffffffffffffffffffffffffff*/
-
+@media screen and (min-width: 1920px) {
+    .top_text {
+        margin-bottom: 35px;
+    }
+    .top_text h2 {
+        font-size: 28.8px;
+    }
+    .top_text p {
+        font-size: 20.352px;
+    }
+}
+    /*fffffffffffffffffffffffffffffff*/

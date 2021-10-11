@@ -15,6 +15,11 @@ const Gallery = () => {
 
     const [openZoomImg, setOpenZoomImg] = React.useState(false);
 
+    const [activeImg, setActiveImg] = React.useState(1);
+    const [activeImgTag, setActiveImgTag] = React.useState(
+        <img src="/img/cat_for_card.jpg" alt="" />
+    );
+
     const zoomImg = React.useRef();
     React.useEffect(() => {
         if (openZoomImg) {
@@ -31,7 +36,7 @@ const Gallery = () => {
     }, [openZoomImg])
     let arrImg = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]; // remove when conect BD
 
-    const [activeSort, setActiveSort] = React.useState(0);
+    const [activeSort, setActiveSort] = React.useState(1);
     const changeActiveSort = (num) => setActiveSort(num);
 
 
@@ -76,56 +81,75 @@ const Gallery = () => {
         }
 
         sort_hair.current.parentNode.addEventListener("mouseleave", closeBlocks)
-
         if (activeSort === 0) {
+            closeBlocks();
+            sort_hair.current.childNodes[1].removeEventListener("mouseenter", openLonghair);
+
+            sort_hair.current.childNodes[2].removeEventListener("mouseenter", openShorthair)
+            sort_hair.current.childNodes[3].removeEventListener("mouseenter", openSiamese)
+
+        }else if (activeSort === 1) {
             closeBlocks();
             if (triggerOn2RenderSort === false) {
                 setTriggerOn2RenderSort(true);
             } else {
                 sort_longhair.current.style.transform = `scaleY(1)`;
             }
-            sort_hair.current.childNodes[0].addEventListener("mouseenter", openLonghair);
+            sort_hair.current.childNodes[1].addEventListener("mouseenter", openLonghair);
 
-            sort_hair.current.childNodes[1].removeEventListener("mouseenter", openShorthair)
-            sort_hair.current.childNodes[2].removeEventListener("mouseenter", openSiamese)
-
-        } else if (activeSort === 1) {
-            closeBlocks();
-            sort_shorthair.current.style.transform = `scaleY(1)`;
-            sort_hair.current.childNodes[1].addEventListener("mouseenter", openShorthair)
-
-            sort_hair.current.childNodes[0].removeEventListener("mouseenter", openLonghair);
-            sort_hair.current.childNodes[2].removeEventListener("mouseenter", openSiamese)
+            sort_hair.current.childNodes[2].removeEventListener("mouseenter", openShorthair)
+            sort_hair.current.childNodes[3].removeEventListener("mouseenter", openSiamese)
 
         } else if (activeSort === 2) {
             closeBlocks();
-            sort_siamese.current.style.transform = `scaleY(1)`;
-            sort_hair.current.childNodes[2].addEventListener("mouseenter", openSiamese)
+            sort_shorthair.current.style.transform = `scaleY(1)`;
+            sort_hair.current.childNodes[2].addEventListener("mouseenter", openShorthair)
 
-            sort_hair.current.childNodes[0].removeEventListener("mouseenter", openLonghair);
-            sort_hair.current.childNodes[1].removeEventListener("mouseenter", openShorthair)
+            sort_hair.current.childNodes[1].removeEventListener("mouseenter", openLonghair);
+            sort_hair.current.childNodes[3].removeEventListener("mouseenter", openSiamese)
+
+        } else if (activeSort === 3) {
+            closeBlocks();
+            sort_siamese.current.style.transform = `scaleY(1)`;
+            sort_hair.current.childNodes[3].addEventListener("mouseenter", openSiamese)
+
+            sort_hair.current.childNodes[1].removeEventListener("mouseenter", openLonghair);
+            sort_hair.current.childNodes[2].removeEventListener("mouseenter", openShorthair)
         }
 
     }, [activeSort])
 
     const active_sort = React.useRef();
     React.useEffect(() => {
-            if (activeSort === 0 && activeLonghairSort === 0) {
+            if (activeSort === 1 && activeLonghairSort === 0) {
                 active_sort.current.textContent = `- Longhair -`
-            } else if (activeSort === 1 && activeShorthairSort === 0) {
+            } else if (activeSort === 2 && activeShorthairSort === 0) {
                 active_sort.current.textContent = `- Shorthair -`
-            } else if (activeSort === 2 && activeSiameseSort === 0) {
+            } else if (activeSort === 3 && activeSiameseSort === 0) {
                 active_sort.current.textContent = `- Siamese & Oriental -`
             }
 
-            else if (activeSort === 0 && activeLonghairSort !== 0) {
+            else if (activeSort === 1 && activeLonghairSort !== 0) {
                 active_sort.current.textContent = `- ${jsonCats.long_hair[activeLonghairSort - 1].name} -`
-            } else if (activeSort === 1 && activeShorthairSort !== 0) {
+            } else if (activeSort === 2 && activeShorthairSort !== 0) {
                 active_sort.current.textContent = `- ${jsonCats.short_hair[activeShorthairSort - 1].name} -`
-            } else if (activeSort === 2 && activeSiameseSort !== 0) {
+            } else if (activeSort === 3 && activeSiameseSort !== 0) {
                 active_sort.current.textContent = `- ${jsonCats.siamese_and_oriental[activeSiameseSort - 1].name} -`
             }
     }, [activeSort, activeLonghairSort, activeShorthairSort, activeSiameseSort])
+
+    const blockCard = React.useRef();
+    React.useEffect(() => {
+        // console.log(blockCard.current.childNodes[activeImg].style.backgroundImage)
+        // if(activeImg < 0){
+        //     setActiveImg(blockCard.current.childNodes.length - 1);
+        // }
+
+        setActiveImgTag(
+            <img src={`${blockCard.current.childNodes[activeImg].style.backgroundImage.match(/(?<="|'|`).+(?="|'|`)/)}`} alt="" />
+        )
+        
+    }, [activeImg])
     return (
         <>
             <MainWrapper>
@@ -139,15 +163,20 @@ const Gallery = () => {
                     <div className={s.sort_hair} ref={sort_hair}>
                         <div className={activeSort === 0 ? `${s.active}` : ``} onClick={() => changeActiveSort(0)}>
                             <p>
-                                Longhair Breeds
+                                All Breeds
                             </p>
                         </div>
                         <div className={activeSort === 1 ? `${s.active}` : ``} onClick={() => changeActiveSort(1)}>
                             <p>
-                                Shorthair Breeds
+                                Longhair Breeds
                             </p>
                         </div>
                         <div className={activeSort === 2 ? `${s.active}` : ``} onClick={() => changeActiveSort(2)}>
+                            <p>
+                                Shorthair Breeds
+                            </p>
+                        </div>
+                        <div className={activeSort === 3 ? `${s.active}` : ``} onClick={() => changeActiveSort(3)}>
                             <p>
                                 Siamese &amp; Oriental
                             </p>
@@ -209,11 +238,15 @@ const Gallery = () => {
                     </div>
                 </div>
 
-                <div className={s.wrap_block_img}>
+                <div className={s.wrap_block_img} ref={blockCard}>
                     {
                         arrImg.map((el, i) => <div className={s.block_img} key={`${i}_img_cat`}
-                            style={{ background: `url(/img/cat_for_card.jpg)`, backgroundPosition: "center", backgroundSize: "cover", backgroundRepeat: "no-repeat" }}
-                            onClick={() => setOpenZoomImg(true)}
+                            style={i % 2 === 0 ? { background: `url(/img/cat_for_card.jpg)`, backgroundPosition: "center", backgroundSize: "cover", backgroundRepeat: "no-repeat"} : 
+                                { background: `url(/img/cat_bottom_home.png)`, backgroundPosition: "center", backgroundSize: "cover", backgroundRepeat: "no-repeat" }}
+                            onClick={() => { 
+                                setActiveImg(i);
+                                setOpenZoomImg(true) 
+                            }}
                         ></div>)
                     }
                 </div>
@@ -222,15 +255,32 @@ const Gallery = () => {
             <div className={s.zoomImg} ref={zoomImg}>
                 <p className={s.close} onClick={() => setOpenZoomImg(false)}>✕</p>
                 <div className={s.fon} onClick={() => setOpenZoomImg(false)}></div>
-                {/* <button title="prev slide" className={s.prev_slide} onClick={() => prevSlide()}> */}
-                <button title="prev slide" className={s.prev_slide}>
+                <button title="prev slide" className={s.prev_slide} onClick={() => {
+                    if(activeImg > 0){
+                        setActiveImg(activeImg - 1)
+                    }else{
+                        setActiveImg(blockCard.current.childNodes.length - 1);
+                    }
+                        
+                    
+                    }}>
+                {/* <button title="prev slide" className={s.prev_slide}> */}
                     <img src="/img/icon_arow.svg" alt="" />
                 </button>
+                
+                {
+                    activeImgTag
+                }
 
-                <img src="/img/cat_for_card.jpg" alt="" />
+                <button title="next slide" className={s.next_slide} onClick={() => {
+                    if (activeImg < blockCard.current.childNodes.length - 1) {
+                        setActiveImg(activeImg + 1)
+                    } else {
+                        setActiveImg(0);
+                    }
 
-                {/* <button title="next slide" className={s.next_slide} onClick={() => nextSlide()}> */}
-                <button title="next slide" className={s.next_slide}>
+                }}>
+                {/* <button title="next slide" className={s.next_slide}> */}
                     <img src="/img/icon_arow.svg" alt="" />
                 </button>
             </div>

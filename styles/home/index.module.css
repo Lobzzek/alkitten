@@ -5,6 +5,7 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 1.8225vw;
+    z-index: 1;
 }
 
 .top_text h2 {
@@ -73,8 +74,8 @@
     align-items: center;
     margin-bottom: 6vw;
     padding: 5px;
-    -webkit-box-shadow: 5px 5px 32px -11px rgba(0,0,0,0.6);
-    box-shadow: 5px 5px 32px -11px rgba(0,0,0,0.6);
+    -webkit-box-shadow: rgb(0 0 0 / 28%) 0px 8px 28px;
+    box-shadow: rgb(0 0 0 / 28%) 0px 8px 28px;
 }
 
 .criteries>div {
@@ -194,7 +195,7 @@
     font-size: .75vw;
     font-family: "modelica-m";
     color: #253E47;
-    padding: 3px 0;
+    padding: .15vw 0;
     margin: 0;
 }
 
@@ -322,7 +323,7 @@
     font-size: .75vw;
     font-family: "modelica-m";
     color: #253E47;
-    padding: 3px;
+    padding: .15vw .15vw .15vw 0;
     margin: 0;
 }
 
@@ -607,7 +608,7 @@
     background: #938556;
     text-decoration: none;
     margin: 0;
-    padding: .25vw .4vw;
+    padding: .3vw .5vw;
     border-radius: 0.208vw;
     font-weight: 100;
     border: none;
@@ -631,7 +632,7 @@
 
 .last_kittens .block_cats {
     display: flex;
-    width: 48.11vw;
+    width: 100%;
     justify-content: center;
     margin-bottom: 1.2vw;
 }
@@ -644,8 +645,8 @@
     background: #938556;
     text-decoration: none;
     margin: 0;
-    padding: .31vw .5vw;
-    border-radius: 0.26vw;
+    padding: .3vw .5vw;
+    border-radius: 0.25vw;
 }
 
 @media screen and (min-width: 1920px) {
@@ -712,7 +713,7 @@
     }
     .criteries .section_param2>p {
         font-size: 14.4px;
-        padding: 3px;
+        padding: 3px 3px 3px 0;
     }
     .criteries .section_param2 ul li label {
         font-size: 14.4px;
@@ -734,7 +735,7 @@
     }
     .section_param3 .pick_price>p {
         font-size: 14.4px;
-        padding: 3px;
+        padding: 3px 3px 3px 0;
     }
     .section_param3 .pick_price ul li label {
         font-size: 12px;
@@ -795,7 +796,7 @@
         left: -12.48px;
     }
     .section_param4 .with_photo label {
-        font-size: 14.4px;
+        font-size: 12.4px;
     }
     .section_param4 .with_photo label::before {
         width: 9.6px;
@@ -812,17 +813,16 @@
     }
     .section_param4>input[type="submit"] {
         font-size: 15.36px;
-        padding: 4.8px 7.68px;
+        padding: 6px 10px;
         border-radius: 0.208vw;
     }
     .last_kittens .block_cats {
-        width: 923.52px;
         margin-bottom: 23px;
     }
     .last_kittens>a {
         font-size: 19.2px;
         color: white;
-        padding: 5.7px 9.6px;
-        border-radius: 0.26vw;
+        padding: 6px 10px;
+        border-radius: 5px;
     }
 }

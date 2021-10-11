@@ -6,7 +6,12 @@ const CardCat = (props) => {
     const cnt_name = React.useRef();
     const more_text = React.useRef();
 
+    const [favourite, setFavourite] = React.useState(false);
+
     React.useEffect(() => {
+        if(props.favourite){
+            setFavourite(true);
+        }
         for (let i = 0; i < cnt_data.current.childNodes.length; i++) {
             const element = cnt_data.current.childNodes[i];
             if (element.scrollHeight > element.clientHeight){
@@ -57,7 +62,9 @@ const CardCat = (props) => {
                         {
                             props.name ? props.name : "QUEEN"
                         }
-                        <img src="/img/icon/checked.svg" alt="cat card info check icon" />
+                        {
+                            props.verefied ? <img src="/img/icon/checked.svg" alt="cat card info check icon" /> : null
+                        }
                     </h2>
                     <div className={s.cat_card_info_row__sub_titles} ref={cnt_name}>
                         <p>
@@ -73,13 +80,25 @@ const CardCat = (props) => {
                         </p>
                     </div>
                 </div>
-                <img
+                {/* <img
                     className={s.cat_card_info__icon}
-                    src="img/icon/1.svg"
+                    src="img/icon/catteries.svg"
                     alt="cat card info icon"
-                />
+                /> */}
+                <div className={s.cat_card_info__icon} style={{ background: `url('${props.img_cattery}') 0/cover no-repeat` }}></div>
             </div>
-            <div className={s.cat_card_info_img} style={{ "background": `url('${props.img_cat}') 0/cover no-repeat`}}></div>
+            <div className={s.cat_card_info_img} style={{ "background": `url('${props.img_cat}') 0/cover no-repeat`}}>
+                <div onClick={() => setFavourite(!favourite)} className={favourite ? `${s.favourite} ${s.active}` : `${s.favourite}` } >
+                    <svg xmlns="http://www.w3.org/2000/svg" className={s.heart} throwIfNamespace="preserve" width="320px" height="260px" version="1.1" viewBox="0 -0.2 5.85 5.5" xlinkHref="http://www.w3.org/1999/xlink">
+                         <defs>
+                        </defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer" />
+                            <path class={s.fil0} d="M2.92 0.82c0,0 0.51,-0.78 1.27,-0.82 0.96,-0.05 1.61,0.67 1.65,1.48 0.05,0.8 -0.68,1.61 -1.15,2.07 -0.98,0.99 -1.42,1.29 -1.76,1.62 -0.33,-0.33 -0.78,-0.62 -1.77,-1.61 -0.46,-0.46 -1.2,-1.26 -1.16,-2.07 0.05,-0.81 0.69,-1.53 1.65,-1.48 0.77,0.04 1.27,0.81 1.27,0.81z" />
+                        </g>
+                    </svg>
+                </div>
+            </div>
             <div className={`${s.cat_card_info_row} ${s.cat_card_info_row_2}`}>
                 <div className={s.cat_card_info_row_text} ref={cnt_data}>
                     <p><img src="/img/icon/date.svg" alt="" />{

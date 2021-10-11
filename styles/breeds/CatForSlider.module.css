@@ -1,21 +1,23 @@
 .card_cat {
-    width: 157.5px;
-    height: 255px;
-    border-radius: 5px;
+    width: 163.2px;
+    height: 250px;
+    border-radius: 12px;
     border: 1.2px solid #fff;
     transition: .2s;
     cursor: pointer;
     transform: scale(1.45);
 }
+
 .card_cat.hiddenCart {
     opacity: 0;
 }
+
 .block_img {
     width: 137.5px;
     height: 162.5px;
     background: #f1efe8;
     border: 1.2px solid #938556;
-    border-radius: 5px;
+    border-radius: 12px;
     margin: 8.75px auto 0 auto;
     position: relative;
     transition: .2s;
@@ -81,13 +83,14 @@
     align-items: center;
     margin-top: 0;
     margin-bottom: 5px;
+    max-width: 95%;
 }
 
 .text div {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 130px;
+    width: 138px;
 }
 
 .text div a, .text div button {
@@ -97,7 +100,7 @@
     font-family: "modelica-r";
     font-size: 12px;
     border: none;
-    padding: 4px 4.4px;
+    padding: 2.7px 6.8px;
     opacity: 0;
     transition: .2s;
     cursor: pointer;
@@ -159,13 +162,15 @@
 
 @media screen and (max-width: 1920px) {
     .card_cat {
-        width: 8.203vw;
-        height: 13.323vw;
+        width: 8.5vw;
+        height: 13.1vw;
+        border-radius: .6vw;
     }
     .block_img {
         width: 7.161vw;
         height: 8.464vw;
         margin: 0.456vw auto 0 auto;
+        border-radius: .6vw;
     }
     .text {
         height: 4vw;
@@ -176,11 +181,13 @@
         height: 1.875vw;
     }
     .text div {
-        width: 6.771vw;
+        /* width: 6.771vw; */
+        width: 7.2vw;
     }
     .text div a, .text div button {
         font-size: 0.625vw;
-        padding: 0.308vw 0.25vw;
+        padding: 0.24vw 0.34vw;
+        border-radius: .25vw;
     }
     .fav_ava>div {
         width: 1.823vw;
