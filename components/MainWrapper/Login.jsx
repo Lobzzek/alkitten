@@ -77,12 +77,12 @@ const Login = (props) => {
 
 
                                         <p className={`${s.woocommerce_form_row} ${s.woocommerce_form_row__wide} ${s.form_row} ${s.form_row_wide}`}>
-                                            <label for="username">Email address&nbsp; <span lassName={s.required}>*</span></label>
+                                            <label htmlFor="username">Email address&nbsp; <span lassName={s.required}>*</span></label>
                                             <input type="text" className={` ${s.woocommerce_Input} ${s.woocommerce_Input__text} ${s.input_text} `}
                                                 name="username" id="username" autoComplete="username" value="" />
                                         </p>
                                         <p className={`${s.woocommerce_form_row} ${s.woocommerce_form_row__wide} ${s.form_row} ${s.form_row_wide}`}>
-                                            <label for="password">Password&nbsp; <span className={s.required}>*</span></label>
+                                            <label htmlFor="password">Password&nbsp; <span className={s.required}>*</span></label>
                                             <span className={s.password_input}><input
                                                 className={`${s.woocommerce_Input} ${s.woocommerce_Input__text} ${s.input_text}`} type="password"
                                                 name="password" id="password" autoComplete="current_password" /><span
@@ -126,14 +126,14 @@ const Login = (props) => {
 
 
                                         <p className={`${s.woocommerce_form_row} ${s.woocommerce_form_row__wide} ${s.form_row} ${s.form_row_wide}}`}>
-                                            <label for="reg_email">Email address&nbsp; <span className={s.required}>*</span></label>
+                                            <label htmlFor="reg_email">Email address&nbsp; <span className={s.required}>*</span></label>
                                             <input type="email" className={`${s.woocommerce_Input} ${s.woocommerce_Input__text} ${s.input_text}`}
                                                 name="email" id="reg_email" autoComplete="email" value="" />
                                         </p>
 
 
                                         <p className={`${s.woocommerce_form_row} ${s.woocommerce_form_row__wide} ${s.form_row} ${s.form_row_wide}`}>
-                                            <label for="reg_password">Password&nbsp; <span className={s.required}>*</span></label>
+                                            <label htmlFor="reg_password">Password&nbsp; <span className={s.required}>*</span></label>
                                             <span className={s.password_input}><input type="password"
                                                 className={`${s.woocommerce_Input} ${s.woocommerce_Input__text} ${s.input_text}`} name="password"
                                                 id="reg_password" autoComplete="new_password" /><span
@@ -145,7 +145,7 @@ const Login = (props) => {
                                             <p>Your personal data will be used to support your experience throughout this website,
                                                 to manage access to your account, and for other purposes described in our <a
                                                     href="https://www.coniferkingdom.com/terms_and_conditions/"
-                                                    className={s.woocommerce_privacy_policy_link} target="_blank">privacy policy</a>.</p>
+                                                    className={s.woocommerce_privacy_policy_link} >privacy policy</a>.</p>
                                         </div>
                                         <p className={`${s.woocommerce_form_row} ${s.form_row}`}>
                                             <input type="hidden" id="woocommerce_register_nonce" name="woocommerce_register_nonce"
