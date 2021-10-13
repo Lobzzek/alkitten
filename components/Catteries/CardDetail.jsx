@@ -1,5 +1,6 @@
 import React from 'react'
 import s from '../../styles/catteries/CardDetail.module.css'
+import Link from 'next/link'
 
 const CardDetail = (props) => {
     const cnt_data = React.useRef();
@@ -158,7 +159,16 @@ const CardDetail = (props) => {
 
                     </div>
                 </div>
-                <button className={s.detail}>Open Cattery Page</button>
+                {
+                    props.with_button && (
+                        <Link href="/catteries/1/">
+                            <a>
+                                <button className={s.detail}>Open Cattery Page</button>
+                            </a>
+                        </Link>
+                    )
+                }
+                
             </div>
             <div className={s.right_cnt}>
                 <p>We are a breeder located in Temecula, CA,

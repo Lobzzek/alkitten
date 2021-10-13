@@ -24,7 +24,7 @@
 
 .categories {
     position: relative;
-    width: 1296.9px;
+    width: 1256.9px;
     display: flex;
     justify-content: space-between;
 }
@@ -209,7 +209,8 @@
 
 @media screen and (max-width: 1920px) {
     .categories {
-        width: 67.549vw;
+        /* width: 67.549vw; */
+        width: 65.549vw;
     }
     .categories .left_panel {
         top: 6.255vw;

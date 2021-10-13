@@ -1,10 +1,10 @@
 import React from 'react'
-import MainWrapper from '../components/MainWrapper/MainWrapper.jsx'
-import s from '../styles/catteries/catteries.module.css'
-import CardCattery from '../components/Catteries/CardCattery.jsx'
-import CardDetail from '../components/Catteries/CardDetail.jsx'
-import CardCat from './../components/CardCat.jsx'
-import Comment from '../components/Catteries/Comment.jsx'
+import MainWrapper from '../../components/MainWrapper/MainWrapper.jsx'
+import s from '../../styles/catteries/catteries.module.css'
+import CardCattery from '../../components/Catteries/CardCattery.jsx'
+import CardDetail from '../../components/Catteries/CardDetail.jsx'
+import CardCat from '../../components/CardCat.jsx'
+import Comment from '../../components/Catteries/Comment.jsx'
 
 const Catteries = () => {
     const details = React.useRef();
@@ -116,7 +116,7 @@ const Catteries = () => {
                         <img src="/img/icon_close.svg" alt="" />
                     </button>
                     <div className={s.top_section}>
-                        <CardDetail img_cat="/img/icon/catteries.svg" verefied />
+                        <CardDetail img_cat="/img/icon/catteries.svg" with_button verefied />
                         <div className={s.right_cnt}>
                             <div className={s.vid}>
                                 <img src="/img/icon_play.svg" alt="" />

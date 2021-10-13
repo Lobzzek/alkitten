@@ -171,7 +171,7 @@
     padding: 15px;
     color: #365864;
     font-family: "modelica-r";
-    margin: 0 24px;
+    margin: 0 0 40px 0;
     background: white;
 }
 
@@ -384,7 +384,7 @@
         padding: .75vw;
         color: #365864;
         font-family: "modelica-r";
-        margin: 0 1.25vw;
+        margin: 0 0 2vw 0;
     }
     .cat_card_info__icon {
         width: 2.34vw;

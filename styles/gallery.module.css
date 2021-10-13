@@ -37,7 +37,7 @@
     border: 1.2px solid #938556;
     width: 50.9vw;
     /* width: 978px; */
-    height: 1.901vw;
+    height: 2.2vw;
     z-index: 2;
     margin: 0 auto;
     margin-bottom: 95px;
@@ -101,7 +101,6 @@
     transform-origin: 50% 0;
     transform: scaleY(0);
     opacity: 0;
-
 }
 
 /* .sort_longhair.active, .sort_shorthair.active, .sort_siamesr.active {
@@ -166,7 +165,7 @@
 }
 
 .wrap_block_img {
-    width: 950px;
+    width: 1282px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -328,7 +327,7 @@
         margin-bottom: 0.158vw;
     }
     .wrap_block_img {
-        width: 49.921vw;
+        width: 66.7vw;
         border-radius: .6vw;
     }
     .block_img {
@@ -360,10 +359,10 @@
         font-size: 28.8px;
     }
     .top_text p {
-        font-size: 20.352px;
+        font-size: 19.2px;
     }
     .sort {
         width: 978px;
-        height: 36.5px;
+        height: 42.3px;
     }
 }

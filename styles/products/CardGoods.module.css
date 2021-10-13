@@ -1,5 +1,5 @@
 .card_goods {
-    width: 614.4px;
+    width: 604.4px;
     height: 393.6px;
     height: fit-content;
     -webkit-box-shadow: rgb(0 0 0 / 28%) 0px 8px 28px;
@@ -117,7 +117,7 @@
 
 @media screen and (max-width: 1920px) {
     .card_goods {
-        width: 32vw;
+        width: 31.5vw;
         height: 20.5vw;
         margin-bottom: 3.102vw;
         border-radius: .6vw;

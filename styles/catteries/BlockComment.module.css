@@ -1,0 +1,294 @@
+.comment {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    -webkit-box-shadow: 5px 5px 32px -11px rgb(0 0 0 / 40%);
+    box-shadow: 5px 5px 32px -11px rgb(0 0 0 / 40%);
+    margin-bottom: 20px;
+}
+
+.comment p {
+    font-size: 19.2px;
+    font-family: "modelica-r";
+    text-decoration: none;
+    margin: 0;
+}
+
+.top_block {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+
+.center_block {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.top_block::before, .center_block::before {
+    content: '';
+    background: rgba(0, 0, 0, 0.219);
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.top_block .avtatar {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    border-radius: 50%;
+    background: url("https://cdn.pixabay.com/photo/2018/04/18/18/56/user-3331256__340.png");
+    /* background: #000; */
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.top_block .user {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.top_block .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.top_block .text>div {
+    display: flex;
+}
+
+.top_block .name {
+    margin-bottom: 7px;
+}
+
+.top_block .text p {
+    display: flex;
+    margin-top: 7px;
+    margin-right: 15px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.top_block .text p img {
+    height: 19.2px;
+    margin-right: 5px;
+}
+
+.center_block .top_string {
+    display: flex;
+    padding: 15px 0 10px 0;
+}
+
+.center_block .top_string .rating {
+    margin-right: 15px;
+}
+
+.center_block .top_string .rating img {
+    width: 30px;
+    margin-right: 5px;
+}
+
+.center_block .top_string .verefied {
+    width: 30px;
+    margin-right: 5px;
+}
+
+.center_block .status {
+    display: flex;
+    align-items: center;
+}
+
+.center_block .data {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    color: #73738f;
+    font-weight: 600;
+}
+
+.cnt {
+    padding-bottom: 15px;
+}
+
+.cnt h2 {
+    font-size: 28.8px;
+    font-family: "modelica-r";
+    margin: 0 0 10px 0;
+}
+
+.bottom_block {
+    padding: 15px 0 5px 0;
+    display: flex;
+}
+
+.bottom_block p {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.bottom_block p:hover {
+    opacity: .6;
+}
+
+.bottom_block p img {
+    height: 19.2px;
+    margin-right: 5px;
+}
+
+.bottom_block .facebook {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.bottom_block .facebook img {
+    width: 35px;
+}
+
+@media screen and (max-width: 1920px) {
+    .comment {
+        background: white;
+        padding: 0.78vw;
+        border-radius: 0.63vw;
+        -webkit-box-shadow: 0.26vw 0.26vw 1.67vw -0.57vw rgb(0 0 0 / 40%);
+        box-shadow: 0.26vw 0.26vw 1.67vw -0.57vw rgb(0 0 0 / 40%);
+        margin-bottom: 1.04vw;
+    }
+    .comment p {
+        font-size: 1vw;
+        font-family: "modelica-r";
+        text-decoration: none;
+        margin: 0;
+    }
+    .top_block {
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: space-between;
+        padding-bottom: 0.78vw;
+    }
+    .center_block {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .top_block::before, .center_block::before {
+        content: '';
+        background: rgba(0, 0, 0, 0.219);
+        width: 100%;
+        height: 0.10vw;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    .top_block .avtatar {
+        width: 4.17vw;
+        height: 4.17vw;
+        position: relative;
+        border-radius: 50%;
+        background: url("https://cdn.pixabay.com/photo/2018/04/18/18/56/user-3331256__340.png");
+        /* background: #000; */
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
+        margin-right: 0.52vw;
+    }
+    .top_block .user {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    .top_block .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .top_block .text>div {
+        display: flex;
+    }
+    .top_block .name {
+        margin-bottom: 0.36vw;
+    }
+    .top_block .text p {
+        display: flex;
+        margin-top: 0.36vw;
+        margin-right: 0.78vw;
+        align-items: center;
+        cursor: pointer;
+    }
+    .top_block .text p img {
+        height: 1vw;
+        margin-right: 0.26vw;
+    }
+    .center_block .top_string {
+        display: flex;
+        padding: 0.78vw 0 0.52vw 0;
+    }
+    .center_block .top_string .rating {
+        margin-right: 0.78vw;
+    }
+    .center_block .top_string .rating img {
+        width: 1.56vw;
+        margin-right: 0.26vw;
+    }
+    .center_block .top_string .verefied {
+        width: 1.56vw;
+        margin-right: 0.26vw;
+    }
+    .center_block .status {
+        display: flex;
+        align-items: center;
+    }
+    .center_block .data {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        color: #73738f;
+        font-weight: 600;
+    }
+    .cnt {
+        padding-bottom: 0.78vw;
+    }
+    .cnt h2 {
+        font-size: 1.5vw;
+        font-family: "modelica-r";
+        margin: 0 0 0.52vw 0;
+    }
+    .bottom_block {
+        padding: 0.78vw 0 0.26vw 0;
+        display: flex;
+    }
+    .bottom_block p {
+        display: flex;
+        align-items: center;
+        margin-right: 0.78vw;
+        cursor: pointer;
+    }
+    .bottom_block p:hover {
+        opacity: .6;
+    }
+    .bottom_block p img {
+        height: 1vw;
+        margin-right: 0.26vw;
+    }
+    .bottom_block .facebook {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+    }
+    .bottom_block .facebook img {
+        width: 1.82vw;
+    }
+}

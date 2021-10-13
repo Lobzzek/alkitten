@@ -1,4 +1,5 @@
 import s from '../../../styles/MainWrapper/BlockPerson.module.css';
+import Link from 'next/link'
 
 const BlockPerson = (props) => {
 
@@ -22,16 +23,19 @@ const BlockPerson = (props) => {
                         {numStars} 
                         <p>({props.rating})</p>
                     </div>
-                    <h3 className={s.login}>{props.login}</h3>
+                    <h3 className={s.login}>{props.cattery}</h3>
+                    <p className={s.breed}>{props.breed}</p>
                 </div>
             </div>
-            <p>{props.description}</p>
+            {/* <p>{props.description}</p> */}
             <div className={s.location}>
                 <div>
                     <img src="/img/icon_point.svg" alt="point_map" className="point" />
                     <p>{props.location}</p>
                 </div>
-                <a href="#">Detail</a>
+                <Link href="/catteries/1">
+                    <a >Detail</a>
+                </Link>
             </div>
         </div>
     )
