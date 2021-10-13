@@ -25,7 +25,9 @@ const Gallery = () => {
         if (openZoomImg) {
             zoomImg.current.style.display = 'flex';
             setTimeout(() => {
-                zoomImg.current.childNodes.forEach(el => el.style.opacity = "1")
+                zoomImg.current.childNodes.forEach(el => { 
+                    el.style.opacity = "1";
+              })
             }, 300);
         }else{
             zoomImg.current.childNodes.forEach(el => el.style.opacity = "0")
@@ -53,19 +55,22 @@ const Gallery = () => {
 
     let openLonghair = React.useCallback(
         () => {
-            sort_longhair.current.style.transform = `scaleY(1)`;
+            sort_longhair.current.style.transform = `translateY(0)`;
+            sort_longhair.current.style.opacity = `1`;
         },
         []
     )
     let openShorthair = React.useCallback(
         () => {
-            sort_shorthair.current.style.transform = `scaleY(1)`
+            sort_shorthair.current.style.transform = `translateY(0)`
+            sort_shorthair.current.style.opacity = `1`
         },
         []
     )
     let openSiamese = React.useCallback(
         () => {
-            sort_siamese.current.style.transform = `scaleY(1)`
+            sort_siamese.current.style.transform = `translateY(0)`
+            sort_siamese.current.style.opacity = `1`
         },
         []
     )
@@ -75,9 +80,12 @@ const Gallery = () => {
         setActiveSiameseSort(0);
 
         let closeBlocks = () => {
-            sort_siamese.current.style.transform = `scaleY(0)`;
-            sort_shorthair.current.style.transform = `scaleY(0)`;
-            sort_longhair.current.style.transform = `scaleY(0)`;
+            sort_siamese.current.style.transform = `translateY(-20%)`;
+            sort_siamese.current.style.opacity = "0";
+            sort_shorthair.current.style.transform = `translateY(-20%)`;
+            sort_shorthair.current.style.opacity = "0";
+            sort_longhair.current.style.transform = `translateY(-20%)`;
+            sort_longhair.current.style.opacity = "0";
         }
 
         sort_hair.current.parentNode.addEventListener("mouseleave", closeBlocks)
@@ -93,7 +101,8 @@ const Gallery = () => {
             if (triggerOn2RenderSort === false) {
                 setTriggerOn2RenderSort(true);
             } else {
-                sort_longhair.current.style.transform = `scaleY(1)`;
+                sort_longhair.current.style.transform = `translateY(0)`;
+                sort_longhair.current.style.opacity = `1`;
             }
             sort_hair.current.childNodes[1].addEventListener("mouseenter", openLonghair);
 
@@ -102,7 +111,8 @@ const Gallery = () => {
 
         } else if (activeSort === 2) {
             closeBlocks();
-            sort_shorthair.current.style.transform = `scaleY(1)`;
+            sort_shorthair.current.style.transform = `translateY(0)`;
+            sort_shorthair.current.style.opacity = `1`;
             sort_hair.current.childNodes[2].addEventListener("mouseenter", openShorthair)
 
             sort_hair.current.childNodes[1].removeEventListener("mouseenter", openLonghair);
@@ -110,7 +120,8 @@ const Gallery = () => {
 
         } else if (activeSort === 3) {
             closeBlocks();
-            sort_siamese.current.style.transform = `scaleY(1)`;
+            sort_siamese.current.style.transform = `translateY(0)`;
+            sort_siamese.current.style.opacity = `1`;
             sort_hair.current.childNodes[3].addEventListener("mouseenter", openSiamese)
 
             sort_hair.current.childNodes[1].removeEventListener("mouseenter", openLonghair);

@@ -20,14 +20,14 @@
     margin: 0;
     padding: 0;
     color: #919191;
-    font-size: 1.06vw;
+    font-size: 1vw;
 }
 
 .search_form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: scale(1.25);
+    /* transform: scale(1.25); */
     transform-origin: 50% 0;
 }
 
@@ -37,15 +37,15 @@
 }
 
 .search_form .search_inp input {
-    border: 1px solid #000;
-    border-radius: 4px;
+    border-radius: .6vw;
     background: #f1efe8;
-    width: 23.177vw;
-    height: 2.292vw;
-    font-size: 0.75vw;
+    width: 30.2vw;
+    height: 2.8vw;
+    font-size: 1vw;
     font-family: "modelica-r";
     padding-left: 2.865vw;
     outline: none;
+    border: 0.15vw solid #938556;
 }
 
 .search_form .search_inp button {
@@ -56,6 +56,7 @@
     border: none;
     left: 0.3vw;
     height: 1.6vw;
+    cursor: pointer;
 }
 
 .search_form .search_inp button img {
@@ -68,40 +69,43 @@
     width: auto;
     height: auto;
     /* border: 1px solid #000; */
-    border-radius: 4px;
+    border-radius: 12px;
+    display: -moz-box;
     display: flex;
+    -moz-box-pack: space-evenly;
     justify-content: space-evenly;
+    -moz-box-align: center;
     align-items: center;
     margin-bottom: 6vw;
-    padding: 5px;
+    padding: .75vw;
     -webkit-box-shadow: rgb(0 0 0 / 28%) 0px 8px 28px;
     box-shadow: rgb(0 0 0 / 28%) 0px 8px 28px;
 }
 
 .criteries>div {
-    height: 10.156vw;
+    height: 13.156vw;
     position: relative;
     margin: 5px;
 }
 
 .criteries .section_param1 {
-    width: 11.458vw;
+    width: 15.458vw;
     background: white;
     display: flex;
     flex-direction: column;
 }
 
 .criteries .section_param2 {
-    width: 5.260vw;
+    width: 7.260vw;
     background: white;
 }
 
 .criteries .section_param3 {
-    width: 9vw;
+    width: 14vw;
 }
 
 .criteries .section_param4 {
-    width: 9.3vw;
+    width: 13.3vw;
 }
 
 .criteries .section_param1 {
@@ -110,7 +114,7 @@
 
 .criteries .section_param1>p {
     position: relative;
-    font-size: .75vw;
+    font-size: 1vw;
     font-family: "modelica-m";
     color: #253E47;
     padding: 0.2vw 0;
@@ -165,15 +169,15 @@
 }
 
 .criteries .section_param1 ul li {
-    height: .75vw;
-    margin-bottom: .25vw;
+    height: 1vw;
+    margin-bottom: .5vw;
     display: flex;
     align-items: center;
 }
 
 .criteries .section_param1 ul li label {
     color: #919191;
-    font-size: .75vw;
+    font-size: 1vw;
     font-family: "modelica-r";
     cursor: pointer;
 }
@@ -192,7 +196,7 @@
 }
 
 .criteries .section_param2>p {
-    font-size: .75vw;
+    font-size: 1w;
     font-family: "modelica-m";
     color: #253E47;
     padding: .15vw 0;
@@ -227,7 +231,7 @@
 
 .criteries .section_param2 ul li label {
     color: #919191;
-    font-size: .75vw;
+    font-size: 1vw;
     font-family: "modelica-r";
     cursor: pointer;
 }
@@ -247,7 +251,7 @@
 
 .section_param3 .pick_availability {
     position: relative;
-    height: 7.135vw;
+    height: 9.135vw;
     width: 100%;
     background: white;
     display: flex;
@@ -256,7 +260,7 @@
 }
 
 .section_param3 .pick_availability>p {
-    font-size: .75vw;
+    font-size: 1vw;
     font-family: "modelica-m";
     color: #253E47;
     padding: 3px 0;
@@ -297,7 +301,7 @@
 
 .section_param3 .pick_availability ul li label {
     color: #919191;
-    font-size: .7vw;
+    font-size: 1vw;
     font-family: "modelica-r";
     cursor: pointer;
 }
@@ -311,7 +315,7 @@
 
 .section_param3 .pick_price {
     position: relative;
-    height: 2.552vw;
+    height: 3.552vw;
     width: 100%;
     background: white;
     display: flex;
@@ -320,7 +324,7 @@
 }
 
 .section_param3 .pick_price>p {
-    font-size: .75vw;
+    font-size: 1vw;
     font-family: "modelica-m";
     color: #253E47;
     padding: .15vw .15vw .15vw 0;
@@ -354,7 +358,7 @@
 }
 
 .section_param3 .pick_price ul li:nth-child(2) {
-    margin-left: .1vw;
+    margin-left: .4vw;
 }
 
 .section_param3 .pick_price ul li input {
@@ -364,7 +368,7 @@
 
 .section_param3 .pick_price ul li label {
     color: #919191;
-    font-size: .63vw;
+    font-size: 1vw;
     font-family: "modelica-r";
     cursor: pointer;
     margin-top: .2vw;
@@ -401,7 +405,7 @@
 
 .section_param4 .pick_gender {
     position: relative;
-    height: 2.552vw;
+    height: 3.552vw;
     width: 100%;
     background: white;
     display: flex;
@@ -410,7 +414,7 @@
 }
 
 .section_param4 .pick_gender>p {
-    font-size: .75vw;
+    font-size: 1vw;
     font-family: "modelica-m";
     color: #253E47;
     padding: 3px 0;
@@ -441,7 +445,7 @@
     user-select: none;
     display: flex;
     align-items: center;
-    margin-right: .1vw;
+    margin-right: .4vw;
 }
 
 .section_param4 .pick_gender ul li input {
@@ -451,7 +455,7 @@
 
 .section_param4 .pick_gender ul li label {
     color: #919191;
-    font-size: .63vw;
+    font-size: 1vw;
     font-family: "modelica-r";
     cursor: pointer;
     margin-top: .2vw;
@@ -480,7 +484,7 @@
 
 .section_param4 .pick_location {
     position: relative;
-    height: 4.063vw;
+    height: 5.063vw;
     width: 100%;
     background: white;
     display: flex;
@@ -489,7 +493,7 @@
 }
 
 .section_param4 .pick_location>p {
-    font-size: .75vw;
+    font-size: 1vw;
     font-family: "modelica-m";
     color: #253E47;
     padding: 3px 0;
@@ -521,7 +525,7 @@
     user-select: none;
     display: flex;
     align-items: center;
-    margin-right: 0vw;
+    margin-right: .4vw;
 }
 
 .section_param4 .pick_location ul li input {
@@ -531,10 +535,10 @@
 
 .section_param4 .pick_location ul li label {
     color: #919191;
-    font-size: .63vw;
+    font-size: 1vw;
     font-family: "modelica-r";
     cursor: pointer;
-    margin-top: .2vw;
+    margin-top: .3vw;
     position: relative;
 }
 
@@ -558,10 +562,11 @@
 
 .section_param4 .with_photo label {
     color: #919191;
-    font-size: .75vw;
+    font-size: 1vw;
     font-family: "modelica-r";
     cursor: pointer;
     position: relative;
+    padding-left: .2vw;
 }
 
 .section_param4 .with_photo input {
@@ -604,7 +609,7 @@
     color: white;
     font-family: "modelica-r";
     font-weight: 100;
-    font-size: .8vw;
+    font-size: 1vw;
     background: #938556;
     text-decoration: none;
     margin: 0;
@@ -657,17 +662,18 @@
         font-size: 28.8px;
     }
     .top_text p {
-        font-size: 20.352px;
+        font-size: 19.2px;
     }
     .search_form .search_inp {
         margin-bottom: 19.2px;
     }
     .search_form .search_inp input {
-        border-radius: 4px;
-        width: 441.6px;
-        height: 44px;
-        font-size: 14.4px;
+        border-radius: 12px;
+        width: 579.84px;
+        height: 53.7px;
+        font-size: 19.2px;
         padding-left: 55px;
+        border: 2.5px solid #938556;
     }
     .search_form .search_inp button {
         left: 5.76px;
@@ -678,67 +684,68 @@
     }
     .criteries {
         margin-bottom: 115.1920px;
-        padding: 5px;
+        padding: 15px;
+        border-radius: 12px;
     }
     .criteries>div {
-        height: 194px;
+        height: 255.3px;
     }
     .criteries .section_param1 {
-        width: 220px;
+        width: 296.7;
         padding-left: 10px;
     }
     .criteries .section_param2 {
-        width: 100px;
+        width: 139.5px;
     }
     .criteries .section_param3 {
-        width: 161px;
+        width: 268.8px;
     }
     .criteries .section_param4 {
-        width: 178px;
+        width: 255.3px;
     }
     .criteries .section_param1>p {
-        font-size: 14.4px;
+        font-size: 19.2px;
         margin: 0;
         padding: 5px 0;
     }
     .criteries .section_param1 ul li {
-        height: 14.4px;
+        height: 19.2px;
         margin-bottom: 4.8px;
     }
     .criteries .section_param1 ul li label {
-        font-size: 14.4px;
+        font-size: 19.2px;
     }
     .criteries .section_param2 {
         padding-left: 10px;
     }
     .criteries .section_param2>p {
-        font-size: 14.4px;
+        font-size: 19.2px;
         padding: 3px 3px 3px 0;
     }
     .criteries .section_param2 ul li label {
-        font-size: 14.4px;
+        font-size: 19.2px;
     }
     .section_param3 .pick_availability {
-        height: 136px;
+        height: 174.7px;
         padding-left: 10px;
     }
     .section_param3 .pick_availability>p {
-        font-size: 14.4px;
+        font-size: 19.2px;
         padding: 3px 0;
     }
     .section_param3 .pick_availability ul li label {
-        font-size: 13.44px;
+        font-size: 19.2px;
     }
     .section_param3 .pick_price {
-        height: 48.9px;
+        height: 67.2px;
         padding-left: 10px;
     }
     .section_param3 .pick_price>p {
-        font-size: 14.4px;
+        font-size: 19.2px;
         padding: 3px 3px 3px 0;
     }
     .section_param3 .pick_price ul li label {
-        font-size: 12px;
+        font-size: 19.2px;
         margin-top: 3.84px;
     }
     .section_param3 .pick_price ul li label::after {
@@ -749,20 +756,23 @@
         left: -12.48px;
     }
     .section_param4 .pick_gender {
-        height: 48.9px;
+        height: 67.2px;
         padding-left: 10px;
     }
     .section_param4 .pick_gender>p {
-        font-size: 14.4px;
+        font-size: 19.2px;
         padding: 3px 0;
     }
     .section_param4 .pick_gender ul li {
         list-style-type: none;
-        margin-right: 5.7px;
+        margin-right: 7.6px;
+    }
+    .section_param3 .pick_price ul li:nth-child(2) {
+        margin-left: 7.6px;
     }
     .section_param4 .pick_gender ul li label {
-        font-size: 12px;
-        margin-top: .2vw;
+        font-size: 19.2px;
+        margin-top: 4px;
     }
     .section_param4 .pick_gender ul li label::after {
         min-width: 7.68px;
@@ -772,11 +782,11 @@
         left: -12.48px;
     }
     .section_param4 .pick_location {
-        height: 78px;
+        height: 97.1px;
         padding-left: 10px;
     }
     .section_param4 .pick_location>p {
-        font-size: 14.4px;
+        font-size: 19.2px;
         padding: 3px 0;
         margin: 0;
     }
@@ -785,7 +795,7 @@
         margin-right: 5.7px;
     }
     .section_param4 .pick_location ul li label {
-        font-size: 12px;
+        font-size: 19.2px;
         margin-top: 3.84px;
     }
     .section_param4 .pick_location ul li label::after {
@@ -796,7 +806,7 @@
         left: -12.48px;
     }
     .section_param4 .with_photo label {
-        font-size: 12.4px;
+        font-size: 19.2px;
     }
     .section_param4 .with_photo label::before {
         width: 9.6px;
@@ -812,7 +822,7 @@
         border-radius: 2px;
     }
     .section_param4>input[type="submit"] {
-        font-size: 15.36px;
+        font-size: 19.2px;
         padding: 6px 10px;
         border-radius: 0.208vw;
     }

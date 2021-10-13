@@ -16,6 +16,7 @@ const CardCat = (props) => {
             const element = cnt_data.current.childNodes[i];
             if (element.scrollHeight > element.clientHeight){
                 const fun_enter = () => {
+                    console.log("jjdjf")
                     more_text.current.childNodes[0].textContent = element.textContent;
                     more_text.current.style.top = `${element.offsetTop}px`;
                     more_text.current.style.left = `${element.offsetLeft}px`;
@@ -37,6 +38,7 @@ const CardCat = (props) => {
             // console.log(more_text.current.childNodes[0].textContent)
             if (element.scrollHeight > element.clientHeight) {
                 const fun_enter = () => {
+                    console.log("jjdjf")
                     more_text.current.childNodes[0].textContent = element.textContent;
                     more_text.current.style.top = `${element.offsetTop}px`;
                     more_text.current.style.left = `${element.offsetLeft}px`;

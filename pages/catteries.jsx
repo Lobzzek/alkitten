@@ -20,9 +20,9 @@ const Catteries = () => {
     const comments = React.useRef();
 
     React.useEffect(() => {
-        if (activeComment < 0){
+        if (activeComment < 0) {
             setActiveComment(0)
-        } else if (activeComment > comments.current.childNodes.length - 1){
+        } else if (activeComment > comments.current.childNodes.length - 1) {
             setActiveComment(comments.current.childNodes.length - 1)
         }
 
@@ -41,14 +41,14 @@ const Catteries = () => {
     }, [activeComment])
 
     React.useEffect(() => {
-        if (openDetails){
+        if (openDetails) {
             details.current.style.display = "flex";
             setTimeout(() => {
                 fon_details.current.style.opacity = "1";
                 cnt_details.current.style.opacity = "1";
                 cnt_details.current.style.transform = "translate(-50%, -50%)";
             }, 200);
-        }else{
+        } else {
 
             fon_details.current.style.opacity = "0";
             cnt_details.current.style.opacity = "0";
@@ -66,32 +66,42 @@ const Catteries = () => {
                 <p>Specify a breed or location or both</p>
             </div>
             <div className={s.sort}>
-                <div className={activeSort === 0 ? `${s.active}` : ``} onClick={() => changeActiveSort(0)}>
-                    <p>
-                        All Breeds
-                    </p>
+                <div className={s.sort_breeds}>
+                    <div className={activeSort === 0 ? `${s.active}` : ``} onClick={() => changeActiveSort(0)}>
+                        <p>
+                            All Breeds
+                        </p>
+                    </div>
+                    <div className={activeSort === 1 ? `${s.active}` : ``} onClick={() => changeActiveSort(1)}>
+                        <p>
+                            Longhair Breeds
+                        </p>
+                    </div>
+                    <div className={activeSort === 2 ? `${s.active}` : ``} onClick={() => changeActiveSort(2)}>
+                        <p>
+                            Shorthair Breeds
+                        </p>
+                    </div>
+                    <div className={activeSort === 3 ? `${s.active}` : ``} onClick={() => changeActiveSort(3)}>
+                        <p>
+                            Siamese &amp; Oriental
+                        </p>
+                    </div>
                 </div>
-                <div className={activeSort === 1 ? `${s.active}` : ``} onClick={() => changeActiveSort(1)}>
-                    <p>
-                        Longhair Breeds
-                    </p>
-                </div>
-                <div className={activeSort === 2 ? `${s.active}` : ``} onClick={() => changeActiveSort(2)}>
-                    <p>
-                        Shorthair Breeds
-                    </p>
-                </div>
-                <div className={activeSort === 3 ? `${s.active}` : ``} onClick={() => changeActiveSort(3)}>
-                    <p>
-                        Siamese &amp; Oriental
-                    </p>
+                <div className={s.sort_location}>
+                    <ul>
+                        <li><input type="radio" name="location" id="inp_rad_location0" defaultChecked /><label htmlFor="inp_rad_location0">All States</label></li>
+                        <li><input type="radio" name="location" id="inp_rad_location1" /><label htmlFor="inp_rad_location1">My State</label></li>
+                        <li><input type="radio" name="location" id="inp_rad_location2" /><label htmlFor="inp_rad_location2">Worldwide</label></li>
+                        <li><input type="radio" name="location" id="inp_rad_location3" /><label htmlFor="inp_rad_location3">Specific (Map)</label></li>
+                    </ul>
                 </div>
             </div>
-            
+
             <div className={s.last_kittens}>
-                <div className={s.top_text}>
+                {/* <div className={s.top_text}>
                     <h2>You May Be Interested In</h2>
-                </div>
+                </div> */}
                 <div className={s.block_cats}>
                     <CardCattery openDetails={() => setOpenDetails(!openDetails)} img_cat="/img/icon/catteries.svg" verefied favourite />
                     <CardCattery openDetails={() => setOpenDetails(!openDetails)} img_cat="/img/icon/catteries.svg" verefied />
@@ -126,7 +136,7 @@ const Catteries = () => {
                             <button className={s.all_img}>View All</button>
                         </div>
                     </div>
-                    
+
                     <div className={s.cats}>
                         <div className={s.top_text}>
                             <h2>Our cats</h2>
@@ -137,19 +147,19 @@ const Catteries = () => {
                             <CardCat img_cat="/img/cat_bottom_home.png" img_cattery="/img/icon/catteries.svg" verefied />
                         </div>
                     </div>
-                
+
                     <div className={s.comments}>
                         <button className={s.prev} onClick={() => setActiveComment(activeComment - 1)}>
                             <img src="/img/icon_arow.svg" alt="" />
                         </button>
                         <div className={s.wrap_comments}>
                             <div className={s.comments} ref={comments}>
-                                <Comment name="Lorem Ipsum" href_facebook="#"/>
-                                <Comment name="Lorem Ipsum" href_facebook="#"/>
-                                <Comment name="Lorem Ipsum" href_facebook="#"/>
-                                <Comment name="Lorem Ipsum" href_facebook="#"/>
-                                <Comment name="Lorem Ipsum" href_facebook="#"/>
-                                <Comment name="Lorem Ipsum" href_facebook="#"/>
+                                <Comment name="Lorem Ipsum" href_facebook="#" />
+                                <Comment name="Lorem Ipsum" href_facebook="#" />
+                                <Comment name="Lorem Ipsum" href_facebook="#" />
+                                <Comment name="Lorem Ipsum" href_facebook="#" />
+                                <Comment name="Lorem Ipsum" href_facebook="#" />
+                                <Comment name="Lorem Ipsum" href_facebook="#" />
                             </div>
                         </div>
                         <button className={s.next} onClick={() => setActiveComment(activeComment + 1)}>
@@ -158,7 +168,7 @@ const Catteries = () => {
                     </div>
                 </div>
             </div>
-        
+
         </MainWrapper>
     )
 }

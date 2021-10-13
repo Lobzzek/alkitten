@@ -197,7 +197,7 @@
 .container_latters button {
     background: none;
     border: none;
-    font-size: 23.3px;
+    font-size: 19.2px;
     font-family: 'modelica-r';
     cursor: pointer;
     padding: 0 6px;
@@ -273,7 +273,7 @@
         margin: 0 auto 2.083vw auto;
     }
     .container_latters button {
-        font-size: 1.2vw;
+        font-size: 1vw;
         padding: 0 .3vw;
     }
     

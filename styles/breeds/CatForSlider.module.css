@@ -75,7 +75,7 @@
 }
 
 .text p {
-    font-size: 15.6px;
+    font-size: 13.2px;
     font-family: "modelica-r";
     text-align: center;
     height: 36px;
@@ -83,7 +83,7 @@
     align-items: center;
     margin-top: 0;
     margin-bottom: 5px;
-    max-width: 95%;
+    max-width: 90%;
 }
 
 .text div {
@@ -104,6 +104,9 @@
     opacity: 0;
     transition: .2s;
     cursor: pointer;
+}
+.text div a:hover, .text div button:hover {
+    opacity: 1 !important;
 }
 
 .fav_ava {
@@ -177,7 +180,7 @@
         margin-top: 0.156vw;
     }
     .text p {
-        font-size: 0.813vw;
+        font-size: 0.69vw;
         height: 1.875vw;
     }
     .text div {

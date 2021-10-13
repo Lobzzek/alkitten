@@ -1,4 +1,11 @@
 .sort {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.sort .sort_breeds {
     background: white;
     display: flex;
     border-radius: 5px;
@@ -9,10 +16,10 @@
     justify-content: space-between;
     z-index: 2;
     margin: 0 auto;
-    margin-bottom: 95px;
+    margin-bottom: 10px;
 }
 
-.sort div {
+.sort .sort_breeds div {
     width: 35%;
     height: 105%;
     display: flex;
@@ -21,26 +28,76 @@
     cursor: pointer;
 }
 
-.sort div:nth-child(1), .sort div:nth-child(2), .sort div:nth-child(3) {
+.sort .sort_breeds div:nth-child(1), .sort .sort_breeds div:nth-child(2), .sort .sort_breeds div:nth-child(3) {
     border-right: 1.25px solid #938556;
 }
 
-.sort div:nth-child(1) {
+.sort .sort_breeds div:nth-child(1) {
     margin-left: -1px;
 }
 
-.sort div p {
+.sort .sort_breeds div p {
     color: #000;
-    font-size: 17.5px;
+    font-size: .9vw;
     font-family: "modelica-r";
 }
 
-.sort div.active {
+.sort .sort_breeds div.active {
     background: #938556;
 }
 
-.sort div.active p {
+.sort .sort_breeds div.active p {
     color: white;
+}
+
+/* .sort .sort_location{
+    min-height: 10px;
+    min-width: 10px;
+} */
+
+.sort_location ul {
+    display: flex;
+}
+
+.sort_location li {
+    margin-right: .4vw;
+    list-style: none;
+}
+
+.sort_location input {
+    margin-left: 0;
+    opacity: 0;
+}
+
+.sort_location label {
+    color: #938556;
+    font-size: 1vw;
+    font-family: "modelica-r";
+    cursor: pointer;
+    margin-top: .2vw;
+    position: relative;
+}
+
+.sort_location label::after {
+    content: '';
+    position: absolute;
+    min-width: 0.4vw;
+    min-height: 0.4vw;
+    max-width: 0.4vw;
+    max-height: 0.4vw;
+    left: -webkit-calc(-.7vw + .5px);
+    left: -moz-calc(-.7vw + .5px);
+    left: calc(-.7vw + .5px);
+    border: 1px solid #000;
+    border-radius: 100%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.sort_location input:checked+label::after {
+    background: #938556;
 }
 
 .last_kittens {
@@ -122,11 +179,11 @@
     top: 50%;
     transform: translate(-50%, -20%);
     background: white;
-    width: 58vw;
+    width: 70vw;
     min-height: 10vw;
     border-radius: 12px;
     padding: 20px;
-    max-width: 1071px;
+    max-width: 1364px;
     max-height: 85vh;
     overflow-y: auto;
     transition: .6s;
@@ -160,7 +217,7 @@
 }
 
 .detail_catteries .cnt .right_cnt {
-    width: 390px;
+    width: 450px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -210,8 +267,8 @@
 .detail_catteries .cnt .right_cnt .img_blocks div {
     border-radius: 12px;
     border: 2.5px solid #938556;
-    height: 70px;
-    width: 70px;
+    height: 80px;
+    width: 80px;
     position: relative;
     cursor: pointer;
     transition: .4s;
@@ -332,7 +389,7 @@
         font-size: 28.8px;
     }
     .top_text p {
-        font-size: 20.352px;
+        font-size: 19.2px;
     }
     .last_kittens .block_cats {
         margin-bottom: 23px;
@@ -343,19 +400,43 @@
         padding: 5.7px 9.6px;
         border-radius: 0.26vw;
     }
-    .sort {
+    .sort .sort_breeds div p {
+        color: #000;
+        font-size: 17.5px;
+        font-family: "modelica-r";
+    }
+    .sort .sort_breeds {
         width: 733px;
         height: 36.5px;
+    }
+    .sort_location li {
+        margin-right: 7.6px;
+    }
+    .sort_location label {
+        font-size: 19.2px;
+        margin-top: 3.84px;
+    }
+    .sort_location label::after {
+        min-width: 7.68px;
+        min-height: 7.68px;
+        max-width: 7.68px;
+        max-height: 7.68px;
+        left: -webkit-calc(-13.44px + .5px);
+        left: -moz-calc(-13.44px + .5px);
+        left: calc(-13.44px + .5px);
     }
 }
 
 @media screen and (max-width: 1920px) {
     .sort {
+        margin-bottom: 2.427vw;
+    }
+    .sort .sort_breeds {
         border-radius: 0.25vw;
-        margin-bottom: 4.427vw;
+        margin-bottom: .5vw;
     }
     .detail_catteries .cnt .right_cnt {
-        width: 20.31vw;
+        width: 23.4vw;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -392,8 +473,8 @@
     }
     .detail_catteries .cnt .right_cnt .img_blocks div {
         border-radius: 0.63vw;
-        height: 3.65vw;
-        width: 3.65vw;
+        height: 4.1vw;
+        width: 4.1vw;
         position: relative;
     }
     .detail_catteries .cnt .right_cnt .img_blocks div.top_b {

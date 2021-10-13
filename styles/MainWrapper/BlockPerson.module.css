@@ -3,7 +3,7 @@
     background: white;
     border-radius: 0.4vw;
     position: relative;
-    padding-right: 13px;
+    padding-right: 0.6vw;
 }
 
 .avatar_data {
@@ -35,8 +35,8 @@
 }
 
 .avatar_data .data img {
-    height: 0.65vw;
-    width: 0.65vw;
+    height: 0.7vw;
+    width: 0.7vw;
     margin: 0 .12vw;
 }
 
@@ -63,14 +63,15 @@
 
 @media screen and (min-width: 1920px) {
     .avatar_data .data p {
-        font-size: 19px;
+        font-size: 19.2px;
     }
 }
 
 .avatar_data .data .login {
     font-family: "modelica-r";
-    font-size: .65vw;
-    margin: 0;
+    /* font-weight: 400; */
+    font-size: 1vw;
+    margin: 0 0 .2vw 0;
     max-width: 5vw;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -86,7 +87,7 @@
 .block_person>p {
     margin: 0 0 0 0.75vw;
     font-family: "modelica-r";
-    font-size: 0.72vw;
+    font-size: 1vw;
     width: fit-content;
     color: #365864;
     overflow: hidden;
@@ -98,18 +99,29 @@
     -webkit-box-orient: vertical;
     line-clamp: 3;
     box-orient: vertical;
+    line-height: 1.2;
 }
 
 .location {
     display: flex;
     align-items: center;
+    /* flex-direction: column; */
+    justify-content: space-between;
     width: calc(100% - 0.781vw);
     margin-left: 0.75vw;
-    padding-bottom: 0.25vw;
+    padding-bottom: 0.5vw;
+    margin-top: .4vw;
+}
+
+.location div {
+    display: flex;
+    align-items: center;
+    max-width: 55%;
+    /* margin: .4vw 0 .6vw 0; */
 }
 
 .location img {
-    width: 0.58vw;
+    width: 1vw;
     height: fit-content;
     margin-right: .2vw;
 }
@@ -117,8 +129,8 @@
 .location p {
     color: #365864;
     font-family: "modelica-r";
-    font-size: .75vw;
-    max-width: 5.5vw;
+    font-size: 1vw;
+    max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -moz-box;
@@ -128,16 +140,18 @@
     -webkit-box-orient: vertical;
     line-clamp: 1;
     box-orient: vertical;
+    margin: 0;
 }
 
 .location a {
     text-decoration: none;
-    margin-left: auto;
+    /* margin-left: auto; */
     background: #142B33;
     color: white;
     border-radius: 0.25vw;
     padding: .25vw 0.75vw;
-    font-size: 0.87vw;
+    font-size: 1vw;
+    /* margin-bottom: .4vw; */
 }
 
 @media screen and (min-width: 1920px) {
@@ -154,29 +168,32 @@
         height: 12.5px;
     }
     .avatar_data .data .login {
-        font-size: 12px;
+        font-size: 19.2px;
         max-width: 100px;
+        margin: 0 0 3.8px 0;
     }
     .block_person>p {
-        font-size: 13.875px;
+        font-size: 19.2px;
         margin-left: 13.875px;
     }
     .location img {
-        width: 11.25px;
+        width: 19.2px;
         height: fit-content;
         margin-right: 4px;
     }
     .location {
-        width: calc(100% - 15px);
+        /* width: calc(100% - 15px); */
         margin-left: 14.2px;
-        padding-bottom: 4.7px;
+        /* padding-bottom: 4.7px; */
+        padding-bottom: 9.6px;
+        margin-top: .7.6;
     }
     .location p {
-        font-size: 14.4px;
-        max-width: 105.6px;
+        font-size: 19.2px;
+        /* max-width: 105.6px; */
     }
     .location a {
-        font-size: 16.75px;
+        font-size: 19.2px;
         padding: 4.7px 14.2px;
         border-radius: 4.7px;
     }
@@ -187,8 +204,8 @@
         min-height: 58.75px;
     }
     .avatar_data .data img {
-        width: 12.3px;
-        height: 12.3px;
+        width: 13.4;
+        height: 13.4;
         margin: 0 2.2px;
     }
 }

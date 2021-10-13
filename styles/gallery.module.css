@@ -19,7 +19,7 @@
     margin: 0;
     padding: 0;
     color: #919191;
-    font-size: 1.06vw;
+    font-size: 1vw;
 }
 
 .active_sort {
@@ -96,11 +96,17 @@
     z-index: -1;
     -webkit-box-shadow: rgb(0 0 0 / 28%) 0px 8px 28px;
     box-shadow: rgb(0 0 0 / 28%) 0px 8px 28px;
-    transition: .4s;
+    transition: .5s;
     height: 200px;
     transform-origin: 50% 0;
     transform: scaleY(0);
+    opacity: 0;
+
 }
+
+/* .sort_longhair.active, .sort_shorthair.active, .sort_siamesr.active {
+    transform: scaleY(1);
+} */
 
 .sort_longhair {
     left: 25%;
@@ -224,7 +230,7 @@
 .zoomImg img {
     position: relative;
     z-index: 1;
-    height: 80%;
+    width: 800px;
     transition: .6s;
     border-radius: 12px
 }
@@ -342,20 +348,22 @@
     }
     .zoomImg img {
         border-radius: .6vw;
+        width: 41.6vw;
     }
 }
-    @media screen and (min-width: 1920px) {
-        .top_text {
-            margin-bottom: 53px;
-        }
-        .top_text h2 {
-            font-size: 28.8px;
-        }
-        .top_text p {
-            font-size: 20.352px;
-        }
-        .sort {
-            width: 978px;
-            height: 36.5px;
-        }
+
+@media screen and (min-width: 1920px) {
+    .top_text {
+        margin-bottom: 53px;
     }
+    .top_text h2 {
+        font-size: 28.8px;
+    }
+    .top_text p {
+        font-size: 20.352px;
+    }
+    .sort {
+        width: 978px;
+        height: 36.5px;
+    }
+}

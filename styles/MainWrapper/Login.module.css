@@ -26,6 +26,7 @@
     opacity: 0;
     transform: translate(-50%, -20%);
     transition: .6s;
+    font-family: "modelica-r";
 }
 
 .login_wrap form {
@@ -68,7 +69,7 @@
     background: none;
     margin: 0;
     padding: 0;
-    font-size: 19px;
+    font-size: 19.2px;
     color: white;
     cursor: pointer;
     padding: 20px 0;
@@ -130,6 +131,67 @@
     border: none;
 }
 
+.woocommerce_form__input_checkbox {
+    opacity: 1;
+}
+.woocommerce_form__label_for_checkbox{
+    position: relative;
+}
+/* .woocommerce_form__label_for_checkbox::after {
+    content: '';
+    position: absolute;
+    width: 0.5vw;
+    height: 0.5vw;
+    left: -webkit-calc(-.7vw + .5px);
+    left: -moz-calc(-.7vw + .5px);
+    left: calc(-.7vw + .5px);
+    border: 1px solid #000;
+    border-radius: 2px;
+    top: 50%;
+    -webkit-transform: translateY(-53%);
+    -moz-transform: translateY(-53%);
+    transform: translateY(-53%);
+}
+.woocommerce_form__label_for_checkbox ~ input:checked{
+    background: #000;
+}
+
+.woocommerce_form__label_for_checkbox::before {
+    content: '✔';
+    position: absolute;
+    width: 0.5vw;
+    height: 0.5vw;
+    left: -.63vw;
+    top: 50%;
+    display: -moz-box;
+    display: flex;
+    justify-self: center;
+    -moz-box-align: center;
+    align-items: center;
+    font-size: .5vw;
+    -webkit-transform: translateY(-58%);
+    -moz-transform: translateY(-58%);
+    transform: translateY(-58%);
+    opacity: 0;
+    font-weight: 600;
+} */
+
+/* @media screen and (min-width: 1920px) {
+    .woocommerce_form__label_for_checkbox::after {
+        width: 9.6px;
+        height: 9.6px;
+        left: -13.44px;
+        border-radius: 2px;
+    }
+    .woocommerce_form__label_for_checkbox::before {
+        width: 9.6px;
+        height: 9.6px;
+        left: -11.6px;
+        top: 50%;
+        font-size: 9.6px;
+    }
+} */
+
 .woocommerce form .form_row .required {
     visibility: visible;
 }
@@ -162,7 +224,7 @@ form .row_specs_form a {
     outline: none;
     background: #938556;
     color: #fff;
-    font-size: 18px;
+    font-size: 19.2px;
     transition: 300ms;
     margin-top: 10px;
     cursor: pointer;
@@ -186,6 +248,7 @@ form .row_specs_form a {
     cursor: pointer;
     transition: 300ms;
 }
+
 /* 
 @media screen and (max-width: 1920px) {
     .login_wrap {

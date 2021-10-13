@@ -239,14 +239,15 @@
     z-index: 2;
     padding: 1vw 0;
     box-shadow: 0 10px 16px #f1efe8;
+    /* background: pink; */
 }
 
 .group_cats .top_phrase h3 {
     margin: 0 auto;
     width: fit-content;
     color: #000;
-    font-family: "modelica-m";
-    font-size: 1.125vw;
+    font-family: "modelica-r";
+    font-size: 1vw;
     margin-top: 0;
 }
 
@@ -378,7 +379,7 @@
         height: 340px;
     }
     .group_cats .top_phrase h3 {
-        font-size: 21.6px;
+        font-size: 19.2px;
     }
     .group_cats .link {
         height: 70px;

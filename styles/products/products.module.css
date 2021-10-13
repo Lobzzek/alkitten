@@ -19,12 +19,12 @@
     margin: 0;
     padding: 0;
     color: #919191;
-    font-size: 1.06vw;
+    font-size: 1vw;
 }
 
 .categories {
     position: relative;
-    width: 1161px;
+    width: 1296.9px;
     display: flex;
     justify-content: space-between;
 }
@@ -203,13 +203,13 @@
         font-size: 28.8px;
     }
     .top_text p {
-        font-size: 20.352px;
+        font-size: 19.2px;
     }
 }
 
 @media screen and (max-width: 1920px) {
     .categories {
-        width: 60.549vw;
+        width: 67.549vw;
     }
     .categories .left_panel {
         top: 6.255vw;

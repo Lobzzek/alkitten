@@ -27,8 +27,10 @@ const BlockPerson = (props) => {
             </div>
             <p>{props.description}</p>
             <div className={s.location}>
-                <img src="/img/icon_point.svg" alt="point_map" className="point" />
-                <p>{props.location}</p>
+                <div>
+                    <img src="/img/icon_point.svg" alt="point_map" className="point" />
+                    <p>{props.location}</p>
+                </div>
                 <a href="#">Detail</a>
             </div>
         </div>

@@ -1,6 +1,6 @@
 .card_goods {
-    width: 556.8px;
-    height: 374.4px;
+    width: 614.4px;
+    height: 393.6px;
     height: fit-content;
     -webkit-box-shadow: rgb(0 0 0 / 28%) 0px 8px 28px;
     box-shadow: rgb(0 0 0 / 28%) 0px 8px 28px;
@@ -9,7 +9,7 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     border-radius: 5px;
     overflow: hidden;
 }
@@ -29,9 +29,10 @@
     padding: 19px 0;
     font-family: 'modelica-r';
     font-weight: 100;
-    font-size: 23.3px;
+    font-size: 19.2px;
     text-align: center;
     max-height: 81px;
+    font-weight: 600;
 }
 
 .card_goods .cnt_goods {
@@ -91,8 +92,8 @@
 }
 
 .card_goods.narrow {
-    width: 356.3px;
-    height: 700px;
+    width: 384px;
+    height: 720px;
     /* width: 18.561vw;
     height: 35vw; */
 }
@@ -116,14 +117,14 @@
 
 @media screen and (max-width: 1920px) {
     .card_goods {
-        width: 29vw;
-        height: 19.5vw;
-        margin-bottom: 2.102vw;
+        width: 32vw;
+        height: 20.5vw;
+        margin-bottom: 3.102vw;
         border-radius: .6vw;
     }
     .card_goods h3 {
         padding: 0.998vw 0;
-        font-size: 1.2vw;
+        font-size: 1vw;
         max-height: 4.205vw;
     }
     .card_goods .cnt_goods {
@@ -145,8 +146,8 @@
     .card_goods.narrow {
         /* width: 11.561vw;
         height: 27.325vw; */
-        width: 18.561vw;
-        height: 36.5vw;
+        width: 20vw;
+        height: 37.5vw;
     }
     .card_goods.narrow .cnt_goods>img {
         margin-bottom: 0.525vw;

@@ -51,7 +51,7 @@
 }
 
 .card_slider h3 {
-    font-size: 15.6px;
+    font-size: 19.2px;
     font-family: "modelica-r";
     display: flex;
     -moz-box-align: center;
@@ -62,14 +62,14 @@
 }
 
 .card_slider h4 {
-    font-size: 15.6px;
+    font-size: 19.2px;
     font-family: "modelica-r";
     margin-bottom: 5px;
     margin-top: 0;
 }
 
 .card_slider p {
-    font-size: 15.6px;
+    font-size: 19.2px;
     font-family: "modelica-r";
     margin-bottom: 5px;
     font-weight: 100;
