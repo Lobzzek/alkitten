@@ -6,7 +6,6 @@ const CardDetail = (props) => {
     const cnt_data = React.useRef();
     const cnt_breed = React.useRef();
     const cnt_name = React.useRef();
-    // const more_text = React.useRef();
 
     const [favourite, setFavourite] = React.useState(false);
 
@@ -116,7 +115,11 @@ const CardDetail = (props) => {
                         <img src="/img/icon_star.svg" alt="" />
                     </div>
                     <p className={s.num}>10.0</p>
-                    <p className={s.vote}>(47)</p>
+                    <Link href="/catteries/1?comments">
+                        <a>
+                            <p className={s.vote}>(47)</p>
+                        </a>
+                    </Link>
                 </div>
                 <div className={s.cat_card_info_img} style={{ "background": `url('${props.img_cat}') 0/cover no-repeat` }}>
                     <div onClick={() => setFavourite(!favourite)} className={favourite ? `${s.favourite} ${s.active}` : `${s.favourite}`} >
@@ -161,7 +164,7 @@ const CardDetail = (props) => {
                 </div>
                 {
                     props.with_button && (
-                        <Link href="/catteries/1/">
+                        <Link href="/catteries/1">
                             <a>
                                 <button className={s.detail}>Open Cattery Page</button>
                             </a>

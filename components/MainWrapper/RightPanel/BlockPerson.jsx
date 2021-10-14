@@ -21,7 +21,11 @@ const BlockPerson = (props) => {
                             )
                         }
                         {numStars} 
-                        <p>({props.rating})</p>
+                        <Link href="/catteries/1?comments">
+                            <a>
+                                <p>({props.rating})</p>
+                            </a>
+                        </Link>
                     </div>
                     <h3 className={s.login}>{props.cattery}</h3>
                     <p className={s.breed}>{props.breed}</p>
@@ -34,7 +38,7 @@ const BlockPerson = (props) => {
                     <p>{props.location}</p>
                 </div>
                 <Link href="/catteries/1">
-                    <a >Detail</a>
+                    <a>Detail</a>
                 </Link>
             </div>
         </div>

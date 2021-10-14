@@ -3,12 +3,30 @@ import s from '../../styles/catteries/cattery.module.css'
 import React from 'react';
 import MainWrapper from '../../components/MainWrapper/MainWrapper.jsx'
 import CardCat from '../../components/CardCat.jsx'
-import Comment from '../../components/Catteries/Comment.jsx'
+// import Comment from '../../components/Catteries/Comment.jsx'
 import CardDetail from '../../components/Catteries/CardDetail.jsx'
 import AllComments from '../../components/Catteries/AllComments.jsx'
+import { useRouter } from 'next/router'
+
 
 const Cattery = () => {
+    let router = useRouter();
+    const comments = React.useRef();
 
+    function offsetPosition(element) {
+        let hElem = element.clientHeight;
+        let offsetTop = 0;
+        do {
+            offsetTop += element.offsetTop;
+        } while (element = element.offsetParent);
+        return [offsetTop, offsetTop + hElem];
+    }
+
+    React.useEffect(() => {
+        if (/comment/.test(router.asPath)){
+            window.scrollTo(0, offsetPosition(comments.current)[1]);
+        }
+    }, [])
     return (
         <MainWrapper>
             <div className={s.detail_catteries}>
@@ -35,7 +53,7 @@ const Cattery = () => {
                         </div>
                     </div>
 
-                    <div className={s.cats}>
+                    <div className={s.cats} ref={comments}>
                         <div className={s.top_text}>
                             <h2>Our cats</h2>
                         </div>

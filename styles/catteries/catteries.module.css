@@ -382,7 +382,31 @@
     margin-left: 19.02px;
 }
 
+.all_com {
+    color: white;
+    font-family: "modelica-r";
+    font-weight: 100;
+    font-size: 1vw;
+    background: #938556;
+    text-decoration: none;
+    margin: 0;
+    padding: 0.4vw .5vw;
+    border-radius: 0.25vw;
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+    margin: 1vw auto 0 auto;
+}
+.all_com:hover{
+    opacity: .6;
+}
 @media screen and (min-width: 1920px) {
+    .all_com {
+        font-size: 19.075px;
+        padding: 6px 10px;
+        border-radius: 5px;
+        margin: 20px auto 0 auto;
+    }
     .top_text {
         margin-bottom: 35px;
     }

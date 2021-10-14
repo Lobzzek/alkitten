@@ -5,6 +5,7 @@ import CardCattery from '../../components/Catteries/CardCattery.jsx'
 import CardDetail from '../../components/Catteries/CardDetail.jsx'
 import CardCat from '../../components/CardCat.jsx'
 import Comment from '../../components/Catteries/Comment.jsx'
+import Link from 'next/link'
 
 const Catteries = () => {
     const details = React.useRef();
@@ -166,6 +167,11 @@ const Catteries = () => {
                             <img src="/img/icon_arow.svg" alt="" />
                         </button>
                     </div>
+                    <Link href="/catteries/1?comment">
+                        <a>
+                            <p className={s.all_com}>All Comments</p>
+                        </a>
+                    </Link>
                 </div>
             </div>
 
