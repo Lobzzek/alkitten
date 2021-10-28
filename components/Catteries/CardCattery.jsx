@@ -1,11 +1,17 @@
 import React from 'react'
 import s from '../../styles/catteries/CardCattery.module.css'
-
+import { useDispatch } from 'react-redux';
+import { setActiveCatteryDetails } from '../../Redux/actions/activeCaterryDetails.js'
+import { setActiveMap } from '../../Redux/actions/activeMap.js'
+import PropTypes from 'prop-types'
 const CardCattery = (props) => {
+    const dispatch = useDispatch();
     const cnt_data = React.useRef();
     const cnt_breed = React.useRef();
     const cnt_name = React.useRef();
     const more_text = React.useRef();
+
+    
 
     const [favourite, setFavourite] = React.useState(false);
 
@@ -114,7 +120,7 @@ const CardCattery = (props) => {
                 <p className={s.num}>10.0</p>
                 <p className={s.vote}>(47)</p>
             </div>
-            <div className={s.cat_card_info_img} style={{ "background": `url('${props.img_cat}') 0/cover no-repeat` }}>
+            <div className={s.cat_card_info_img} style={{ "background": `url('${props.img_cattery}') 0/cover no-repeat` }}>
                 <div onClick={() => setFavourite(!favourite)} className={favourite ? `${s.favourite} ${s.active}` : `${s.favourite}`} >
                     <svg xmlns="http://www.w3.org/2000/svg" className={s.heart} throwIfNamespace="preserve" width="320px" height="260px" version="1.1" viewBox="0 -0.2 5.85 5.5" xlinkHref="http://www.w3.org/1999/xlink">
                         <defs>
@@ -129,7 +135,7 @@ const CardCattery = (props) => {
             <div className={`${s.cat_card_info_row} ${s.cat_card_info_row_2}`}>
                 <div className={s.cat_card_info_row_text} ref={cnt_data}>
                     <p><img src="/img/icon/date.svg" alt="" />{
-                        props.age ? props.age : "5/2/21 (3 m YO)"
+                        props.date ? props.date : "5/2/21 (3 m YO)"
                     } </p>
                     {/* <p><img src="/img/icon/gender.svg" alt="" />
                         {
@@ -142,14 +148,14 @@ const CardCattery = (props) => {
                         }
 
                     </p> */}
-                    <p><img src="/img/icon/coords.svg" alt="" />
+                    <p className={s.location} onClick={() => dispatch(setActiveMap(true))}><img src="/img/icon/coords.svg" alt="" />
                         {
                             props.location ? props.location : "Los Angeles, CA"
                         }
                     </p>
                     <a href={`${props.href_site}`} className={s.href_site}><img src="/img/icon/href.svg" alt="" />
                         {
-                            props.location ? props.location : "www.usamainecoons.com"
+                            props.href_site ? props.href_site : "www.usamainecoons.com"
                         }
                     </a>
                     <h5>
@@ -162,13 +168,23 @@ const CardCattery = (props) => {
                 {/* <a href="#" className={s.cat_card_info_row__link}>
                     Detail</a> */}
             </div>
-            <button className={s.detail} onClick={() => props.openDetails()}>Detail</button>
+            <button className={s.detail} onClick={() => dispatch(setActiveCatteryDetails(true))}>Detail</button>
 
             <div className={s.show_more_text} ref={more_text}>
                 <p></p>
             </div>
         </div>
     )
+}
+
+CardCattery.propTypes = {
+    img_cattery: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    breed: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    href_site: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
 }
 
 export default CardCattery

@@ -1,8 +1,10 @@
 import React from 'react'
-import s from '../../styles/catteries/CardDetail.module.css'
+import s from '../../styles/catteries/CardDetailCattery.module.css'
 import Link from 'next/link'
-
+import { setActiveMap } from '../../Redux/actions/activeMap.js'
+import { useDispatch } from 'react-redux'
 const CardDetail = (props) => {
+    const dispatch = useDispatch();
     const cnt_data = React.useRef();
     const cnt_breed = React.useRef();
     const cnt_name = React.useRef();
@@ -85,7 +87,7 @@ const CardDetail = (props) => {
             <div className={s.left_cnt}>
                 <div className={`${s.cat_card_info_row} ${s.cat_card_info_row_1}`}>
                     <div className={s.cat_card_info_row_text}>
-                        <h2 className={s.cat_card_info_row__title} >
+                        <h2 className={props.big_title ? `${s.cat_card_info_row__title} ${s.big}` : `${s.cat_card_info_row__title}` }  >
                             <span ref={cnt_name}>
                                 {
                                     props.name ? props.name : "Newlogica Cattery"
@@ -149,7 +151,7 @@ const CardDetail = (props) => {
                         }
 
                     </p> */}
-                        <p><img src="/img/icon/coords.svg" alt="" />
+                        <p className={s.location} onClick={() => dispatch(setActiveMap(true))}><img src="/img/icon/coords.svg" alt="" />
                             {
                                 props.location ? props.location : "Los Angeles, CA"
                             }

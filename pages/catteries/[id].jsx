@@ -4,12 +4,19 @@ import React from 'react';
 import MainWrapper from '../../components/MainWrapper/MainWrapper.jsx'
 import CardCat from '../../components/CardCat.jsx'
 // import Comment from '../../components/Catteries/Comment.jsx'
-import CardDetail from '../../components/Catteries/CardDetail.jsx'
+import CardDetailCattery from '../../components/MainWrapper/CardDetailCattery.jsx'
 import AllComments from '../../components/Catteries/AllComments.jsx'
 import { useRouter } from 'next/router'
+// import { setActiveCaterryDetails, setActiveCatteryDetails} from '../../Redux/actions/activeCaterryDetails.js';
+import { useDispatch } from 'react-redux'
+import { setActiveGalleryPopup } from '../../Redux/actions/activeGalleryPopup.js';
+import { setActiveCatteryDetails } from '../../Redux/actions/activeCaterryDetails.js'
+import { setActiveChats } from '../../Redux/actions/activeChats.js'
 
 
 const Cattery = () => {
+    const dispatch = useDispatch();
+
     let router = useRouter();
     const comments = React.useRef();
 
@@ -22,18 +29,21 @@ const Cattery = () => {
         return [offsetTop, offsetTop + hElem];
     }
 
+    dispatch(setActiveCatteryDetails(false))
+    dispatch(setActiveChats(false))
     React.useEffect(() => {
         if (/comment/.test(router.asPath)){
             window.scrollTo(0, offsetPosition(comments.current)[1]);
         }
+
     }, [])
     return (
         <MainWrapper>
             <div className={s.detail_catteries}>
                 {/* <div onClick={() => setOpenDetails(false)}></div> */}
                     <div className={s.top_section}>
-                        <CardDetail img_cat="/img/icon/catteries.svg" verefied />
-                        <div className={s.right_cnt}>
+                        <CardDetailCattery big_title img_cat="/img/icon/catteries.svg" verefied />
+                        <div className={s.right_cnt} onClick={() => dispatch(setActiveGalleryPopup(true))}>
                             <div className={s.vid}>
                                 <img src="/img/icon_play.svg" alt="" />
                             </div>

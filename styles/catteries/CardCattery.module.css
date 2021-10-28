@@ -46,6 +46,15 @@
     max-width: 71%;
 }
 
+.location {
+    cursor: pointer;
+    transition: .4s;
+}
+
+.location:hover {
+    opacity: .4;
+}
+
 .cat_card_info_row_2 a.href_site {
     font-size: 19.2px;
     display: flex;

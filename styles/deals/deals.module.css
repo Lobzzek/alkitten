@@ -1,0 +1,182 @@
+.top_text {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.8225vw;
+    z-index: 1;
+}
+
+.top_text h2 {
+    margin: 0;
+    padding: 0;
+    font-family: "modelica-m";
+    color: #202D34;
+    font-size: 1.5vw;
+}
+
+.top_text p {
+    margin: 0;
+    padding: 0;
+    color: #919191;
+    font-size: 1.06vw;
+}
+
+.sort {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.sort .sort_breeds {
+    background: white;
+    display: flex;
+    border-radius: 5px;
+    border: 1.2px solid #938556;
+    width: 50.9vw;
+    height: 2.2vw;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.sort .sort_breeds div {
+    width: 35%;
+    height: 105%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.sort .sort_breeds div:nth-child(1), .sort .sort_breeds div:nth-child(2), .sort .sort_breeds div:nth-child(3) {
+    border-right: 1.25px solid #938556;
+}
+
+.sort .sort_breeds div:nth-child(1) {
+    margin-left: -1px;
+}
+
+.sort .sort_breeds div p {
+    color: #000;
+    font-size: .9vw;
+    font-family: "modelica-r";
+}
+
+.sort .sort_breeds div.active {
+    background: #938556;
+    box-shadow: 0px 2px 16px #00000046;
+}
+
+.sort .sort_breeds div.active p {
+    color: white;
+}
+
+/* .sort .sort_location{
+    min-height: 10px;
+    min-width: 10px;
+} */
+
+.sort_location ul {
+    display: flex;
+}
+
+.sort_location li {
+    margin-right: .4vw;
+    list-style: none;
+}
+
+.sort_location input {
+    margin-left: 0;
+    opacity: 0;
+}
+
+.sort_location label {
+    color: #938556;
+    font-size: 1vw;
+    font-family: "modelica-r";
+    cursor: pointer;
+    margin-top: .2vw;
+    position: relative;
+}
+
+.sort_location label::after {
+    content: '';
+    position: absolute;
+    min-width: 0.4vw;
+    min-height: 0.4vw;
+    max-width: 0.4vw;
+    max-height: 0.4vw;
+    left: -webkit-calc(-.7vw + .5px);
+    left: -moz-calc(-.7vw + .5px);
+    left: calc(-.7vw + .5px);
+    border: 1px solid #000;
+    border-radius: 100%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.sort_location input:checked+label::after {
+    background: #938556;
+}
+
+.block_cats{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+@media screen and (min-width: 1920px) {
+    .sort .sort_breeds div p {
+        color: #000;
+        font-size: 17.5px;
+        font-family: "modelica-r";
+    }
+    .sort .sort_breeds {
+        width: 978px;
+        height: 42.3px;
+    }
+    .sort_location li {
+        margin-right: 7.6px;
+    }
+    .sort_location label {
+        font-size: 19.2px;
+        margin-top: 3.84px;
+    }
+    .sort_location label::after {
+        min-width: 7.68px;
+        min-height: 7.68px;
+        max-width: 7.68px;
+        max-height: 7.68px;
+        left: -webkit-calc(-13.44px + .5px);
+        left: -moz-calc(-13.44px + .5px);
+        left: calc(-13.44px + .5px);
+    }
+    .top_text {
+        margin-bottom: 35px;
+    }
+    .top_text h2 {
+        font-size: 28.8px;
+    }
+    .top_text p {
+        font-size: 19.2px;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    .sort {
+        margin-bottom: 2.427vw;
+    }
+    .sort .sort_breeds {
+        border-radius: 0.25vw;
+        margin-bottom: .5vw;
+    }
+}

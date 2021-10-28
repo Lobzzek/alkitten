@@ -5,15 +5,14 @@ import Footer from './Footer.jsx';
 import React from 'react'
 import s from '../../styles/MainWrapper/MainWrapper.module.css'
 import Login from './Login.jsx'
+import CatDetails from './CatDetails.jsx'
+import GalleryPopup from './GalleryPopup.jsx'
+import CatteryDetails from './CatteryDetails.jsx'
+import MapPopup from './MapPopup.jsx'
+import Chats from './Chats.jsx'
 
-// import { setTriggeredScroll } from '../../Redux/actions/triggeredScroll.js';
-// import { useDispatch } from 'react-redux'
-
-// import moduleName from '../../Redux/actions/triggeredScroll.js'
 
 function MainWrapper(props) {
-
-    // const dispatch = useDispatch();
 
     const main_content = React.useRef();
 
@@ -51,6 +50,11 @@ function MainWrapper(props) {
             <Footer />
 
             <Login />
+            <CatDetails />
+            <GalleryPopup />
+            <CatteryDetails />
+            <MapPopup />
+            <Chats />
         </div>
     );
 }

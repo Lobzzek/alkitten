@@ -80,6 +80,7 @@
     padding: .75vw;
     -webkit-box-shadow: rgb(0 0 0 / 28%) 0px 8px 28px;
     box-shadow: rgb(0 0 0 / 28%) 0px 8px 28px;
+    width: 65.1vw;
 }
 
 .criteries>div {
@@ -89,23 +90,23 @@
 }
 
 .criteries .section_param1 {
-    width: 15.458vw;
+    width: 18.47vw;
     background: white;
     display: flex;
     flex-direction: column;
 }
 
 .criteries .section_param2 {
-    width: 7.260vw;
+    width: 9.76vw;
     background: white;
 }
 
 .criteries .section_param3 {
-    width: 14vw;
+    width: 15.97vw;
 }
 
 .criteries .section_param4 {
-    width: 13.3vw;
+    width: 15.01vw;
 }
 
 .criteries .section_param1 {
@@ -196,7 +197,7 @@
 }
 
 .criteries .section_param2>p {
-    font-size: 1w;
+    font-size: 1vw;
     font-family: "modelica-m";
     color: #253E47;
     padding: .15vw 0;
@@ -613,7 +614,7 @@
     background: #938556;
     text-decoration: none;
     margin: 0;
-    padding: .3vw .5vw;
+    padding: .3vw 1vw;
     border-radius: 0.208vw;
     font-weight: 100;
     border: none;
@@ -633,12 +634,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .last_kittens .block_cats {
     display: flex;
-    width: 100%;
-    justify-content: center;
+    width: 65.1vw;
+    justify-content: space-between;
     margin-bottom: 1.2vw;
 }
 
@@ -686,22 +688,23 @@
         margin-bottom: 115.1920px;
         padding: 15px;
         border-radius: 12px;
+        width: 1250px;
     }
     .criteries>div {
         height: 255.3px;
     }
     .criteries .section_param1 {
-        width: 296.7px;
+        width: 354.7px;
         padding-left: 10px;
     }
     .criteries .section_param2 {
-        width: 139.5px;
+        width: 187.5px;
     }
     .criteries .section_param3 {
-        width: 268.8px;
+        width: 306.8px;
     }
     .criteries .section_param4 {
-        width: 255.3px;
+        width: 288.3px;
     }
     .criteries .section_param1>p {
         font-size: 19.2px;
@@ -823,11 +826,12 @@
     }
     .section_param4>input[type="submit"] {
         font-size: 19.2px;
-        padding: 6px 10px;
+        padding: 6px 19.2px;
         border-radius: 0.208vw;
     }
     .last_kittens .block_cats {
         margin-bottom: 23px;
+        width: 1250px;
     }
     .last_kittens>a {
         font-size: 19.2px;

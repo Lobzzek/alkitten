@@ -10,7 +10,7 @@ const CardGoodsSlider = (props) => {
             <hr></hr>
             <div className={s.rating}>
                 {/* <img src="/img/icon_star.svg" alt="" />
-                <img src="/img/icon_star.svg" alt="" />
+                <img src="/img/icon_star.svg" alt="" /  >
                 <img src="/img/icon_star.svg" alt="" />
                 <img src="/img/icon_star.svg" alt="" />
                 <img src="/img/icon_star.svg" alt="" /> */}

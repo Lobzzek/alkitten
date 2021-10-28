@@ -124,7 +124,7 @@
 .breed_info_right__row_5 span, .breed_info_right__row_6 span, .breed_info_right__row_7 span {
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
-    align-self: center;
+    /* align-self: center; */
     padding: 0 10px 0 0;
 }
 

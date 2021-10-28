@@ -149,6 +149,12 @@
     line-clamp: 1;
     box-orient: vertical;
     margin: 0;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.location p:hover {
+    opacity: .4;
 }
 
 .location a {
@@ -213,7 +219,7 @@
         height: 70px;
         min-width: 58.75px;
         min-height: 58.75px;
-        margin-top: -.13.4px;
+        margin-top: -13.4px;
     }
     .avatar_data .data img {
         width: 13.4px;
@@ -223,4 +229,13 @@
     .avatar_data .data {
         width: 134.4px;
     }
+}
+
+.for_map {
+    padding-right: 0 !important;
+    width: 100% !important;
+}
+
+.for_map .avatar_data .avatar {
+    margin-top: 0 !important;
 }

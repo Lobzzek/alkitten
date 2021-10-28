@@ -1,3 +1,6 @@
+.main_wrapper{
+    width: 100vw;
+}
 .center_content {
     position: relative;
     width: 85.8vw;
@@ -14,7 +17,6 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* background: pink; */
 }
 
 @media screen and (min-width: 1920px) {

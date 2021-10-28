@@ -77,7 +77,7 @@ const Login = (props) => {
 
 
                                         <p className={`${s.woocommerce_form_row} ${s.woocommerce_form_row__wide} ${s.form_row} ${s.form_row_wide}`}>
-                                            <label htmlFor="username">Email address&nbsp; <span lassName={s.required}>*</span></label>
+                                            <label htmlFor="username">Email address&nbsp; <span className={s.required}>*</span></label>
                                             <input type="text" className={` ${s.woocommerce_Input} ${s.woocommerce_Input__text} ${s.input_text} `}
                                                 name="username" id="username" autoComplete="username" value="" />
                                         </p>

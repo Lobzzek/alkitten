@@ -236,8 +236,8 @@
 
 .zoomImg .close {
     position: absolute;
-    color: #800;
-    font-size: 80px;
+    color: white;
+    font-size: 50px;
     right: 50px;
     top: 0;
     z-index: 2;
@@ -337,7 +337,7 @@
         border-radius: .6vw;
     }
     .zoomImg .close {
-        font-size: 4.204vw;
+        font-size: 2.6vw;
         right: 2.627vw;
     }
     .zoomImg>button {
