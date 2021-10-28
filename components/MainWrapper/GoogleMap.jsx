@@ -48,7 +48,7 @@ const GoogleMapContainer = (props) => {
 
             {
 
-                dataPoints.map((el, index) => <Marker 
+                dataPoints.map((el, index) => <Marker key={`${index}_marker_${el.id}`}
                     icon={{
                         url: `/img/icon_point.svg`,
                         scaledSize: window.google.maps.Size(30, 30)

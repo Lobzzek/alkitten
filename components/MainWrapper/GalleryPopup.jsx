@@ -84,10 +84,10 @@ const GalleryPopup = () => {
 
                         {
                             imgsGallery[activeImg].type === "video" && /youtube.com/.test(imgsGallery[activeImg].href) ?
-                                <iframe width="949" height="534" src={`https://www.youtube.com/embed/${imgsGallery[activeImg].href.match(/(?<=v\=)(\w|\D)+/)[0]}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> :
+                                <iframe width="949" height="534" src={`https://www.youtube.com/embed/${imgsGallery[activeImg].href.match(/(?<=v\=)(\w|\D)+/)[0]}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> :
 
                                 imgsGallery[activeImg].type === "video" && /vimeo.com/.test(imgsGallery[activeImg].href) ?
-                                    <iframe src={`https://player.vimeo.com/video/${imgsGallery[activeImg].href.match(/(?<=\/)\d+/)[0]}`} width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> :
+                                    <iframe src={`https://player.vimeo.com/video/${imgsGallery[activeImg].href.match(/(?<=\/)\d+/)[0]}`} width="640" height="360" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe> :
 
                                     imgsGallery[activeImg].type === "video" && !/vimeo.com|youtube.com/.test(imgsGallery[activeImg].href) ?
                                         <video controls><source src={`${imgsGallery[activeImg].href}`} /></video>
