@@ -25,6 +25,7 @@ const Header = () => {
     const user = React.useRef();
     React.useEffect(() => {
         if (openProfile){
+            
             modal_profile.current.style.display = "flex";
             setTimeout(() => {
                 modal_profile.current.style.opacity = "1";
