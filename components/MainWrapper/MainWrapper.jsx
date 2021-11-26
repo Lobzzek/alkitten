@@ -5,14 +5,18 @@ import Footer from './Footer.jsx';
 import React from 'react'
 import s from '../../styles/MainWrapper/MainWrapper.module.css'
 import Login from './Login.jsx'
-import CatDetails from './CatDetails.jsx'
 import GalleryPopup from './GalleryPopup.jsx'
-import CatteryDetails from './CatteryDetails.jsx'
 import MapPopup from './MapPopup.jsx'
 import Chats from './Chats.jsx'
 
+import {useRouter} from 'next/router'
+
+
 
 function MainWrapper(props) {
+
+    const router = useRouter();
+
 
     const main_content = React.useRef();
 
@@ -38,7 +42,15 @@ function MainWrapper(props) {
             <section className={triggeredState ? `${s.center_content} ${s.triggered}` : `${s.center_content}`}>
                 {/* <LeftPanel triggered={triggerScroll} bottomContent={bottomContent} /> */}
                 <section className={s.main_content} ref={main_content}>
-
+                {
+                        router.pathname !== "/" && <button onClick={() => {
+                            if(Object.keys(router.components).length === 2){
+                                router.push("/")
+                            }else{
+                                router.back()
+                            }
+                        }} className={s.past_page}>&#8592; Back</button>
+                }
                 {
                     props.children
                 }
@@ -50,9 +62,7 @@ function MainWrapper(props) {
             <Footer />
 
             <Login />
-            <CatDetails />
             <GalleryPopup />
-            <CatteryDetails />
             <MapPopup />
             <Chats />
         </div>

@@ -1,6 +1,7 @@
-.main_wrapper{
+.main_wrapper {
     width: 100vw;
 }
+
 .center_content {
     position: relative;
     width: 85.8vw;
@@ -19,13 +20,31 @@
     flex-direction: column;
 }
 
+.past_page {
+    position: absolute;
+    left: 1.82vw;
+    top: 0;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1vw;
+    color: #919191;
+    z-index: 2;
+}
+
 @media screen and (min-width: 1920px) {
     .center_content {
         max-width: 1649px;
         margin: 113px auto 50px auto;
     }
+
     .main_content {
         width: 1333px;
+    }
+
+    .past_page {
+        left: 35px;
+        font-size: 19.2px;
     }
 }
 
@@ -33,6 +52,7 @@
     .center_content {
         width: 95vw;
     }
+
     .main_content {
         width: 63.875vw;
     }

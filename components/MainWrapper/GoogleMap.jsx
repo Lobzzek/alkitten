@@ -56,7 +56,6 @@ const GoogleMapContainer = (props) => {
                     position={{ lat: el.lat, lng: el.lng}} 
                     onClick={() => {
                         setInfoPosition([el.lat, el.lng])
-                        console.log(infoPosition)
                     }}
                 />)
 

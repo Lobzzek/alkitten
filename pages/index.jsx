@@ -3,11 +3,31 @@ import Head from "next/head"
 import s from "../styles/home/index.module.css";
 import jsonCats from '../_data_cats.js';
 import React from 'react'
+import { useRouter } from 'next/router'
 
 import dynamic from 'next/dynamic';
 const CardCat = dynamic(() => import('../components/CardCat.jsx'));
 
 export default function Home() {
+  // const [activeBreed, setActiveBreed] = React.useState(0);
+  const router = useRouter();
+  const list_breeds = React.useRef();
+  const allBreeds = [
+    ...jsonCats.long_hair, ...jsonCats.short_hair, ...jsonCats.siamese_and_oriental
+  ]
+  React.useEffect(() => {
+    if (router.query.breed){
+      allBreeds.forEach((el, index) => {
+        if (el.name === router.query.breed) {
+          list_breeds.current.childNodes.forEach(el => el.childNodes[0].defaultChecked = false);
+          list_breeds.current.childNodes[index].childNodes[0].defaultChecked = true;
+        }
+      })
+    }else{
+      list_breeds.current.childNodes[0].childNodes[0].defaultChecked = true;
+    }
+  }, [])
+
   return (
     <>
       <Head>
@@ -26,20 +46,10 @@ export default function Home() {
         <div className={s.criteries}>
           <div className={s.section_param1}>
             <p>Breeds</p>
-            <ul>
+            <ul ref={list_breeds}>
                 {
-                  jsonCats.long_hair.map( (el, i ) => 
-                    <li key={`li_beeds1${i + 1}`}><input type="radio" name="breeds" id={`inp_rad_beeds${i + 1}`} defaultChecked={i===0 ? true : false}/><label htmlFor={`inp_rad_beeds${i + 1}`}>{el.name}</label></li>
-                  )
-                }
-                {
-                  jsonCats.short_hair.map((el, i) =>
-                    <li key={`li_beeds2${i + 1}`}><input type="radio" name="breeds" id={`inp_rad_beeds${i + 1}`}/><label htmlFor={`inp_rad_beeds${i + 1}`}>{el.name}</label></li>
-                  )
-                }
-                {
-                  jsonCats.siamese_and_oriental.map((el, i) =>
-                    <li key={`li_beeds3${i + 1}`}><input type="radio" name="breeds"  id={`inp_rad_beeds${i + 1}`} /><label htmlFor={`inp_rad_beeds${i + 1}`}>{el.name}</label></li>
+                  allBreeds.map( (el, i) =>
+                    <li key={`li_beeds${i + 1}`}><input type="radio" name="breeds" id={`inp_rad_beeds${i + 1}`}/><label htmlFor={`inp_rad_beeds${i + 1}`}>{el.name}</label></li>
                   )
                 }
             </ul>
@@ -103,8 +113,31 @@ export default function Home() {
           </div>
         </div>
       </form>
-    
-      <div className={s.last_kittens}>
+      
+      {
+          router.query.breed ? 
+          (
+              <div className={`${s.compilation} ${s.matched_kittens}`}>
+                <div className={s.top_text}>
+                  <h2>We have selected kittens for you</h2>
+                  <p>Browse breeds that fit your lifestyle</p>
+                </div>
+                <div className={s.block_cats}>
+                  <CardCat breed={`${router.query.breed.replace(/_/g, " ")}`} img_cat="/img/cat_bottom_home.png" img_cattery="/img/icon/catteries.svg" verefied favourite />
+                  <CardCat breed={`${router.query.breed.replace(/_/g, " ")}`} img_cat="/img/cat_bottom_home.png" img_cattery="/img/cat_bottom_home.png" />
+                  <CardCat breed={`${router.query.breed.replace(/_/g, " ")}`} img_cat="/img/cat_bottom_home.png" img_cattery="/img/icon/catteries.svg" verefied />
+                  <CardCat breed={`${router.query.breed.replace(/_/g, " ")}`} img_cat="/img/cat_bottom_home.png" img_cattery="/img/icon/catteries.svg" verefied favourite />
+                  <CardCat breed={`${router.query.breed.replace(/_/g, " ")}`} img_cat="/img/cat_bottom_home.png" img_cattery="/img/cat_bottom_home.png" />
+                  <CardCat breed={`${router.query.breed.replace(/_/g, " ")}`} img_cat="/img/cat_bottom_home.png" img_cattery="/img/icon/catteries.svg" verefied />
+                </div>
+                <a href="dsa">View More</a>
+              </div>
+          )
+          :
+          null
+      }
+        
+        <div className={`${s.compilation} ${s.last_kittens}`}>
         <div className={s.top_text}>
           <h2>Recently Viewed Kittens</h2>
           <p>Browse breeds that fit your lifestyle</p>
@@ -114,7 +147,6 @@ export default function Home() {
             <CardCat img_cat="/img/cat_bottom_home.png" img_cattery="/img/cat_bottom_home.png" />
             <CardCat img_cat="/img/cat_bottom_home.png" img_cattery="/img/icon/catteries.svg" verefied />
           </div> 
-          <a href="dsa">Viev More</a>
       </div>
     </MainWrapper>
     </>

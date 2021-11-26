@@ -178,7 +178,6 @@ const CardDetail = (props) => {
             <div className={s.right_cnt}>
                 <p>We are a breeder located in Temecula, CA,
                     and specialize in Maine Coon kittens.
-                    <br />
                     We are family based cat breeders since 1992.
                     We are located in California, near San Diego,
                     and always happy to assist you, help you with
@@ -188,7 +187,6 @@ const CardDetail = (props) => {
                     members of our family literally, you can come
                     and see that they growing up in an
                     atmosphere of kindness and love.
-                    <br />
                     We produce a variety of colors ranging from
                     brown to silver to red and black smokes.
                     Some of our kittens are also polydactyl.  All of

@@ -34,38 +34,30 @@ const Header = () => {
         }else{
             // user.current.style.pointerEvents = "none"
             modal_profile.current.style.opacity = "0";
-            modal_profile.current.style.transform = "translateY(125%)";
+            modal_profile.current.style.transform = "translateY(115%)";
             setTimeout(() => {
                 // user.current.style.pointerEvents = "auto"
                 modal_profile.current.style.display = "none";
-            }, 600);
+            }, 300);
         }
     }, [openProfile])
-
-    // React.useEffect(() => {
-    //     setTimeout(() => {
-    //         // console.log("1", triggerMouse)
-    //         if (!triggerMouse) {
-    //             setOpenProfile(false);
-    //         }else{
-    //             setOpenProfile(true)
-    //         }
-    //     }, 1000);
-        
-    // }, [triggerMouse])
     return (
         <section className={s.header}>
             <div className={s.green_sect}>
                 <input type="checkbox" ref={inp} onChange={() => dispatch(setLoginUser(inp.current.checked))} />
                 <div className={s.wrap}>
-                    <div className={s.logo}>
-                        <img src="/img/logoForHeader.svg" alt="logo_site"/>
-                    </div>
+                    <Link href="/">
+                        <a>
+                            <div className={s.logo}>
+                                <img src="/img/logoForHeader.svg" alt="logo_site" />
+                            </div>
+                        </a>
+                    </Link>
                     <nav>
                         <Link href="/"><a className={classNames("", { [s.active]: router.pathname === "/" })}>Home</a></Link>
                         <Link href="/breeds"><a className={classNames("", { [s.active]: router.pathname === "/breeds" })}>Breeds</a></Link>
                         <Link href="/catteries"><a className={classNames("", { [s.active]: router.pathname === "/catteries" })}>Catteries</a></Link>
-                        <Link href="/products"><a className={classNames("", { [s.active]: router.pathname === "/products" })}>Products</a></Link>
+                        {/* <Link href="/products"><a className={classNames("", { [s.active]: router.pathname === "/products" })}>Products</a></Link> */}
                         <Link href="/deals"><a className={classNames("", { [s.active]: router.pathname === "/deals" })}>Deals</a></Link>
                         <Link href="/gallery"><a className={classNames("", { [s.active]: router.pathname === "/gallery" })}>Gallery</a></Link>
                         <Link href="/faq"><a className={classNames("", { [s.active]: router.pathname === "/faq" })}>FAQ/Guide</a></Link>

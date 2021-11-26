@@ -14,7 +14,12 @@ const Faq = () => {
         do {
             offsetTop += element.offsetTop;
         } while (element = element.offsetParent);
-        return [offsetTop, offsetTop + hElem];
+
+        if(document.documentElement.clientWidth > 1920){
+            return [offsetTop - 300, offsetTop + hElem - 300];
+        }else{
+            return [offsetTop - ((300 / document.documentElement.clientWidth) * 100), offsetTop + hElem - ((300 / document.documentElement.clientWidth) * 100)];
+        }
     }
     React.useEffect(() => {
 
@@ -47,7 +52,6 @@ const Faq = () => {
         
 
         let setActivePunktOnScroll = () => {
-            // console.log(listLi.current.childNodes[0].getBoundingClientRect())
             if (window.scrollY < offsetPosition(listLi.current.childNodes[0])[1]) {
                 setActivePunkt(0)
             } else if (window.scrollY > offsetPosition(listLi.current.childNodes[1])[0] &&

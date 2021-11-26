@@ -1,12 +1,16 @@
 import React from 'react'
 import s from '../../styles/catteries/BlockComment.module.css'
 
-const BlockComment = () => {
+const BlockComment = (props) => {
     return (
         <div className={s.comment}>
             <div className={s.top_block}>
                 <div className={s.user}>
-                    <div className={s.avtatar}></div>
+                    <div className={s.avtatar}>
+                        {
+                            props.verefied && <img src="/img/icon/checked.svg" alt="" />
+                        }
+                    </div>
                     <div className={s.text}>
                         <p className={s.name}>Lorem ipsum</p>
                         <div>
@@ -25,10 +29,6 @@ const BlockComment = () => {
                         <img src="/img/icon_star.svg" alt="" />
                         <img src="/img/icon_star.svg" alt="" />
                     </div>  
-                    <p className={s.status}>
-                        <img src="/img/icon/checked.svg" className={s.verefied} alt="" />
-                        Invited
-                    </p>
                     <p className={s.data}>
                         5 days ago
                     </p>

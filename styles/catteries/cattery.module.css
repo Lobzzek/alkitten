@@ -25,12 +25,14 @@
 
 .detail_catteries {
     display: block;
-    width: 100%;
+    width: 97%;
+    margin: 0 auto;
     /* background: #000; */
     position: relative;
     /* z-index: 10; */
     /* display: none; */
     padding: 20px;
+    margin-top: 50px;
 }
 
 
@@ -231,21 +233,28 @@
     .top_text {
         margin-bottom: 35px;
     }
+
     .top_text h2 {
         font-size: 28.8px;
     }
+
     .top_text p {
         font-size: 19.2px;
     }
 }
 
 @media screen and (max-width: 1920px) {
+    .detail_catteries {
+        margin-top: 2.6vw;
+    }
+
     .detail_catteries .right_cnt {
         width: 23.4vw;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     .detail_catteries .right_cnt .vid {
         width: 100%;
         border-radius: 0.63vw;
@@ -255,9 +264,11 @@
         height: 10.42vw;
         margin-bottom: 1.04vw;
     }
+
     .detail_catteries .right_cnt .vid img {
         width: 4.17vw;
     }
+
     .detail_catteries .right_cnt .img_blocks {
         width: 100%;
         display: flex;
@@ -265,6 +276,7 @@
         justify-content: space-between;
         position: relative;
     }
+
     .detail_catteries .right_cnt .img_blocks::before {
         content: '';
         width: 110%;
@@ -276,34 +288,42 @@
         bottom: -0.10vw;
         z-index: 1;
     }
+
     .detail_catteries .right_cnt .img_blocks div {
         border-radius: 0.63vw;
         height: 4.1vw;
         width: 4.1vw;
         position: relative;
     }
+
     .detail_catteries .right_cnt .img_blocks div.top_b {
         margin-bottom: 0.52vw;
     }
+
     .detail_catteries .right_cnt .all_img {
         border-radius: 0.25vw;
         padding: .3vw 0.6vw;
         font-size: 1vw;
         margin-top: -.5vw;
     }
+
     .detail_catteries .right_cnt {
         margin-top: 5.4vw;
     }
+
     .detail_catteries .close {
         right: 1vw;
         top: 1vw;
     }
+
     .detail_catteries .close img {
         width: 1.5vw;
     }
+
     .detail_catteries .cats, .detail_catteries .top_section {
         margin-bottom: 2.5vw;
     }
+
     .comments .wrap_comments .comments>div:first-child {
         margin-left: 1vw;
     }

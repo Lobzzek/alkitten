@@ -4,13 +4,6 @@ import s from '../styles/gallery.module.css'
 import jsonCats from '../_data_cats.js'
 import classNames from 'classnames'
 
-// const BlockImg = (props) => {
-//     return (
-        
-//     )
-// }
-
-
 const Gallery = () => {
 
     const [openZoomImg, setOpenZoomImg] = React.useState(false);
@@ -74,23 +67,24 @@ const Gallery = () => {
         },
         []
     )
+    let closeBlocks = () => {
+        sort_siamese.current.style.transform = `translateY(-20%)`;
+        sort_siamese.current.style.opacity = "0";
+        sort_shorthair.current.style.transform = `translateY(-20%)`;
+        sort_shorthair.current.style.opacity = "0";
+        sort_longhair.current.style.transform = `translateY(-20%)`;
+        sort_longhair.current.style.opacity = "0";
+    }
     React.useEffect(() => {
         setActiveLonghairSort(0);
         setActiveShorthairSort(0);
         setActiveSiameseSort(0);
 
-        let closeBlocks = () => {
-            sort_siamese.current.style.transform = `translateY(-20%)`;
-            sort_siamese.current.style.opacity = "0";
-            sort_shorthair.current.style.transform = `translateY(-20%)`;
-            sort_shorthair.current.style.opacity = "0";
-            sort_longhair.current.style.transform = `translateY(-20%)`;
-            sort_longhair.current.style.opacity = "0";
-        }
+        
 
         sort_hair.current.parentNode.addEventListener("mouseleave", closeBlocks)
         if (activeSort === 0) {
-            closeBlocks();
+            // closeBlocks();
             sort_hair.current.childNodes[1].removeEventListener("mouseenter", openLonghair);
 
             sort_hair.current.childNodes[2].removeEventListener("mouseenter", openShorthair)
@@ -204,7 +198,10 @@ const Gallery = () => {
 
                                     key={`long_hair_${index}`}
                                     className={classNames("", { [s.active]: activeLonghairSort === index + 1 })}
-                                    onClick={() => setActiveLonghairSort(index + 1)}
+                                    onClick={() => {
+                                        closeBlocks();
+                                        setActiveLonghairSort(index + 1)
+                                    }}
 
                                 >{el.name}</li>)
 
@@ -222,7 +219,10 @@ const Gallery = () => {
 
                                     key={`short_hair_${index}`}
                                     className={classNames("", { [s.active]: activeShorthairSort === index + 1 })}
-                                    onClick={() => setActiveShorthairSort(index + 1)}
+                                    onClick={() => {
+                                        closeBlocks();
+                                        setActiveShorthairSort(index + 1)
+                                    }}
 
                                 >{el.name}</li>)
 
@@ -240,7 +240,10 @@ const Gallery = () => {
 
                                     key={`siamese_${index}`}
                                     className={classNames("", { [s.active]: activeSiameseSort === index + 1 })}
-                                    onClick={() => setActiveSiameseSort(index + 1)}
+                                    onClick={() => {
+                                        closeBlocks();
+                                        setActiveSiameseSort(index + 1)
+                                    } }
 
                                 >{el.name}</li>)
 

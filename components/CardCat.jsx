@@ -1,10 +1,11 @@
 import s from '../styles/home/CardCat.module.css'
 import React from 'react'
 import classNames from 'classnames'
-import { setActiveCatDetails } from '../Redux/actions/activeCatDetails';
+// import { setActiveCatDetails } from '../Redux/actions/activeCatDetails';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types'
 import { setActiveMap } from '../Redux/actions/activeMap.js'
+import Link from 'next/link'
 
 const CardCat = (props) => {
 
@@ -44,7 +45,6 @@ const CardCat = (props) => {
             // console.log(more_text.current.childNodes[0].textContent)
             if (element.scrollHeight > element.clientHeight) {
                 const fun_enter = () => {
-                    console.log("jjdjf")
                     more_text.current.childNodes[0].textContent = element.textContent;
                     more_text.current.style.top = `${element.offsetTop}px`;
                     more_text.current.style.left = `${element.offsetLeft}px`;
@@ -103,9 +103,13 @@ const CardCat = (props) => {
                                     }
                                 </p>
                                 <p>
-                                    {
-                                        props.cattery ? props.cattery : "Newlogica Cattery"
-                                    }
+                                <Link href="/catteries/1">
+                                    <a>
+                                        {
+                                            props.cattery ? props.cattery : "Newlogica Cattery"
+                                        }
+                                    </a>
+                                </Link>
                                 </p>
                             </div>
                         </div>
@@ -136,10 +140,20 @@ const CardCat = (props) => {
                         </div>
                         {
                             props.discount ? 
-                                (<a onClick={() => dispatch(setActiveCatDetails(true))} className={`${s.cat_card_info_row__link} ${s.discount_link}`}>
-                                    Buy With {props.discount}% Discount</a>) :
-                                (<a onClick={() => dispatch(setActiveCatDetails(true))} className={s.cat_card_info_row__link}>
-                                    Detail</a>)
+                                (
+                                    <Link href="/kitty/1">
+                                        <a className={`${s.cat_card_info_row__link} ${s.discount_link}`}>
+                                            Buy With {props.discount}% Discount
+                                        </a>
+                                    </Link>
+                                    ) :
+                                (
+                                    <Link href="/kitty/1">
+                                        <a className={s.cat_card_info_row__link}>
+                                            Detail
+                                        </a>
+                                    </Link>
+                                )
                         }
                         
                     </div>
@@ -175,9 +189,13 @@ const CardCat = (props) => {
                                 }
                             </p>
                             <p>
-                                {
-                                    props.cattery ? props.cattery : "Newlogica Cattery"
-                                }
+                            <Link href="/catteries/1">
+                                <a>
+                                    {
+                                        props.cattery ? props.cattery : "Newlogica Cattery"
+                                    }
+                                </a>
+                            </Link>
                             </p>
                         </div>
                     </div>
@@ -220,10 +238,20 @@ const CardCat = (props) => {
                     </div>
                     {
                         props.discount ?
-                            (<a onClick={() => dispatch(setActiveCatDetails(true))} className={`${s.cat_card_info_row__link} ${s.discount_link}`}>
-                                Buy With {props.discount}% Discount</a>) :
-                            (<a onClick={() => dispatch(setActiveCatDetails(true))} className={s.cat_card_info_row__link}>
-                                Detail</a>)
+                            (
+                                <Link href="/kitty/1">
+                                    <a className={`${s.cat_card_info_row__link} ${s.discount_link}`}>
+                                        Buy With {props.discount}% Discount
+                                    </a>
+                                </Link>
+                            ) :
+                            (
+                                <Link href="/kitty/1">
+                                    <a className={s.cat_card_info_row__link}>
+                                        Detail
+                                    </a>
+                                </Link>
+                            )
                     }
                 </div>
                 <div className={s.show_more_text} ref={more_text}>

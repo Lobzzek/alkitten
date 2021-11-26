@@ -3,19 +3,12 @@ import s from '../../styles/breeds/CatForSlider.module.css'
 import {useDispatch} from 'react-redux';
 import {setActiveBreed} from '../../Redux/actions/activeBreedsInfoAction.js'
 import classNames from 'classnames'
+import { useRouter } from 'next/router'
 
 
 const CatForSlider = (props) => {
     const dispatch = useDispatch();
-    // const imgCardRef = React.useRef(null)
-    // const [imgCard, setImgCard] = React.useState(imgCardRef.current);
-    // React.useEffect(() => {
-    //     window.onload = () => {
-    //         imgCardRef.current = <img src={props.image} alt={`cat${props.indexCart}_for_slider`} />
-    //         setImgCard(imgCardRef.current)
-    //         console.log(imgCardRef.current)
-    //     }
-    // }, [])
+    const router = useRouter();
     return (
 
             <div className={classNames(s.card_cat, 
@@ -31,11 +24,11 @@ const CatForSlider = (props) => {
             <div className={s.text}>
                 <p className={s.name}>{props.name}</p>
                 <div>
-                    <a href="#">Show 21 kitten</a>
-                    <button onClick={() => { 
+                    <button onClick={() => router.push(`/?breed=${props.name}`)}>Show 21 kitten</button>
+                    <a href="#info" onClick={() => { 
                         dispatch(setActiveBreed(props.data))
                         props.onClick()
-                    }}>Info</button>
+                    }}>Info</a>
                 </div>
             </div>
             <div className={s.fav_ava}>

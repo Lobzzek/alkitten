@@ -66,10 +66,10 @@ const AllComments = () => {
                     </ul>
                 </div>
             </div>
-            <BlockComment />
-            <BlockComment />
-            <BlockComment />
-            <BlockComment />
+            <BlockComment verefied />
+            <BlockComment verefied />
+            <BlockComment verefied />
+            <BlockComment verefied />
             
         </div>
     )

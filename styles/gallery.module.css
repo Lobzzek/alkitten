@@ -156,6 +156,14 @@
     margin-bottom: 3px;
 }
 
+.sort_longhair ul li:first-child, .sort_shorthair ul li:first-child, .sort_siamese ul li:first-child {
+    margin-bottom: 5px;
+}
+
+.sort_longhair ul li:last-child, .sort_shorthair ul li:last-child, .sort_siamese ul li:last-child {
+    margin-bottom: 10px;
+}
+
 .sort_longhair ul li.active, .sort_shorthair ul li.active, .sort_siamese ul li.active {
     color: #938556;
 }
@@ -288,27 +296,34 @@
         border-radius: 0.25vw;
         margin-bottom: 4.427vw;
     }
+
     .sort .sort_hair div p {
         font-size: 0.911vw;
     }
+
     .sort_longhair ul::-webkit-scrollbar, .sort_shorthair ul::-webkit-scrollbar, .sort_siamese ul::-webkit-scrollbar {
         width: 0.375vw;
     }
+
     .wrapp_card {
         width: 49.921vw;
     }
+
     .sort .sort_hair div:nth-child(1) {
         margin-left: -1px;
     }
+
     .sort .sort_hair div p {
         font-size: 0.920vw;
     }
+
     .sort_longhair, .sort_shorthair, .sort_siamese {
         bottom: -10.510vw;
         z-index: -1;
         /* left: -2px; */
         height: 10.510vw;
     }
+
     /* .sort_longhair {
         left: -0.105vw;
     }
@@ -321,33 +336,48 @@
     .sort_longhair ul, .sort_shorthair ul, .sort_siamese ul {
         padding: 0 0 0 0.368vw;
     }
+
     .sort_longhair ul li, .sort_shorthair ul li, .sort_siamese ul li {
+        font-size: .8vw;
         padding-left: 0;
         cursor: pointer;
         margin-bottom: 0.158vw;
     }
+
     .wrap_block_img {
         width: 66.7vw;
         border-radius: .6vw;
     }
+
     .block_img {
         width: 16.290vw;
         height: 16.290vw;
         margin-bottom: 0.525vw;
         border-radius: .6vw;
     }
+
     .zoomImg .close {
         font-size: 2.6vw;
         right: 2.627vw;
     }
+
     .zoomImg>button {
         height: 1.693vw;
         width: 1.693vw;
         margin: 4.627vw;
     }
+
     .zoomImg img {
         border-radius: .6vw;
         width: 41.6vw;
+    }
+
+    .sort_longhair ul li:first-child, .sort_shorthair ul li:first-child, .sort_siamese ul li:first-child {
+        margin-top: 0.26vw;
+    }
+
+    .sort_longhair ul li:last-child, .sort_shorthair ul li:last-child, .sort_siamese ul li:last-child {
+        margin-bottom: 0.52vw;
     }
 }
 
@@ -355,12 +385,15 @@
     .top_text {
         margin-bottom: 53px;
     }
+
     .top_text h2 {
         font-size: 28.8px;
     }
+
     .top_text p {
         font-size: 19.2px;
     }
+
     .sort {
         width: 978px;
         height: 42.3px;

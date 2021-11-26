@@ -7,10 +7,9 @@ import CardCat from '../../components/CardCat.jsx'
 import CardDetailCattery from '../../components/MainWrapper/CardDetailCattery.jsx'
 import AllComments from '../../components/Catteries/AllComments.jsx'
 import { useRouter } from 'next/router'
-// import { setActiveCaterryDetails, setActiveCatteryDetails} from '../../Redux/actions/activeCaterryDetails.js';
+// import { setActiveCaterryDetails, tails} from '../../Redux/actions/activeCaterryDetails.js';
 import { useDispatch } from 'react-redux'
 import { setActiveGalleryPopup } from '../../Redux/actions/activeGalleryPopup.js';
-import { setActiveCatteryDetails } from '../../Redux/actions/activeCaterryDetails.js'
 import { setActiveChats } from '../../Redux/actions/activeChats.js'
 
 
@@ -29,7 +28,6 @@ const Cattery = () => {
         return [offsetTop, offsetTop + hElem];
     }
 
-    dispatch(setActiveCatteryDetails(false))
     dispatch(setActiveChats(false))
     React.useEffect(() => {
         if (/comment/.test(router.asPath)){

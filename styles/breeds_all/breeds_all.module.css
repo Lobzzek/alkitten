@@ -51,8 +51,10 @@
     justify-content: space-between;
     transition: .6s;
 }
-
-.wrapp_card div:last-child {
+.wrapp_card a:hover{
+    opacity: 1;
+}
+.wrapp_card a:last-child div {
     margin-right: auto;
     margin-left: 61px;
 }
@@ -69,13 +71,16 @@
         border-radius: 0.25vw;
         margin-bottom: 4.427vw;
     }
+
     .sort div p {
         font-size: 0.911vw;
     }
+
     .wrapp_card {
         width: 49.921vw;
     }
-    .wrapp_card div:last-child {
+
+    .wrapp_card a:last-child div{
         margin-left: 3.2vw;
     }
 }

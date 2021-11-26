@@ -54,14 +54,19 @@
     transform: translateY(-50%);
     background: none;
     border: none;
-    left: 0.3vw;
-    height: 1.6vw;
+    left: 0.7vw;
     cursor: pointer;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .search_form .search_inp button img {
     width: 1.1vw;
     height: fit-content;
+    height: 1.6vw;
+
 }
 
 .criteries {
@@ -84,7 +89,7 @@
 }
 
 .criteries>div {
-    height: 13.156vw;
+    height: 14.3vw;
     position: relative;
     margin: 5px;
 }
@@ -94,23 +99,29 @@
     background: white;
     display: flex;
     flex-direction: column;
+    margin: 0.26vw;
 }
 
 .criteries .section_param2 {
     width: 9.76vw;
     background: white;
+    margin: 0.26vw;
 }
 
 .criteries .section_param3 {
     width: 15.97vw;
+    margin: 0.26vw;
 }
 
 .criteries .section_param4 {
     width: 15.01vw;
+    margin: 0.26vw;
 }
 
 .criteries .section_param1 {
     padding-left: 0.525vw;
+    padding-top: 0.525vw;
+    padding-bottom: 0.525vw;
 }
 
 .criteries .section_param1>p {
@@ -194,6 +205,8 @@
     padding-left: 0.525vw;
     display: flex;
     flex-direction: column;
+    padding-top: 0.525vw;
+    padding-bottom: 0.525vw;
 }
 
 .criteries .section_param2>p {
@@ -252,12 +265,14 @@
 
 .section_param3 .pick_availability {
     position: relative;
-    height: 9.135vw;
+    height: 9.6135vw;
     width: 100%;
     background: white;
     display: flex;
     flex-direction: column;
     padding-left: 0.525vw;
+    padding-top: 0.525vw;
+    padding-bottom: 0.525vw;
 }
 
 .section_param3 .pick_availability>p {
@@ -316,12 +331,14 @@
 
 .section_param3 .pick_price {
     position: relative;
-    height: 3.552vw;
+    height: 4vw;
     width: 100%;
     background: white;
     display: flex;
     flex-direction: column;
     padding-left: 0.525vw;
+    padding-top: 0.525vw;
+    padding-bottom: 0.525vw;
 }
 
 .section_param3 .pick_price>p {
@@ -406,19 +423,21 @@
 
 .section_param4 .pick_gender {
     position: relative;
-    height: 3.552vw;
+    height: 3.6552vw;
     width: 100%;
     background: white;
     display: flex;
     flex-direction: column;
     padding-left: 0.525vw;
+    padding-top: 0.525vw;
+    padding-bottom: 0.525vw;
 }
 
 .section_param4 .pick_gender>p {
     font-size: 1vw;
     font-family: "modelica-m";
     color: #253E47;
-    padding: 3px 0;
+    padding: 0.15vw 0;
     margin: 0;
 }
 
@@ -485,19 +504,21 @@
 
 .section_param4 .pick_location {
     position: relative;
-    height: 5.063vw;
+    height: 5.6063vw;
     width: 100%;
     background: white;
     display: flex;
     flex-direction: column;
     padding-left: 0.525vw;
+    padding-top: 0.525vw;
+    padding-bottom: 0.525vw;
 }
 
 .section_param4 .pick_location>p {
     font-size: 1vw;
     font-family: "modelica-m";
     color: #253E47;
-    padding: 3px 0;
+    padding: .15vw 0;
     margin: 0;
 }
 
@@ -630,21 +651,26 @@
 
 /*-----last kitten------*/
 
-.last_kittens {
+.compilation {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
 
-.last_kittens .block_cats {
+.compilation.matched_kittens {
+    margin-bottom: 5vw;
+}
+
+.compilation .block_cats {
     display: flex;
     width: 65.1vw;
     justify-content: space-between;
     margin-bottom: 1.2vw;
+    flex-wrap: wrap;
 }
 
-.last_kittens>a {
+.compilation>a {
     font-family: "modelica-r";
     font-weight: 100;
     font-size: 1vw;
@@ -660,15 +686,19 @@
     .top_text {
         margin-bottom: 35px;
     }
+
     .top_text h2 {
         font-size: 28.8px;
     }
+
     .top_text p {
         font-size: 19.2px;
     }
+
     .search_form .search_inp {
         margin-bottom: 19.2px;
     }
+
     .search_form .search_inp input {
         border-radius: 12px;
         width: 579.84px;
@@ -677,80 +707,110 @@
         padding-left: 55px;
         border: 2.5px solid #938556;
     }
+
     .search_form .search_inp button {
-        left: 5.76px;
+        left: 13.44px;
     }
+
     .search_form .search_inp button img {
         width: 19.2px;
         height: fit-content;
     }
+
     .criteries {
         margin-bottom: 115.1920px;
         padding: 15px;
         border-radius: 12px;
         width: 1250px;
     }
+
     .criteries>div {
-        height: 255.3px;
+        height: 275.3px;
+
     }
+
     .criteries .section_param1 {
         width: 354.7px;
         padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
+
     .criteries .section_param2 {
         width: 187.5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
+
     .criteries .section_param3 {
         width: 306.8px;
     }
+
     .criteries .section_param4 {
         width: 288.3px;
     }
+
     .criteries .section_param1>p {
         font-size: 19.2px;
         margin: 0;
         padding: 5px 0;
     }
+
     .criteries .section_param1 ul li {
         height: 19.2px;
         margin-bottom: 4.8px;
     }
+
     .criteries .section_param1 ul li label {
         font-size: 19.2px;
     }
+
     .criteries .section_param2 {
         padding-left: 10px;
     }
+
     .criteries .section_param2>p {
         font-size: 19.2px;
         padding: 3px 3px 3px 0;
     }
+
     .criteries .section_param2 ul li label {
         font-size: 19.2px;
     }
+
     .section_param3 .pick_availability {
-        height: 174.7px;
+        height: 184.7px;
         padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
+
     .section_param3 .pick_availability>p {
         font-size: 19.2px;
         padding: 3px 0;
     }
+
     .section_param3 .pick_availability ul li label {
         font-size: 19.2px;
     }
+
     .section_param3 .pick_price {
-        height: 67.2px;
+        height: 77.2px;
         padding-left: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
+
     .section_param3 .pick_price>p {
         font-size: 19.2px;
         padding: 3px 3px 3px 0;
     }
+
     .section_param3 .pick_price ul li label {
         font-size: 19.2px;
         margin-top: 3.84px;
     }
+
     .section_param3 .pick_price ul li label::after {
         min-width: 7.68px;
         min-height: 7.68px;
@@ -758,25 +818,33 @@
         max-height: 7.68px;
         left: -12.48px;
     }
+
     .section_param4 .pick_gender {
-        height: 67.2px;
+        height: 77.2px;
         padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
+
     .section_param4 .pick_gender>p {
         font-size: 19.2px;
         padding: 3px 0;
     }
+
     .section_param4 .pick_gender ul li {
         list-style-type: none;
         margin-right: 7.6px;
     }
+
     .section_param3 .pick_price ul li:nth-child(2) {
         margin-left: 7.6px;
     }
+
     .section_param4 .pick_gender ul li label {
         font-size: 19.2px;
         margin-top: 4px;
     }
+
     .section_param4 .pick_gender ul li label::after {
         min-width: 7.68px;
         min-height: 7.68px;
@@ -784,23 +852,30 @@
         max-height: 7.68px;
         left: -12.48px;
     }
+
     .section_param4 .pick_location {
-        height: 97.1px;
+        height: 107.1px;
         padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
+
     .section_param4 .pick_location>p {
         font-size: 19.2px;
         padding: 3px 0;
         margin: 0;
     }
+
     .section_param4 .pick_location ul li {
         margin-top: 0vw;
         margin-right: 5.7px;
     }
+
     .section_param4 .pick_location ul li label {
         font-size: 19.2px;
         margin-top: 3.84px;
     }
+
     .section_param4 .pick_location ul li label::after {
         min-width: 7.68px;
         min-height: 7.68px;
@@ -808,9 +883,11 @@
         max-height: 7.68px;
         left: -12.48px;
     }
+
     .section_param4 .with_photo label {
         font-size: 19.2px;
     }
+
     .section_param4 .with_photo label::before {
         width: 9.6px;
         height: 9.6px;
@@ -818,22 +895,29 @@
         top: 50%;
         font-size: 9.6px;
     }
+
     .section_param4 .with_photo label::after {
         width: 9.6px;
         height: 9.6px;
         left: -13.44px;
         border-radius: 2px;
     }
+
     .section_param4>input[type="submit"] {
         font-size: 19.2px;
         padding: 6px 19.2px;
         border-radius: 0.208vw;
     }
-    .last_kittens .block_cats {
+
+    .compilation.matched_kittens {
+        margin-bottom: 100px;
+    }
+    .compilation .block_cats {
         margin-bottom: 23px;
         width: 1250px;
     }
-    .last_kittens>a {
+
+    .compilation>a {
         font-size: 19.2px;
         color: white;
         padding: 6px 10px;

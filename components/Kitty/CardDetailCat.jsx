@@ -2,7 +2,6 @@ import React from 'react'
 import s from '../../styles/MainWrapper/CardDetailCat.module.css'
 import Link from 'next/link'
 import { useDispatch } from 'react-redux';
-import { setActiveCatDetails } from '../../Redux/actions/activeCatDetails.js'
 import { setActiveMap } from '../../Redux/actions/activeMap.js'
 
 const CardDetail = (props) => {
@@ -166,7 +165,7 @@ const CardDetail = (props) => {
                     <img src="/img/icon_star.svg" alt="" />
                 </div>
                 <p className={s.num}>10.0</p>
-                <Link href="/catteries/1?comments" onClick={() => dispatch(setActiveCatDetails(false))}>
+                <Link href="/catteries/1?comments">
                     <a>
                         <p className={s.vote}>(47)</p>
                     </a>

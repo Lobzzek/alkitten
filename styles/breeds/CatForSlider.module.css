@@ -23,18 +23,18 @@
     transition: .2s;
 }
 
-.card_cat:hover, .card_cat.active {
+/* .card_cat{
     background: #f1efe8;
     border: 1.2px solid #938556;
-}
+} */
 
-.card_cat:hover .block_img, .card_cat.active .block_img {
+/* .card_cat:hover .block_img, .card_cat.active .block_img {
     background: #938556;
-}
-
-.card_cat:hover .text div a, .card_cat:hover .text div button, .card_cat.active .text div a, .card_cat.active .text div button, .card_cat.active .fav_ava, .card_cat:hover .fav_ava {
+} */
+/* 
+.card_cat .text div a, .card_cat .text div button, .card_cat.active .text div a, .card_cat.active .text div button, .card_cat.active .fav_ava, .card_cat:hover .fav_ava {
     opacity: 1;
-}
+} */
 
 .card_cat:hover .text div, .card_cat:hover .text div button {
     transition: 0;
@@ -62,7 +62,6 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: fit-content;
     transform: translate(-50%, -59%);
 }
 
@@ -101,13 +100,12 @@
     font-size: 12px;
     border: none;
     padding: 2.7px 6.8px;
-    opacity: 0;
     transition: .2s;
     cursor: pointer;
 }
-.text div a:hover, .text div button:hover {
-    opacity: 1 !important;
-}
+/* .text div a:hover, .text div button:hover {
+    opacity: 0 !important;
+} */
 
 .fav_ava {
     position: absolute;
@@ -117,7 +115,6 @@
     right: 0;
     transform: translateX(50%);
     top: 40%;
-    opacity: 0;
     z-index: 4;
     transition: .4s opacity;
 }

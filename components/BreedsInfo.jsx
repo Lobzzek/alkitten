@@ -2,7 +2,7 @@ import React from 'react'
 import s from '../styles/breeds/BreedsInfo.module.css'
 const BreedsInfo = (props) => {
     return (
-        <div className={s.breed_info}>
+        <div className={s.breed_info} id="info">
             <div className={s.breed_info_container}>
                 <div className={s.breed_info__title}>Breed Info</div>
                 <div className={s.breed_info_content}>

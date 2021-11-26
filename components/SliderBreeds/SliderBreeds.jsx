@@ -30,6 +30,17 @@ const SliderBreeds = () => {
             block_imgs.current.style.width = `${block_imgs.current.childNodes.length * (163.2 + 166)}px`;
         }
         setNumberPages(Math.ceil(block_imgs.current.childNodes.length));
+
+
+        window.addEventListener("resize", function () {
+            if (document.documentElement.clientWidth < 1920) {
+                let marginBetwenCards = document.documentElement.clientWidth * 0.086;
+                let widthCard = 8.5 * document.documentElement.clientWidth / 100;
+                block_imgs.current.style.width = `${block_imgs.current.childNodes.length * (widthCard + marginBetwenCards)}px`;
+            } else {
+                block_imgs.current.style.width = `${block_imgs.current.childNodes.length * (163.2 + 166)}px`;
+            }
+        });
     }, [])
 
 

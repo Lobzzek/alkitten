@@ -19,6 +19,9 @@
 .cat_card_info .right_cnt p {
     font-size: 19.2px;
     margin: 0;
+    font-family: "modelica-r";
+    font-weight: 100;
+    line-height: 1.5;
 }
 
 .cat_card_info__icon {

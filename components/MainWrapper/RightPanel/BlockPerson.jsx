@@ -22,7 +22,7 @@ const BlockPerson = (props) => {
                     <div className={s.rating}>
                         {
                             props.verified && (
-                                <img src="/img/icon_verified.svg" alt="verified_icon" />
+                                <img src="/img/icon/checked.svg" alt="verified_icon" />
                             )
                         }
                         {numStars} 

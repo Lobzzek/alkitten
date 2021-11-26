@@ -1,17 +1,17 @@
 import React from 'react'
 import s from '../../styles/catteries/CardCattery.module.css'
 import { useDispatch } from 'react-redux';
-import { setActiveCatteryDetails } from '../../Redux/actions/activeCaterryDetails.js'
+// import { setActiveCatteryDetails } from '../../Redux/actions/activeCaterryDetails.js'
 import { setActiveMap } from '../../Redux/actions/activeMap.js'
 import PropTypes from 'prop-types'
+import Link from 'next/link'
+
 const CardCattery = (props) => {
     const dispatch = useDispatch();
     const cnt_data = React.useRef();
     const cnt_breed = React.useRef();
     const cnt_name = React.useRef();
     const more_text = React.useRef();
-
-    
 
     const [favourite, setFavourite] = React.useState(false);
 
@@ -165,11 +165,12 @@ const CardCattery = (props) => {
                         }
                     </h5>
                 </div>
-                {/* <a href="#" className={s.cat_card_info_row__link}>
-                    Detail</a> */}
             </div>
-            <button className={s.detail} onClick={() => dispatch(setActiveCatteryDetails(true))}>Detail</button>
-
+            <Link href="/catteries/1">
+                <a>
+                    <button className={s.detail}>Detail</button>
+                </a>
+            </Link>
             <div className={s.show_more_text} ref={more_text}>
                 <p></p>
             </div>
