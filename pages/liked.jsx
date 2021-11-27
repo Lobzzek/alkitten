@@ -36,11 +36,15 @@ const Liked = () => {
                         <CardCat img_cat="/img/cat_bottom_home.png" img_cattery="/img/icon/catteries.svg" verefied favourite />
                         <CardCat img_cat="/img/cat_bottom_home.png" img_cattery="/img/icon/catteries.svg" verefied favourite />
                         <CardCat img_cat="/img/cat_bottom_home.png" img_cattery="/img/icon/catteries.svg" verefied favourite />
+                        <CardCat img_cat="/img/cat_bottom_home.png" img_cattery="/img/icon/catteries.svg" verefied favourite />
+                        <CardCat img_cat="/img/cat_bottom_home.png" img_cattery="/img/icon/catteries.svg" verefied favourite />
                         </>
                     ) 
                     :
                     (
                         <>
+                        <CardCattery img_cattery="/img/icon/catteries.svg" verefied favourite />
+                        <CardCattery img_cattery="/img/icon/catteries.svg" verefied favourite />
                         <CardCattery img_cattery="/img/icon/catteries.svg" verefied favourite />
                         <CardCattery img_cattery="/img/icon/catteries.svg" verefied favourite />
                         <CardCattery img_cattery="/img/icon/catteries.svg" verefied favourite />

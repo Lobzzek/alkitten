@@ -28,6 +28,11 @@ export default function Home() {
     }
   }, [])
 
+
+  const [showGroupKitty, setShowGroupKitty] = React.useState(1);
+
+  const testDataKitty = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22];
+
   return (
     <>
       <Head>
@@ -123,14 +128,21 @@ export default function Home() {
                   <p>Browse breeds that fit your lifestyle</p>
                 </div>
                 <div className={s.block_cats}>
-                  <CardCat breed={`${router.query.breed.replace(/_/g, " ")}`} img_cat="/img/cat_bottom_home.png" img_cattery="/img/icon/catteries.svg" verefied favourite />
-                  <CardCat breed={`${router.query.breed.replace(/_/g, " ")}`} img_cat="/img/cat_bottom_home.png" img_cattery="/img/cat_bottom_home.png" />
-                  <CardCat breed={`${router.query.breed.replace(/_/g, " ")}`} img_cat="/img/cat_bottom_home.png" img_cattery="/img/icon/catteries.svg" verefied />
-                  <CardCat breed={`${router.query.breed.replace(/_/g, " ")}`} img_cat="/img/cat_bottom_home.png" img_cattery="/img/icon/catteries.svg" verefied favourite />
-                  <CardCat breed={`${router.query.breed.replace(/_/g, " ")}`} img_cat="/img/cat_bottom_home.png" img_cattery="/img/cat_bottom_home.png" />
-                  <CardCat breed={`${router.query.breed.replace(/_/g, " ")}`} img_cat="/img/cat_bottom_home.png" img_cattery="/img/icon/catteries.svg" verefied />
+                  {
+                    testDataKitty.slice(0, showGroupKitty * 6).map((el, index) => <CardCat name={`Kitty ${index}`} key={`compilation_cat_${index}`} breed={`${router.query.breed.replace(/_/g, " ")}`} img_cat="/img/cat_bottom_home.png" img_cattery="/img/icon/catteries.svg" verefied favourite />)
+                  }
                 </div>
-                <a href="dsa">View More</a>
+                <button className={showGroupKitty * 6 >= testDataKitty.length ? s.hide : null} onClick={() => {
+                  if (showGroupKitty * 6 < testDataKitty.length){
+                      setShowGroupKitty(showGroupKitty + 1)
+                    }else{
+                      setShowGroupKitty(1);
+                    }
+                }}>
+                  {
+                    showGroupKitty * 6 < testDataKitty.length ? "View More" : "Hidden All"
+                  }
+                </button>
               </div>
           )
           :
@@ -143,7 +155,7 @@ export default function Home() {
           <p>Browse breeds that fit your lifestyle</p>
         </div>
           <div className={s.block_cats}>
-            <CardCat img_cat="/img/cat_bottom_home.png" img_cattery="/img/icon/catteries.svg" verefied favourite />
+            <CardCat breed="American Curl Longhair" img_cat="/img/cat_bottom_home.png" img_cattery="/img/icon/catteries.svg" verefied favourite />
             <CardCat img_cat="/img/cat_bottom_home.png" img_cattery="/img/cat_bottom_home.png" />
             <CardCat img_cat="/img/cat_bottom_home.png" img_cattery="/img/icon/catteries.svg" verefied />
           </div> 

@@ -2,12 +2,13 @@ import s from '../../../styles/MainWrapper/BlockPerson.module.css';
 import Link from 'next/link'
 import { useDispatch } from 'react-redux'
 import { setActiveMap } from '../../../Redux/actions/activeMap.js'
+import { useRouter } from 'next/router'
 
 const BlockPerson = (props) => {
 
     const dispatch = useDispatch();
+    const router = useRouter();
     
-
     const numStars = [];
     for (let i = 0; i < Number(props.rating); i++) {
         numStars.push((<img key={`${i}_img_person`} src="/img/icon_star.svg" alt="star_icon"/>))
@@ -33,7 +34,7 @@ const BlockPerson = (props) => {
                         </Link>
                     </div>
                     <h3 className={s.login}>{props.cattery}</h3>
-                    <p className={s.breed}>{props.breed}</p>
+                    <p onClick={() => router.push(`/breeds?info=${props.breed}`)} className={s.breed}>{props.breed}</p>
                 </div>
             </div>
             {/* <p>{props.description}</p> */}

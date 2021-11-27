@@ -67,7 +67,7 @@ const GoogleMapContainer = (props) => {
                 }}
                 onCloseClick={() => setInfoPosition(null)}
                 >
-                    <BlockPerson forMap verified rating="4" breed="Main coon" index="0" cattery="Newlogica Cattery" description="We are a breeder located in McKinney, TX and specialize in Exotic Folds / Foldex kittens. The queen (mother) is an Exotic Long Hair and the king (father)" location="Temecula, CA" />
+                    <BlockPerson forMap verified rating="4" breed="Maine Coon" index="0" cattery="Newlogica Cattery" description="We are a breeder located in McKinney, TX and specialize in Exotic Folds / Foldex kittens. The queen (mother) is an Exotic Long Hair and the king (father)" location="Temecula, CA" />
                 </InfoWindow>
             }
             

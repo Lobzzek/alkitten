@@ -4,7 +4,6 @@ const BreedsInfo = (props) => {
     return (
         <div className={s.breed_info} id="info">
             <div className={s.breed_info_container}>
-                <div className={s.breed_info__title}>Breed Info</div>
                 <div className={s.breed_info_content}>
                     <div className={s.breed_info_left}>
                         <div className={s.breed_info_left__img}>

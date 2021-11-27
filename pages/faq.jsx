@@ -6,6 +6,13 @@ const Faq = () => {
 
     const listLi = React.useRef();
     const punkts = React.useRef()
+
+    const tit_1 = React.useRef();
+    const tit_2 = React.useRef();
+    const tit_3 = React.useRef();
+    const tit_4 = React.useRef();
+    const tit_5 = React.useRef();
+
     const [activePunkt, setActivePunkt] = React.useState(0);
 
     function offsetPosition(element) {
@@ -18,7 +25,7 @@ const Faq = () => {
         if(document.documentElement.clientWidth > 1920){
             return [offsetTop - 300, offsetTop + hElem - 300];
         }else{
-            return [offsetTop - ((300 / document.documentElement.clientWidth) * 100), offsetTop + hElem - ((300 / document.documentElement.clientWidth) * 100)];
+            return [offsetTop - (0.15 * document.documentElement.clientWidth), offsetTop + hElem - (0.15 * document.documentElement.clientWidth)];
         }
     }
     React.useEffect(() => {
@@ -92,26 +99,26 @@ const Faq = () => {
             </div>
             <div className={s.faq_cnt}>
                 <div className={s.punkts} ref={punkts}>
-                    <div><a href="#tit_1" onClick={() => setTimeout(() => {setActivePunkt(0)}, 1000)}
+                    <div><a onClick={() => window.scrollTo(0, offsetPosition(tit_1.current)[0])}
                         className={activePunkt === 0 ? `${s.active}` : `` }
                     >Lorem Ipsum1</a></div>
-                    <div><a href="#tit_2" onClick={() => setTimeout(() => {setActivePunkt(1)}, 1000)}
+                    <div><a onClick={() => window.scrollTo(0, offsetPosition(tit_2.current)[0])}
                         className={activePunkt === 1 ? `${s.active}` : `` }
                     >Lorem Ipsum2</a></div>
-                    <div><a href="#tit_3" onClick={() => setTimeout(() => {setActivePunkt(2)}, 1000)}
+                    <div><a onClick={() => window.scrollTo(0, offsetPosition(tit_3.current)[0])}
                         className={activePunkt === 2 ? `${s.active}` : `` }
                     >Lorem Ipsum3</a></div>
-                    <div><a href="#tit_4" onClick={() => setTimeout(() => {setActivePunkt(3)}, 1000)}
+                    <div><a onClick={() => window.scrollTo(0, offsetPosition(tit_4.current)[0])}
                         className={activePunkt === 3 ? `${s.active}` : `` }
                     >Lorem Ipsum4</a></div>
-                    <div><a href="#tit_5" onClick={() => setTimeout(() => {setActivePunkt(4)}, 1000)}
+                    <div><a onClick={() => window.scrollTo(0, offsetPosition(tit_5.current)[0])}
                         className={activePunkt ===4 ? `${s.active}` : `` }
                     >Lorem Ipsum5</a></div>
                 </div>
 
                 <ul ref={listLi}>
                     <div className={s.section_li_1}>
-                        <h3 id="tit_1">Lorem1</h3>
+                        <h3 id="tit_1" ref={tit_1}>Lorem1</h3>
                         <li>
                             <div>
                                 <h4>Lorem, ipsum dolor.</h4>
@@ -204,7 +211,7 @@ const Faq = () => {
                         </li>
                     </div>
                     <div className={s.section_li_2}>
-                        <h3 id="tit_2">Lorem2</h3>
+                        <h3 id="tit_2" ref={tit_2}>Lorem2</h3>
                         <li>
                             <div>
                                 <h4>Lorem, ipsum dolor.</h4>
@@ -297,7 +304,7 @@ const Faq = () => {
                         </li>
                     </div>
                     <div className={s.section_li_3}>
-                        <h3 id="tit_3">Lorem3</h3>
+                        <h3 id="tit_3" ref={tit_3}>Lorem3</h3>
                         <li>
                             <div>
                                 <h4>Lorem, ipsum dolor.</h4>
@@ -390,7 +397,7 @@ const Faq = () => {
                         </li>
                     </div>
                     <div className={s.section_li_4}>
-                        <h3 id="tit_4">Lorem4</h3>
+                        <h3 id="tit_4" ref={tit_4}>Lorem4</h3>
                         <li>
                             <div>
                                 <h4>Lorem, ipsum dolor.</h4>
@@ -483,7 +490,7 @@ const Faq = () => {
                         </li>
                     </div>
                     <div className={s.section_li_5}>
-                        <h3 id="tit_5">Lorem5</h3>
+                        <h3 id="tit_5" ref={tit_5}>Lorem5</h3>
                         <li>
                             <div>
                                 <h4>Lorem, ipsum dolor.</h4>

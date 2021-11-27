@@ -65,27 +65,29 @@
 .cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 100%;
 }
 
 .cards>div {
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 40px;
+    margin-left: 13px;
+    margin-right: 13px;
 }
 
 @media screen and (min-width: 1920px) {
     .top_text {
         margin-bottom: 53px;
     }
+
     .top_text h2 {
         font-size: 28.8px;
     }
+
     .sort {
         width: 478px;
         height: 42.3px;
     }
+
     .slider_breeds>a {
         font-size: 19.075px;
     }
@@ -96,7 +98,9 @@
         border-radius: 0.25vw;
         margin-bottom: 2.6vw;
     }
+
     .cards>div {
-        margin-bottom: 2vw;
+        margin-left: 0.67vw;
+        margin-right: 0.67vw;
     }
 }

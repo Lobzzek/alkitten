@@ -63,6 +63,9 @@
     margin-bottom: .12vw;
     font-size: .8vw;
 }
+p.breed{
+    cursor: help;
+}
 
 @media screen and (min-width: 1920px) {
     .avatar_data .data p {

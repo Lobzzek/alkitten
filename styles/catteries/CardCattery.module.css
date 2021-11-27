@@ -6,7 +6,7 @@
     padding: 15px;
     color: #365864;
     font-family: "modelica-r";
-    margin: 0 30px;
+    margin: 0 27px;
     overflow-x: hidden;
     border-radius: 12px;
 }
@@ -122,6 +122,7 @@
     margin: 0px 0px 5px 0px;
     padding: 0px 0px 6px 0px;
     position: relative;
+    cursor: help;
 }
 
 .cat_card_info_row__sub_titles p:last-child {
@@ -333,16 +334,19 @@
     .rating .vote {
         font-size: 1vw;
     }
+
     .rating .num {
         font-size: 1vw;
         padding: .3vw .3vw;
         border-radius: 0.26vw;
         margin: 0 .3vw 0 .4vw;
     }
+
     .rating .stars img {
         width: 1vw;
         margin-right: .2vw;
     }
+
     .cat_card_info {
         width: 20.3vw;
         border-radius: .6vw;
@@ -351,10 +355,12 @@
         font-family: "modelica-r";
         margin: 0 1.25vw;
     }
+
     .cat_card_info__icon {
         width: 2.34vw;
         height: 2.34vw;
     }
+
     .cat_card_info_row {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -366,11 +372,13 @@
         -ms-flex-pack: justify;
         justify-content: space-between;
     }
+
     .cat_card_info_row_2 img {
         width: 1vw;
         height: 1vw;
         margin: 0.00vw 0.26vw 0.00vw 0.00vw;
     }
+
     .cat_card_info_row_2 p {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -381,27 +389,33 @@
         font-size: 1vw;
         margin: 0.00vw 0.00vw 0.26vw 0.00vw;
     }
+
     .cat_card_info_row_2 a.href_site {
         font-size: 1vw;
         margin: 0px 0px 0.8vw 0px;
     }
+
     .cat_card_info_row_2 h5 {
         font-size: 1vw;
         margin: 0px 0px 0vw 0px;
     }
+
     .cat_card_info_row__title {
         font-size: 1vw;
         margin: 0.00vw 0.00vw 0.5vw 0.00vw;
     }
+
     .cat_card_info_row__title img {
         width: 1.04vw;
         height: 1.04vw;
         margin: 0.00vw 0.00vw 0.00vw 0.52vw;
     }
+
     .cat_card_info_row__sub_titles {
         font-size: 1vw;
         width: 9.38vw;
     }
+
     .cat_card_info_row__sub_titles p {
         overflow: hidden;
         text-overflow: ellipsis;
@@ -413,20 +427,24 @@
         line-clamp: 1;
         box-orient: vertical;
     }
+
     .cat_card_info_row__sub_titles p:first-child {
         margin: 0.00vw 0.00vw 0.26vw 0.00vw;
         padding: 0.00vw 0.00vw 0.31vw 0.00vw;
         position: relative;
     }
+
     .cat_card_info_row__sub_titles p:last-child {
         margin: 0.00vw;
         padding: 0.00vw;
     }
+
     .cat_card_info_row__sub_titles:after {
         width: 3.65vw;
         height: 0.10vw;
         top: -.3vw;
     }
+
     .cat_card_info_row_2 p {
         /* font-size: 0.83vw; */
         overflow: hidden;
@@ -440,6 +458,7 @@
         box-orient: vertical;
         /* height: 0.83vw; */
     }
+
     /* .cat_card_info_row_2 p:hover {
     display: -moz-box;
     -moz-box-orient: vertical;
@@ -456,6 +475,7 @@
         overflow-x: hidden;
         text-overflow: clip;
     }
+
     .cat_card_info_row__link {
         padding: 0.26vw 0.78vw;
         background: #142b33;
@@ -463,6 +483,7 @@
         border-radius: 0.26vw;
         font-size: 0.75vw;
     }
+
     .cat_card_info_img {
         border-radius: 0.52vw;
         border: 0.12vw solid #938556;
@@ -471,6 +492,7 @@
         margin: 0.78vw 0.00vw 0.78vw 0.00vw;
         /* background: url("/img/cat_bottom_home.png") 0/cover no-repeat; */
     }
+
     .show_more_text {
         position: absolute;
         background: white;
@@ -483,10 +505,12 @@
         display: none;
         z-index: 2;
     }
+
     .show_more_text p {
         margin: 0;
         font-size: .8vw;
     }
+
     .cat_card_info_img .favourite {
         right: .5vw;
         width: 2.5vw;

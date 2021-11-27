@@ -29,23 +29,18 @@ const Gallery = () => {
             }, 700);
         }
     }, [openZoomImg])
-    let arrImg = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]; // remove when conect BD
+    let arrImg = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]; // remove when conect BD
 
     const [activeSort, setActiveSort] = React.useState(1);
     const changeActiveSort = (num) => setActiveSort(num);
-
-
     const [activeLonghairSort, setActiveLonghairSort] = React.useState(0);
     const [activeShorthairSort, setActiveShorthairSort] = React.useState(0);
     const [activeSiameseSort, setActiveSiameseSort] = React.useState(0);
-
     const sort_hair = React.useRef();
     const sort_longhair = React.useRef();
     const sort_shorthair = React.useRef();
     const sort_siamese = React.useRef();
-
     const [triggerOn2RenderSort, setTriggerOn2RenderSort] = React.useState(false)
-
     let openLonghair = React.useCallback(
         () => {
             sort_longhair.current.style.transform = `translateY(0)`;
@@ -79,9 +74,6 @@ const Gallery = () => {
         setActiveLonghairSort(0);
         setActiveShorthairSort(0);
         setActiveSiameseSort(0);
-
-        
-
         sort_hair.current.parentNode.addEventListener("mouseleave", closeBlocks)
         if (activeSort === 0) {
             // closeBlocks();
@@ -145,11 +137,6 @@ const Gallery = () => {
 
     const blockCard = React.useRef();
     React.useEffect(() => {
-        // console.log(blockCard.current.childNodes[activeImg].style.backgroundImage)
-        // if(activeImg < 0){
-        //     setActiveImg(blockCard.current.childNodes.length - 1);
-        // }
-
         setActiveImgTag(
             <img src={`${blockCard.current.childNodes[activeImg].style.backgroundImage.match(/(?<="|'|`).+(?="|'|`)/)}`} alt="" />
         )

@@ -11,6 +11,7 @@ const Breeds_all = () => {
     const [activeGroup, setActiveGroup] = React.useState(jsonCats.long_hair);
 
     const container_img = React.useRef();
+
     React.useEffect(() => {
         // container_img.current.style.opacity = "0";
         // container_img.current.style.filter = "blur(10px)";

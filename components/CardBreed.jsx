@@ -1,9 +1,11 @@
 import React from 'react'
 import s from '../styles/breeds_all/CardBreed.module.css'
 import Link from 'next/link'
+
+
 const CardBreed = (props) => {
     return (
-        <Link href="/kitty/1">
+        <Link href={`/?breed=${props.name}`}>
             <a>
                 <div className={s.card_breed}>
                     <div className={s.block_img}>

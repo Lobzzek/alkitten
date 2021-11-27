@@ -6,8 +6,10 @@ import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types'
 import { setActiveMap } from '../Redux/actions/activeMap.js'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const CardCat = (props) => {
+    const router = useRouter();
 
     const cnt_data = React.useRef();
     const cnt_name = React.useRef();
@@ -96,8 +98,7 @@ const CardCat = (props) => {
                                 }
                             </h2>
                             <div className={s.cat_card_info_row__sub_titles} ref={cnt_name}>
-                                <p>
-
+                                <p onClick={() => router.push(`/breeds?info=${props.breed ? props.breed : "Maine Coon"}`)}>
                                     {
                                         props.breed ? props.breed : "Maine Coon"
                                     }
@@ -113,7 +114,11 @@ const CardCat = (props) => {
                                 </p>
                             </div>
                         </div>
-                        <div className={s.cat_card_info__icon} style={{ background: `url('${props.img_cattery}') 0/cover no-repeat` }}></div>
+                        <Link href={`/catteries/1`}>
+                            <a>
+                                <div className={s.cat_card_info__icon} style={{ background: `url('${props.img_cattery}') 0/cover no-repeat` }}></div>
+                            </a>
+                        </Link>
                     </div>
                     <div className={`${s.cat_card_info_row} ${s.cat_card_info_row_2}`}>
                         <div className={s.cat_card_info_row_text} ref={cnt_data}>
@@ -182,7 +187,7 @@ const CardCat = (props) => {
                             }
                         </h2>
                         <div className={s.cat_card_info_row__sub_titles} ref={cnt_name}>
-                            <p>
+                            <p onClick={() => router.push(`/breeds?info=${props.breed ? props.breed : "Maine Coon"}`)}>
 
                                 {
                                     props.breed ? props.breed : "Maine Coon"
@@ -199,7 +204,11 @@ const CardCat = (props) => {
                             </p>
                         </div>
                     </div>
-                    <div className={s.cat_card_info__icon} style={{ background: `url('${props.img_cattery}') 0/cover no-repeat` }}></div>
+                    <Link href={`/catteries/1`}>
+                        <a>
+                            <div className={s.cat_card_info__icon} style={{ background: `url('${props.img_cattery}') 0/cover no-repeat` }}></div>
+                        </a>           
+                    </Link>
                 </div>
                 <div className={s.cat_card_info_img} style={{ "background": `url('${props.img_cat}') 0/cover no-repeat` }}>
                     <div onClick={() => setFavourite(!favourite)} className={favourite ? `${s.favourite} ${s.active}` : `${s.favourite}`} >
@@ -269,6 +278,7 @@ CardCat.propTypes = {
     breed: PropTypes.string.isRequired,
     cattery: PropTypes.string.isRequired,
     age: PropTypes.string.isRequired,
+    id_cattery: PropTypes.string.isRequired,
     female: PropTypes.string.isRequired,
     color: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,

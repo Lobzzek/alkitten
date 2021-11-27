@@ -50,6 +50,8 @@ const Kitty = () => {
                         <CardCat verefied img_cat="/img/cat_for_block_person.jpg" img_cattery="/img/cat_for_block_person.jpg" />
                         <CardCat verefied img_cat="/img/cat_for_block_person.jpg" img_cattery="/img/cat_for_block_person.jpg" />
                         <CardCat verefied img_cat="/img/cat_for_block_person.jpg" img_cattery="/img/cat_for_block_person.jpg" />
+                        <CardCat verefied img_cat="/img/cat_for_block_person.jpg" img_cattery="/img/cat_for_block_person.jpg" />
+                        <CardCat verefied img_cat="/img/cat_for_block_person.jpg" img_cattery="/img/cat_for_block_person.jpg" />
                     </div>
                 </div>
             </div>

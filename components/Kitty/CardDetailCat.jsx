@@ -3,6 +3,7 @@ import s from '../../styles/MainWrapper/CardDetailCat.module.css'
 import Link from 'next/link'
 import { useDispatch } from 'react-redux';
 import { setActiveMap } from '../../Redux/actions/activeMap.js'
+import { useRouter } from 'next/router'
 
 const CardDetail = (props) => {
     const dispatch = useDispatch();
@@ -10,6 +11,7 @@ const CardDetail = (props) => {
     const cnt_breed = React.useRef();
     const cnt_name = React.useRef();
 
+    const router = useRouter();
     const [favourite, setFavourite] = React.useState(false);
 
     React.useEffect(() => {
@@ -93,7 +95,7 @@ const CardDetail = (props) => {
 
                     </h2>
                     <div className={s.cat_card_info_row__sub_titles} ref={cnt_breed}>
-                        <p>
+                        <p onClick={() => router.push(`/breeds?info=${props.breed ? props.breed : "Maine Coon"}`)}>
                             {
                                 props.breed ? props.breed : "Maine Coon"
                             }

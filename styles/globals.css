@@ -40,6 +40,6 @@ button:hover, a:hover {
   opacity: .6;
 }
 
-button, a, input, img, textarea{
+button, a, input, img, textarea, video{
   outline: none;
 }

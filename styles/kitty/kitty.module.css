@@ -1,9 +1,8 @@
 .detail_cat {
     display: flex;
     width: 95%;
-    margin: 70px auto 0 auto;
+    margin: 100px auto 0 auto;
     flex-direction: column;
-
 }
 
 .detail_cat .top_block {
@@ -203,19 +202,19 @@
     overflow-y: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 
+.detail_cat .more_cats .block_cats>div {
+    margin-right: 13px;
+    margin-left: 13px;
+}
 
 
 
 @media screen and (max-width: 1920px) {
     .detail_cat {
-        display: flex;
-        width: 95%;
-        margin: 3.64vw auto 0 auto;
-        flex-direction: column;
-
+        margin: 5vw auto 0 auto;
     }
 
     .detail_cat .cats .wrap_cats>div {
@@ -223,7 +222,6 @@
     }
 
     .detail_cat .right_cnt {
-        width: 28.4vw;
         margin-top: 4.16vw;
     }
 
@@ -321,5 +319,10 @@
     .detail_cat .more_cats>h2 {
         font-size: 1.5vw;
         margin: 0 0 3.6vw 0;
+    }
+
+    .detail_cat .more_cats .block_cats>div {
+        margin-right: 0.67vw;
+        margin-left: 0.67vw;
     }
 }

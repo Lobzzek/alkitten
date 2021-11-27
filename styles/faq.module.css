@@ -70,6 +70,7 @@
     position: relative;
     opacity: .5;
     font-family: 'modelica-r';
+    cursor: pointer;
 }
 
 .faq_cnt .punkts a:hover {

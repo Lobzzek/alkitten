@@ -53,6 +53,7 @@ const Deals = () => {
                 <CardCat discount="15" horizontal img_cat="/img/cat_for_block_person.jpg" img_cattery="/img/cat_for_block_person.jpg" />
                 <CardCat discount="15" horizontal img_cat="/img/cat_for_block_person.jpg" img_cattery="/img/cat_for_block_person.jpg" />
                 <CardCat discount="15" horizontal img_cat="/img/cat_for_block_person.jpg" img_cattery="/img/cat_for_block_person.jpg" />
+                <CardCat discount="15" horizontal img_cat="/img/cat_for_block_person.jpg" img_cattery="/img/cat_for_block_person.jpg" />
             </div>
         </MainWrapper>
     )

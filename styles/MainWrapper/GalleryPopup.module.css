@@ -28,8 +28,8 @@
 .zoomImg .slides .main_container {
     position: relative;
     z-index: 1;
-    width: 70vh;
-    height: 70vh;
+    width: 772px;
+    height: 772px;
     background: url("/img/cat_bottom_home.png");
     background-color: white;
     background-position: center;
@@ -40,8 +40,8 @@
 }
 
 .zoomImg .slides .main_container.video {
-    width: 124.4vh;
-    height: 70vh;
+    width: 1371px;
+    height: 772px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,10 +113,21 @@
 }
 
 .zoomImg button.prev_slide {
-    transform: rotate(0deg);
+    transform: rotate(0deg) translateX(-850px);
+    position: absolute;
+    left: 50%;
+    z-index: 2;
+    margin: 0;
 }
 
-.zoomImg .next_slide, .zoomImg .next_panel {
+.zoomImg .next_slide {
+    transform: rotate(180deg) translateX(-850px);
+    position: absolute;
+    right: 50%;
+    margin: 0;
+}
+
+.zoomImg .next_panel {
     transform: rotate(180deg);
 }
 
@@ -223,53 +234,92 @@
         right: 2.627vw;
         top: 1.56vw;
     }
+
     .zoomImg .slides>button {
         height: 1.693vw;
         width: 1.693vw;
         margin: 4.627vw;
     }
+
     .zoomImg .slides .main_container {
-        width: 70vh;
-        height: 70vh;
-        /* transition: .6s; */
+        width: 40.21vw;
+        height: 40.21vw;
         border-radius: 0.63vw;
     }
+
     .zoomImg .slides .main_container.video {
-        width: 124.4vh;
-        height: 70vh;
+        width: 71.41vw;
+        height: 40.21vw;
     }
+
+    .zoomImg button.prev_slide {
+        transform: rotate(0deg) translateX(-44.27vw);
+    }
+
+    .zoomImg .next_slide {
+        transform: rotate(180deg) translateX(-44.27vw);
+    }
+
     .zoomImg button {
-        background: #f1efe8;
         border-radius: 50%;
-        position: relative;
-        border: none;
         height: 1.7vw;
         width: 1.7vw;
         z-index: 1;
         margin: 4.17vw;
     }
+
     .zoomImg .slide_bar {
         height: 7.81vw;
         width: 62.50vw;
         margin-top: 2.60vw;
     }
+
     .zoomImg .slide_bar .wrap_panels {
         border-radius: 0.63vw;
     }
+
     .zoomImg .slide_bar .panles div:first-child {
         margin-left: 1.56vw;
     }
+
     .zoomImg .slide_bar .panles div:last-child {
         margin-right: 1.56vw;
     }
+
     .zoomImg .slide_bar .panles div {
         height: 6.25vw;
         width: 8.33vw;
         margin-right: 1.04vw;
         border-radius: 0.63vw;
     }
+
     .zoomImg .slide_bar .panles div img {
         width: 3.13vw;
         height: 3.13vw;
+    }
+}
+
+@media (min-aspect-ratio: 1921/1000) and (min-width: 1920px) {
+    .zoomImg .slides .main_container {
+        width: 609px;
+        height: 609px;
+    }
+
+    .zoomImg .slides .main_container.video {
+        width: 1082px;
+        height: 609px;
+    }
+}
+
+
+@media (min-aspect-ratio: 1919/1034) and (max-width: 1919px) {
+    .zoomImg .slides .main_container {
+        width: 31.8vw;
+        height: 31.8vw;
+    }
+
+    .zoomImg .slides .main_container.video {
+        width: 56.41vw;
+        height: 31.8vw;
     }
 }

@@ -101,6 +101,7 @@
     transform-origin: 50% 0;
     transform: scaleY(0);
     opacity: 0;
+    padding-bottom: 10px;
 }
 
 /* .sort_longhair.active, .sort_shorthair.active, .sort_siamesr.active {
@@ -157,7 +158,7 @@
 }
 
 .sort_longhair ul li:first-child, .sort_shorthair ul li:first-child, .sort_siamese ul li:first-child {
-    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .sort_longhair ul li:last-child, .sort_shorthair ul li:last-child, .sort_siamese ul li:last-child {
@@ -176,15 +177,14 @@
     width: 1282px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .block_img {
-    width: 310px;
-    height: 310px;
+    width: 300px;
+    height: 300px;
     overflow: hidden;
     position: relative;
-    margin-bottom: 10px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -193,6 +193,7 @@
     border-radius: 12px;
     -webkit-box-shadow: rgb(0 0 0 / 18%) 0px 8px 28px;
     box-shadow: rgb(0 0 0 / 18%) 0px 8px 28px;
+    margin: 0 10px 15px 10px;
 }
 
 .block_img:hover {
@@ -322,6 +323,7 @@
         z-index: -1;
         /* left: -2px; */
         height: 10.510vw;
+        padding-bottom: .5vw;
     }
 
     /* .sort_longhair {
@@ -350,10 +352,10 @@
     }
 
     .block_img {
-        width: 16.290vw;
-        height: 16.290vw;
-        margin-bottom: 0.525vw;
+        width: 15.625vw;
+        height: 15.625vw;
         border-radius: .6vw;
+        margin: 0 0.52vw 0.78vw 0.52vw;
     }
 
     .zoomImg .close {

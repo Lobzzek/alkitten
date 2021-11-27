@@ -665,12 +665,17 @@
 .compilation .block_cats {
     display: flex;
     width: 65.1vw;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 1.2vw;
     flex-wrap: wrap;
 }
 
-.compilation>a {
+.compilation .block_cats>div {
+    margin-right: 0.677vw;
+    margin-left: 0.677vw;
+}
+
+.compilation>button {
     font-family: "modelica-r";
     font-weight: 100;
     font-size: 1vw;
@@ -680,6 +685,13 @@
     margin: 0;
     padding: .3vw .5vw;
     border-radius: 0.25vw;
+    border: none;
+    cursor: pointer;
+}
+
+.compilation>button.hide {
+    background: #333;
+    opacity: .6;
 }
 
 @media screen and (min-width: 1920px) {
@@ -912,15 +924,21 @@
     .compilation.matched_kittens {
         margin-bottom: 100px;
     }
+
     .compilation .block_cats {
         margin-bottom: 23px;
         width: 1250px;
     }
 
-    .compilation>a {
-        font-size: 19.2px;
-        color: white;
-        padding: 6px 10px;
-        border-radius: 5px;
+    .compilation .block_cats>div {
+        margin-left: 13px;
+        margin-right: 13px;
     }
-}
+
+        .compilation>button {
+            font-size: 19.2px;
+            color: white;
+            padding: 6px 10px;
+            border-radius: 5px;
+        }
+    }

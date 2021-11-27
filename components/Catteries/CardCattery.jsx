@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { setActiveMap } from '../../Redux/actions/activeMap.js'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const CardCattery = (props) => {
     const dispatch = useDispatch();
@@ -14,6 +15,8 @@ const CardCattery = (props) => {
     const more_text = React.useRef();
 
     const [favourite, setFavourite] = React.useState(false);
+
+    const router = useRouter();
 
     React.useEffect(() => {
         if (props.favourite) {
@@ -100,7 +103,7 @@ const CardCattery = (props) => {
                         
                     </h2>
                     <div className={s.cat_card_info_row__sub_titles} ref={cnt_breed}>
-                        <p>
+                        <p onClick={() => router.push(`/breeds?info=${props.breed ? props.breed : "Maine Coon"}`)}>
                             {
                                 props.breed ? props.breed : "Maine Coon"
                             }

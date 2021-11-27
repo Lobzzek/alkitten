@@ -9,6 +9,15 @@ import { useRouter } from 'next/router'
 const CatForSlider = (props) => {
     const dispatch = useDispatch();
     const router = useRouter();
+
+    React.useEffect(() => {
+        function locationHashChanged() {
+            if (location.hash) {
+                history.replaceState({}, '', router.pathname)
+            }
+        }
+        window.onhashchange = locationHashChanged;
+    }, [])
     return (
 
             <div className={classNames(s.card_cat, 
