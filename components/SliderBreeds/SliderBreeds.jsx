@@ -51,16 +51,16 @@ const SliderBreeds = () => {
             setActivePage(1);
         }
 
-        let leftBlock = 0;
+        let leftBlock = 3;
         for (let i = 0; i < activePage - 1; i++) {
             if (activeSort === 0) {
-                leftBlock -= 16.85
+                leftBlock -= 16.87
             }else if (activeSort === 1) {
                 leftBlock -= 16.713
             } else if (activeSort === 2) {
-                leftBlock -= 16.713
+                leftBlock -= 16.790
             } else if (activeSort === 3) {
-                leftBlock -= 16.413
+                leftBlock -= 16.526
             }
         }
 

@@ -1,0 +1,57 @@
+.bottom_bar {
+    display: none;
+    background: white;
+    width: 100vw;
+    padding: 2vw 4vw;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    transition: .5s;
+    justify-content: center;
+    flex-direction: center;
+    background: white;
+    z-index: 5;
+}
+
+.bottom_bar nav {
+    display: flex;
+    width: 100%;
+    position: relative;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.bottom_bar nav>a,
+.bottom_bar nav>button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bottom_bar nav>button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bottom_bar img {
+    width: 7vw;
+}
+
+.bottom_bar button img {
+    width: 7.2vw;
+}
+
+.bottom_bar nav p {
+    font-size: 2.5vw;
+    font-family: "modelica-r";
+    margin: .4vw 0 0 0;
+    color: #333;
+}
+
+@media screen and (max-width: 768px) {
+    .bottom_bar {
+        display: flex;
+    }
+}

@@ -1,4 +1,4 @@
-import s from '../../../styles/MainWrapper/BlockPerson.module.css';
+import s from '../../../styles/MainWrapper/RightPanel/BlockPerson.module.css';
 import Link from 'next/link'
 import { useDispatch } from 'react-redux'
 import { setActiveMap } from '../../../Redux/actions/activeMap.js'

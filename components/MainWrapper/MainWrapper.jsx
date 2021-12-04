@@ -8,6 +8,7 @@ import Login from './Login.jsx'
 import GalleryPopup from './GalleryPopup.jsx'
 import MapPopup from './MapPopup.jsx'
 import Chats from './Chats.jsx'
+import BottomBar from './BottomBar.jsx'
 
 import {useRouter} from 'next/router'
 
@@ -59,7 +60,10 @@ function MainWrapper(props) {
 
                 <RightPanel triggered={triggerScroll} bottomContent={bottomContent} />
             </section>
+
+            <BottomBar />
             <Footer />
+
 
             <Login />
             <GalleryPopup />

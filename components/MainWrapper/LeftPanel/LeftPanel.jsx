@@ -9,7 +9,7 @@ const LeftPanel = () => {
 
     return (
         <section className={s.left_panel}>
-            <div className={s.group_cats}>
+            <div className={s.group_catteries}>
                 <div className={s.top_phrase}>
                     <h3>Catteries/Breeders</h3>
                 </div>
@@ -51,13 +51,6 @@ const LeftPanel = () => {
                     <Link href="/faq"><a className={s.view}>View More</a></Link>
                 </div>
             </div>
-            {/* <div className={s.gallery}>
-                <div className={s.text}>
-                    <h4>Cat Gallery</h4>
-                    <img src="/img/fon_gallery.jpg" alt="" />
-                    <a href="#">View Gallery</a>
-                </div>
-            </div> */}
         </section>
     )
 }

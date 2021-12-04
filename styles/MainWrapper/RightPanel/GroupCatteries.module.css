@@ -1,0 +1,138 @@
+.group_catteries {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 25.78vw;
+    background: #F1EFE8;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-shadow: 5px 5px 32px -11px rgba(0, 0, 0, 0.4);
+    box-shadow: 5px 5px 32px -11px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.group_catteries .top_phrase {
+    position: relative;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    padding: 1vw 0;
+    box-shadow: 0 10px 16px #f1efe8;
+}
+
+.group_catteries .top_phrase h3 {
+    margin: 0 auto;
+    width: fit-content;
+    color: #000;
+    font-family: "modelica-r";
+    font-size: 1vw;
+    margin-top: 0;
+}
+
+.group_catteries .blocks {
+    position: relative;
+    overflow-y: scroll;
+    width: 98%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.group_catteries .blocks>div {
+    margin: 0 auto;
+}
+
+.group_catteries .blocks::-webkit-scrollbar {
+    width: 7.2px;
+}
+
+@media screen and (max-width: 1920px) {
+    .group_catteries .blocks::-webkit-scrollbar {
+        width: 0.375vw;
+    }
+}
+
+.group_catteries .blocks::-webkit-scrollbar-thumb {
+    background: #919191;
+    border-radius: 10px;
+}
+
+.group_catteries .blocks::-webkit-scrollbar-track {
+    background: none;
+}
+
+.group_catteries .blocks>div {
+    margin-bottom: 1vw;
+    border-radius: 7.2px;
+}
+
+.group_catteries .blocks>div:first-child {
+    margin-top: 1vw;
+}
+
+.group_catteries .link {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 -10px 16px #f1efe8;
+    height: 3.64vw;
+    align-items: center;
+}
+
+.group_catteries .link a {
+    color: white;
+    font-family: "modelica-r";
+    font-weight: 100;
+    font-size: 1vw;
+    background: #938556;
+    text-decoration: none;
+    padding: .31vw .5vw;
+    border-radius: 0.26vw;
+    margin: 0 auto;
+    height: fit-content;
+}
+
+@media screen and (min-width: 1920px) {
+    .group_catteries .top_phrase {
+        padding: 19.2px 0;
+    }
+
+    .group_catteries {
+        height: 495px;
+    }
+
+    .group_catteries .top_phrase h3 {
+        font-size: 19.2px;
+    }
+
+    .group_catteries .link {
+        height: 70px;
+    }
+
+    .group_catteries .link a {
+        font-size: 19.2px;
+    }
+
+    .group_catteries .blocks>div {
+        margin-bottom: 19px;
+    }
+
+    .group_catteries .blocks>div:first-child {
+        margin-top: 19px;
+    }
+}
+
+@media (min-width: 1920px) and (min-aspect-ratio: 2194/1050) {
+    .group_catteries {
+        height: 340px;
+    }
+}
+
+@media (max-width: 1920px) and (min-aspect-ratio: 1475/796) {
+    .group_catteries {
+        height: 17.7vw;
+    }
+
+}

@@ -9,7 +9,7 @@
     justify-content: space-between;
     z-index: 2;
     margin: 0 auto;
-    margin-bottom: 95px;
+    margin-bottom: 125px;
 }
 
 .sort div {
@@ -71,12 +71,13 @@
 @media screen and (max-width: 1920px) {
     .sort {
         border-radius: 0.25vw;
-        margin-bottom: 4.427vw;
+        margin-bottom: 6.5vw;
     }
 
     .sort div p {
         font-size: 0.911vw;
     }
+
     .wrapp_card>a {
         margin: 0 1.3vw;
     }

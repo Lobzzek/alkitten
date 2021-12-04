@@ -23,6 +23,8 @@
     z-index: 2;
     margin: 0 auto;
     margin-bottom: 25px;
+    overflow: hidden;
+
 }
 
 .sort div {
@@ -227,6 +229,7 @@
         width: 978px;
         height: 42.3px;
     }
+
     .slider_breeds>a {
         font-size: 19.075px;
     }
@@ -236,43 +239,59 @@
     .slider_cnt>button:first-child {
         transform: rotate(0deg) translateX(1vw);
     }
+
     .dots {
         margin-bottom: 1.563vw;
     }
+
     .sort {
         border-radius: 0.25vw;
         margin-bottom: 1.302vw;
+        border: 0.0625vw solid #938556;
     }
+
+    .sort div:nth-child(1), .sort div:nth-child(2), .sort div:nth-child(3) {
+        border-right: 0.0625vw solid #938556;
+    }
+
     .sort div p {
         font-size: 0.911vw;
     }
+
     .slider_cnt>button {
         height: 1.693vw;
         width: 1.693vw;
         margin-top: 8.729vw;
     }
+
     .slider_cnt .wrap_cont {
         width: 58.083vw;
         height: 25vw;
     }
+
     .dots .container_dots span {
         width: 0.521vw;
         height: 0.521vw;
         margin: .26vw;
     }
+
     .dots .container_dots span:nth-child(76) {
         margin-left: 1vw;
     }
+
     .dots .container_dots {
         max-width: 40vw;
     }
+
     .dots>button {
         width: 1.250vw;
         height: 1.250vw;
     }
+
     .container_latters {
         margin: 0 auto 2.083vw auto;
     }
+
     .container_latters button {
         font-size: 1vw;
         padding: 0 .3vw;

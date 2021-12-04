@@ -1,6 +1,6 @@
 .card_breed {
     width: 180px;
-    margin: 0 10px 60px 10px;
+    margin: 0 10px 80px 10px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -12,26 +12,26 @@
     width: 180px;
     height: 180px;
     position: relative;
-    background: #CDD7D9;
+    /* background: #CDD7D9; */
     border-radius: 40px;
     transition: .4s;
 }
 
-.card_breed:hover .block_img {
+/* .card_breed:hover .block_img {
     -webkit-box-shadow: rgb(0 0 0 / 28%) 0px 8px 28px;
     box-shadow: rgb(0 0 0 / 28%) 0px 8px 28px;
-}
+} */
 
 .card_breed:hover .block_img img {
-    transform: translate(-50%, -62%);
+    transform: translate(-50%, -2%);
 }
 
 .block_img img {
     height: 140%;
     position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -60%);
+    bottom: 0;
+    transform: translateX(-50%);
     transition: .4s;
 }
 
@@ -47,13 +47,15 @@
 @media screen and (max-width: 1920px) {
     .card_breed {
         width: 9.459vw;
-        margin: 0 .5vw 3.153vw .5vw;
+        margin: 0 .5vw 4.16vw .5vw;
     }
+
     .block_img {
         width: 9.459vw;
         height: 9.459vw;
         border-radius: 2.102vw;
     }
+
     .card_breed p {
         font-size: 1.1vw;
         margin-top: 0.263vw;

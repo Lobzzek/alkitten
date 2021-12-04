@@ -65,10 +65,9 @@
 
 @media screen and (max-width: 768px) {
     .center_content {
-        width: 95vw;
+        width: 92vw;
     }
-
     .main_content {
-        width: 63.875vw;
+        width: 92vw;
     }
 }
